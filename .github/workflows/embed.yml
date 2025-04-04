@@ -1,0 +1,42 @@
+name: Embed Snippets
+
+on:
+  push:
+    paths:
+      - 'src/snippets/**'
+      - 'src/tasks/embedAndSync.ts'
+      - 'src/tasks/embedAll.ts'
+      - 'src/utils/**'
+      - 'embedding-cache.json'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Run embedding process
+        run: node dist/index.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+      
+      - name: Commit cache changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add embedding-cache.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update embedding cache [skip ci]"
+          git push

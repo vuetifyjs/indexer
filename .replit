@@ -1,0 +1,195 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "VueSnippetsEmbedder"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "SearchVectors"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "ProcessAllVueSnippets"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "SearchVueSnippets"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DeleteVueSnippets"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "AnalyzeVueSnippet"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "BatchAnalyzeVueSnippets"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "AnalyzeSearchVectorsFile"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "LintFix"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Lint"
+
+[[workflows.workflow]]
+name = "VueSnippetsEmbedder"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && tsc && node dist/index.js"
+
+[[workflows.workflow]]
+name = "SearchVectors"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && tsc && node dist/search-vectors.js card"
+
+[[workflows.workflow]]
+name = "ProcessAllVueSnippets"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx tsc && node dist/index.js --verbose"
+
+[[workflows.workflow]]
+name = "SearchVueSnippets"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx tsc && node dist/search-vectors.js card"
+
+[[workflows.workflow]]
+name = "DeleteVueSnippets"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx tsc && node dist/delete-vectors.js --help"
+
+[[workflows.workflow]]
+name = "AnalyzeVueSnippet"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx tsc && node dist/demo/analyze-vue-snippet.js src/snippets/v-card/basic.vue"
+
+[[workflows.workflow]]
+name = "BatchAnalyzeVueSnippets"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx tsc && node dist/demo/batch-analyze-snippets.js -c v-card"
+
+[[workflows.workflow]]
+name = "AnalyzeSearchVectorsFile"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install && npx ts-node src/demo/analyze-file-content.ts src/search-vectors.ts"
+
+[[workflows.workflow]]
+name = "LintFix"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eslint . --ext .ts --fix"
+
+[[workflows.workflow]]
+name = "Lint"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eslint . --ext .ts"
+
+[deployment]
+run = ["sh", "-c", "npm install && tsc && node dist/index.js"]

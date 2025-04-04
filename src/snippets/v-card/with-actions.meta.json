@@ -1,0 +1,8 @@
+{
+  "id": "v-card-with-actions",
+  "component": "v-card",
+  "tags": ["card", "actions", "buttons", "interactive"],
+  "title": "Card with Actions",
+  "description": "A card with text content and action buttons at the bottom",
+  "category": "components"
+}

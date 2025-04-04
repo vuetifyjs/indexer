@@ -1,0 +1,34 @@
+{
+  "name": "@vuetify/indexer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "search-vectors": "node dist/search-vectors.js card",
+    "process-snippets": "node dist/index.js --verbose",
+    "delete-snippets": "node dist/delete-vectors.js --help",
+    "analyze-snippet": "node dist/demo/analyze-vue-snippet.js src/snippets/v-card/basic.vue",
+    "batch-analyze-snippets": "node dist/demo/batch-analyze-snippets.js -c v-card",
+    "analyze-file": "ts-node src/demo/analyze-file-content.ts src/search-vectors.ts",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^5.1.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "glob": "^11.0.1",
+    "openai": "^4.91.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "dotenv": "^16.3.1"
+  }
+}

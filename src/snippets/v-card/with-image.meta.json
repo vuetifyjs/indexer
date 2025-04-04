@@ -1,0 +1,8 @@
+{
+  "id": "v-card-with-image",
+  "component": "v-card",
+  "tags": ["card", "image", "media", "subtitle"],
+  "title": "Card with Image",
+  "description": "A card that displays an image at the top with title and subtitle below",
+  "category": "components"
+}
