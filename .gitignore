@@ -38,3 +38,7 @@ jspm_packages/
 # Environment variables
 .env
 .env.*.local
+
+# Vuetify clone and API output
+vuetify-clone/
+vuetify-api/
