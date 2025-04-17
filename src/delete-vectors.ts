@@ -1,9 +1,9 @@
-import { deleteById, batchDelete } from './tasks/deleteVector'
+import { deleteById, batchDelete } from './tasks/delete-vector'
 
 /**
  * Main entry point for the vector deletion tool
  */
-async function main() {
+async function main () {
   // Check for required environment variables
   if (!process.env.PINECONE_API_KEY) {
     console.error('Error: PINECONE_API_KEY environment variable is required')
@@ -51,7 +51,7 @@ async function main() {
 /**
  * Displays usage information
  */
-function showHelp() {
+function showHelp () {
   console.log(`
 Vue Snippets Vector Deletion Tool
 

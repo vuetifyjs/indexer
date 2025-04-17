@@ -4,7 +4,7 @@ import { querySimilar } from './utils/pinecone'
 /**
  * Main entry point for the vector search tool
  */
-async function main() {
+async function main () {
   // Check for required environment variables
   if (!process.env.OPENAI_API_KEY) {
     console.error('Error: OPENAI_API_KEY environment variable is required')
@@ -135,7 +135,7 @@ async function main() {
 /**
  * Displays usage information
  */
-function showHelp() {
+function showHelp () {
   console.log(`
 Vue Snippets Vector Search Tool
 

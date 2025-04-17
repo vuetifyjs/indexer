@@ -44,7 +44,7 @@ export interface ComponentExposed {
  * Loads all component API data from the vuetify-api directory
  * @returns A map of component names to their API data
  */
-export function loadVuetifyApiData(): Record<string, VuetifyComponent> {
+export function loadVuetifyApiData (): Record<string, VuetifyComponent> {
   if (!fs.existsSync(API_DIR)) {
     throw new Error(`Vuetify API directory not found at ${API_DIR}. Run 'npm run build-vuetify-api' first.`)
   }
@@ -82,7 +82,7 @@ export function loadVuetifyApiData(): Record<string, VuetifyComponent> {
  * @param componentName The name of the component (e.g., 'VCard')
  * @returns The component's API data or null if not found
  */
-export function getComponentApiData(componentName: string): VuetifyComponent | null {
+export function getComponentApiData (componentName: string): VuetifyComponent | null {
   const allComponents = loadVuetifyApiData()
   return allComponents[componentName] || null
 }
@@ -92,7 +92,7 @@ export function getComponentApiData(componentName: string): VuetifyComponent | n
  * @param search Search term to match against component names or tags
  * @returns Array of matching components
  */
-export function findComponentsByName(search: string): VuetifyComponent[] {
+export function findComponentsByName (search: string): VuetifyComponent[] {
   const allComponents = loadVuetifyApiData()
   const searchLower = search.toLowerCase()
 
@@ -107,7 +107,7 @@ export function findComponentsByName(search: string): VuetifyComponent[] {
  * @param component The component to summarize
  * @returns A summary of the component's API
  */
-export function summarizeComponent(component: VuetifyComponent): string {
+export function summarizeComponent (component: VuetifyComponent): string {
   let summary = `# ${component.name}\n\n`
 
   // Props

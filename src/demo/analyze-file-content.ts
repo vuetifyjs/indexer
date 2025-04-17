@@ -1,16 +1,15 @@
 import fs from 'fs/promises'
-import path from 'path'
 
 /**
  * A simple utility to read and analyze file contents
- * 
+ *
  * This is useful for understanding the structure of files in the project
  * and can help diagnose issues with file processing
  */
-async function analyzeFile(filePath: string) {
+async function analyzeFile (filePath: string) {
   try {
     console.log(`Analyzing file: ${filePath}`)
-    
+
     // Check if file exists
     try {
       await fs.access(filePath)
@@ -18,20 +17,20 @@ async function analyzeFile(filePath: string) {
       console.error(`File does not exist: ${filePath}`)
       return
     }
-    
+
     // Read file
     const content = await fs.readFile(filePath, 'utf-8')
-    
+
     // Basic info
     console.log(`File size: ${content.length} bytes`)
     console.log(`Line count: ${content.split('\n').length}`)
-    
+
     // Content preview (first 200 chars)
     console.log('\nContent preview:')
     console.log('-'.repeat(40))
     console.log(content.substring(0, 200) + (content.length > 200 ? '...' : ''))
     console.log('-'.repeat(40))
-    
+
     // For Vue files, try to extract template
     if (filePath.endsWith('.vue')) {
       const templateMatch = content.match(/<template>([\s\S]*?)<\/template>/i)
@@ -44,7 +43,7 @@ async function analyzeFile(filePath: string) {
         console.log('No template section found in Vue file')
       }
     }
-    
+
     // For JSON files, try to parse and display structure
     if (filePath.endsWith('.json')) {
       try {
@@ -57,24 +56,24 @@ async function analyzeFile(filePath: string) {
         console.error('Failed to parse JSON content:', error)
       }
     }
-    
+
     // Check for special patterns in TS files
     if (filePath.endsWith('.ts')) {
       // Look for functions
       const functionMatches = content.matchAll(/function\s+(\w+)/g)
       const functions = Array.from(functionMatches).map(match => match[1])
-      
+
       if (functions.length > 0) {
         console.log('\nFunctions found:')
         console.log('-'.repeat(40))
         functions.forEach(func => console.log(func))
         console.log('-'.repeat(40))
       }
-      
+
       // Look for imports
       const importMatches = content.matchAll(/import\s+.*from\s+['"](.+)['"]/g)
       const imports = Array.from(importMatches).map(match => match[1])
-      
+
       if (imports.length > 0) {
         console.log('\nImports:')
         console.log('-'.repeat(40))
@@ -82,16 +81,16 @@ async function analyzeFile(filePath: string) {
         console.log('-'.repeat(40))
       }
     }
-    
+
   } catch (error) {
     console.error('Error analyzing file:', error)
   }
 }
 
-async function main() {
+async function main () {
   // Get file path from command line args
   const args = process.argv.slice(2)
-  
+
   if (args.length === 0 || args.includes('--help') || args.includes('-h')) {
     console.log(`
 File Content Analyzer
@@ -106,7 +105,7 @@ Examples:
     `)
     process.exit(0)
   }
-  
+
   const filePath = args[0]
   await analyzeFile(filePath)
 }

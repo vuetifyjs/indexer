@@ -1,7 +1,5 @@
 import { OpenAI } from 'openai'
-import fs from 'fs/promises'
-import path from 'path'
-import { getSnippetFiles, readSnippet } from '../utils/fileProcessor'
+import { getSnippetFiles, readSnippet } from '../utils/file-processor'
 
 // Initialize the OpenAI client with API key from environment
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! })
@@ -11,21 +9,21 @@ const MAX_SNIPPETS_PER_BATCH = 5
 
 /**
  * Summarize multiple Vue snippets into a concise report
- * 
+ *
  * @param snippets Array of Vue snippets to analyze
  * @returns A summary analysis of all snippets
  */
-async function batchAnalyzeSnippets(snippetPaths: string[]) {
+async function batchAnalyzeSnippets (snippetPaths: string[]) {
   try {
     console.log(`Analyzing ${snippetPaths.length} Vue snippets...`)
-    
+
     // Read all snippets
     const snippets = await Promise.all(
       snippetPaths.map(async (path) => {
         return await readSnippet(path)
       })
     )
-    
+
     // Prepare snippets for analysis
     const snippetData = snippets.map(snippet => ({
       id: snippet.id,
@@ -34,7 +32,7 @@ async function batchAnalyzeSnippets(snippetPaths: string[]) {
       content: snippet.content,
       tags: snippet.metadata.tags
     }))
-    
+
     // Create the prompt for GPT-4o
     const prompt = `
 Analyze these Vue component snippets:
@@ -61,12 +59,12 @@ Based on these snippets, provide a comprehensive analysis in JSON format with th
     const response = await openai.chat.completions.create({
       model: 'gpt-4o', // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
       messages: [
-        { 
-          role: 'system', 
-          content: 'You are a Vue.js expert specialized in analyzing component libraries and providing architectural insights.' 
+        {
+          role: 'system',
+          content: 'You are a Vue.js expert specialized in analyzing component libraries and providing architectural insights.'
         },
-        { 
-          role: 'user', 
+        {
+          role: 'user',
           content: prompt
         }
       ],
@@ -80,7 +78,7 @@ Based on these snippets, provide a comprehensive analysis in JSON format with th
       throw new Error('No content received from OpenAI API')
     }
     const analysis = JSON.parse(messageContent)
-    
+
     return {
       snippetCount: snippets.length,
       snippetIds: snippets.map(s => s.id),
@@ -94,28 +92,28 @@ Based on these snippets, provide a comprehensive analysis in JSON format with th
 
 /**
  * Processes snippets in batches to respect API limits
- * 
+ *
  * @param snippetPaths Array of paths to Vue snippet files
  * @returns An array of analyses, one for each batch
  */
-async function processInBatches(snippetPaths: string[]) {
+async function processInBatches (snippetPaths: string[]) {
   const results = []
-  
+
   for (let i = 0; i < snippetPaths.length; i += MAX_SNIPPETS_PER_BATCH) {
     const batchPaths = snippetPaths.slice(i, i + MAX_SNIPPETS_PER_BATCH)
     console.log(`Processing batch ${Math.floor(i / MAX_SNIPPETS_PER_BATCH) + 1}/${Math.ceil(snippetPaths.length / MAX_SNIPPETS_PER_BATCH)} (${batchPaths.length} snippets)`)
-    
+
     const batchResult = await batchAnalyzeSnippets(batchPaths)
     results.push(batchResult)
   }
-  
+
   return results
 }
 
 /**
  * Main function to run the batch analysis
  */
-async function main() {
+async function main () {
   // Check for required environment variables
   if (!process.env.OPENAI_API_KEY) {
     console.error('Error: OPENAI_API_KEY environment variable is required')
@@ -125,13 +123,13 @@ async function main() {
   try {
     // Parse command line arguments
     const args = process.argv.slice(2)
-    
+
     if (args.includes('--help') || args.includes('-h')) {
       console.log(`
 Vue Snippets Batch Analyzer - Analyze multiple Vue components using OpenAI
 
 Usage:
-  node dist/demo/batch-analyze-snippets.js [options]
+  npx ts-node src/demo/batch-analyze-snippets.ts [options]
 
 Options:
   --dir, -d <path>       Specify snippets directory (default: src/snippets)
@@ -139,17 +137,17 @@ Options:
   --help, -h             Show this help message
 
 Examples:
-  node dist/demo/batch-analyze-snippets.js                  # Analyze all snippets
-  node dist/demo/batch-analyze-snippets.js -c v-card        # Analyze only v-card components
-  node dist/demo/batch-analyze-snippets.js -d custom/path   # Use custom snippets directory
+  npx ts-node src/demo/batch-analyze-snippets.ts                  # Analyze all snippets
+  npx ts-node src/demo/batch-analyze-snippets.ts -c v-card        # Analyze only v-card components
+  npx ts-node src/demo/batch-analyze-snippets.ts -d custom/path   # Use custom snippets directory
       `)
       process.exit(0)
     }
-    
+
     // Parse options
     let snippetsDir = 'src/snippets'
     let componentFilter = ''
-    
+
     for (let i = 0; i < args.length; i++) {
       if ((args[i] === '--dir' || args[i] === '-d') && i + 1 < args.length) {
         snippetsDir = args[i + 1]
@@ -159,11 +157,11 @@ Examples:
         i++ // Skip the next arg
       }
     }
-    
+
     // Get all snippet files
     console.log(`Getting snippet files from ${snippetsDir}${componentFilter ? ` for component: ${componentFilter}` : ''}...`)
     let snippetFiles = await getSnippetFiles(snippetsDir)
-    
+
     // Apply component filter if specified
     if (componentFilter) {
       const filteredFiles = []
@@ -173,19 +171,19 @@ Examples:
           filteredFiles.push(file)
         }
       }
-      
+
       snippetFiles = filteredFiles
       console.log(`Filtered to ${snippetFiles.length} snippet files for component: ${componentFilter}`)
     }
-    
+
     if (snippetFiles.length === 0) {
       console.log('No snippet files found.')
       process.exit(0)
     }
-    
+
     // Process the snippets in batches
     const results = await processInBatches(snippetFiles)
-    
+
     // Output the results
     console.log('\nAnalysis Results:')
     results.forEach((result, index) => {
@@ -193,7 +191,7 @@ Examples:
       console.log(`Analyzed ${result.snippetCount} snippets: ${result.snippetIds.join(', ')}`)
       console.log(JSON.stringify(result.analysis, null, 2))
     })
-    
+
     console.log('\nBatch analysis complete!')
   } catch (error: any) {
     console.error('Error:', error)

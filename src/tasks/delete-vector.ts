@@ -2,11 +2,11 @@ import { batchDeleteVectors, deleteVector } from '../utils/pinecone'
 
 /**
  * Deletes a single vector from Pinecone by ID
- * 
+ *
  * @param id The unique identifier for the vector to delete
  * @returns Information about the operation performed
  */
-export async function deleteById(id: string): Promise<{
+export async function deleteById (id: string): Promise<{
   status: 'success' | 'failed',
   message: string
 }> {
@@ -28,11 +28,11 @@ export async function deleteById(id: string): Promise<{
 
 /**
  * Deletes multiple vectors from Pinecone by ID
- * 
+ *
  * @param ids Array of vector IDs to delete
  * @returns Information about the operation performed
  */
-export async function batchDelete(ids: string[]): Promise<{
+export async function batchDelete (ids: string[]): Promise<{
   total: number,
   status: 'success' | 'partial' | 'failed',
   message: string
@@ -47,9 +47,9 @@ export async function batchDelete(ids: string[]): Promise<{
     }
 
     console.log(`Deleting ${ids.length} vectors in batch`)
-    
+
     await batchDeleteVectors(ids)
-    
+
     return {
       total: ids.length,
       status: 'success',

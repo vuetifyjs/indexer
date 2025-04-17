@@ -22,11 +22,11 @@ export interface VueSnippet {
 
 /**
  * Gets all Vue snippet files in the project
- * 
+ *
  * @param snippetsDir Directory containing the snippets
  * @returns Array of file paths to Vue snippets
  */
-export async function getSnippetFiles(snippetsDir: string = 'src/snippets'): Promise<string[]> {
+export async function getSnippetFiles (snippetsDir: string = 'src/snippets'): Promise<string[]> {
   try {
     return await glob(`${snippetsDir}/**/*.vue`)
   } catch (error: any) {
@@ -37,20 +37,20 @@ export async function getSnippetFiles(snippetsDir: string = 'src/snippets'): Pro
 
 /**
  * Reads a Vue snippet and its associated metadata
- * 
+ *
  * @param snippetPath Path to the Vue snippet file
  * @returns Object containing the snippet content and metadata
  */
-export async function readSnippet(snippetPath: string): Promise<VueSnippet> {
+export async function readSnippet (snippetPath: string): Promise<VueSnippet> {
   try {
     // Read the Vue template file
     const content = await fs.readFile(snippetPath, 'utf8')
-    
+
     // Get the associated metadata file
     const metaPath = snippetPath.replace('.vue', '.meta.json')
     const metadataRaw = await fs.readFile(metaPath, 'utf8')
     const metadata = JSON.parse(metadataRaw)
-    
+
     return {
       id: metadata.id,
       path: snippetPath,
@@ -65,11 +65,11 @@ export async function readSnippet(snippetPath: string): Promise<VueSnippet> {
 
 /**
  * Checks if a cache file exists and creates it if it doesn't
- * 
+ *
  * @param cachePath Path to the cache file
  * @returns The cache object or an empty object if not found
  */
-export async function ensureCacheFile(cachePath: string): Promise<Record<string, string>> {
+export async function ensureCacheFile (cachePath: string): Promise<Record<string, string>> {
   try {
     try {
       const cacheContent = await fs.readFile(cachePath, 'utf8')
@@ -89,12 +89,12 @@ export async function ensureCacheFile(cachePath: string): Promise<Record<string,
 
 /**
  * Updates the cache with a new hash for a snippet
- * 
+ *
  * @param cachePath Path to the cache file
  * @param snippetPath Path of the snippet being cached
  * @param hash The hash to store
  */
-export async function updateCache(cachePath: string, snippetPath: string, hash: string): Promise<void> {
+export async function updateCache (cachePath: string, snippetPath: string, hash: string): Promise<void> {
   try {
     const cache = await ensureCacheFile(cachePath)
     cache[snippetPath] = hash

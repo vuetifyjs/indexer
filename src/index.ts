@@ -1,11 +1,11 @@
 import 'dotenv/config'
-import { embedAll } from './tasks/embedAll'
-import { embedAndSync } from './tasks/embedAndSync'
+import { embedAll } from './tasks/embed-all'
+import { embedAndSync } from './tasks/embed-and-sync'
 
 /**
  * Main entry point for the application
  */
-async function main() {
+async function main () {
   // Check for required environment variables
   if (!process.env.OPENAI_API_KEY) {
     console.error('Error: OPENAI_API_KEY environment variable is required')
@@ -74,12 +74,12 @@ async function main() {
 /**
  * Displays usage information
  */
-function showHelp() {
+function showHelp () {
   console.log(`
 Vue Snippets Embedder - Process and index Vue component snippets to Pinecone
 
 Usage:
-  node dist/index.js [options] [file]
+  npx ts-node src/index.ts [options] [file]
 
 Options:
   --no-batch       Disable batch processing (process each snippet individually)
@@ -88,10 +88,10 @@ Options:
   --help, -h       Show this help message
 
 Examples:
-  node dist/index.js                           # Process all snippets with batch processing
-  node dist/index.js --no-batch                # Process all snippets individually
-  node dist/index.js src/snippets/v-card/basic.vue  # Process a single snippet
-  node dist/index.js --dir src/custom-snippets # Use a custom snippets directory
+  npx ts-node src/index.ts                           # Process all snippets with batch processing
+  npx ts-node src/index.ts --no-batch                # Process all snippets individually
+  npx ts-node src/index.ts src/snippets/v-card/basic.vue  # Process a single snippet
+  npx ts-node src/index.ts --dir src/custom-snippets # Use a custom snippets directory
   `)
 }
 
