@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "search-vectors": "ts-node src/search-vectors.ts card",
-    "process-snippets": "ts-node src/index.ts --verbose",
-    "delete-snippets": "ts-node src/delete-vectors.ts --help",
-    "analyze-snippet": "ts-node src/demo/analyze-vue-snippet.ts src/snippets/v-card/basic.vue",
-    "batch-analyze-snippets": "ts-node src/demo/batch-analyze-snippets.ts -c v-card",
-    "analyze-file": "ts-node src/demo/analyze-file-content.ts src/search-vectors.ts",
-    "build-vuetify-api": "ts-node src/tasks/build-vuetify-api.ts",
-    "explore-vuetify-api": "ts-node src/demo/explore-vuetify-api.ts",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "build": "tsc -p tsconfig.build.json",
+    "start": "NODE_OPTIONS='--loader ts-node/esm' node src/index.ts",
+    "search-vectors": "NODE_OPTIONS='--loader ts-node/esm' node src/search-vectors.ts card",
+    "process-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/index.ts --verbose",
+    "delete-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/delete-vectors.ts --help",
+    "analyze-snippet": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/analyze-vue-snippet.ts src/snippets/v-card/basic.vue",
+    "batch-analyze-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/batch-analyze-snippets.ts -c v-card",
+    "analyze-file": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/analyze-file-content.ts src/search-vectors.ts",
+    "build-vuetify-api": "NODE_OPTIONS='--loader ts-node/esm' node src/tasks/build-vuetify-api.ts",
+    "explore-vuetify-api": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/explore-vuetify-api.ts",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "keywords": [],
   "author": "",
@@ -32,10 +32,6 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.25.1",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "@typescript-eslint/parser": "^8.31.0",
-    "eslint": "^9.25.1",
-    "globals": "^16.0.0"
+    "oxlint": "^0.16.7"
   }
 }

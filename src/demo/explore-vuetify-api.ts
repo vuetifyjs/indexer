@@ -5,13 +5,14 @@ import {
   findComponentsByName,
   getComponentApiData,
   summarizeComponent,
-} from '../utils/vuetify-api-processor'
+  type VuetifyComponent,
+  type ComponentProp,
+} from '../utils/vuetify-api-processor.ts'
 
 /**
  * Simple demo script to explore the Vuetify API data
  */
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-async function exploreVuetifyApi () {
+async function exploreVuetifyApi (): Promise<void> {
   try {
     // Ensure the API directory exists
     const apiDir = path.join(__dirname, '..', '..', 'vuetify-api')
@@ -28,7 +29,7 @@ async function exploreVuetifyApi () {
     // Example 1: Find all components containing "card" in their name
     const cardComponents = findComponentsByName('card')
     console.log(`\nFound ${cardComponents.length} components matching "card":`)
-    cardComponents.forEach(component => {
+    cardComponents.forEach((component: VuetifyComponent) => {
       console.log(`- ${component.name}`)
     })
 
@@ -42,7 +43,7 @@ async function exploreVuetifyApi () {
 
       // Print all prop names
       console.log('\nVCard props:')
-      vCardComponent.props.forEach(prop => {
+      vCardComponent.props.forEach((prop: ComponentProp) => {
         console.log(`- ${prop.name}: ${prop.type.join(' | ')}`)
       })
     }

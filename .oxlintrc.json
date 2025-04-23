@@ -1,0 +1,16 @@
+{
+  "extends": ["recommended"],
+  "rules": {
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "prefer-spread": "error",
+
+    "no-explicit-any": "error",
+    "no-non-null-assertion": "error",
+
+    "no-unsafe-negation": "error",
+    "no-unsafe-optional-chaining": "error",
+    "no-unsafe-declaration-merging": "error"
+  }
+}
