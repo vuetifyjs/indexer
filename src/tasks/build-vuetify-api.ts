@@ -1,9 +1,13 @@
 import fs from 'fs'
 import path from 'path'
+import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 import dotenv from 'dotenv'
 
 dotenv.config()
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const VUETIFY_REPO_URL = 'https://github.com/vuetifyjs/vuetify.git'
 const VUETIFY_DIR = path.join(__dirname, '..', '..', 'vuetify-clone')
@@ -77,6 +81,24 @@ function extractApiFiles (): void {
 }
 
 /**
+ * Cleans up the Vuetify repository after extracting API files
+ */
+function cleanupVuetifyRepo (): void {
+  console.log('Cleaning up Vuetify repository...')
+  try {
+    // Remove the cloned repository
+    if (fs.existsSync(VUETIFY_DIR)) {
+      fs.rmSync(VUETIFY_DIR, { recursive: true, force: true })
+      console.log('Vuetify repository cleaned up successfully.')
+    }
+  } catch (error: unknown) {
+    console.error('Error during cleanup:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
+  }
+}
+
+/**
  * Main function to execute the entire process
  */
 async function main (): Promise<void> {
@@ -87,6 +109,7 @@ async function main (): Promise<void> {
     installDependencies()
     buildVuetifyAndApi()
     extractApiFiles()
+    cleanupVuetifyRepo()
 
     console.log('Vuetify API build process completed successfully!')
   } catch (error: unknown) {
@@ -97,7 +120,8 @@ async function main (): Promise<void> {
   }
 }
 
-if (require.main === module) {
+// Check if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch((error: unknown) => {
     console.error('Unhandled error in Vuetify API build process:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
