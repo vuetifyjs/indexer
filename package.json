@@ -1,6 +1,7 @@
 {
   "name": "@vuetify/indexer",
   "version": "0.0.1",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,8 +15,8 @@
     "analyze-file": "ts-node src/demo/analyze-file-content.ts src/search-vectors.ts",
     "build-vuetify-api": "ts-node src/tasks/build-vuetify-api.ts",
     "explore-vuetify-api": "ts-node src/demo/explore-vuetify-api.ts",
-    "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --ext .ts --fix"
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -24,14 +25,17 @@
   "dependencies": {
     "@pinecone-database/pinecone": "^5.1.1",
     "@types/node": "^22.14.1",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "dotenv": "^16.3.1",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
+    "dotenv": "^16.5.0",
     "glob": "^11.0.1",
-    "openai": "^4.91.1",
+    "openai": "^4.95.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0"
   }
 }

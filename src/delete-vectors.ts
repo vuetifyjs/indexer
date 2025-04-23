@@ -1,9 +1,9 @@
-import { deleteById, batchDelete } from './tasks/delete-vector'
+import { deleteById, batchDelete } from './tasks/delete-vector.js'
 
 /**
  * Main entry point for the vector deletion tool
  */
-async function main () {
+async function main (): Promise<void> {
   // Check for required environment variables
   if (!process.env.PINECONE_API_KEY) {
     console.error('Error: PINECONE_API_KEY environment variable is required')
@@ -13,23 +13,23 @@ async function main () {
   try {
     // Parse command line arguments
     const args = process.argv.slice(2)
-    
+
     // Help flag
     if (args.includes('--help') || args.includes('-h') || args.length === 0) {
       showHelp()
       process.exit(0)
     }
-    
+
     // Check for vector IDs to delete
     const ids = args.filter(arg => !arg.startsWith('--'))
     const forceBatch = args.includes('--batch')
-    
+
     if (ids.length === 0) {
       console.error('Error: No vector IDs provided')
       showHelp()
       process.exit(1)
     }
-    
+
     // If only one ID and not forced to batch, use single delete
     if (ids.length === 1 && !forceBatch) {
       console.log(`Deleting single vector: ${ids[0]}`)
@@ -41,9 +41,10 @@ async function main () {
       const result = await batchDelete(ids)
       console.log(`Result: ${result.status} - ${result.message}`)
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in deletion process:', error)
-    console.error('Error message:', error?.message || 'Unknown error')
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error message:', errorMessage)
     process.exit(1)
   }
 }
@@ -51,7 +52,7 @@ async function main () {
 /**
  * Displays usage information
  */
-function showHelp () {
+function showHelp (): void {
   console.log(`
 Vue Snippets Vector Deletion Tool
 
@@ -70,8 +71,11 @@ Examples:
 }
 
 // Run the main function
-main().catch((err: any) => {
-  console.error('Unhandled error:', err)
-  console.error('Error message:', err?.message || 'Unknown error')
-  process.exit(1)
-})
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    console.error('Unhandled error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error message:', errorMessage)
+    process.exit(1)
+  })
+}

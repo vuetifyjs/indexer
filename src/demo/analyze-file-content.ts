@@ -1,58 +1,53 @@
 import fs from 'fs/promises'
 
+interface FileAnalysis {
+  size: number
+  lineCount: number
+  preview: string
+  template?: string
+  jsonStructure?: unknown
+  functions?: string[]
+  imports?: string[]
+}
+
 /**
  * A simple utility to read and analyze file contents
  *
  * This is useful for understanding the structure of files in the project
  * and can help diagnose issues with file processing
  */
-async function analyzeFile (filePath: string) {
+async function analyzeFile (filePath: string): Promise<FileAnalysis | null> {
   try {
-    console.log(`Analyzing file: ${filePath}`)
-
     // Check if file exists
     try {
       await fs.access(filePath)
-    } catch (error) {
-      console.error(`File does not exist: ${filePath}`)
-      return
+    } catch (error: unknown) {
+      console.error(`File does not exist: ${filePath}`, error)
+      return null
     }
 
     // Read file
     const content = await fs.readFile(filePath, 'utf-8')
 
-    // Basic info
-    console.log(`File size: ${content.length} bytes`)
-    console.log(`Line count: ${content.split('\n').length}`)
-
-    // Content preview (first 200 chars)
-    console.log('\nContent preview:')
-    console.log('-'.repeat(40))
-    console.log(content.substring(0, 200) + (content.length > 200 ? '...' : ''))
-    console.log('-'.repeat(40))
+    const analysis: FileAnalysis = {
+      size: content.length,
+      lineCount: content.split('\n').length,
+      preview: content.substring(0, 200) + (content.length > 200 ? '...' : ''),
+    }
 
     // For Vue files, try to extract template
     if (filePath.endsWith('.vue')) {
       const templateMatch = content.match(/<template>([\s\S]*?)<\/template>/i)
       if (templateMatch) {
-        console.log('\nTemplate content:')
-        console.log('-'.repeat(40))
-        console.log(templateMatch[1].trim())
-        console.log('-'.repeat(40))
-      } else {
-        console.log('No template section found in Vue file')
+        analysis.template = templateMatch[1].trim()
       }
     }
 
     // For JSON files, try to parse and display structure
     if (filePath.endsWith('.json')) {
       try {
-        const jsonData = JSON.parse(content)
-        console.log('\nJSON structure:')
-        console.log('-'.repeat(40))
-        console.log(JSON.stringify(jsonData, null, 2))
-        console.log('-'.repeat(40))
-      } catch (error) {
+        analysis.jsonStructure = JSON.parse(content)
+      } catch (error: unknown) {
         console.error('Failed to parse JSON content:', error)
       }
     }
@@ -61,33 +56,69 @@ async function analyzeFile (filePath: string) {
     if (filePath.endsWith('.ts')) {
       // Look for functions
       const functionMatches = content.matchAll(/function\s+(\w+)/g)
-      const functions = Array.from(functionMatches).map(match => match[1])
-
-      if (functions.length > 0) {
-        console.log('\nFunctions found:')
-        console.log('-'.repeat(40))
-        functions.forEach(func => console.log(func))
-        console.log('-'.repeat(40))
-      }
+      analysis.functions = Array.from(functionMatches).map(match => match[1])
 
       // Look for imports
       const importMatches = content.matchAll(/import\s+.*from\s+['"](.+)['"]/g)
-      const imports = Array.from(importMatches).map(match => match[1])
-
-      if (imports.length > 0) {
-        console.log('\nImports:')
-        console.log('-'.repeat(40))
-        imports.forEach(imp => console.log(imp))
-        console.log('-'.repeat(40))
-      }
+      analysis.imports = Array.from(importMatches).map(match => match[1])
     }
 
-  } catch (error) {
+    return analysis
+  } catch (error: unknown) {
     console.error('Error analyzing file:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
+    return null
   }
 }
 
-async function main () {
+/**
+ * Displays the analysis results in a formatted way
+ */
+function displayAnalysis (filePath: string, analysis: FileAnalysis): void {
+  console.log(`\nAnalysis of ${filePath}:`)
+  console.log('-'.repeat(40))
+  console.log(`File size: ${analysis.size} bytes`)
+  console.log(`Line count: ${analysis.lineCount}`)
+
+  console.log('\nContent preview:')
+  console.log('-'.repeat(40))
+  console.log(analysis.preview)
+  console.log('-'.repeat(40))
+
+  if (analysis.template) {
+    console.log('\nTemplate content:')
+    console.log('-'.repeat(40))
+    console.log(analysis.template)
+    console.log('-'.repeat(40))
+  }
+
+  if (analysis.jsonStructure) {
+    console.log('\nJSON structure:')
+    console.log('-'.repeat(40))
+    console.log(JSON.stringify(analysis.jsonStructure, null, 2))
+    console.log('-'.repeat(40))
+  }
+
+  if (analysis.functions?.length) {
+    console.log('\nFunctions found:')
+    console.log('-'.repeat(40))
+    analysis.functions.forEach(func => console.log(func))
+    console.log('-'.repeat(40))
+  }
+
+  if (analysis.imports?.length) {
+    console.log('\nImports:')
+    console.log('-'.repeat(40))
+    analysis.imports.forEach(imp => console.log(imp))
+    console.log('-'.repeat(40))
+  }
+}
+
+/**
+ * Main function to execute the analysis
+ */
+async function main (): Promise<void> {
   // Get file path from command line args
   const args = process.argv.slice(2)
 
@@ -98,19 +129,28 @@ File Content Analyzer
 Usage:
   npx ts-node src/demo/analyze-file-content.ts <path-to-file>
 
-Examples:
-  npx ts-node src/demo/analyze-file-content.ts src/search-vectors.ts
-  npx ts-node src/demo/analyze-file-content.ts src/snippets/v-card/basic.vue
-  npx ts-node src/demo/analyze-file-content.ts src/snippets/v-card/basic.meta.json
+Options:
+  --help, -h  Show this help message
+
+Example:
+  npx ts-node src/demo/analyze-file-content.ts src/index.ts
     `)
     process.exit(0)
   }
 
   const filePath = args[0]
-  await analyzeFile(filePath)
+  const analysis = await analyzeFile(filePath)
+
+  if (analysis) {
+    displayAnalysis(filePath, analysis)
+  }
 }
 
-main().catch(error => {
-  console.error('Unhandled error:', error)
-  process.exit(1)
-})
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    console.error('Unhandled error in file analysis:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
+    process.exit(1)
+  })
+}

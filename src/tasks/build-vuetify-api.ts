@@ -12,7 +12,7 @@ const API_OUTPUT_DIR = path.join(__dirname, '..', '..', 'vuetify-api')
 /**
  * Clones the Vuetify repository if it doesn't exist already
  */
-function cloneVuetifyRepo () {
+function cloneVuetifyRepo (): void {
   console.log('Checking if Vuetify repository exists...')
 
   if (!fs.existsSync(VUETIFY_DIR)) {
@@ -29,7 +29,7 @@ function cloneVuetifyRepo () {
 /**
  * Installs dependencies for the Vuetify project
  */
-function installDependencies () {
+function installDependencies (): void {
   console.log('Installing Vuetify dependencies...')
   execSync(`cd ${VUETIFY_DIR} && pnpm install`, { stdio: 'inherit' })
   console.log('Dependencies installed successfully.')
@@ -38,7 +38,7 @@ function installDependencies () {
 /**
  * Builds Vuetify and generates API documentation
  */
-function buildVuetifyAndApi () {
+function buildVuetifyAndApi (): void {
   console.log('Building Vuetify...')
   execSync(`cd ${VUETIFY_DIR} && pnpm run build vuetify`, { stdio: 'inherit' })
   console.log('Vuetify built successfully.')
@@ -58,7 +58,7 @@ function buildVuetifyAndApi () {
 /**
  * Extracts and saves the generated API files
  */
-function extractApiFiles () {
+function extractApiFiles (): void {
   const apiSourceDir = path.join(VUETIFY_DIR, 'packages', 'api-generator', 'dist')
 
   if (!fs.existsSync(apiSourceDir)) {
@@ -79,7 +79,7 @@ function extractApiFiles () {
 /**
  * Main function to execute the entire process
  */
-async function main () {
+async function main (): Promise<void> {
   try {
     console.log('Starting Vuetify API build process...')
 
@@ -89,14 +89,21 @@ async function main () {
     extractApiFiles()
 
     console.log('Vuetify API build process completed successfully!')
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Error during Vuetify API build process:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
     process.exit(1)
   }
 }
 
 if (require.main === module) {
-  main()
+  main().catch((error: unknown) => {
+    console.error('Unhandled error in Vuetify API build process:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
+    process.exit(1)
+  })
 }
 
 export { cloneVuetifyRepo, installDependencies, buildVuetifyAndApi, extractApiFiles, main as buildVuetifyApi }

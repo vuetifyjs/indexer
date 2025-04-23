@@ -4,12 +4,13 @@ import {
   loadVuetifyApiData,
   findComponentsByName,
   getComponentApiData,
-  summarizeComponent
+  summarizeComponent,
 } from '../utils/vuetify-api-processor'
 
 /**
  * Simple demo script to explore the Vuetify API data
  */
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function exploreVuetifyApi () {
   try {
     // Ensure the API directory exists

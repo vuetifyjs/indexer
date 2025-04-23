@@ -1,11 +1,18 @@
 import _fs from 'fs/promises'
 import path from 'path'
-import { embed } from '../utils/openai'
-import { hashContent } from '../utils/hash'
-import { upsertVector } from '../utils/pinecone'
-import { readSnippet, ensureCacheFile, updateCache } from '../utils/file-processor'
+import { embed } from '../utils/openai.js'
+import { hashContent } from '../utils/hash.js'
+import { upsertVector } from '../utils/pinecone.js'
+import { readSnippet, ensureCacheFile, updateCache } from '../utils/file-processor.js'
+import type { RecordMetadata } from '@pinecone-database/pinecone'
 
 const CACHE_FILE = './embedding-cache.json'
+
+interface EmbedAndSyncResult {
+  id: string
+  status: 'unchanged' | 'updated' | 'failed'
+  message: string
+}
 
 /**
  * Embeds and syncs a single Vue component snippet
@@ -13,11 +20,7 @@ const CACHE_FILE = './embedding-cache.json'
  * @param snippetPath Path to the Vue snippet file
  * @returns Information about the operation performed
  */
-export async function embedAndSync (snippetPath: string): Promise<{
-  id: string,
-  status: 'unchanged' | 'updated' | 'failed',
-  message: string
-}> {
+export async function embedAndSync (snippetPath: string): Promise<EmbedAndSyncResult> {
   try {
     // Read the snippet and metadata
     const snippet = await readSnippet(snippetPath)
@@ -34,7 +37,7 @@ export async function embedAndSync (snippetPath: string): Promise<{
       return {
         id,
         status: 'unchanged',
-        message: `No changes detected for snippet: ${id}`
+        message: `No changes detected for snippet: ${id}`,
       }
     }
 
@@ -48,8 +51,8 @@ export async function embedAndSync (snippetPath: string): Promise<{
       {
         ...metadata,
         hash,
-        updatedAt: new Date().toISOString()
-      }
+        updatedAt: new Date().toISOString(),
+      } as RecordMetadata,
     )
 
     // Update the cache with the new hash
@@ -58,14 +61,15 @@ export async function embedAndSync (snippetPath: string): Promise<{
     return {
       id,
       status: 'updated',
-      message: `Successfully updated snippet: ${id}`
+      message: `Successfully updated snippet: ${id}`,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(`Error processing snippet ${snippetPath}:`, error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return {
       id: path.basename(snippetPath, '.vue'),
       status: 'failed',
-      message: `Failed to process: ${error?.message || 'Unknown error'}`
+      message: `Failed to process: ${errorMessage}`,
     }
   }
 }

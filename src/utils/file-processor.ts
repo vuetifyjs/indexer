@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import _path from 'path'
 import { glob } from 'glob'
+import type { RecordMetadata } from '@pinecone-database/pinecone'
 
 /**
  * Interface representing a Vue snippet with its metadata
@@ -9,14 +10,13 @@ export interface VueSnippet {
   id: string
   path: string
   content: string
-  metadata: {
+  metadata: RecordMetadata & {
     id: string
     component: string
     tags: string[]
     title: string
     description: string
     category: string
-    [key: string]: any
   }
 }
 
@@ -29,9 +29,10 @@ export interface VueSnippet {
 export async function getSnippetFiles (snippetsDir: string = 'src/snippets'): Promise<string[]> {
   try {
     return await glob(`${snippetsDir}/**/*.vue`)
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error finding snippet files:', error)
-    throw new Error(`Failed to get snippet files: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to get snippet files: ${errorMessage}`)
   }
 }
 
@@ -49,17 +50,18 @@ export async function readSnippet (snippetPath: string): Promise<VueSnippet> {
     // Get the associated metadata file
     const metaPath = snippetPath.replace('.vue', '.meta.json')
     const metadataRaw = await fs.readFile(metaPath, 'utf8')
-    const metadata = JSON.parse(metadataRaw)
+    const metadata = JSON.parse(metadataRaw) as VueSnippet['metadata']
 
     return {
       id: metadata.id,
       path: snippetPath,
       content,
-      metadata
+      metadata,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(`Error reading snippet ${snippetPath}:`, error)
-    throw new Error(`Failed to read snippet: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to read snippet: ${errorMessage}`)
   }
 }
 
@@ -73,15 +75,18 @@ export async function ensureCacheFile (cachePath: string): Promise<Record<string
   try {
     try {
       const cacheContent = await fs.readFile(cachePath, 'utf8')
-      return JSON.parse(cacheContent)
-    } catch (error) {
+      return JSON.parse(cacheContent) as Record<string, string>
+    } catch (error: unknown) {
       // Create an empty cache file if it doesn't exist
-      const emptyCache = {}
+      console.warn(error)
+      const emptyCache: Record<string, string> = {}
       await fs.writeFile(cachePath, JSON.stringify(emptyCache, null, 2), 'utf8')
       return emptyCache
     }
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Error with cache file:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
     // Return empty cache object if there's any issue
     return {}
   }
@@ -99,8 +104,9 @@ export async function updateCache (cachePath: string, snippetPath: string, hash:
     const cache = await ensureCacheFile(cachePath)
     cache[snippetPath] = hash
     await fs.writeFile(cachePath, JSON.stringify(cache, null, 2), 'utf8')
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error updating cache:', error)
-    throw new Error(`Failed to update cache: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to update cache: ${errorMessage}`)
   }
 }

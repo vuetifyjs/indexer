@@ -1,10 +1,25 @@
 import _fs from 'fs/promises'
-import { getSnippetFiles, readSnippet, ensureCacheFile, updateCache, VueSnippet } from '../utils/file-processor'
-import { hashContent } from '../utils/hash'
-import { batchProcessSnippets } from '../utils/batch-processor'
-import { embedAndSync } from './embed-and-sync'
+import type { VueSnippet } from '../utils/file-processor.js'
+import { getSnippetFiles, readSnippet, ensureCacheFile, updateCache } from '../utils/file-processor.js'
+import { hashContent } from '../utils/hash.js'
+import { batchProcessSnippets } from '../utils/batch-processor.js'
+import { embedAndSync } from './embed-and-sync.js'
 
 const CACHE_FILE = './embedding-cache.json'
+
+interface ProcessingResult {
+  id: string
+  status: string
+  message: string
+}
+
+interface ProcessingStats {
+  total: number
+  updated: number
+  unchanged: number
+  failed: number
+  results: ProcessingResult[]
+}
 
 /**
  * Processes all Vue component snippets in the project
@@ -16,14 +31,8 @@ const CACHE_FILE = './embedding-cache.json'
  */
 export async function embedAll (
   snippetsDir: string = 'src/snippets',
-  useBatchProcessing: boolean = true
-): Promise<{
-  total: number,
-  updated: number,
-  unchanged: number,
-  failed: number,
-  results: Array<{ id: string, status: string, message: string }>
-}> {
+  useBatchProcessing: boolean = true,
+): Promise<ProcessingStats> {
   try {
     // Get all snippet files
     const snippetFiles = await getSnippetFiles(snippetsDir)
@@ -64,15 +73,17 @@ export async function embedAll (
           snippetHashes.set(snippetPath, hash)
           snippetsWithMetadata.push(snippet)
         }
-      } catch (error: any) {
+      } catch (error: unknown) {
         console.error(`Error reading snippet ${snippetPath}:`, error)
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+        console.error('Error details:', errorMessage)
       }
     }
 
     // Process all snippets in batch
     const { results, unchanged } = await batchProcessSnippets(
       snippetsWithMetadata,
-      snippetHashes
+      snippetHashes,
     )
 
     // Update cache for all processed snippets
@@ -86,26 +97,27 @@ export async function embedAll (
       ...unchanged.map(id => ({
         id,
         status: 'unchanged' as const,
-        message: `No changes detected for snippet: ${id}`
-      }))
+        message: `No changes detected for snippet: ${id}`,
+      })),
     ]
 
     // Compile stats
-    const stats = {
+    const stats: ProcessingStats = {
       total: finalResults.length,
       updated: finalResults.filter(r => r.status === 'updated').length,
       unchanged: finalResults.filter(r => r.status === 'unchanged').length,
       failed: finalResults.filter(r => r.status === 'failed').length,
-      results: finalResults
+      results: finalResults,
     }
 
     console.log('Embedding process completed:')
     console.log(`Total: ${stats.total}, Updated: ${stats.updated}, Unchanged: ${stats.unchanged}, Failed: ${stats.failed}`)
 
     return stats
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in embedAll process:', error)
-    throw new Error(`Failed to process all snippets: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to process all snippets: ${errorMessage}`)
   }
 }
 
@@ -115,28 +127,22 @@ export async function embedAll (
  * @param snippetFiles Array of snippet file paths
  * @returns Results in the same format as embedAll
  */
-async function processSeparately (snippetFiles: string[]): Promise<{
-  total: number,
-  updated: number,
-  unchanged: number,
-  failed: number,
-  results: Array<{ id: string, status: string, message: string }>
-}> {
+async function processSeparately (snippetFiles: string[]): Promise<ProcessingStats> {
   // Process each snippet
   const results = await Promise.all(
     snippetFiles.map(async (snippetPath) => {
       console.log(`Processing snippet individually: ${snippetPath}`)
       return await embedAndSync(snippetPath)
-    })
+    }),
   )
 
   // Compile stats
-  const stats = {
+  const stats: ProcessingStats = {
     total: results.length,
     updated: results.filter(r => r.status === 'updated').length,
     unchanged: results.filter(r => r.status === 'unchanged').length,
     failed: results.filter(r => r.status === 'failed').length,
-    results
+    results,
   }
 
   console.log('Individual processing completed:')

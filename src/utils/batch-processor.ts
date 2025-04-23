@@ -1,6 +1,7 @@
-import { embed } from './openai'
-import { batchUpsertVectors as pineconeUpsertBatch } from './pinecone'
-import { VueSnippet } from './file-processor'
+import { embed } from './openai.js'
+import { batchUpsertVectors as pineconeUpsertBatch } from './pinecone.js'
+import type { VueSnippet } from './file-processor.js'
+import type { RecordMetadata } from '@pinecone-database/pinecone'
 
 /**
  * Maximum number of items to process in a single batch
@@ -36,11 +37,12 @@ export async function batchEmbeddings (snippets: string[]): Promise<number[][]> 
         batch.map(async (content) => {
           try {
             return await embed(content) // Get dense embeddings
-          } catch (error: any) {
+          } catch (error: unknown) {
             console.error('Error generating embedding:', error)
-            throw error
+            const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+            throw new Error(`Failed to generate embedding: ${errorMessage}`)
           }
-        })
+        }),
       )
 
       embeddings.push(...batchResults)
@@ -50,9 +52,10 @@ export async function batchEmbeddings (snippets: string[]): Promise<number[][]> 
     }
 
     return embeddings
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in batch embedding:', error)
-    throw new Error(`Failed to process batch embeddings: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to process batch embeddings: ${errorMessage}`)
   }
 }
 
@@ -60,9 +63,9 @@ export async function batchEmbeddings (snippets: string[]): Promise<number[][]> 
  * Enhanced item interface for upsert operations
  */
 export interface UpsertItem {
-  id: string;
-  vector: number[];
-  metadata: Record<string, any>;
+  id: string
+  vector: number[]
+  metadata: RecordMetadata
 }
 
 /**
@@ -82,7 +85,7 @@ export async function batchUpsertVectors (items: UpsertItem[]): Promise<BatchRes
       return {
         id,
         values: vector,
-        metadata
+        metadata,
       }
     })
 
@@ -93,16 +96,17 @@ export async function batchUpsertVectors (items: UpsertItem[]): Promise<BatchRes
     return items.map(({ id }) => ({
       id,
       status: 'updated' as const,
-      message: `Successfully updated snippet: ${id}`
+      message: `Successfully updated snippet: ${id}`,
     }))
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in batch upsert:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
 
     // If the entire batch fails, return failed for all items
     return items.map(({ id }) => ({
       id,
       status: 'failed' as const,
-      message: `Failed to upsert in batch: ${error?.message || 'Unknown error'}`
+      message: `Failed to upsert in batch: ${errorMessage}`,
     }))
   }
 }
@@ -116,9 +120,9 @@ export async function batchUpsertVectors (items: UpsertItem[]): Promise<BatchRes
  */
 export async function batchProcessSnippets (
   snippets: VueSnippet[],
-  snippetHashes: Map<string, string>
+  snippetHashes: Map<string, string>,
 ): Promise<{
-  results: BatchResult[],
+  results: BatchResult[]
   unchanged: string[]
 }> {
   try {
@@ -130,14 +134,14 @@ export async function batchProcessSnippets (
 
     // Get changed/new snippets
     const changedSnippets = snippets.filter(snippet =>
-      !unchangedSnippets.includes(snippet)
+      !unchangedSnippets.includes(snippet),
     )
 
     // If no snippets have changed, return early
     if (changedSnippets.length === 0) {
       return {
         results: [],
-        unchanged: unchangedSnippets.map(s => s.id)
+        unchanged: unchangedSnippets.map(s => s.id),
       }
     }
 
@@ -159,8 +163,8 @@ export async function batchProcessSnippets (
           hash: snippetHashes.get(snippet.path),
           updatedAt: new Date().toISOString(),
           content: snippet.content, // Store the content for reference
-          path: snippet.path // Store the path for reference
-        }
+          path: snippet.path, // Store the path for reference
+        } as RecordMetadata,
       }
     })
 
@@ -169,10 +173,11 @@ export async function batchProcessSnippets (
 
     return {
       results,
-      unchanged: unchangedSnippets.map(s => s.id)
+      unchanged: unchangedSnippets.map(s => s.id),
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in batch processing:', error)
-    throw new Error(`Failed to process snippets in batch: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to process snippets in batch: ${errorMessage}`)
   }
 }

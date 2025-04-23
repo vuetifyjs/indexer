@@ -1,8 +1,33 @@
 import { OpenAI } from 'openai'
 import fs from 'fs/promises'
 
+interface VueMetadata {
+  id: string
+  component: string
+  tags: string[]
+  title: string
+  description: string
+  category: string
+  [key: string]: unknown
+}
+
+interface AnalysisResult {
+  id: string
+  analysis: {
+    'Component overview': string
+    'Props used': string[]
+    'Events emitted': string[]
+    'Usage examples': string[]
+    'Improvement suggestions': string[]
+  }
+}
+
 // Initialize the OpenAI client with API key from environment
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! })
+const apiKey = process.env.OPENAI_API_KEY
+if (!apiKey) {
+  throw new Error('OPENAI_API_KEY environment variable is not set')
+}
+const openai = new OpenAI({ apiKey })
 
 /**
  * Analyzes a Vue snippet using OpenAI's GPT-4o model
@@ -10,7 +35,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! })
  * @param snippetPath Path to the Vue snippet file
  * @returns Analysis of the snippet including component details, usage suggestions, and potential improvements
  */
-async function analyzeVueSnippet (snippetPath: string) {
+async function analyzeVueSnippet (snippetPath: string): Promise<AnalysisResult> {
   try {
     // Read the snippet file
     const content = await fs.readFile(snippetPath, 'utf8')
@@ -18,7 +43,7 @@ async function analyzeVueSnippet (snippetPath: string) {
     // Get the associated metadata file
     const metaPath = snippetPath.replace('.vue', '.meta.json')
     const metadataRaw = await fs.readFile(metaPath, 'utf8')
-    const metadata = JSON.parse(metadataRaw)
+    const metadata = JSON.parse(metadataRaw) as VueMetadata
 
     // Create the prompt for GPT-4o
     const prompt = `
@@ -47,9 +72,9 @@ Please provide the following analysis in JSON format:
       model: 'gpt-4o', // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
       messages: [
         { role: 'system', content: 'You are a Vue.js expert specialized in analyzing component structure and providing helpful insights.' },
-        { role: 'user', content: prompt }
+        { role: 'user', content: prompt },
       ],
-      response_format: { type: 'json_object' }
+      response_format: { type: 'json_object' },
     })
 
     // Parse and return the analysis
@@ -57,21 +82,22 @@ Please provide the following analysis in JSON format:
     if (!messageContent) {
       throw new Error('No content received from OpenAI API')
     }
-    const analysis = JSON.parse(messageContent)
+    const analysis = JSON.parse(messageContent) as AnalysisResult['analysis']
     return {
       id: metadata.id,
-      analysis
+      analysis,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error analyzing snippet:', error)
-    throw new Error(`Failed to analyze snippet: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to analyze snippet: ${errorMessage}`)
   }
 }
 
 /**
  * Main function to run the analysis
  */
-async function main () {
+async function main (): Promise<void> {
   // Check for required environment variables
   if (!process.env.OPENAI_API_KEY) {
     console.error('Error: OPENAI_API_KEY environment variable is required')
@@ -108,15 +134,20 @@ Examples:
 
     console.log('\nAnalysis Result:')
     console.log(JSON.stringify(result, null, 2))
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error:', error)
-    console.error('Error message:', error?.message || 'Unknown error')
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error message:', errorMessage)
     process.exit(1)
   }
 }
 
 // Run the main function
-main().catch(err => {
-  console.error('Unhandled error:', err)
-  process.exit(1)
-})
+if (require.main === module) {
+  main().catch((error: unknown) => {
+    console.error('Unhandled error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error details:', errorMessage)
+    process.exit(1)
+  })
+}

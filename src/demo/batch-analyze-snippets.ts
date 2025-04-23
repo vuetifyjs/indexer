@@ -1,11 +1,20 @@
 import { OpenAI } from 'openai'
-import { getSnippetFiles, readSnippet } from '../utils/file-processor'
+import { getSnippetFiles, readSnippet, type VueSnippet } from '../utils/file-processor.js'
 
 // Initialize the OpenAI client with API key from environment
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! })
+const apiKey = process.env.OPENAI_API_KEY
+if (!apiKey) {
+  throw new Error('OPENAI_API_KEY environment variable is not set')
+}
+const openai = new OpenAI({ apiKey })
 
 // Maximum number of snippets to process in a single batch request
 const MAX_SNIPPETS_PER_BATCH = 5
+
+interface Snippet {
+  id: string
+  content: VueSnippet
+}
 
 /**
  * Summarize multiple Vue snippets into a concise report
@@ -19,18 +28,22 @@ async function batchAnalyzeSnippets (snippetPaths: string[]) {
 
     // Read all snippets
     const snippets = await Promise.all(
-      snippetPaths.map(async (path) => {
-        return await readSnippet(path)
-      })
+      snippetPaths.map(async (path: string) => {
+        const content = await readSnippet(path)
+        return {
+          id: path,
+          content,
+        }
+      }),
     )
 
     // Prepare snippets for analysis
     const snippetData = snippets.map(snippet => ({
       id: snippet.id,
-      component: snippet.metadata.component,
-      title: snippet.metadata.title,
-      content: snippet.content,
-      tags: snippet.metadata.tags
+      component: snippet.content.metadata.component,
+      title: snippet.content.metadata.title,
+      content: snippet.content.content,
+      tags: snippet.content.metadata.tags,
     }))
 
     // Create the prompt for GPT-4o
@@ -61,14 +74,14 @@ Based on these snippets, provide a comprehensive analysis in JSON format with th
       messages: [
         {
           role: 'system',
-          content: 'You are a Vue.js expert specialized in analyzing component libraries and providing architectural insights.'
+          content: 'You are a Vue.js expert specialized in analyzing component libraries and providing architectural insights.',
         },
         {
           role: 'user',
-          content: prompt
-        }
+          content: prompt,
+        },
       ],
-      response_format: { type: 'json_object' }
+      response_format: { type: 'json_object' },
     })
 
     // Parse and return the analysis
@@ -81,12 +94,13 @@ Based on these snippets, provide a comprehensive analysis in JSON format with th
 
     return {
       snippetCount: snippets.length,
-      snippetIds: snippets.map(s => s.id),
-      analysis
+      snippetIds: snippets.map((s: Snippet) => s.id),
+      analysis,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error analyzing snippets in batch:', error)
-    throw new Error(`Failed to analyze snippets in batch: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to analyze snippets in batch: ${errorMessage}`)
   }
 }
 
@@ -193,9 +207,10 @@ Examples:
     })
 
     console.log('\nBatch analysis complete!')
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error:', error)
-    console.error('Error message:', error?.message || 'Unknown error')
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error message:', errorMessage)
     process.exit(1)
   }
 }

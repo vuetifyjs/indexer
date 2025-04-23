@@ -1,4 +1,15 @@
-import { batchDeleteVectors, deleteVector } from '../utils/pinecone'
+import { batchDeleteVectors, deleteVector } from '../utils/pinecone.js'
+
+interface DeleteResult {
+  status: 'success' | 'failed'
+  message: string
+}
+
+interface BatchDeleteResult {
+  total: number
+  status: 'success' | 'partial' | 'failed'
+  message: string
+}
 
 /**
  * Deletes a single vector from Pinecone by ID
@@ -6,22 +17,20 @@ import { batchDeleteVectors, deleteVector } from '../utils/pinecone'
  * @param id The unique identifier for the vector to delete
  * @returns Information about the operation performed
  */
-export async function deleteById (id: string): Promise<{
-  status: 'success' | 'failed',
-  message: string
-}> {
+export async function deleteById (id: string): Promise<DeleteResult> {
   try {
     console.log(`Deleting vector with ID: ${id}`)
     await deleteVector(id)
     return {
       status: 'success',
-      message: `Successfully deleted snippet: ${id}`
+      message: `Successfully deleted snippet: ${id}`,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error(`Error deleting vector ${id}:`, error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return {
       status: 'failed',
-      message: `Failed to delete: ${error?.message || 'Unknown error'}`
+      message: `Failed to delete: ${errorMessage}`,
     }
   }
 }
@@ -32,17 +41,13 @@ export async function deleteById (id: string): Promise<{
  * @param ids Array of vector IDs to delete
  * @returns Information about the operation performed
  */
-export async function batchDelete (ids: string[]): Promise<{
-  total: number,
-  status: 'success' | 'partial' | 'failed',
-  message: string
-}> {
+export async function batchDelete (ids: string[]): Promise<BatchDeleteResult> {
   try {
     if (ids.length === 0) {
       return {
         total: 0,
         status: 'success',
-        message: 'No vectors to delete'
+        message: 'No vectors to delete',
       }
     }
 
@@ -53,14 +58,15 @@ export async function batchDelete (ids: string[]): Promise<{
     return {
       total: ids.length,
       status: 'success',
-      message: `Successfully deleted ${ids.length} vectors`
+      message: `Successfully deleted ${ids.length} vectors`,
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in batch delete:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return {
       total: ids.length,
       status: 'failed',
-      message: `Failed to delete vectors: ${error?.message || 'Unknown error'}`
+      message: `Failed to delete vectors: ${errorMessage}`,
     }
   }
 }

@@ -1,7 +1,11 @@
 import { OpenAI } from 'openai'
 
+if (!process.env.OPENAI_API_KEY) {
+  throw new Error('OPENAI_API_KEY environment variable is required')
+}
+
 // Initialize the OpenAI client with API key from environment
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! })
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
 /**
  * Generates a dense embedding vector for the provided text
@@ -14,13 +18,14 @@ export async function embed (text: string): Promise<number[]> {
     const res = await openai.embeddings.create({
       model: 'text-embedding-3-small',
       input: text,
-      encoding_format: 'float'
+      encoding_format: 'float',
     })
 
     return res.data[0].embedding
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error generating embedding:', error)
-    throw new Error(`Failed to generate embedding: ${error?.message || 'Unknown error'}`)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    throw new Error(`Failed to generate embedding: ${errorMessage}`)
   }
 }
 

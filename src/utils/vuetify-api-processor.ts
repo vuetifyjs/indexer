@@ -63,14 +63,15 @@ export function loadVuetifyApiData (): Record<string, VuetifyComponent> {
     const content = fs.readFileSync(filePath, 'utf-8')
 
     try {
-      const data = JSON.parse(content)
+      const data = JSON.parse(content) as VuetifyComponent
 
       // Skip non-component files
       if (!data.name) continue
 
       componentData[data.name] = data
-    } catch (error) {
-      console.warn(`Failed to parse ${file}: ${error}`)
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+      console.warn(`Failed to parse ${file}: ${errorMessage}`)
     }
   }
 

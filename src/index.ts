@@ -1,11 +1,11 @@
 import 'dotenv/config'
-import { embedAll } from './tasks/embed-all'
-import { embedAndSync } from './tasks/embed-and-sync'
+import { embedAll } from './tasks/embed-all.js'
+import { embedAndSync } from './tasks/embed-and-sync.js'
 
 /**
  * Main entry point for the application
  */
-async function main () {
+async function main (): Promise<void> {
   // Check for required environment variables
   if (!process.env.OPENAI_API_KEY) {
     console.error('Error: OPENAI_API_KEY environment variable is required')
@@ -59,14 +59,15 @@ async function main () {
 
       if (verbose && results.results.length > 0) {
         console.log('\nDetailed results:')
-        results.results.forEach(result => {
+        results.results.forEach((result: { id: string; status: string; message: string }) => {
           console.log(`- ${result.id}: ${result.status} - ${result.message}`)
         })
       }
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in main process:', error)
-    console.error('Error message:', error?.message || 'Unknown error')
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Error message:', errorMessage)
     process.exit(1)
   }
 }
@@ -74,7 +75,7 @@ async function main () {
 /**
  * Displays usage information
  */
-function showHelp () {
+function showHelp (): void {
   console.log(`
 Vue Snippets Embedder - Process and index Vue component snippets to Pinecone
 
@@ -102,8 +103,9 @@ if (process.argv.includes('--help') || process.argv.includes('-h')) {
 }
 
 // Run the main function
-main().catch((err: any) => {
-  console.error('Unhandled error:', err)
-  console.error('Error message:', err?.message || 'Unknown error')
+main().catch((error: unknown) => {
+  console.error('Unhandled error:', error)
+  const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+  console.error('Error message:', errorMessage)
   process.exit(1)
 })
