@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename)
 const VUETIFY_DIR = path.join(__dirname, '..', '..', 'vuetify-clone')
 const EXAMPLES_DIR = path.join(VUETIFY_DIR, 'packages', 'docs', 'src', 'examples')
 const CACHE_FILE = './vuetify-examples-cache.json'
-const MAX_EXAMPLES = 10 // Limit for test run
+const MAX_EXAMPLES = 1 // Limit for test run
 
 /**
  * Processes a single Vue example file and creates metadata for it
@@ -86,7 +86,7 @@ async function processVuetifyExamples (): Promise<void> {
     cleanup: true,
     installDeps: true,
     shallowClone: true,
-    silent: true // Add silent option to prevent duplicate spinners
+    silent: true
   })
 
   try {
@@ -101,9 +101,6 @@ async function processVuetifyExamples (): Promise<void> {
     const limitedExampleFiles = exampleFiles.slice(0, MAX_EXAMPLES)
     spinner.text = `Processing ${limitedExampleFiles.length} examples...`
 
-    // Ensure cache file exists
-    await ensureCacheFile(CACHE_FILE)
-
     // Process each example
     for (const exampleFile of limitedExampleFiles) {
       const fullPath = path.join(EXAMPLES_DIR, exampleFile)
@@ -114,7 +111,7 @@ async function processVuetifyExamples (): Promise<void> {
     spinner.text = 'Creating embeds for examples...'
     const results = await embedAll('src/snippets/vuetify-examples')
 
-    spinner.succeed(`Processed ${results.total} examples: ${results.updated} updated, ${results.unchanged} unchanged, ${results.failed} failed`)
+    spinner.succeed(`Processed ${results.total} examples: ${results.updated} updated, ${results.failed} failed, ${results.unchanged} unchanged`)
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     spinner.fail(`Error during Vuetify examples processing: ${errorMessage}`)

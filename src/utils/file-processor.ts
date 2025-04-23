@@ -1,7 +1,8 @@
 import fs from 'fs/promises'
-import _path from 'path'
+import upath from 'upath'
 import { glob } from 'glob'
 import type { RecordMetadata } from '@pinecone-database/pinecone'
+import path from 'path'
 
 /**
  * Interface representing a Vue snippet with its metadata
@@ -28,7 +29,18 @@ export interface VueSnippet {
  */
 export async function getSnippetFiles (snippetsDir: string = 'src/snippets'): Promise<string[]> {
   try {
-    return await glob(`${snippetsDir}/**/*.vue`)
+    // Resolve the path relative to the project root
+    const resolvedDir = upath.resolve(process.cwd(), snippetsDir)
+    const pattern = upath.join(resolvedDir, '**', '*.vue')
+    const files = await glob(pattern)
+    if (files.length === 0) {
+      try {
+        await fs.readdir(resolvedDir)
+      } catch (err) {
+        console.error('Directory does not exist:', resolvedDir)
+      }
+    }
+    return files
   } catch (error: unknown) {
     console.error('Error finding snippet files:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
@@ -93,6 +105,20 @@ export async function ensureCacheFile (cachePath: string): Promise<Record<string
 }
 
 /**
+ * Normalizes a file path to use consistent format
+ * @param filePath The path to normalize
+ * @returns The normalized path
+ */
+export function normalizePath(filePath: string): string {
+  // Convert to relative path if it's absolute
+  if (filePath.startsWith('/')) {
+    const workspaceRoot = process.cwd()
+    return path.relative(workspaceRoot, filePath)
+  }
+  return filePath
+}
+
+/**
  * Updates the cache with a new hash for a snippet
  *
  * @param cachePath Path to the cache file
@@ -102,7 +128,8 @@ export async function ensureCacheFile (cachePath: string): Promise<Record<string
 export async function updateCache (cachePath: string, snippetPath: string, hash: string): Promise<void> {
   try {
     const cache = await ensureCacheFile(cachePath)
-    cache[snippetPath] = hash
+    const normalizedPath = normalizePath(snippetPath)
+    cache[normalizedPath] = hash
     await fs.writeFile(cachePath, JSON.stringify(cache, null, 2), 'utf8')
   } catch (error: unknown) {
     console.error('Error updating cache:', error)

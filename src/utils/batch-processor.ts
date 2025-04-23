@@ -2,6 +2,7 @@ import { embed } from './openai.js'
 import { upsertVectors as pineconeUpsertBatch } from './pinecone.js'
 import type { VueSnippet } from './file-processor.js'
 import type { RecordMetadata } from '@pinecone-database/pinecone'
+import { ensureCacheFile, updateCache, normalizePath } from './file-processor.js'
 
 /**
  * Maximum number of items to process in a single batch
@@ -13,7 +14,7 @@ const MAX_BATCH_SIZE = 10
  */
 export interface BatchResult {
   id: string
-  status: 'updated' | 'failed'
+  status: 'updated' | 'failed' | 'unchanged'
   message: string
 }
 
@@ -46,9 +47,6 @@ export async function batchEmbeddings (snippets: string[]): Promise<number[][]> 
       )
 
       embeddings.push(...batchResults)
-
-      // Log progress
-      console.log(`Processed embeddings batch ${Math.floor(i / MAX_BATCH_SIZE) + 1}/${Math.ceil(snippets.length / MAX_BATCH_SIZE)}`)
     }
 
     return embeddings
@@ -123,57 +121,73 @@ export async function batchProcessSnippets (
   snippetHashes: Map<string, string>,
 ): Promise<{
   results: BatchResult[]
-  unchanged: string[]
 }> {
   try {
-    // Get unchanged snippets
-    const unchangedSnippets = snippets.filter(snippet => {
-      const cachedHash = snippetHashes.get(snippet.path)
-      return cachedHash // Has a hash in the map
-    })
+    // Check cache for unchanged snippets
+    const cache = await ensureCacheFile('./embedding-cache.json')
+    const unchangedSnippets = new Set<string>()
+    const snippetsToProcess: VueSnippet[] = []
+    const hashesToProcess = new Map<string, string>()
 
-    // Get changed/new snippets
-    const changedSnippets = snippets.filter(snippet =>
-      !unchangedSnippets.includes(snippet),
-    )
+    for (const snippet of snippets) {
+      const normalizedPath = normalizePath(snippet.path)
+      const cachedHash = cache[normalizedPath]
+      const currentHash = snippetHashes.get(snippet.path)
 
-    // If no snippets have changed, return early
-    if (changedSnippets.length === 0) {
-      return {
-        results: [],
-        unchanged: unchangedSnippets.map(s => s.id),
+      if (cachedHash === currentHash) {
+        unchangedSnippets.add(snippet.id)
+      } else if (currentHash) {
+        snippetsToProcess.push(snippet)
+        hashesToProcess.set(snippet.path, currentHash)
       }
     }
 
-    console.log(`Processing ${changedSnippets.length} changed snippets in batches`)
+    // Process only changed snippets
+    const results: BatchResult[] = []
 
-    // Extract content for embedding
-    const contents = changedSnippets.map(s => s.content)
+    // Add unchanged results
+    for (const id of unchangedSnippets) {
+      results.push({
+        id,
+        status: 'unchanged',
+        message: `Snippet unchanged: ${id}`,
+      })
+    }
 
-    // Generate embeddings in batch
-    const embeddings = await batchEmbeddings(contents)
+    if (snippetsToProcess.length > 0) {
+      // Extract content for embedding
+      const contents = snippetsToProcess.map(s => s.content)
 
-    // Prepare items for batch upsert
-    const upsertItems = changedSnippets.map((snippet, index) => {
-      return {
-        id: snippet.id,
-        vector: embeddings[index],
-        metadata: {
-          ...snippet.metadata,
-          hash: snippetHashes.get(snippet.path),
-          updatedAt: new Date().toISOString(),
-          content: snippet.content, // Store the content for reference
-          path: snippet.path, // Store the path for reference
-        } as RecordMetadata,
+      // Generate embeddings in batch
+      const embeddings = await batchEmbeddings(contents)
+
+      // Prepare items for batch upsert
+      const upsertItems = snippetsToProcess.map((snippet, index) => {
+        return {
+          id: snippet.id,
+          vector: embeddings[index],
+          metadata: {
+            ...snippet.metadata,
+            hash: hashesToProcess.get(snippet.path),
+            updatedAt: new Date().toISOString(),
+            content: snippet.content,
+            path: snippet.path,
+          } as RecordMetadata,
+        }
+      })
+
+      // Perform batch upsert
+      const upsertResults = await batchUpsertVectors(upsertItems)
+      results.push(...upsertResults)
+
+      // Update cache for processed snippets
+      for (const [path, hash] of hashesToProcess.entries()) {
+        await updateCache('./embedding-cache.json', path, hash)
       }
-    })
-
-    // Perform batch upsert - using the optimized version
-    const results = await batchUpsertVectors(upsertItems)
+    }
 
     return {
       results,
-      unchanged: unchangedSnippets.map(s => s.id),
     }
   } catch (error: unknown) {
     console.error('Error in batch processing:', error)

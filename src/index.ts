@@ -17,6 +17,11 @@ async function main (): Promise<void> {
     process.exit(1)
   }
 
+  if (!process.env.PINECONE_INDEX) {
+    console.error('Error: PINECONE_INDEX environment variable is required')
+    process.exit(1)
+  }
+
   try {
     // Parse command line arguments
     const args = process.argv.slice(2)

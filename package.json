@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "tsx --env-file=.env watch src/index.ts",
+    "dev": "tsx --env-file=.env --watch src/index.ts",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "collect:api": "tsx --env-file=.env src/tasks/build-vuetify-api.ts",
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "oxlint": "^0.16.7",
-    "tsx": "^4.19.3"
+    "tsx": "^4.19.3",
+    "upath": "^2.0.1"
   }
 }

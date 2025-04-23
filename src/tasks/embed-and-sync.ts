@@ -3,14 +3,14 @@ import path from 'path'
 import { embed } from '../utils/openai.js'
 import { hashContent } from '../utils/hash.js'
 import { upsertVector } from '../utils/pinecone.js'
-import { readSnippet, ensureCacheFile, updateCache } from '../utils/file-processor.js'
+import { readSnippet, ensureCacheFile, updateCache, normalizePath } from '../utils/file-processor.js'
 import type { RecordMetadata } from '@pinecone-database/pinecone'
 
 const CACHE_FILE = './embedding-cache.json'
 
 interface EmbedAndSyncResult {
   id: string
-  status: 'unchanged' | 'updated' | 'failed'
+  status: 'updated' | 'failed' | 'unchanged'
   message: string
 }
 
@@ -29,15 +29,16 @@ export async function embedAndSync (snippetPath: string): Promise<EmbedAndSyncRe
     // Generate hash of the content
     const hash = hashContent(content)
 
-    // Read the cache
-    const cache = await ensureCacheFile(CACHE_FILE)
-
     // Check if the content has changed
-    if (cache[snippetPath] === hash) {
+    const cache = await ensureCacheFile(CACHE_FILE)
+    const normalizedPath = normalizePath(snippetPath)
+    const cachedHash = cache[normalizedPath]
+
+    if (cachedHash === hash) {
       return {
         id,
         status: 'unchanged',
-        message: `No changes detected for snippet: ${id}`,
+        message: `Snippet unchanged: ${id}`,
       }
     }
 
