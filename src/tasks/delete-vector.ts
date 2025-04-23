@@ -1,4 +1,5 @@
 import { batchDeleteVectors, deleteVector } from '../utils/pinecone.js'
+import ora from 'ora'
 
 interface DeleteResult {
   status: 'success' | 'failed'
@@ -18,16 +19,21 @@ interface BatchDeleteResult {
  * @returns Information about the operation performed
  */
 export async function deleteById (id: string): Promise<DeleteResult> {
+  const spinner = ora({
+    text: `Deleting vector: ${id}...`,
+    spinner: 'dots'
+  }).start()
+
   try {
-    console.log(`Deleting vector with ID: ${id}`)
     await deleteVector(id)
+    spinner.succeed(`Successfully deleted vector: ${id}`)
     return {
       status: 'success',
       message: `Successfully deleted snippet: ${id}`,
     }
   } catch (error: unknown) {
-    console.error(`Error deleting vector ${id}:`, error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    spinner.fail(`Failed to delete vector: ${id}`)
     return {
       status: 'failed',
       message: `Failed to delete: ${errorMessage}`,
@@ -42,8 +48,14 @@ export async function deleteById (id: string): Promise<DeleteResult> {
  * @returns Information about the operation performed
  */
 export async function batchDelete (ids: string[]): Promise<BatchDeleteResult> {
+  const spinner = ora({
+    text: 'Starting batch delete...',
+    spinner: 'dots'
+  }).start()
+
   try {
     if (ids.length === 0) {
+      spinner.info('No vectors to delete')
       return {
         total: 0,
         status: 'success',
@@ -51,18 +63,18 @@ export async function batchDelete (ids: string[]): Promise<BatchDeleteResult> {
       }
     }
 
-    console.log(`Deleting ${ids.length} vectors in batch`)
-
+    spinner.text = `Deleting ${ids.length} vectors...`
     await batchDeleteVectors(ids)
 
+    spinner.succeed(`Successfully deleted ${ids.length} vectors`)
     return {
       total: ids.length,
       status: 'success',
       message: `Successfully deleted ${ids.length} vectors`,
     }
   } catch (error: unknown) {
-    console.error('Error in batch delete:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    spinner.fail(`Failed to delete vectors: ${errorMessage}`)
     return {
       total: ids.length,
       status: 'failed',

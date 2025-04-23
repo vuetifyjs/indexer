@@ -1,4 +1,5 @@
 import _fs from 'fs/promises'
+import ora from 'ora'
 import type { VueSnippet } from '../utils/file-processor.js'
 import { getSnippetFiles, readSnippet, ensureCacheFile, updateCache } from '../utils/file-processor.js'
 import { hashContent } from '../utils/hash.js'
@@ -33,18 +34,22 @@ export async function embedAll (
   snippetsDir: string = 'src/snippets',
   useBatchProcessing: boolean = true,
 ): Promise<ProcessingStats> {
+  const spinner = ora({
+    text: 'Processing snippets...',
+    spinner: 'dots'
+  }).start()
+
   try {
     // Get all snippet files
     const snippetFiles = await getSnippetFiles(snippetsDir)
-    console.log(`Found ${snippetFiles.length} snippet files to process`)
 
     // If no snippets or batch processing disabled, use the original method
     if (snippetFiles.length === 0 || !useBatchProcessing || snippetFiles.length < 3) {
-      console.log('Using individual processing for snippets...')
+      spinner.text = 'Using individual processing for snippets...'
       return await processSeparately(snippetFiles)
     }
 
-    console.log('Using batch processing for snippets...')
+    spinner.text = 'Using batch processing for snippets...'
 
     // Read cache file
     const cache = await ensureCacheFile(CACHE_FILE)
@@ -54,7 +59,7 @@ export async function embedAll (
     const snippetHashes = new Map<string, string>()
 
     // First pass - read all snippets and compute hashes
-    console.log('Reading snippets and computing hashes...')
+    spinner.text = 'Reading snippets and computing hashes...'
     for (const snippetPath of snippetFiles) {
       try {
         // Read snippet and its metadata
@@ -65,28 +70,26 @@ export async function embedAll (
 
         // Check if hash has changed
         if (cache[snippetPath] === hash) {
-          // Mark as unchanged
-          console.log(`No changes detected for snippet: ${snippet.id}`)
           snippetHashes.set(snippetPath, hash)
         } else {
-          console.log(`Changes detected for snippet: ${snippet.id}`)
           snippetHashes.set(snippetPath, hash)
           snippetsWithMetadata.push(snippet)
         }
       } catch (error: unknown) {
-        console.error(`Error reading snippet ${snippetPath}:`, error)
         const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-        console.error('Error details:', errorMessage)
+        spinner.warn(`Error reading snippet ${snippetPath}: ${errorMessage}`)
       }
     }
 
     // Process all snippets in batch
+    spinner.text = 'Processing snippets in batch...'
     const { results, unchanged } = await batchProcessSnippets(
       snippetsWithMetadata,
       snippetHashes,
     )
 
     // Update cache for all processed snippets
+    spinner.text = 'Updating cache...'
     for (const [path, hash] of snippetHashes.entries()) {
       await updateCache(CACHE_FILE, path, hash)
     }
@@ -110,13 +113,11 @@ export async function embedAll (
       results: finalResults,
     }
 
-    console.log('Embedding process completed:')
-    console.log(`Total: ${stats.total}, Updated: ${stats.updated}, Unchanged: ${stats.unchanged}, Failed: ${stats.failed}`)
-
+    spinner.succeed(`Processed ${stats.total} snippets: ${stats.updated} updated, ${stats.unchanged} unchanged, ${stats.failed} failed`)
     return stats
   } catch (error: unknown) {
-    console.error('Error in embedAll process:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    spinner.fail(`Error in embedAll process: ${errorMessage}`)
     throw new Error(`Failed to process all snippets: ${errorMessage}`)
   }
 }
@@ -128,25 +129,33 @@ export async function embedAll (
  * @returns Results in the same format as embedAll
  */
 async function processSeparately (snippetFiles: string[]): Promise<ProcessingStats> {
-  // Process each snippet
-  const results = await Promise.all(
-    snippetFiles.map(async (snippetPath) => {
-      console.log(`Processing snippet individually: ${snippetPath}`)
-      return await embedAndSync(snippetPath)
-    }),
-  )
+  const spinner = ora({
+    text: 'Processing snippets individually...',
+    spinner: 'dots'
+  }).start()
 
-  // Compile stats
-  const stats: ProcessingStats = {
-    total: results.length,
-    updated: results.filter(r => r.status === 'updated').length,
-    unchanged: results.filter(r => r.status === 'unchanged').length,
-    failed: results.filter(r => r.status === 'failed').length,
-    results,
+  try {
+    // Process each snippet
+    const results = await Promise.all(
+      snippetFiles.map(async (snippetPath) => {
+        return await embedAndSync(snippetPath)
+      }),
+    )
+
+    // Compile stats
+    const stats: ProcessingStats = {
+      total: results.length,
+      updated: results.filter(r => r.status === 'updated').length,
+      unchanged: results.filter(r => r.status === 'unchanged').length,
+      failed: results.filter(r => r.status === 'failed').length,
+      results,
+    }
+
+    spinner.succeed(`Processed ${stats.total} snippets: ${stats.updated} updated, ${stats.unchanged} unchanged, ${stats.failed} failed`)
+    return stats
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    spinner.fail(`Error in individual processing: ${errorMessage}`)
+    throw error
   }
-
-  console.log('Individual processing completed:')
-  console.log(`Total: ${stats.total}, Updated: ${stats.updated}, Unchanged: ${stats.unchanged}, Failed: ${stats.failed}`)
-
-  return stats
 }

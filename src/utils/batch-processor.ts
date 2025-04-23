@@ -1,5 +1,5 @@
 import { embed } from './openai.js'
-import { batchUpsertVectors as pineconeUpsertBatch } from './pinecone.js'
+import { upsertVectors as pineconeUpsertBatch } from './pinecone.js'
 import type { VueSnippet } from './file-processor.js'
 import type { RecordMetadata } from '@pinecone-database/pinecone'
 

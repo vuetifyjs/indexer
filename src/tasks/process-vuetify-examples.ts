@@ -3,8 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { glob } from 'glob'
+import ora from 'ora'
 import { embedAll } from './embed-all.js'
-import { cloneVuetifyRepo, installDependencies } from './build-vuetify-api.js'
+import { VuetifyRepo } from '#utils/vuetify-repo.js'
 import { hashContent } from '../utils/hash.js'
 import { ensureCacheFile, updateCache } from '../utils/file-processor.js'
 
@@ -66,12 +67,9 @@ async function processExampleFile (examplePath: string): Promise<void> {
     // Update cache with the hash of the content
     const hash = hashContent(content)
     await updateCache(CACHE_FILE, outputPath, hash)
-
-    console.log(`Processed example: ${relativePath}`)
   } catch (error: unknown) {
-    console.error(`Error processing example ${examplePath}:`, error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Error details:', errorMessage)
+    throw new Error(`Failed to process example ${examplePath}: ${errorMessage}`)
   }
 }
 
@@ -79,20 +77,29 @@ async function processExampleFile (examplePath: string): Promise<void> {
  * Main function to process all Vuetify examples
  */
 async function processVuetifyExamples (): Promise<void> {
-  try {
-    console.log('Starting Vuetify examples processing...')
+  const spinner = ora({
+    text: 'Starting Vuetify examples processing...',
+    spinner: 'dots'
+  }).start()
 
-    // Clone Vuetify if needed
-    cloneVuetifyRepo()
-    installDependencies()
+  const vuetifyRepo = new VuetifyRepo({
+    cleanup: true,
+    installDeps: true,
+    shallowClone: true,
+    silent: true // Add silent option to prevent duplicate spinners
+  })
+
+  try {
+    // Set up Vuetify repository
+    await vuetifyRepo.setup()
 
     // Find all example files
+    spinner.text = 'Finding example files...'
     const exampleFiles = await glob('**/*.vue', { cwd: EXAMPLES_DIR })
-    console.log(`Found ${exampleFiles.length} example files`)
 
     // Limit the number of examples for test run
     const limitedExampleFiles = exampleFiles.slice(0, MAX_EXAMPLES)
-    console.log(`Processing first ${MAX_EXAMPLES} examples for test run`)
+    spinner.text = `Processing ${limitedExampleFiles.length} examples...`
 
     // Ensure cache file exists
     await ensureCacheFile(CACHE_FILE)
@@ -104,22 +111,16 @@ async function processVuetifyExamples (): Promise<void> {
     }
 
     // Create embeds for all processed examples
-    console.log('Creating embeds for examples...')
+    spinner.text = 'Creating embeds for examples...'
     const results = await embedAll('src/snippets/vuetify-examples')
-    console.log(`Processed ${results.total} examples: ${results.updated} updated, ${results.unchanged} unchanged, ${results.failed} failed`)
 
-    // Clean up the cloned repository
-    if (fs.existsSync(VUETIFY_DIR)) {
-      fs.rmSync(VUETIFY_DIR, { recursive: true, force: true })
-      console.log('Cleaned up Vuetify repository')
-    }
-
-    console.log('Vuetify examples processing completed successfully!')
+    spinner.succeed(`Processed ${results.total} examples: ${results.updated} updated, ${results.unchanged} unchanged, ${results.failed} failed`)
   } catch (error: unknown) {
-    console.error('Error during Vuetify examples processing:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Error details:', errorMessage)
+    spinner.fail(`Error during Vuetify examples processing: ${errorMessage}`)
     process.exit(1)
+  } finally {
+    await vuetifyRepo.cleanup()
   }
 }
 

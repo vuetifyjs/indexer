@@ -1,59 +1,35 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
-import { execSync } from 'child_process'
-import dotenv from 'dotenv'
+import { VuetifyRepo, VUETIFY_DIR } from '#utils/vuetify-repo.js'
+import { getDirname } from '#utils/path-utils.js'
+import { execCommand, cleanupProcesses } from '#utils/process-utils.js'
+import ora from 'ora'
 
-dotenv.config()
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-const VUETIFY_REPO_URL = 'https://github.com/vuetifyjs/vuetify.git'
-const VUETIFY_DIR = path.join(__dirname, '..', '..', 'vuetify-clone')
+const __dirname = getDirname(import.meta.url)
 const API_OUTPUT_DIR = path.join(__dirname, '..', '..', 'vuetify-api')
-
-/**
- * Clones the Vuetify repository if it doesn't exist already
- */
-function cloneVuetifyRepo (): void {
-  console.log('Checking if Vuetify repository exists...')
-
-  if (!fs.existsSync(VUETIFY_DIR)) {
-    console.log(`Cloning Vuetify repository to ${VUETIFY_DIR}...`)
-    execSync(`git clone ${VUETIFY_REPO_URL} ${VUETIFY_DIR}`, { stdio: 'inherit' })
-    console.log('Vuetify repository cloned successfully.')
-  } else {
-    console.log('Vuetify repository already exists. Pulling latest changes...')
-    execSync(`cd ${VUETIFY_DIR} && git pull`, { stdio: 'inherit' })
-    console.log('Vuetify repository updated successfully.')
-  }
-}
-
-/**
- * Installs dependencies for the Vuetify project
- */
-function installDependencies (): void {
-  console.log('Installing Vuetify dependencies...')
-  execSync(`cd ${VUETIFY_DIR} && pnpm install`, { stdio: 'inherit' })
-  console.log('Dependencies installed successfully.')
-}
 
 /**
  * Builds Vuetify and generates API documentation
  */
-function buildVuetifyAndApi (): void {
-  console.log('Building Vuetify...')
-  execSync(`cd ${VUETIFY_DIR} && pnpm run build vuetify`, { stdio: 'inherit' })
-  console.log('Vuetify built successfully.')
+async function buildVuetifyAndApi(): Promise<void> {
+  try {
+    await execCommand(
+      `cd ${VUETIFY_DIR} && pnpm run build vuetify --parallel --filter=vuetify`
+    )
+  } catch (err) {
+    throw new Error('Failed to build Vuetify')
+  }
 
-  console.log('Building Vuetify API documentation...')
-  // Make sure the api-generator directory exists and run the build
   const apiGeneratorDir = path.join(VUETIFY_DIR, 'packages', 'api-generator')
 
   if (fs.existsSync(apiGeneratorDir)) {
-    execSync(`cd ${apiGeneratorDir} && pnpm run build`, { stdio: 'inherit' })
-    console.log('API documentation built successfully.')
+    try {
+      await execCommand(
+        `cd ${apiGeneratorDir} && pnpm install --frozen-lockfile && pnpm run build`
+      )
+    } catch (err) {
+      throw new Error('Failed to build API documentation')
+    }
   } else {
     throw new Error('API Generator directory does not exist!')
   }
@@ -62,72 +38,71 @@ function buildVuetifyAndApi (): void {
 /**
  * Extracts and saves the generated API files
  */
-function extractApiFiles (): void {
+async function extractApiFiles(): Promise<void> {
   const apiSourceDir = path.join(VUETIFY_DIR, 'packages', 'api-generator', 'dist')
 
   if (!fs.existsSync(apiSourceDir)) {
     throw new Error('API build output directory does not exist!')
   }
 
-  console.log('Creating output directory for API files...')
   if (!fs.existsSync(API_OUTPUT_DIR)) {
     fs.mkdirSync(API_OUTPUT_DIR, { recursive: true })
   }
 
-  console.log('Copying API files...')
-  // Copy all .json files from the API generator output
-  execSync(`cp -r ${apiSourceDir}/*.json ${API_OUTPUT_DIR}/`, { stdio: 'inherit' })
-  console.log(`API files extracted successfully to ${API_OUTPUT_DIR}`)
-}
-
-/**
- * Cleans up the Vuetify repository after extracting API files
- */
-function cleanupVuetifyRepo (): void {
-  console.log('Cleaning up Vuetify repository...')
   try {
-    // Remove the cloned repository
-    if (fs.existsSync(VUETIFY_DIR)) {
-      fs.rmSync(VUETIFY_DIR, { recursive: true, force: true })
-      console.log('Vuetify repository cleaned up successfully.')
-    }
-  } catch (error: unknown) {
-    console.error('Error during cleanup:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Error details:', errorMessage)
+    await execCommand(
+      `cp -r ${apiSourceDir}/*.json ${API_OUTPUT_DIR}/`
+    )
+  } catch (err) {
+    throw new Error('Failed to extract API files')
   }
 }
 
 /**
- * Main function to execute the entire process
+ * Main function to orchestrate the build process
  */
-async function main (): Promise<void> {
-  try {
-    console.log('Starting Vuetify API build process...')
-
-    cloneVuetifyRepo()
-    installDependencies()
-    buildVuetifyAndApi()
-    extractApiFiles()
-    cleanupVuetifyRepo()
-
-    console.log('Vuetify API build process completed successfully!')
-  } catch (error: unknown) {
-    console.error('Error during Vuetify API build process:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Error details:', errorMessage)
-    process.exit(1)
-  }
-}
-
-// Check if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch((error: unknown) => {
-    console.error('Unhandled error in Vuetify API build process:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    console.error('Error details:', errorMessage)
-    process.exit(1)
+async function main(): Promise<void> {
+  const vuetifyRepo = new VuetifyRepo({
+    cleanup: true,
+    installDeps: true,
+    shallowClone: true,
+    silent: true // Add silent option to prevent duplicate spinners
   })
+
+  // Set up signal handlers
+  const signals = ['SIGINT', 'SIGTERM', 'SIGHUP']
+  signals.forEach(signal => {
+    process.on(signal, async () => {
+      cleanupProcesses()
+      await vuetifyRepo.cleanup()
+      process.exit(0)
+    })
+  })
+
+  const spinner = ora({
+    text: 'Starting Vuetify API build process...',
+    spinner: 'dots'
+  }).start()
+
+  try {
+    await vuetifyRepo.setup()
+    spinner.text = 'Building Vuetify...'
+    await buildVuetifyAndApi()
+    spinner.text = 'Extracting API files...'
+    await extractApiFiles()
+    spinner.succeed('Vuetify API build process completed!')
+  } catch (err) {
+    spinner.fail('Error during Vuetify API build process')
+    throw err
+  } finally {
+    await vuetifyRepo.cleanup()
+  }
 }
 
-export { cloneVuetifyRepo, installDependencies, buildVuetifyAndApi, extractApiFiles, main as buildVuetifyApi }
+// Run the main function
+main().catch((err) => {
+  console.error('Fatal error:', err)
+  process.exit(1)
+})
+
+export { buildVuetifyAndApi, extractApiFiles, main as buildVuetifyApi }

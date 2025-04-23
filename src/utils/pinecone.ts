@@ -5,23 +5,54 @@ import { Pinecone } from '@pinecone-database/pinecone'
 const MAX_VECTORS_PER_BATCH = 100
 
 if (!process.env.PINECONE_API_KEY) {
-  throw new Error('PINECONE_API_KEY environment variable is required')
+  throw new Error('PINECONE_API_KEY environment variable is not set')
 }
 
-// Initialize Pinecone client with API key from environment
-const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY })
+if (!process.env.PINECONE_INDEX) {
+  throw new Error('PINECONE_INDEX environment variable is not set')
+}
 
-// Get a reference to the specific index we're using
-export const index = pinecone.index('vuetify-docs')
+export const pinecone = new Pinecone({
+  apiKey: process.env.PINECONE_API_KEY
+})
 
-export interface VectorRecord {
-  id: string
-  values: number[]
-  metadata: RecordMetadata
-  sparseValues?: {
-    indices: number[]
-    values: number[]
+export const index = pinecone.Index(process.env.PINECONE_INDEX)
+
+export type VectorRecord = PineconeRecord<RecordMetadata>
+
+/**
+ * Upserts vectors to Pinecone in batches
+ * @param vectors Array of vectors to upsert
+ * @param batchSize Maximum number of vectors to upsert in a single batch
+ */
+export async function upsertVectors(
+  vectors: VectorRecord[],
+  batchSize: number = MAX_VECTORS_PER_BATCH
+): Promise<void> {
+  for (let i = 0; i < vectors.length; i += batchSize) {
+    const batch = vectors.slice(i, i + batchSize)
+    await index.upsert(batch)
   }
+}
+
+/**
+ * Queries Pinecone for similar vectors
+ * @param vector Query vector
+ * @param topK Number of results to return
+ * @param filter Optional metadata filter
+ * @returns Array of scored vectors
+ */
+export async function queryVectors(
+  vector: number[],
+  topK: number = 10,
+  filter?: Record<string, unknown>
+): Promise<ScoredPineconeRecord<RecordMetadata>[]> {
+  const results = await index.query({
+    vector,
+    topK,
+    filter,
+  })
+  return results.matches
 }
 
 /**
@@ -65,37 +96,6 @@ export async function upsertVector (
 }
 
 /**
- * Upserts multiple vectors into the Pinecone index in batches
- *
- * @param vectors Array of vectors to upsert
- * @returns Promise<void>
- */
-export async function batchUpsertVectors (vectors: VectorRecord[]): Promise<void> {
-  try {
-    // Process in batches to respect API limits
-    for (let i = 0; i < vectors.length; i += MAX_VECTORS_PER_BATCH) {
-      const batch = vectors.slice(i, i + MAX_VECTORS_PER_BATCH)
-      console.log(`Upserting batch ${i / MAX_VECTORS_PER_BATCH + 1}/${Math.ceil(vectors.length / MAX_VECTORS_PER_BATCH)} to Pinecone (${batch.length} vectors)`)
-
-      const pineconeRecords: PineconeRecord<RecordMetadata>[] = batch.map(record => ({
-        id: record.id,
-        values: record.values,
-        metadata: record.metadata,
-        ...(record.sparseValues && {
-          sparseValues: record.sparseValues,
-        }),
-      }))
-
-      await index.upsert(pineconeRecords)
-    }
-  } catch (error: unknown) {
-    console.error('Error batch upserting vectors to Pinecone:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    throw new Error(`Failed to batch upsert vectors: ${errorMessage}`)
-  }
-}
-
-/**
  * Deletes a vector from the Pinecone index
  *
  * @param id The unique identifier for the vector to delete
@@ -130,45 +130,5 @@ export async function batchDeleteVectors (ids: string[]): Promise<void> {
     console.error('Error batch deleting vectors from Pinecone:', error)
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     throw new Error(`Failed to batch delete vectors: ${errorMessage}`)
-  }
-}
-
-interface QueryResult {
-  matches: ScoredPineconeRecord<RecordMetadata>[]
-}
-
-/**
- * Queries the Pinecone index for similar vectors
- *
- * @param vector The query vector
- * @param topK Number of results to return
- * @param filter Optional metadata filter
- * @param sparseVector Optional sparse vector for hybrid search
- * @returns Promise<QueryResult>
- */
-export async function querySimilar (
-  vector: number[],
-  topK = 10,
-  filter?: object,
-  sparseVector?: {
-    indices: number[]
-    values: number[]
-  },
-): Promise<QueryResult> {
-  try {
-    const queryParams = {
-      vector,
-      topK,
-      includeMetadata: true,
-      ...(filter && { filter }),
-      ...(sparseVector && { sparseVector }),
-    }
-
-    const result = await index.query(queryParams)
-    return result
-  } catch (error: unknown) {
-    console.error('Error querying Pinecone:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-    throw new Error(`Failed to query similar vectors: ${errorMessage}`)
   }
 }

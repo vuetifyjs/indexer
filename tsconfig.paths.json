@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "#/*": ["src/*"],
+      "#utils/*": ["src/utils/*"],
+      "#tasks/*": ["src/tasks/*"],
+      "#demo/*": ["src/demo/*"]
+    }
+  }
+}
