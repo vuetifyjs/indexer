@@ -6,15 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.build.json",
-    "start": "NODE_OPTIONS='--loader ts-node/esm' node src/index.ts",
-    "search-vectors": "NODE_OPTIONS='--loader ts-node/esm' node src/search-vectors.ts card",
-    "process-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/index.ts --verbose",
-    "delete-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/delete-vectors.ts --help",
-    "analyze-snippet": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/analyze-vue-snippet.ts src/snippets/v-card/basic.vue",
-    "batch-analyze-snippets": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/batch-analyze-snippets.ts -c v-card",
-    "analyze-file": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/analyze-file-content.ts src/search-vectors.ts",
-    "build-vuetify-api": "NODE_OPTIONS='--loader ts-node/esm' node src/tasks/build-vuetify-api.ts",
-    "explore-vuetify-api": "NODE_OPTIONS='--loader ts-node/esm' node src/demo/explore-vuetify-api.ts",
+    "start": "tsx src/index.ts",
+    "search-vectors": "tsx src/search-vectors.ts card",
+    "process-snippets": "tsx src/index.ts --verbose",
+    "delete-snippets": "tsx src/delete-vectors.ts --help",
+    "analyze-snippet": "tsx src/demo/analyze-vue-snippet.ts src/snippets/v-card/basic.vue",
+    "batch-analyze-snippets": "tsx src/demo/batch-analyze-snippets.ts -c v-card",
+    "analyze-file": "tsx src/demo/analyze-file-content.ts src/search-vectors.ts",
+    "build-vuetify-api": "tsx src/tasks/build-vuetify-api.ts",
+    "explore-vuetify-api": "tsx src/demo/explore-vuetify-api.ts",
+    "process-vuetify-examples": "tsx src/tasks/process-vuetify-examples.ts",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix"
   },
@@ -32,6 +33,7 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "oxlint": "^0.16.7"
+    "oxlint": "^0.16.7",
+    "tsx": "^4.19.3"
   }
 }
