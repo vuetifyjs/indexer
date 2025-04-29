@@ -1,0 +1,187 @@
+{
+  "fileName": "v-mutate",
+  "displayName": "v-mutate",
+  "pathName": "v-mutate-directive",
+  "value": {
+    "text": "MutationCallback | { handler: MutationCallback; options?: MutationObserverInit | undefined; }",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "MutationCallback",
+        "source": "typescript/lib/lib.dom.d.ts#L21220-L21222",
+        "type": "ref",
+        "ref": "MutationCallback",
+        "formatted": "MutationCallback"
+      },
+      {
+        "text": "{ handler: MutationCallback; options?: MutationObserverInit | undefined; }",
+        "source": "vuetify/src/directives/mutate/index.ts#L6-L6",
+        "type": "object",
+        "properties": {
+          "handler": {
+            "text": "MutationCallback",
+            "source": "typescript/lib/lib.dom.d.ts#L21220-L21222",
+            "type": "ref",
+            "ref": "MutationCallback",
+            "formatted": "MutationCallback",
+            "optional": false
+          },
+          "options": {
+            "text": "MutationObserverInit | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "UNSUPPORTED",
+                "formatted": "undefined"
+              },
+              {
+                "text": "MutationObserverInit",
+                "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+                "type": "ref",
+                "ref": "MutationObserverInit",
+                "formatted": "MutationObserverInit"
+              }
+            ],
+            "formatted": "MutationObserverInit",
+            "optional": true
+          }
+        },
+        "formatted": "{ handler: MutationCallback; options: MutationObserverInit }"
+      }
+    ],
+    "formatted": "  | MutationCallback\n  | { handler: MutationCallback; options: MutationObserverInit }\n",
+    "optional": false,
+    "description": {
+      "en": "A handler function that is invoked when the element that the directive is attached to is mutated, or an object of [MutationObserver options](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe)."
+    }
+  },
+  "modifiers": {
+    "attr": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "Sets the value of [attributes](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributes) to true."
+      }
+    },
+    "char": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "Sets the value of [characterData](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/characterData) to true."
+      }
+    },
+    "child": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "Sets the value of [childList](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/childList) to true."
+      }
+    },
+    "sub": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "Sets the value of [subtree](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe#Parameters) to true."
+      }
+    },
+    "once": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "The provided handler function is only invoked once."
+      }
+    },
+    "immediate": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "The provided handler function is invoked immediately when directive is attached to element."
+      }
+    }
+  }
+}

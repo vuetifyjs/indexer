@@ -1,0 +1,301 @@
+{
+  "displayName": "VCounter",
+  "fileName": "VCounter",
+  "pathName": "v-counter",
+  "props": {
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the counter is visible or not."
+      },
+      "descriptionSource": {
+        "en": "VCounter"
+      }
+    },
+    "value": {
+      "text": "string | number | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Sets the current counter value."
+      },
+      "descriptionSource": {
+        "en": "VCounter"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "string | number | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum allowed value."
+      },
+      "descriptionSource": {
+        "en": "VCounter"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; } | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        },
+        {
+          "text": "{ component: Component; }",
+          "source": "vuetify/src/components/VCounter/VCounter.tsx#L29-L29",
+          "type": "object",
+          "properties": {
+            "component": {
+              "text": "Component",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+              "type": "ref",
+              "ref": "Component",
+              "formatted": "Component",
+              "optional": false
+            }
+          },
+          "formatted": "{ component: Component }"
+        }
+      ],
+      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component }\n",
+      "optional": false,
+      "default": "{component: {name: 'slide-y-transition'}}",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "VCounterSlot",
+      "source": "vuetify/src/components/VCounter/VCounter.tsx#L33-L37",
+      "type": "object",
+      "properties": {
+        "counter": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "max": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": false
+        },
+        "value": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": false
+        }
+      },
+      "formatted": "{ counter: string; max: string | number; value: string | number }\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$counter-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$counter-flex": {
+      "default": "0 1 auto"
+    },
+    "$counter-font-size": {
+      "default": "12px"
+    },
+    "$counter-line-height": {
+      "default": "$counter-font-size"
+    },
+    "$counter-min-height": {
+      "default": "12px"
+    },
+    "$counter-transition-duration": {
+      "default": "150ms"
+    }
+  }
+}

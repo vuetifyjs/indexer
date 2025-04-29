@@ -1,0 +1,334 @@
+{
+  "displayName": "VApp",
+  "fileName": "VApp",
+  "pathName": "v-app",
+  "props": {
+    "fullHeight": {
+      "text": "boolean | undefined",
+      "source": "layout",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Sets the component height to 100%."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "overlaps": {
+      "text": "string[] | undefined",
+      "source": "layout",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "getLayoutItem": {
+      "text": "(id: string) => { size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; } | undefined",
+      "source": "vuetify/src/composables/layout.ts#L245-L247",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "id",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; } | undefined",
+        "type": "anyOf",
+        "items": [
+          {
+            "text": "undefined",
+            "type": "UNSUPPORTED",
+            "formatted": "undefined"
+          },
+          {
+            "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }",
+            "source": "vuetify/src/composables/layout.ts#L236-L241",
+            "type": "object",
+            "properties": {
+              "size": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "position": {
+                "text": "Position",
+                "source": "vuetify/src/composables/layout.ts#L23-L23",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "\"top\"",
+                    "type": "string",
+                    "literal": "\"top\"",
+                    "formatted": "\"top\""
+                  },
+                  {
+                    "text": "\"left\"",
+                    "type": "string",
+                    "literal": "\"left\"",
+                    "formatted": "\"left\""
+                  },
+                  {
+                    "text": "\"right\"",
+                    "type": "string",
+                    "literal": "\"right\"",
+                    "formatted": "\"right\""
+                  },
+                  {
+                    "text": "\"bottom\"",
+                    "type": "string",
+                    "literal": "\"bottom\"",
+                    "formatted": "\"bottom\""
+                  }
+                ],
+                "formatted": "\"top\" | \"left\" | \"right\" | \"bottom\"",
+                "optional": false
+              },
+              "top": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "bottom": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "left": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "right": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "id": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string",
+                "optional": false
+              }
+            },
+            "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+          }
+        ],
+        "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+      },
+      "formatted": "(id: string) => {\n  size: number\n  position: 'top' | 'left' | 'right' | 'bottom'\n  top: number\n  bottom: number\n  left: number\n  right: number\n  id: string\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Function that returns position and size information about a specific layout item."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "items": {
+      "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }",
+          "source": "vuetify/src/composables/layout.ts#L236-L241",
+          "type": "object",
+          "properties": {
+            "size": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "position": {
+              "text": "Position",
+              "source": "vuetify/src/composables/layout.ts#L23-L23",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "\"top\"",
+                  "type": "string",
+                  "literal": "\"top\"",
+                  "formatted": "\"top\""
+                },
+                {
+                  "text": "\"left\"",
+                  "type": "string",
+                  "literal": "\"left\"",
+                  "formatted": "\"left\""
+                },
+                {
+                  "text": "\"right\"",
+                  "type": "string",
+                  "literal": "\"right\"",
+                  "formatted": "\"right\""
+                },
+                {
+                  "text": "\"bottom\"",
+                  "type": "string",
+                  "literal": "\"bottom\"",
+                  "formatted": "\"bottom\""
+                }
+              ],
+              "formatted": "\"top\" | \"left\" | \"right\" | \"bottom\"",
+              "optional": false
+            },
+            "top": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "bottom": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "left": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "right": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "id": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+        }
+      ],
+      "formatted": "{\n  size: number\n  position: 'top' | 'left' | 'right' | 'bottom'\n  top: number\n  bottom: number\n  left: number\n  right: number\n  id: string\n}[]\n",
+      "optional": false,
+      "description": {
+        "en": "A array of all registered layout items."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "theme": {
+      "text": "{ readonly isDisabled: boolean; readonly themes: Record<string, InternalThemeDefinition>; readonly name: string; readonly current: { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }; readonly computedThemes: { readonly [x: string]: { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }; }; readonly themeClasses: string | undefined; readonly styles: string; readonly global: { readonly name: string; readonly current: { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }; }; }",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L636-L638",
+      "type": "ref",
+      "ref": "__type",
+      "formatted": "{\n  readonly isDisabled: boolean\n  readonly themes: Record<string, InternalThemeDefinition>\n  readonly name: string\n  readonly current: {\n    readonly dark: boolean\n    readonly colors: {\n      readonly [x: string]: string\n      readonly background: string\n      readonly surface: string\n      readonly primary: string\n      readonly secondary: string\n      readonly success: string\n      readonly warning: string\n      readonly error: string\n      readonly info: string\n      readonly 'on-background': string\n      readonly 'on-surface': string\n      readonly 'on-primary': string\n      readonly 'on-secondary': string\n      readonly 'on-success': string\n      readonly 'on-warning': string\n      readonly 'on-error': string\n      readonly 'on-info': string\n    }\n    readonly variables: { readonly [x: string]: string | number }\n  }\n  readonly computedThemes: {\n    readonly [x: string]: {\n      readonly dark: boolean\n      readonly colors: {\n        readonly [x: string]: string\n        readonly background: string\n        readonly surface: string\n        readonly primary: string\n        readonly secondary: string\n        readonly success: string\n        readonly warning: string\n        readonly error: string\n        readonly info: string\n        readonly 'on-background': string\n        readonly 'on-surface': string\n        readonly 'on-primary': string\n        readonly 'on-secondary': string\n        readonly 'on-success': string\n        readonly 'on-warning': string\n        readonly 'on-error': string\n        readonly 'on-info': string\n      }\n      readonly variables: { readonly [x: string]: string | number }\n    }\n  }\n  readonly themeClasses: string | undefined\n  readonly styles: string\n  readonly global: {\n    readonly name: string\n    readonly current: {\n      readonly dark: boolean\n      readonly colors: {\n        readonly [x: string]: string\n        readonly background: string\n        readonly surface: string\n        readonly primary: string\n        readonly secondary: string\n        readonly success: string\n        readonly warning: string\n        readonly error: string\n        readonly info: string\n        readonly 'on-background': string\n        readonly 'on-surface': string\n        readonly 'on-primary': string\n        readonly 'on-secondary': string\n        readonly 'on-success': string\n        readonly 'on-warning': string\n        readonly 'on-error': string\n        readonly 'on-info': string\n      }\n      readonly variables: { readonly [x: string]: string | number }\n    }\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The instance of the injected active theme."
+      },
+      "descriptionSource": {
+        "en": "VApp"
+      }
+    }
+  },
+  "sass": {
+    "$application-background": {
+      "default": "rgb(var(--v-theme-background))"
+    },
+    "$application-color": {
+      "default": "rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity))"
+    }
+  }
+}

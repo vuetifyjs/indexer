@@ -1,0 +1,69 @@
+{
+  "displayName": "VKbd",
+  "fileName": "VKbd",
+  "pathName": "v-kbd",
+  "props": {
+    "tag": {
+      "text": "string | undefined",
+      "source": "VKbd",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'kbd'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$kbd-border-radius": {
+      "default": "3px"
+    },
+    "$kbd-display": {
+      "default": "inline"
+    },
+    "$kbd-elevation": {
+      "default": "2"
+    },
+    "$kbd-font-size": {
+      "default": "85%"
+    },
+    "$kbd-font-weight": {
+      "default": "normal"
+    },
+    "$kbd-padding": {
+      "default": ".2em .4rem"
+    }
+  }
+}

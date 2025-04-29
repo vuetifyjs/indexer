@@ -1,0 +1,1039 @@
+{
+  "displayName": "VBanner",
+  "fileName": "VBanner",
+  "pathName": "v-banner",
+  "props": {
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "icon": {
+      "text": "IconValue | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "avatar": {
+      "text": "string | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Designates a specific src image to pass to the thumbnail."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "stacked": {
+      "text": "boolean | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the banner actions onto a new line. This is not applicable when the banner has `lines=\"one\"`."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    },
+    "sticky": {
+      "text": "boolean | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies `position: sticky` to the component with `top: 0`. You can find more information on the [MDN documentation for sticky position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Applies the mobile banner styles."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the component's location. Can combine by using a space separated string."
+      },
+      "descriptionSource": {
+        "en": "location"
+      }
+    },
+    "position": {
+      "text": "\"fixed\" | \"relative\" | \"sticky\" | \"static\" | \"absolute\" | undefined",
+      "source": "position",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"fixed\"",
+          "type": "string",
+          "literal": "\"fixed\"",
+          "formatted": "\"fixed\""
+        },
+        {
+          "text": "\"relative\"",
+          "type": "string",
+          "literal": "\"relative\"",
+          "formatted": "\"relative\""
+        },
+        {
+          "text": "\"sticky\"",
+          "type": "string",
+          "literal": "\"sticky\"",
+          "formatted": "\"sticky\""
+        },
+        {
+          "text": "\"static\"",
+          "type": "string",
+          "literal": "\"static\"",
+          "formatted": "\"static\""
+        },
+        {
+          "text": "\"absolute\"",
+          "type": "string",
+          "literal": "\"absolute\"",
+          "formatted": "\"absolute\""
+        }
+      ],
+      "formatted": "'fixed' | 'relative' | 'sticky' | 'static' | 'absolute'\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the position for the component."
+      },
+      "descriptionSource": {
+        "en": "position"
+      }
+    },
+    "lines": {
+      "text": "\"one\" | \"two\" | \"three\" | undefined",
+      "source": "VBanner",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"one\"",
+          "type": "string",
+          "literal": "\"one\"",
+          "formatted": "\"one\""
+        },
+        {
+          "text": "\"two\"",
+          "type": "string",
+          "literal": "\"two\"",
+          "formatted": "\"two\""
+        },
+        {
+          "text": "\"three\"",
+          "type": "string",
+          "literal": "\"three\"",
+          "formatted": "\"three\""
+        }
+      ],
+      "formatted": "'one' | 'two' | 'three'\n",
+      "optional": false,
+      "description": {
+        "en": "The amount of visible lines of text before it truncates."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prepend": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for icon at beginning of banner."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    },
+    "text": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's text content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "actions": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The slot used for the action's content such as a [v-btn](/components/buttons)."
+      },
+      "descriptionSource": {
+        "en": "VBanner"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$banner-action-margin": {
+      "default": "20px"
+    },
+    "$banner-actions-line-margin-top": {
+      "default": "20px"
+    },
+    "$banner-background": {
+      "default": "rgb(var(--v-theme-surface))"
+    },
+    "$banner-border-color": {
+      "default": "settings.$border-color-root"
+    },
+    "$banner-border-radius": {
+      "default": "map.get(settings.$rounded, 0)"
+    },
+    "$banner-border-style": {
+      "default": "settings.$border-style-root"
+    },
+    "$banner-border-thin-width": {
+      "default": "thin"
+    },
+    "$banner-border-width": {
+      "default": "0 0 thin 0"
+    },
+    "$banner-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$banner-density": {
+      "default": "('default': 0, 'comfortable': -1, 'compact': -2)"
+    },
+    "$banner-elevation": {
+      "default": "0"
+    },
+    "$banner-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'body-2', 'size')"
+    },
+    "$banner-line-height": {
+      "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'line-height')"
+    },
+    "$banner-padding-inline-start": {
+      "default": "16px"
+    },
+    "$banner-padding-inline-end": {
+      "default": "8px"
+    },
+    "$banner-padding": {
+      "default": "8px"
+    },
+    "$banner-positions": {
+      "default": "absolute fixed sticky"
+    },
+    "$banner-prepend-margin-end": {
+      "default": "24px"
+    },
+    "$banner-rounded-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$banner-stacked-padding-inline-end": {
+      "default": "36px"
+    },
+    "$banner-sticky-top": {
+      "default": "0"
+    },
+    "$banner-sticky-z-index": {
+      "default": "1"
+    },
+    "$banner-text-padding-end": {
+      "default": "90px"
+    },
+    "$banner-width": {
+      "default": "100%"
+    },
+    "$banner-mobile-avatar-margin-end": {
+      "default": "16px"
+    },
+    "$banner-mobile-content-padding-end": {
+      "default": "8px"
+    },
+    "$banner-mobile-padding-end": {
+      "default": "8px"
+    },
+    "$banner-mobile-padding-start": {
+      "default": "16px"
+    },
+    "$banner-border": {
+      "default": "(\n  $banner-border-color,\n  $banner-border-style,\n  $banner-border-width,\n  $banner-border-thin-width\n)"
+    },
+    "$banner-theme": {
+      "default": "(\n  $banner-background,\n  $banner-color\n)"
+    }
+  }
+}

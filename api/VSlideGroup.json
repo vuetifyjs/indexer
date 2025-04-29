@@ -1,0 +1,1033 @@
+{
+  "displayName": "VSlideGroup",
+  "fileName": "VSlideGroup",
+  "pathName": "v-slide-group",
+  "props": {
+    "symbol": {
+      "text": "any",
+      "source": "VSlideGroup",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) used to hook into group functionality for components like [v-btn-toggle](/components/btn-toggle) and [v-bottom-navigation](/components/bottom-navigations/)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "unknown",
+      "source": "group",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all children components into a disabled state."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "direction": {
+      "text": "\"horizontal\" | \"vertical\" | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "Switch between horizontal and vertical modes."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "centerActive": {
+      "text": "boolean | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the selected component to be centered."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "nextIcon": {
+      "text": "IconValue | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "The appended slot when arrows are shown."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "prevIcon": {
+      "text": "IconValue | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "The prepended slot when arrows are shown."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "showArrows": {
+      "text": "string | boolean | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Change when the overflow arrow indicators are shown. By **default**, arrows *always* display on Desktop when the container is overflowing. When the container overflows on mobile, arrows are not shown by default. A **show-arrows** value of `true` allows these arrows to show on Mobile if the container overflowing. A value of `desktop` *always* displays arrows on Desktop while a value of `mobile` always displays arrows on Mobile. A value of `always` always displays arrows on Desktop *and* Mobile. Find more information on how to customize breakpoint thresholds on the [breakpoints page](/customizing/breakpoints)."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            },
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            }
+          ],
+          "formatted": "\"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\" | \"xs\""
+        }
+      ],
+      "formatted": "number | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xs'\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the designated mobile breakpoint for the component."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-slide-group-item--active'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "SlideGroupSlot",
+      "source": "vuetify/src/components/VSlideGroup/VSlideGroup.tsx#L38-L43",
+      "type": "object",
+      "properties": {
+        "next": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "prev": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "select": {
+          "text": "(id: string, value: boolean) => void",
+          "source": "vuetify/src/composables/group.ts#L32-L32",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(id: string, value: boolean) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(id: string) => boolean",
+          "source": "vuetify/src/composables/group.ts#L34-L34",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(id: string) => boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  next: () => void\n  prev: () => void\n  select: (id: string, value: boolean) => void\n  isSelected: (id: string) => boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prev": {
+      "text": "SlideGroupSlot",
+      "source": "vuetify/src/components/VSlideGroup/VSlideGroup.tsx#L38-L43",
+      "type": "object",
+      "properties": {
+        "next": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "prev": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "select": {
+          "text": "(id: string, value: boolean) => void",
+          "source": "vuetify/src/composables/group.ts#L32-L32",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(id: string, value: boolean) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(id: string) => boolean",
+          "source": "vuetify/src/composables/group.ts#L34-L34",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(id: string) => boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  next: () => void\n  prev: () => void\n  select: (id: string, value: boolean) => void\n  isSelected: (id: string) => boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The prev slot."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "next": {
+      "text": "SlideGroupSlot",
+      "source": "vuetify/src/components/VSlideGroup/VSlideGroup.tsx#L38-L43",
+      "type": "object",
+      "properties": {
+        "next": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "prev": {
+          "text": "() => void",
+          "source": "vuetify/src/composables/group.ts#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "select": {
+          "text": "(id: string, value: boolean) => void",
+          "source": "vuetify/src/composables/group.ts#L32-L32",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(id: string, value: boolean) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(id: string) => boolean",
+          "source": "vuetify/src/composables/group.ts#L34-L34",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "id",
+              "optional": false,
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(id: string) => boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  next: () => void\n  prev: () => void\n  select: (id: string, value: boolean) => void\n  isSelected: (id: string) => boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The next slot."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    }
+  },
+  "exposed": {
+    "selected": {
+      "text": "readonly string[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string[]\n",
+      "optional": false,
+      "description": {
+        "en": "Get the selected component index."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "scrollTo": {
+      "text": "(location: \"next\" | \"prev\") => void",
+      "source": "vuetify/src/components/VSlideGroup/VSlideGroup.tsx#L322-L337",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "location",
+          "optional": false,
+          "text": "\"next\" | \"prev\"",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"next\"",
+              "type": "string",
+              "literal": "\"next\"",
+              "formatted": "\"next\""
+            },
+            {
+              "text": "\"prev\"",
+              "type": "string",
+              "literal": "\"prev\"",
+              "formatted": "\"prev\""
+            }
+          ],
+          "formatted": "\"next\" | \"prev\""
+        }
+      ],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "(location: 'next' | 'prev') => void\n",
+      "optional": false,
+      "description": {
+        "en": "Scroll the component to a given index."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "scrollOffset": {
+      "text": "number",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Scroll the component to a given index."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "focus": {
+      "text": "(location?: \"next\" | \"prev\" | \"first\" | \"last\" | undefined) => void",
+      "source": "vuetify/src/components/VSlideGroup/VSlideGroup.tsx#L291-L320",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "location",
+          "optional": false,
+          "text": "\"next\" | \"prev\" | \"first\" | \"last\" | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "\"next\"",
+              "type": "string",
+              "literal": "\"next\"",
+              "formatted": "\"next\""
+            },
+            {
+              "text": "\"prev\"",
+              "type": "string",
+              "literal": "\"prev\"",
+              "formatted": "\"prev\""
+            },
+            {
+              "text": "\"first\"",
+              "type": "string",
+              "literal": "\"first\"",
+              "formatted": "\"first\""
+            },
+            {
+              "text": "\"last\"",
+              "type": "string",
+              "literal": "\"last\"",
+              "formatted": "\"last\""
+            }
+          ],
+          "formatted": "\"next\" | \"prev\" | \"first\" | \"last\""
+        }
+      ],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "(location: 'next' | 'prev' | 'first' | 'last') => void\n",
+      "optional": false,
+      "description": {
+        "en": "Focus the component."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "hasPrev": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if there are items before current index."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "hasNext": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if there are items after current index."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    }
+  },
+  "sass": {
+    "$slide-group-prev-basis": {
+      "default": "52px"
+    }
+  }
+}

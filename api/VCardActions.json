@@ -1,0 +1,23 @@
+{
+  "displayName": "VCardActions",
+  "fileName": "VCardActions",
+  "pathName": "v-card-actions",
+  "props": {},
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

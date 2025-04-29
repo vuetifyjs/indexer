@@ -1,0 +1,1664 @@
+{
+  "displayName": "VChip",
+  "fileName": "VChip",
+  "pathName": "v-chip",
+  "props": {
+    "filter": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays a selection icon when selected."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "replace": {
+      "text": "boolean | undefined",
+      "source": "router",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Setting **replace** prop will call `router.replace()` instead of `router.push()` when clicked, so the navigation will not leave a history record. You can find more information about the [replace](https://router.vuejs.org/api/#replace) prop on the vue-router documentation."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "link": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates that the component is a link. This is automatic when using the href or to prop."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height, padding and the font size of the component. Accepts only predefined options: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when a child of a [v-chip-group](/components/chip-groups)."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "text": {
+      "text": "string | number | boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'span'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"elevated\"",
+          "type": "string",
+          "literal": "\"elevated\"",
+          "formatted": "\"elevated\""
+        },
+        {
+          "text": "\"tonal\"",
+          "type": "string",
+          "literal": "\"tonal\"",
+          "formatted": "\"tonal\""
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        }
+      ],
+      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "optional": false,
+      "default": "'tonal'",
+      "description": {
+        "en": "Applies a distinct style to the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of component when not focused."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prependIcon": {
+      "text": "IconValue | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "Creates a [v-icon](/api/v-icon/) component in the **prepend** slot before default content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "appendIcon": {
+      "text": "IconValue | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "ripple": {
+      "text": "boolean | { class: string; } | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "{ class: string; }",
+          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
+          "type": "object",
+          "properties": {
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ class: string }"
+        }
+      ],
+      "formatted": "boolean | { class: string }\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Applies the [v-ripple](/directives/ripple) directive."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "href": {
+      "text": "string | undefined",
+      "source": "router",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the component as anchor and applies the **href** attribute."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "exact": {
+      "text": "boolean | undefined",
+      "source": "router",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Exactly match the link. Without this, '/' will match every route. You can find more information about the [**exact** prop](https://router.vuejs.org/api/#exact) on the vue-router documentation."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "to": {
+      "text": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined",
+      "source": "router",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "RouteLocationAsRelativeGeneric",
+          "source": "vue-router/dist/vue-router.d.ts#L606-L613",
+          "type": "ref",
+          "ref": "RouteLocationAsRelativeGeneric",
+          "formatted": "RouteLocationAsRelativeGeneric"
+        },
+        {
+          "text": "RouteLocationAsPathGeneric",
+          "source": "vue-router/dist/vue-router.d.ts#L575-L580",
+          "type": "ref",
+          "ref": "RouteLocationAsPathGeneric",
+          "formatted": "RouteLocationAsPathGeneric"
+        }
+      ],
+      "formatted": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric\n",
+      "optional": false,
+      "description": {
+        "en": "Denotes the target route of the link. You can find more information about the [**to** prop](https://router.vuejs.org/api/#to) on the vue-router documentation."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "draggable": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Makes the chip draggable."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "label": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies a medium size border radius."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "activeClass": {
+      "text": "string | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The class applied to the component when it matches the current route. Find more information about the [active-class prop](https://router.vuejs.org/api/#active-class) on the [vue-router](https://router.vuejs.org/) documentation."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "appendAvatar": {
+      "text": "string | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Appends a [v-avatar](/components/avatars/) component after default content in the **append** slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "closable": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Adds remove button and then a chip can be closed."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "closeIcon": {
+      "text": "IconValue | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$delete'",
+      "description": {
+        "en": "Change the default icon used for **close** chips."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "closeLabel": {
+      "text": "string | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.close'",
+      "description": {
+        "en": "Text used for *aria-label* on the close button in **close** chips. Can also be customized globally in [Internationalization](/customization/internationalization)."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "filterIcon": {
+      "text": "IconValue | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$complete'",
+      "description": {
+        "en": "Change the default icon used for **filter** chips."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "pill": {
+      "text": "boolean | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Remove `v-avatar` padding."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "prependAvatar": {
+      "text": "string | undefined",
+      "source": "VChip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Prepends a [v-avatar](/components/avatars/) component in the **prepend** slot before default content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "group:selected": {
+      "text": "[val: { value: boolean; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ value: boolean; }",
+          "source": "vuetify/src/components/VChip/VChip.tsx#L122-L122",
+          "type": "object",
+          "properties": {
+            "value": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ value: boolean }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ value: boolean }]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when an item is selected within a group."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "click": {
+      "text": "[e: MouseEvent | KeyboardEvent]",
+      "type": "array",
+      "items": [
+        {
+          "text": "MouseEvent | KeyboardEvent",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "MouseEvent",
+              "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+              "type": "ref",
+              "ref": "MouseEvent",
+              "formatted": "MouseEvent"
+            },
+            {
+              "text": "KeyboardEvent",
+              "source": "typescript/lib/lib.dom.d.ts#L8605-L8648",
+              "type": "ref",
+              "ref": "KeyboardEvent",
+              "formatted": "KeyboardEvent"
+            }
+          ],
+          "formatted": "MouseEvent | KeyboardEvent"
+        }
+      ],
+      "length": 1,
+      "formatted": "[MouseEvent | KeyboardEvent]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when component is clicked, toggles chip if contained in a chip group - Will trigger component to ripple when clicked unless the `.native` modifier is used."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "click:close": {
+      "text": "[e: MouseEvent]",
+      "type": "array",
+      "items": [
+        {
+          "text": "MouseEvent",
+          "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+          "type": "ref",
+          "ref": "MouseEvent",
+          "formatted": "MouseEvent"
+        }
+      ],
+      "length": 1,
+      "formatted": "[MouseEvent]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when close icon is clicked."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ isSelected: boolean | undefined; selectedClass: boolean | (string | undefined)[] | undefined; select: ((value: boolean) => void) | undefined; toggle: (() => void) | undefined; value: unknown; disabled: boolean; }",
+      "source": "vuetify/src/components/VChip/VChip.tsx#L40-L47",
+      "type": "object",
+      "properties": {
+        "isSelected": {
+          "text": "boolean | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "formatted": "boolean",
+          "optional": false
+        },
+        "selectedClass": {
+          "text": "boolean | (string | undefined)[] | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            },
+            {
+              "text": "(string | undefined)[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "(string)[]"
+            }
+          ],
+          "formatted": "boolean | (string)[]",
+          "optional": false
+        },
+        "select": {
+          "text": "((value: boolean) => void) | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "(value: boolean) => void",
+              "source": "vuetify/src/components/VChip/VChip.tsx#L43-L43",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(value: boolean) => void"
+            }
+          ],
+          "formatted": "((value: boolean) => void)",
+          "optional": false
+        },
+        "toggle": {
+          "text": "(() => void) | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "() => void",
+              "source": "vuetify/src/components/VChip/VChip.tsx#L44-L44",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void"
+            }
+          ],
+          "formatted": "(() => void)",
+          "optional": false
+        },
+        "value": {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown",
+          "optional": false
+        },
+        "disabled": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  isSelected: boolean\n  selectedClass: boolean | string[]\n  select: (value: boolean) => void\n  toggle: () => void\n  value: unknown\n  disabled: boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "label": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default slot of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prepend": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item outside the input and before input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "append": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item inside the input and after input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "close": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for icon used in **close** prop."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    },
+    "filter": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for icon used in **filter** prop."
+      },
+      "descriptionSource": {
+        "en": "VChip"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$chip-background": {
+      "default": "rgb(var(--v-theme-surface-variant))"
+    },
+    "$chip-border-color": {
+      "default": "settings.$border-color-root"
+    },
+    "$chip-border-radius": {
+      "default": "map.get(settings.$rounded, \"pill\")"
+    },
+    "$chip-border-style": {
+      "default": "settings.$border-style-root"
+    },
+    "$chip-border-thin-width": {
+      "default": "thin"
+    },
+    "$chip-border-width": {
+      "default": "0"
+    },
+    "$chip-close-size": {
+      "default": "18px"
+    },
+    "$chip-color": {
+      "default": "rgb(var(--v-theme-on-surface-variant))"
+    },
+    "$chip-density": {
+      "default": "(\"default\": 0, \"comfortable\": -1, \"compact\": -2)"
+    },
+    "$chip-disabled-opacity": {
+      "default": "0.3"
+    },
+    "$chip-elevation": {
+      "default": "1"
+    },
+    "$chip-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, \"button\", \"size\")"
+    },
+    "$chip-font-weight": {
+      "default": "400"
+    },
+    "$chip-height": {
+      "default": "32px"
+    },
+    "$chip-icon-size-multiplier": {
+      "default": "calc(18/21)"
+    },
+    "$chip-label-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$chip-max-width": {
+      "default": "100%"
+    },
+    "$chip-overflow": {
+      "default": "hidden"
+    },
+    "$chip-padding-ratio": {
+      "default": "2 + math.div(2, 3)"
+    },
+    "$chip-plain-opacity": {
+      "default": "0.26"
+    },
+    "$chip-filter-transition": {
+      "default": ".15s settings.$standard-easing"
+    },
+    "$chip-white-space": {
+      "default": "nowrap"
+    },
+    "$chip-sizes": {
+      "default": "(\n  \"height\": $chip-height,\n  \"font-size\": $chip-font-size,\n)"
+    },
+    "$chip-border": {
+      "default": "(\n  $chip-border-color,\n  $chip-border-style,\n  $chip-border-width\n)"
+    },
+    "$chip-variants": {
+      "default": "(\n  $chip-background,\n  $chip-color,\n  $chip-elevation,\n  $chip-plain-opacity,\n  'v-chip'\n)"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "fileName": "useTheme",
+  "displayName": "useTheme",
+  "pathName": "use-theme",
+  "exposed": {
+    "isDisabled": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Indicates if theming is disabled."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "themes": {
+      "text": "Ref<Record<string, InternalThemeDefinition>, Record<string, InternalThemeDefinition>>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<\n  Record<string, InternalThemeDefinition>,\n  Record<string, InternalThemeDefinition>\n>\n",
+      "optional": false,
+      "description": {
+        "en": "Raw theme definitions."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "name": {
+      "text": "Readonly<Ref<string, string>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<Ref<string, string>>\n",
+      "optional": false,
+      "description": {
+        "en": "Name of current theme."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "current": {
+      "text": "Readonly<Ref<{ readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }, { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<\n  Ref<\n    {\n      readonly dark: boolean\n      readonly colors: {\n        readonly [x: string]: string\n        readonly background: string\n        readonly surface: string\n        readonly primary: string\n        readonly secondary: string\n        readonly success: string\n        readonly warning: string\n        readonly error: string\n        readonly info: string\n        readonly 'on-background': string\n        readonly 'on-surface': string\n        readonly 'on-primary': string\n        readonly 'on-secondary': string\n        readonly 'on-success': string\n        readonly 'on-warning': string\n        readonly 'on-error': string\n        readonly 'on-info': string\n      }\n      readonly variables: { readonly [x: string]: string | number }\n    },\n    {\n      readonly dark: boolean\n      readonly colors: {\n        readonly [x: string]: string\n        readonly background: string\n        readonly surface: string\n        readonly primary: string\n        readonly secondary: string\n        readonly success: string\n        readonly warning: string\n        readonly error: string\n        readonly info: string\n        readonly 'on-background': string\n        readonly 'on-surface': string\n        readonly 'on-primary': string\n        readonly 'on-secondary': string\n        readonly 'on-success': string\n        readonly 'on-warning': string\n        readonly 'on-error': string\n        readonly 'on-info': string\n      }\n      readonly variables: { readonly [x: string]: string | number }\n    }\n  >\n>\n",
+      "optional": false,
+      "description": {
+        "en": "Current theme object."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "computedThemes": {
+      "text": "Readonly<Ref<{ readonly [x: string]: { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }; }, { readonly [x: string]: { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }; }>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<\n  Ref<\n    {\n      readonly [x: string]: {\n        readonly dark: boolean\n        readonly colors: {\n          readonly [x: string]: string\n          readonly background: string\n          readonly surface: string\n          readonly primary: string\n          readonly secondary: string\n          readonly success: string\n          readonly warning: string\n          readonly error: string\n          readonly info: string\n          readonly 'on-background': string\n          readonly 'on-surface': string\n          readonly 'on-primary': string\n          readonly 'on-secondary': string\n          readonly 'on-success': string\n          readonly 'on-warning': string\n          readonly 'on-error': string\n          readonly 'on-info': string\n        }\n        readonly variables: { readonly [x: string]: string | number }\n      }\n    },\n    {\n      readonly [x: string]: {\n        readonly dark: boolean\n        readonly colors: {\n          readonly [x: string]: string\n          readonly background: string\n          readonly surface: string\n          readonly primary: string\n          readonly secondary: string\n          readonly success: string\n          readonly warning: string\n          readonly error: string\n          readonly info: string\n          readonly 'on-background': string\n          readonly 'on-surface': string\n          readonly 'on-primary': string\n          readonly 'on-secondary': string\n          readonly 'on-success': string\n          readonly 'on-warning': string\n          readonly 'on-error': string\n          readonly 'on-info': string\n        }\n        readonly variables: { readonly [x: string]: string | number }\n      }\n    }\n  >\n>\n",
+      "optional": false,
+      "description": {
+        "en": "Object containing all parsed theme definitions."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "themeClasses": {
+      "text": "Readonly<Ref<string | undefined, string | undefined>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<Ref<string | undefined, string | undefined>>\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "styles": {
+      "text": "Readonly<Ref<string, string>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<Ref<string, string>>\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    },
+    "global": {
+      "text": "{ readonly name: Ref<string, string>; readonly current: Readonly<Ref<{ readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }, { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }>>; }",
+      "source": "vuetify/lib/framework.d.ts#L198-L201",
+      "type": "object",
+      "properties": {
+        "name": {
+          "text": "Ref<string, string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<string, string>",
+          "optional": false
+        },
+        "current": {
+          "text": "Readonly<Ref<{ readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }, { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }>>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "ref",
+          "ref": "Readonly",
+          "formatted": "Readonly<Ref<{ readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }, { readonly dark: boolean; readonly colors: { readonly [x: string]: string; readonly background: string; readonly surface: string; readonly primary: string; readonly secondary: string; readonly success: string; readonly warning: string; readonly error: string; readonly info: string; readonly 'on-background': string; readonly 'on-surface': string; readonly 'on-primary': string; readonly 'on-secondary': string; readonly 'on-success': string; readonly 'on-warning': string; readonly 'on-error': string; readonly 'on-info': string; }; readonly variables: { readonly [x: string]: string | number; }; }>>",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  name: Ref<string, string>\n  current: Readonly<\n    Ref<\n      {\n        readonly dark: boolean\n        readonly colors: {\n          readonly [x: string]: string\n          readonly background: string\n          readonly surface: string\n          readonly primary: string\n          readonly secondary: string\n          readonly success: string\n          readonly warning: string\n          readonly error: string\n          readonly info: string\n          readonly 'on-background': string\n          readonly 'on-surface': string\n          readonly 'on-primary': string\n          readonly 'on-secondary': string\n          readonly 'on-success': string\n          readonly 'on-warning': string\n          readonly 'on-error': string\n          readonly 'on-info': string\n        }\n        readonly variables: { readonly [x: string]: string | number }\n      },\n      {\n        readonly dark: boolean\n        readonly colors: {\n          readonly [x: string]: string\n          readonly background: string\n          readonly surface: string\n          readonly primary: string\n          readonly secondary: string\n          readonly success: string\n          readonly warning: string\n          readonly error: string\n          readonly info: string\n          readonly 'on-background': string\n          readonly 'on-surface': string\n          readonly 'on-primary': string\n          readonly 'on-secondary': string\n          readonly 'on-success': string\n          readonly 'on-warning': string\n          readonly 'on-error': string\n          readonly 'on-info': string\n        }\n        readonly variables: { readonly [x: string]: string | number }\n      }\n    >\n  >\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Reference to the global theme instance."
+      },
+      "descriptionSource": {
+        "en": "useTheme"
+      }
+    }
+  }
+}

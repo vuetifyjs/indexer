@@ -1,0 +1,827 @@
+{
+  "displayName": "VEmptyState",
+  "fileName": "VEmptyState",
+  "pathName": "v-empty-state",
+  "props": {
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "The size used to control the dimensions of the media element inside the component. Can be specified as a number or a string (e.g., '50%', '100px')."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "icon": {
+      "text": "IconValue | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "image": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a specific image using [v-img](/components/images/)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "href": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The URL the action button links to."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "to": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The URL the action button links to."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "title": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "headline": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "A large headline often used for 404 pages."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "actionText": {
+      "text": "string | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The text used for the action button."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "justify": {
+      "text": "\"start\" | \"end\" | \"center\" | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center'\n",
+      "optional": false,
+      "default": "'center'",
+      "description": {
+        "en": "Control the justification of the text."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "textWidth": {
+      "text": "string | number | undefined",
+      "source": "VEmptyState",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 500,
+      "description": {
+        "en": "Sets the width of the text container."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    }
+  },
+  "events": {
+    "click:action": {
+      "text": "[e: Event]",
+      "type": "array",
+      "items": [
+        {
+          "text": "Event",
+          "source": "typescript/lib/lib.dom.d.ts#L2163-L2276",
+          "type": "ref",
+          "ref": "Event",
+          "formatted": "Event"
+        }
+      ],
+      "length": 1,
+      "formatted": "[Event]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when the action button is clicked."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    }
+  },
+  "slots": {
+    "actions": {
+      "text": "{ props: { onClick: (e: Event) => void; }; }",
+      "source": "vuetify/src/components/VEmptyState/VEmptyState.tsx#L28-L32",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ onClick: (e: Event) => void; }",
+          "source": "vuetify/src/components/VEmptyState/VEmptyState.tsx#L29-L31",
+          "type": "object",
+          "properties": {
+            "onClick": {
+              "text": "(e: Event) => void",
+              "source": "vuetify/src/components/VEmptyState/VEmptyState.tsx#L30-L30",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "e",
+                  "optional": false,
+                  "text": "Event",
+                  "source": "typescript/lib/lib.dom.d.ts#L2163-L2276",
+                  "type": "ref",
+                  "ref": "Event",
+                  "formatted": "Event"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(e: Event) => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ onClick: (e: Event) => void }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { onClick: (e: Event) => void } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the action button."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "headline": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's headline."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "title": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "media": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's media."
+      },
+      "descriptionSource": {
+        "en": "VEmptyState"
+      }
+    },
+    "text": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's text content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$empty-state-actions-btn-background-color": {
+      "default": "initial"
+    },
+    "$empty-state-actions-btn-color": {
+      "default": "initial"
+    },
+    "$empty-state-actions-gap": {
+      "default": "8px"
+    },
+    "$empty-state-actions-padding": {
+      "default": "16px"
+    },
+    "$empty-state-content-padding": {
+      "default": "24px 0"
+    },
+    "$empty-state-headline-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$empty-state-headline-font-size": {
+      "default": "functions.map-deep-get(settings.$typography, 'h2', 'size')"
+    },
+    "$empty-state-headline-font-weight": {
+      "default": "functions.map-deep-get(settings.$typography, 'h2', 'weight')"
+    },
+    "$empty-state-headline-line-height": {
+      "default": "functions.map-deep-get(settings.$typography, 'h2', 'line-height')"
+    },
+    "$empty-state-headline-margin-bottom": {
+      "default": "8px"
+    },
+    "$empty-state-headline-mobile-font-size": {
+      "default": "functions.map-deep-get(settings.$typography, 'h4', 'size')"
+    },
+    "$empty-state-image-padding": {
+      "default": "16px"
+    },
+    "$empty-state-min-height": {
+      "default": "100%"
+    },
+    "$empty-state-media-icon-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$empty-state-padding": {
+      "default": "16px"
+    },
+    "$empty-state-text-font-size": {
+      "default": "functions.map-deep-get(settings.$typography, 'body-2', 'size')"
+    },
+    "$empty-state-text-font-weight": {
+      "default": "functions.map-deep-get(settings.$typography, 'body-2', 'weight')"
+    },
+    "$empty-state-text-line-height": {
+      "default": "functions.map-deep-get(settings.$typography, 'body-2', 'line-height')"
+    },
+    "$empty-state-text-padding": {
+      "default": "0 16px"
+    },
+    "$empty-state-title-font-size": {
+      "default": "functions.map-deep-get(settings.$typography, 'h6', 'size')"
+    },
+    "$empty-state-title-font-weight": {
+      "default": "functions.map-deep-get(settings.$typography, 'h6', 'weight')"
+    },
+    "$empty-state-title-line-height": {
+      "default": "functions.map-deep-get(settings.$typography, 'h6', 'line-height')"
+    },
+    "$empty-state-title-margin-bottom": {
+      "default": "4px"
+    }
+  }
+}

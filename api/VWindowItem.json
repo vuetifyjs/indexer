@@ -1,0 +1,219 @@
+{
+  "displayName": "VWindowItem",
+  "fileName": "VWindowItem",
+  "pathName": "v-window-item",
+  "props": {
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Prevents the item from becoming active when using the \"next\" and \"prev\" buttons or the `toggle` method."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    },
+    "eager": {
+      "text": "boolean | undefined",
+      "source": "lazy",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | undefined",
+      "source": "VWindowItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "The transition used when the component progressing through items. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    },
+    "reverseTransition": {
+      "text": "string | boolean | undefined",
+      "source": "VWindowItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the reverse transition."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {
+    "group:selected": {
+      "text": "[val: { value: boolean; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ value: boolean; }",
+          "source": "vuetify/src/components/VWindow/VWindowItem.tsx#L43-L43",
+          "type": "object",
+          "properties": {
+            "value": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ value: boolean }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ value: boolean }]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when an item is selected within a group."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "groupItem": {
+      "text": "{ id: string; isSelected: boolean; isFirst: boolean; isLast: boolean; toggle: () => void; select: (value: boolean) => void; selectedClass: false | (string | undefined)[]; value: unknown; disabled: boolean | undefined; group: { register: (item: GroupItem, cmp: ComponentInternalInstance) => void; unregister: (id: string) => void; select: (id: string, value: boolean) => void; selected: readonly string[]; isSelected: (id: string) => boolean; prev: () => void; next: () => void; selectedClass: string | undefined; items: { id: string; value: unknown; disabled: boolean | undefined; }[]; disabled: boolean | undefined; getItemIndex: (value: unknown) => number; }; }",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L636-L638",
+      "type": "ref",
+      "ref": "__type",
+      "formatted": "{\n  id: string\n  isSelected: boolean\n  isFirst: boolean\n  isLast: boolean\n  toggle: () => void\n  select: (value: boolean) => void\n  selectedClass: false | (string | undefined)[]\n  value: unknown\n  disabled: boolean | undefined\n  group: {\n    register: (item: GroupItem, cmp: ComponentInternalInstance) => void\n    unregister: (id: string) => void\n    select: (id: string, value: boolean) => void\n    selected: readonly string[]\n    isSelected: (id: string) => boolean\n    prev: () => void\n    next: () => void\n    selectedClass: string | undefined\n    items: { id: string; value: unknown; disabled: boolean | undefined }[]\n    disabled: boolean | undefined\n    getItemIndex: (value: unknown) => number\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Returns item and item group data, state and helper methods."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    }
+  },
+  "sass": {}
+}

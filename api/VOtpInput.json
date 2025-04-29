@@ -1,0 +1,907 @@
+{
+  "displayName": "VOtpInput",
+  "fileName": "VOtpInput",
+  "pathName": "v-otp-input",
+  "props": {
+    "length": {
+      "text": "string | number | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 6,
+      "description": {
+        "en": "The OTP field's length."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "type": {
+      "text": "\"number\" | \"text\" | \"password\" | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"number\"",
+          "type": "string",
+          "literal": "\"number\"",
+          "formatted": "\"number\""
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"password\"",
+          "type": "string",
+          "literal": "\"password\"",
+          "formatted": "\"password\""
+        }
+      ],
+      "formatted": "'number' | 'text' | 'password'\n",
+      "optional": false,
+      "default": "'number'",
+      "description": {
+        "en": "Supported types: `text`, `password`, `number`."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "error": {
+      "text": "boolean | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"outlined\" | \"plain\" | \"underlined\" | \"filled\" | \"solo\" | \"solo-inverted\" | \"solo-filled\" | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        },
+        {
+          "text": "\"underlined\"",
+          "type": "string",
+          "literal": "\"underlined\"",
+          "formatted": "\"underlined\""
+        },
+        {
+          "text": "\"filled\"",
+          "type": "string",
+          "literal": "\"filled\"",
+          "formatted": "\"filled\""
+        },
+        {
+          "text": "\"solo\"",
+          "type": "string",
+          "literal": "\"solo\"",
+          "formatted": "\"solo\""
+        },
+        {
+          "text": "\"solo-inverted\"",
+          "type": "string",
+          "literal": "\"solo-inverted\"",
+          "formatted": "\"solo-inverted\""
+        },
+        {
+          "text": "\"solo-filled\"",
+          "type": "string",
+          "literal": "\"solo-filled\"",
+          "formatted": "\"solo-filled\""
+        }
+      ],
+      "formatted": "  | 'outlined'\n  | 'plain'\n  | 'underlined'\n  | 'filled'\n  | 'solo'\n  | 'solo-inverted'\n  | 'solo-filled'\n",
+      "optional": false,
+      "default": "'outlined'",
+      "description": {
+        "en": "Applies a distinct style to the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of the input when it is not focused."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "modelValue": {
+      "text": "string | number | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the input."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "loading": {
+      "text": "string | boolean | undefined",
+      "source": "loader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
+      },
+      "descriptionSource": {
+        "en": "loader"
+      }
+    },
+    "placeholder": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the input’s placeholder text."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "label": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.input.otp'",
+      "description": {
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "autofocus": {
+      "text": "boolean | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Automatically focuses the first input on page load"
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "focused": {
+      "text": "boolean | undefined",
+      "source": "focus",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces a focused state styling on the component."
+      },
+      "descriptionSource": {
+        "en": "focus"
+      }
+    },
+    "divider": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the dividing character between items."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "focusAll": {
+      "text": "boolean | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all inputs into a focus state when any are focused"
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[val: string]",
+      "type": "array",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "length": 1,
+      "formatted": "[string]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "update:focused": {
+      "text": "[val: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the input is focused or blurred"
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "finish": {
+      "text": "[val: string]",
+      "type": "array",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "length": 1,
+      "formatted": "[string]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the input is filled completely and cursor is blurred."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "loader": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom loader (displayed when [loading](#props-loading) prop is equal to true)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "blur": {
+      "text": "() => void",
+      "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L318-L320",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Forces the input to lose focus."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "focus": {
+      "text": "() => void",
+      "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L321-L323",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Focuses the first field in the input"
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "reset": {
+      "text": "() => void",
+      "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L178-L180",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Reset's the input model to an empty array"
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "isFocused": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the input is focused."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "sass": {
+    "$otp-input-content-gap": {
+      "default": ".5rem"
+    },
+    "$otp-input-content-height": {
+      "default": "64px"
+    },
+    "$otp-input-content-max-width": {
+      "default": "320px"
+    },
+    "$otp-input-content-padding": {
+      "default": ".5rem"
+    },
+    "$otp-input-divided-content-max-width": {
+      "default": "360px"
+    },
+    "$otp-input-divider-margin": {
+      "default": "0 8px"
+    },
+    "$otp-input-field-font-size": {
+      "default": "1.25rem"
+    },
+    "$otp-input-padding": {
+      "default": ".5rem 0"
+    }
+  }
+}

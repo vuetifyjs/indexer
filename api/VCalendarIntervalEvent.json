@@ -1,0 +1,148 @@
+{
+  "displayName": "VCalendarIntervalEvent",
+  "fileName": "VCalendarIntervalEvent",
+  "pathName": "v-calendar-interval-event",
+  "props": {
+    "allDay": {
+      "text": "boolean | undefined",
+      "source": "VCalendarIntervalEvent",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Indicates whether the event spans the entire day."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "interval": {
+      "text": "unknown",
+      "source": "VCalendarIntervalEvent",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The specific time interval this event is associated with."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "intervalDivisions": {
+      "text": "number",
+      "source": "VCalendarIntervalEvent",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Number of subdivisions within the interval for this event."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "intervalDuration": {
+      "text": "number",
+      "source": "VCalendarIntervalEvent",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Duration of the interval in which this event occurs, in minutes."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "intervalHeight": {
+      "text": "number",
+      "source": "VCalendarIntervalEvent",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Height of the interval in the calendar view, in pixels."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "event": {
+      "text": "unknown",
+      "source": "VCalendarIntervalEvent",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The event object associated with this calendar interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "intervalEvent": {
+      "text": "{ height: string; margin: string; eventClass: string; event: any; interval: any; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarIntervalEvent.tsx#L14-L14",
+      "type": "object",
+      "properties": {
+        "height": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "margin": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "eventClass": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "event": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        },
+        "interval": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  height: string\n  margin: string\n  eventClass: string\n  event: any\n  interval: any\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarIntervalEvent.tsx#L14-L14.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

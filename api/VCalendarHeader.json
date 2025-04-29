@@ -1,0 +1,230 @@
+{
+  "displayName": "VCalendarHeader",
+  "fileName": "VCalendarHeader",
+  "pathName": "v-calendar-header",
+  "props": {
+    "text": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.calendar.today'",
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "title": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "nextIcon": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "The icon to use for the next button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "prevIcon": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "The icon to use for the prev button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "viewMode": {
+      "text": "\"month\" | \"week\" | \"day\" | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"month\"",
+          "type": "string",
+          "literal": "\"month\"",
+          "formatted": "\"month\""
+        },
+        {
+          "text": "\"week\"",
+          "type": "string",
+          "literal": "\"week\"",
+          "formatted": "\"week\""
+        },
+        {
+          "text": "\"day\"",
+          "type": "string",
+          "literal": "\"day\"",
+          "formatted": "\"day\""
+        }
+      ],
+      "formatted": "'month' | 'week' | 'day'\n",
+      "optional": false,
+      "default": "'month'",
+      "description": {
+        "en": "The current view mode of the calendar."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    }
+  },
+  "events": {
+    "click:next": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when clicking the next button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "click:prev": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when clicking the prev button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "click:toToday": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when clicking the today button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    }
+  },
+  "slots": {
+    "title": {
+      "text": "{ title?: string | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarHeader.tsx#L17-L17",
+      "type": "object",
+      "properties": {
+        "title": {
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string",
+          "optional": true
+        }
+      },
+      "formatted": "{ title: string }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

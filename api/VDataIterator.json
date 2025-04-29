@@ -1,0 +1,2504 @@
+{
+  "displayName": "VDataIterator",
+  "fileName": "VDataIterator",
+  "pathName": "v-data-iterator",
+  "props": {
+    "search": {
+      "text": "string | undefined",
+      "source": "VDataIterator",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Text input used to filter items."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "items": {
+      "text": "readonly unknown[] | undefined",
+      "source": "DataIterator-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of strings or objects used for automatically generating children components."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "modelValue": {
+      "text": "readonly any[] | undefined",
+      "source": "DataTable-select",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "loading": {
+      "text": "boolean | undefined",
+      "source": "VDataIterator",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "If `true` and no items are provided, then a loading text will be shown."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; hideOnLeave: boolean; } | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        },
+        {
+          "text": "{ component: Component; hideOnLeave: boolean; }",
+          "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L80-L83",
+          "type": "object",
+          "properties": {
+            "component": {
+              "text": "Component",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+              "type": "ref",
+              "ref": "Component",
+              "formatted": "Component",
+              "optional": false
+            },
+            "hideOnLeave": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ component: Component; hideOnLeave: boolean }"
+        }
+      ],
+      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component; hideOnLeave: boolean }\n",
+      "optional": false,
+      "default": "{component: {name: 'fade-transition'}, hideOnLeave: true}",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
+      }
+    },
+    "itemValue": {
+      "text": "SelectItemKey",
+      "source": "DataIterator-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "'id'",
+      "description": {
+        "en": "Property on supplied `items` that contains its value."
+      },
+      "descriptionSource": {
+        "en": "DataIterator-items"
+      }
+    },
+    "itemSelectable": {
+      "text": "SelectItemKey",
+      "source": "DataIterator-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Property on supplied `items` that contains the boolean value indicating if the item is selectable."
+      },
+      "descriptionSource": {
+        "en": "DataIterator-items"
+      }
+    },
+    "returnObject": {
+      "text": "boolean | undefined",
+      "source": "DataIterator-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Changes the selection behavior to return the object directly rather than the value specified with **item-value**."
+      },
+      "descriptionSource": {
+        "en": "DataIterator-items"
+      }
+    },
+    "showSelect": {
+      "text": "boolean | undefined",
+      "source": "DataTable-select",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Shows the column with checkboxes for selecting items in the list."
+      },
+      "descriptionSource": {
+        "en": "DataTable-select"
+      }
+    },
+    "selectStrategy": {
+      "text": "\"single\" | \"page\" | \"all\" | undefined",
+      "source": "DataTable-select",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"single\"",
+          "type": "string",
+          "literal": "\"single\"",
+          "formatted": "\"single\""
+        },
+        {
+          "text": "\"page\"",
+          "type": "string",
+          "literal": "\"page\"",
+          "formatted": "\"page\""
+        },
+        {
+          "text": "\"all\"",
+          "type": "string",
+          "literal": "\"all\"",
+          "formatted": "\"all\""
+        }
+      ],
+      "formatted": "'single' | 'page' | 'all'\n",
+      "optional": false,
+      "default": "'page'",
+      "description": {
+        "en": "Defines the strategy of selecting items in the list. Possible values are: 'single' (only one item can be selected at a time), 'page' ('Select all' button will select only items on the current page), 'all' ('Select all' button will select all items in the list)."
+      },
+      "descriptionSource": {
+        "en": "DataTable-select"
+      }
+    },
+    "page": {
+      "text": "string | number | undefined",
+      "source": "DataTable-paginate",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 1,
+      "description": {
+        "en": "The current displayed page number (1-indexed)."
+      },
+      "descriptionSource": {
+        "en": "DataTable-paginate"
+      }
+    },
+    "valueComparator": {
+      "text": "typeof deepEqual | undefined",
+      "source": "DataTable-select",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "typeof deepEqual",
+          "source": "vuetify/src/util/helpers.ts#L46-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "a",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            },
+            {
+              "name": "b",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(a: any, b: any) => boolean"
+        }
+      ],
+      "formatted": "(a: any, b: any) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "sortBy": {
+      "text": "readonly SortItem[] | undefined",
+      "source": "DataTable-sort",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Changes which item property (or properties) should be used for sort order. Can be used with `.sync` modifier."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "multiSort": {
+      "text": "boolean | undefined",
+      "source": "DataTable-sort",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "If `true` then one can sort on multiple properties."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "mustSort": {
+      "text": "boolean | undefined",
+      "source": "DataTable-sort",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "If `true` then one can not disable sorting, it will always switch between ascending and descending."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "customKeySort": {
+      "text": "unknown",
+      "source": "DataTable-sort",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Function used on specific keys within the item object. `customSort` is skipped for columns with `customKeySort` specified."
+      },
+      "descriptionSource": {
+        "en": "DataTable-sort"
+      }
+    },
+    "itemsPerPage": {
+      "text": "string | number | undefined",
+      "source": "DataTable-paginate",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 5,
+      "description": {
+        "en": "Changes how many items per page should be visible. Can be used with `.sync` modifier. Setting this prop to `-1` will display all items on the page."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "expandOnClick": {
+      "text": "boolean | undefined",
+      "source": "DataTable-expand",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Expands item when the row is clicked."
+      },
+      "descriptionSource": {
+        "en": "DataTable-expand"
+      }
+    },
+    "showExpand": {
+      "text": "boolean | undefined",
+      "source": "DataTable-expand",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Shows the expand icon."
+      },
+      "descriptionSource": {
+        "en": "DataTable-expand"
+      }
+    },
+    "expanded": {
+      "text": "readonly string[] | undefined",
+      "source": "DataTable-expand",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Array of expanded items. Can be used with `.sync` modifier."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "groupBy": {
+      "text": "readonly SortItem[] | undefined",
+      "source": "DataTable-group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Changes which item property should be used for grouping items. Currently only supports a single grouping in the format: `group` or `['group']`. When using an array, only the first element is considered. Can be used with `.sync` modifier."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "filterMode": {
+      "text": "FilterMode | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterMode",
+          "source": "vuetify/src/composables/filter.tsx#L25-L25",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"every\"",
+              "type": "string",
+              "literal": "\"every\"",
+              "formatted": "\"every\""
+            },
+            {
+              "text": "\"some\"",
+              "type": "string",
+              "literal": "\"some\"",
+              "formatted": "\"some\""
+            },
+            {
+              "text": "\"union\"",
+              "type": "string",
+              "literal": "\"union\"",
+              "formatted": "\"union\""
+            },
+            {
+              "text": "\"intersection\"",
+              "type": "string",
+              "literal": "\"intersection\"",
+              "formatted": "\"intersection\""
+            }
+          ],
+          "formatted": "\"every\" | \"some\" | \"union\" | \"intersection\""
+        }
+      ],
+      "formatted": "'every' | 'some' | 'union' | 'intersection'\n",
+      "optional": false,
+      "default": "'intersection'",
+      "description": {
+        "en": "Controls how the results of `customFilter` and `customKeyFilter` are combined. All modes only apply `customFilter` to columns not specified in `customKeyFilter`.\n\n- **some**: There is at least one match from either the custom filter or the custom key filter.\n- **every**: All columns match either the custom filter or the custom key filter.\n- **union**: There is at least one match from the custom filter, or all columns match the custom key filters.\n- **intersection**: There is at least one match from the custom filter, and all columns match the custom key filters."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "noFilter": {
+      "text": "boolean | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Disables all item filtering."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "customFilter": {
+      "text": "FilterFunction | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterFunction",
+          "source": "vuetify/src/composables/filter.tsx#L22-L22",
+          "type": "ref",
+          "ref": "FilterFunction",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/filter.tsx#L22-L22\" target=\"_blank\">FilterFunction</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/filter.tsx#L22-L22\" target=\"_blank\">FilterFunction</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Function to filter items."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "customKeyFilter": {
+      "text": "unknown",
+      "source": "filter",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Function used on specific keys within the item object. `customFilter` is skipped for columns with `customKeyFilter` specified."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "filterKeys": {
+      "text": "FilterKeys | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterKeys",
+          "source": "vuetify/src/composables/filter.tsx#L24-L24",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "string[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string[]"
+            }
+          ],
+          "formatted": "string | string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "description": {
+        "en": "Array of specific keys to filter on the item."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: any[]]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any[]]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "update:expanded": {
+      "text": "[value: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `expanded` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:groupBy": {
+      "text": "[value: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `groupBy` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:page": {
+      "text": "[value: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `page` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:itemsPerPage": {
+      "text": "[value: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `itemsPerPage` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:sortBy": {
+      "text": "[value: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `sortBy` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:options": {
+      "text": "[value: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `options` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "update:currentItems": {
+      "text": "[value: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "The `.sync` event for `currentItems` prop."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "VDataIteratorSlotProps<unknown>",
+      "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L36-L56",
+      "type": "object",
+      "properties": {
+        "page": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "itemsPerPage": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "pageCount": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "prevPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L92-L94",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "nextPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L88-L90",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "setPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L96-L98",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "setItemsPerPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L83-L86",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(items: SelectableItem | SelectableItem[]) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L127-L129",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem | SelectableItem[]",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "text": "any",
+                      "type": "any",
+                      "formatted": "any",
+                      "optional": false
+                    },
+                    "selectable": {
+                      "text": "boolean",
+                      "type": "boolean",
+                      "formatted": "boolean",
+                      "optional": false
+                    }
+                  },
+                  "formatted": "{ value: any; selectable: boolean }"
+                },
+                {
+                  "text": "SelectableItem[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "SelectableItem",
+                      "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                      "type": "ref",
+                      "ref": "SelectableItem",
+                      "formatted": "SelectableItem"
+                    }
+                  ],
+                  "formatted": "SelectableItem[]"
+                }
+              ],
+              "formatted": "{ value: any; selectable: boolean } | SelectableItem[]"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(items: { value: any; selectable: boolean } | SelectableItem[]) => boolean",
+          "optional": false
+        },
+        "select": {
+          "text": "(items: SelectableItem[], value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L135-L143",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "ref",
+                  "ref": "SelectableItem",
+                  "formatted": "SelectableItem"
+                }
+              ],
+              "formatted": "SelectableItem[]"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(items: SelectableItem[], value: boolean) => void",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "toggleSelect": {
+          "text": "(item: SelectableItem, index?: number | undefined, event?: MouseEvent | undefined) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L145-L159",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "SelectableItem",
+              "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+              "type": "object",
+              "properties": {
+                "value": {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any",
+                  "optional": false
+                },
+                "selectable": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                }
+              },
+              "formatted": "{ value: any; selectable: boolean }"
+            },
+            {
+              "name": "index",
+              "optional": false,
+              "text": "number | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                }
+              ],
+              "formatted": "number"
+            },
+            {
+              "name": "event",
+              "optional": false,
+              "text": "MouseEvent | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "MouseEvent",
+                  "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+                  "type": "ref",
+                  "ref": "MouseEvent",
+                  "formatted": "MouseEvent"
+                }
+              ],
+              "formatted": "MouseEvent"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: { value: any; selectable: boolean }, index: number, event: MouseEvent) => void",
+          "optional": false
+        },
+        "isExpanded": {
+          "text": "(item: DataTableItem<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L55-L57",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean",
+          "optional": false
+        },
+        "toggleExpand": {
+          "text": "(item: DataTableItem<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L59-L61",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void",
+          "optional": false
+        },
+        "isGroupOpen": {
+          "text": "(group: Group<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L69-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean",
+          "optional": false
+        },
+        "toggleGroup": {
+          "text": "(group: Group<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L73-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void",
+          "optional": false
+        },
+        "items": {
+          "text": "readonly DataIteratorItem<unknown>[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]",
+          "optional": false
+        },
+        "groupedItems": {
+          "text": "readonly (DataIteratorItem<unknown> | Group<DataIteratorItem<unknown>>)[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            },
+            {
+              "text": "Group<DataIteratorItem<unknown>>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "formatted": "(<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  page: number\n  itemsPerPage: number\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  pageCount: number\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  prevPage: () => void\n  nextPage: () => void\n  setPage: (value: number) => void\n  setItemsPerPage: (value: number) => void\n  isSelected: (\n    items: { value: any; selectable: boolean } | SelectableItem[],\n  ) => boolean\n  select: (items: SelectableItem[], value: boolean) => void\n  selectAll: (value: boolean) => void\n  toggleSelect: (\n    item: { value: any; selectable: boolean },\n    index: number,\n    event: MouseEvent,\n  ) => void\n  isExpanded: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean\n  toggleExpand: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void\n  isGroupOpen: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean\n  toggleGroup: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void\n  items: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]\n  groupedItems: (<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default slot. Use this to render your items."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "header": {
+      "text": "VDataIteratorSlotProps<unknown>",
+      "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L36-L56",
+      "type": "object",
+      "properties": {
+        "page": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "itemsPerPage": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "pageCount": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "prevPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L92-L94",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "nextPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L88-L90",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "setPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L96-L98",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "setItemsPerPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L83-L86",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(items: SelectableItem | SelectableItem[]) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L127-L129",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem | SelectableItem[]",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "text": "any",
+                      "type": "any",
+                      "formatted": "any",
+                      "optional": false
+                    },
+                    "selectable": {
+                      "text": "boolean",
+                      "type": "boolean",
+                      "formatted": "boolean",
+                      "optional": false
+                    }
+                  },
+                  "formatted": "{ value: any; selectable: boolean }"
+                },
+                {
+                  "text": "SelectableItem[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "SelectableItem",
+                      "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                      "type": "ref",
+                      "ref": "SelectableItem",
+                      "formatted": "SelectableItem"
+                    }
+                  ],
+                  "formatted": "SelectableItem[]"
+                }
+              ],
+              "formatted": "{ value: any; selectable: boolean } | SelectableItem[]"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(items: { value: any; selectable: boolean } | SelectableItem[]) => boolean",
+          "optional": false
+        },
+        "select": {
+          "text": "(items: SelectableItem[], value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L135-L143",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "ref",
+                  "ref": "SelectableItem",
+                  "formatted": "SelectableItem"
+                }
+              ],
+              "formatted": "SelectableItem[]"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(items: SelectableItem[], value: boolean) => void",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "toggleSelect": {
+          "text": "(item: SelectableItem, index?: number | undefined, event?: MouseEvent | undefined) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L145-L159",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "SelectableItem",
+              "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+              "type": "object",
+              "properties": {
+                "value": {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any",
+                  "optional": false
+                },
+                "selectable": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                }
+              },
+              "formatted": "{ value: any; selectable: boolean }"
+            },
+            {
+              "name": "index",
+              "optional": false,
+              "text": "number | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                }
+              ],
+              "formatted": "number"
+            },
+            {
+              "name": "event",
+              "optional": false,
+              "text": "MouseEvent | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "MouseEvent",
+                  "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+                  "type": "ref",
+                  "ref": "MouseEvent",
+                  "formatted": "MouseEvent"
+                }
+              ],
+              "formatted": "MouseEvent"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: { value: any; selectable: boolean }, index: number, event: MouseEvent) => void",
+          "optional": false
+        },
+        "isExpanded": {
+          "text": "(item: DataTableItem<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L55-L57",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean",
+          "optional": false
+        },
+        "toggleExpand": {
+          "text": "(item: DataTableItem<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L59-L61",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void",
+          "optional": false
+        },
+        "isGroupOpen": {
+          "text": "(group: Group<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L69-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean",
+          "optional": false
+        },
+        "toggleGroup": {
+          "text": "(group: Group<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L73-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void",
+          "optional": false
+        },
+        "items": {
+          "text": "readonly DataIteratorItem<unknown>[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]",
+          "optional": false
+        },
+        "groupedItems": {
+          "text": "readonly (DataIteratorItem<unknown> | Group<DataIteratorItem<unknown>>)[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            },
+            {
+              "text": "Group<DataIteratorItem<unknown>>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "formatted": "(<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  page: number\n  itemsPerPage: number\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  pageCount: number\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  prevPage: () => void\n  nextPage: () => void\n  setPage: (value: number) => void\n  setItemsPerPage: (value: number) => void\n  isSelected: (\n    items: { value: any; selectable: boolean } | SelectableItem[],\n  ) => boolean\n  select: (items: SelectableItem[], value: boolean) => void\n  selectAll: (value: boolean) => void\n  toggleSelect: (\n    item: { value: any; selectable: boolean },\n    index: number,\n    event: MouseEvent,\n  ) => void\n  isExpanded: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean\n  toggleExpand: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void\n  isGroupOpen: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean\n  toggleGroup: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void\n  items: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]\n  groupedItems: (<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Defines a header above the items."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "footer": {
+      "text": "VDataIteratorSlotProps<unknown>",
+      "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L36-L56",
+      "type": "object",
+      "properties": {
+        "page": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "itemsPerPage": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "pageCount": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "prevPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L92-L94",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "nextPage": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L88-L90",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "setPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L96-L98",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "setItemsPerPage": {
+          "text": "(value: number) => void",
+          "source": "vuetify/src/components/VDataTable/composables/paginate.ts#L83-L86",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: number) => void",
+          "optional": false
+        },
+        "isSelected": {
+          "text": "(items: SelectableItem | SelectableItem[]) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L127-L129",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem | SelectableItem[]",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "text": "any",
+                      "type": "any",
+                      "formatted": "any",
+                      "optional": false
+                    },
+                    "selectable": {
+                      "text": "boolean",
+                      "type": "boolean",
+                      "formatted": "boolean",
+                      "optional": false
+                    }
+                  },
+                  "formatted": "{ value: any; selectable: boolean }"
+                },
+                {
+                  "text": "SelectableItem[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "SelectableItem",
+                      "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                      "type": "ref",
+                      "ref": "SelectableItem",
+                      "formatted": "SelectableItem"
+                    }
+                  ],
+                  "formatted": "SelectableItem[]"
+                }
+              ],
+              "formatted": "{ value: any; selectable: boolean } | SelectableItem[]"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(items: { value: any; selectable: boolean } | SelectableItem[]) => boolean",
+          "optional": false
+        },
+        "select": {
+          "text": "(items: SelectableItem[], value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L135-L143",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "items",
+              "optional": false,
+              "text": "SelectableItem[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "SelectableItem",
+                  "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+                  "type": "ref",
+                  "ref": "SelectableItem",
+                  "formatted": "SelectableItem"
+                }
+              ],
+              "formatted": "SelectableItem[]"
+            },
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(items: SelectableItem[], value: boolean) => void",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "toggleSelect": {
+          "text": "(item: SelectableItem, index?: number | undefined, event?: MouseEvent | undefined) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L145-L159",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "SelectableItem",
+              "source": "vuetify/src/components/VDataTable/composables/select.ts#L13-L16",
+              "type": "object",
+              "properties": {
+                "value": {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any",
+                  "optional": false
+                },
+                "selectable": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                }
+              },
+              "formatted": "{ value: any; selectable: boolean }"
+            },
+            {
+              "name": "index",
+              "optional": false,
+              "text": "number | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                }
+              ],
+              "formatted": "number"
+            },
+            {
+              "name": "event",
+              "optional": false,
+              "text": "MouseEvent | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "MouseEvent",
+                  "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+                  "type": "ref",
+                  "ref": "MouseEvent",
+                  "formatted": "MouseEvent"
+                }
+              ],
+              "formatted": "MouseEvent"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: { value: any; selectable: boolean }, index: number, event: MouseEvent) => void",
+          "optional": false
+        },
+        "isExpanded": {
+          "text": "(item: DataTableItem<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L55-L57",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean",
+          "optional": false
+        },
+        "toggleExpand": {
+          "text": "(item: DataTableItem<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/expand.ts#L59-L61",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "DataTableItem<any>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L46-L52",
+              "type": "ref",
+              "ref": "DataTableItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void",
+          "optional": false
+        },
+        "isGroupOpen": {
+          "text": "(group: Group<any>) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L69-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean",
+          "optional": false
+        },
+        "toggleGroup": {
+          "text": "(group: Group<any>) => void",
+          "source": "vuetify/src/components/VDataTable/composables/group.ts#L73-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "group",
+              "optional": false,
+              "text": "Group<any>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void",
+          "optional": false
+        },
+        "items": {
+          "text": "readonly DataIteratorItem<unknown>[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]",
+          "optional": false
+        },
+        "groupedItems": {
+          "text": "readonly (DataIteratorItem<unknown> | Group<DataIteratorItem<unknown>>)[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "DataIteratorItem<unknown>",
+              "source": "vuetify/src/components/VDataIterator/composables/items.ts#L18-L20",
+              "type": "ref",
+              "ref": "DataIteratorItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>"
+            },
+            {
+              "text": "Group<DataIteratorItem<unknown>>",
+              "source": "vuetify/src/components/VDataTable/composables/group.ts#L18-L25",
+              "type": "ref",
+              "ref": "Group",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>"
+            }
+          ],
+          "formatted": "(<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  page: number\n  itemsPerPage: number\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  pageCount: number\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  prevPage: () => void\n  nextPage: () => void\n  setPage: (value: number) => void\n  setItemsPerPage: (value: number) => void\n  isSelected: (\n    items: { value: any; selectable: boolean } | SelectableItem[],\n  ) => boolean\n  select: (items: SelectableItem[], value: boolean) => void\n  selectAll: (value: boolean) => void\n  toggleSelect: (\n    item: { value: any; selectable: boolean },\n    index: number,\n    event: MouseEvent,\n  ) => void\n  isExpanded: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => boolean\n  toggleExpand: (item: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L46-L52\" target=\"_blank\">DataTableItem</a>) => void\n  isGroupOpen: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => boolean\n  toggleGroup: (group: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>) => void\n  items: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a>[]\n  groupedItems: (<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataIterator/composables/items.ts#L18-L20\" target=\"_blank\">DataIteratorItem</a> | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/group.ts#L18-L25\" target=\"_blank\">Group</a>)[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Defines a footer below the items."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    },
+    "loader": {
+      "text": "LoaderSlotProps",
+      "source": "vuetify/src/composables/loader.tsx#L12-L15",
+      "type": "object",
+      "properties": {
+        "color": {
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string",
+          "optional": false
+        },
+        "isActive": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{ color: string; isActive: boolean }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom loader (displayed when [loading](#props-loading) prop is equal to true)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "no-data": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Defines content for when no items are provided."
+      },
+      "descriptionSource": {
+        "en": "VDataIterator"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

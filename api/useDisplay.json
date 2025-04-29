@@ -1,0 +1,346 @@
+{
+  "fileName": "useDisplay",
+  "displayName": "useDisplay",
+  "pathName": "use-display",
+  "exposed": {
+    "displayClasses": {
+      "text": "Readonly<Ref<{ [x: string]: boolean; }, { [x: string]: boolean; }>>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "ref",
+      "ref": "Readonly",
+      "formatted": "Readonly<Ref<{ [x: string]: boolean }, { [x: string]: boolean }>>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns an object containing the breakpoints and their corresponding classes."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "mobile": {
+      "text": "ComputedRef<boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+      "type": "ref",
+      "ref": "ComputedRef",
+      "formatted": "ComputedRef<boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is considered to be a mobile breakpoint."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "xs": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **xs**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "sm": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **sm**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "md": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **md**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "lg": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **lg**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "xl": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **xl**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "xxl": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **xxl**."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "smAndUp": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **sm** or higher."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "mdAndUp": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **md** or higher."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "lgAndUp": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **lg** or higher."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "xlAndUp": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **xl** or higher."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "smAndDown": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **sm** or lower."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "mdAndDown": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **md** or lower."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "lgAndDown": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **lg** or lower."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "xlAndDown": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current browser breakpoint is **xl** or lower."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "name": {
+      "text": "Ref<DisplayBreakpoint, DisplayBreakpoint>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<DisplayBreakpoint, DisplayBreakpoint>\n",
+      "optional": false,
+      "description": {
+        "en": "Name of the current breakpoint."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "height": {
+      "text": "Ref<number, number>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<number, number>\n",
+      "optional": false,
+      "description": {
+        "en": "The inner height of the browser window."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "width": {
+      "text": "Ref<number, number>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<number, number>\n",
+      "optional": false,
+      "description": {
+        "en": "The inner width of the browser window."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "Ref<number | DisplayBreakpoint, number | DisplayBreakpoint>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<number | DisplayBreakpoint, number | DisplayBreakpoint>\n",
+      "optional": false,
+      "description": {
+        "en": "Controls which named breakpoint (**lg**, **md**, etc) or browser width (in px) is considered to be mobile."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "platform": {
+      "text": "Ref<DisplayPlatform, DisplayPlatform>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<DisplayPlatform, DisplayPlatform>\n",
+      "optional": false,
+      "description": {
+        "en": "Name of the current platform."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "thresholds": {
+      "text": "Ref<DisplayThresholds, DisplayThresholds>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<DisplayThresholds, DisplayThresholds>\n",
+      "optional": false,
+      "description": {
+        "en": "An object describing the width values of each breakpoint."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "ssr": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns **true** if the current page was server rendered."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    },
+    "update": {
+      "text": "() => void",
+      "source": "vuetify/lib/framework.d.ts#L366-L366",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Function that updates the current width and height values."
+      },
+      "descriptionSource": {
+        "en": "useDisplay"
+      }
+    }
+  }
+}

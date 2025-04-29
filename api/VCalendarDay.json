@@ -1,0 +1,509 @@
+{
+  "displayName": "VCalendarDay",
+  "fileName": "VCalendarDay",
+  "pathName": "v-calendar-day",
+  "props": {
+    "hideDayHeader": {
+      "text": "boolean | undefined",
+      "source": "VCalendarDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the day header is visible in the calendar day view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "intervals": {
+      "text": "number | undefined",
+      "source": "VCalendarDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 24,
+      "description": {
+        "en": "Specifies the total number of time intervals for the day in the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "day": {
+      "text": "unknown",
+      "source": "VCalendarInterval",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "default": "{}",
+      "description": {
+        "en": "Represents the specific day associated with the interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "dayIndex": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Index of the day this interval is a part of, in a week or month view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "events": {
+      "text": "any[] | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Array of events specific to this interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalDivisions": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 2,
+      "description": {
+        "en": "Number of subdivisions within this interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalDuration": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 60,
+      "description": {
+        "en": "Duration of this specific interval in minutes."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalHeight": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 48,
+      "description": {
+        "en": "Height of the interval in pixels in the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalFormat": {
+      "text": "string | Function | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function"
+        }
+      ],
+      "formatted": "string | Function\n",
+      "optional": false,
+      "default": "'fullTime12h'",
+      "description": {
+        "en": "Formatting rule for displaying the interval, as a string or function."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalStart": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Starting time for this specific interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "intervalBody": {
+      "text": "{ interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L22-L22",
+      "type": "object",
+      "properties": {
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L22-L22.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "intervalEvent": {
+      "text": "{ height: string; margin: string; eventClass: string; event: any; interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L23-L29",
+      "type": "object",
+      "properties": {
+        "height": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "margin": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "eventClass": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "event": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        },
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  height: string\n  margin: string\n  eventClass: string\n  event: any\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L23-L29.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "intervalTitle": {
+      "text": "{ interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L30-L30",
+      "type": "object",
+      "properties": {
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L30-L30.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "interval": {
+      "text": "Record<string, unknown>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "record",
+      "key": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "value": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "Record<string, unknown>\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/typescript/lib/lib.es5.d.ts#L6-L6.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    }
+  },
+  "exposed": {
+    "intervals": {
+      "text": "number[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number[]\n",
+      "optional": false,
+      "description": {
+        "en": "Computed reference containing details about each interval in the day view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    }
+  },
+  "sass": {}
+}

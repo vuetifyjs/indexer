@@ -1,0 +1,146 @@
+{
+  "fileName": "useLayout",
+  "displayName": "useLayout",
+  "pathName": "use-layout",
+  "exposed": {
+    "getLayoutItem": {
+      "text": "(id: string) => LayoutItem | undefined",
+      "source": "vuetify/lib/framework.d.ts#L390-L390",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "id",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "LayoutItem | undefined",
+        "type": "anyOf",
+        "items": [
+          {
+            "text": "undefined",
+            "type": "UNSUPPORTED",
+            "formatted": "undefined"
+          },
+          {
+            "text": "LayoutItem",
+            "source": "vuetify/lib/framework.d.ts#L384-L388",
+            "type": "object",
+            "properties": {
+              "id": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string",
+                "optional": false
+              },
+              "size": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "position": {
+                "text": "Position",
+                "source": "vuetify/lib/framework.d.ts#L377-L377",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "\"top\"",
+                    "type": "string",
+                    "literal": "\"top\"",
+                    "formatted": "\"top\""
+                  },
+                  {
+                    "text": "\"left\"",
+                    "type": "string",
+                    "literal": "\"left\"",
+                    "formatted": "\"left\""
+                  },
+                  {
+                    "text": "\"right\"",
+                    "type": "string",
+                    "literal": "\"right\"",
+                    "formatted": "\"right\""
+                  },
+                  {
+                    "text": "\"bottom\"",
+                    "type": "string",
+                    "literal": "\"bottom\"",
+                    "formatted": "\"bottom\""
+                  }
+                ],
+                "formatted": "\"top\" | \"left\" | \"right\" | \"bottom\"",
+                "optional": false
+              },
+              "top": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "bottom": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "left": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "right": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              }
+            },
+            "formatted": "{ id: string; size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number }"
+          }
+        ],
+        "formatted": "{ id: string; size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number }"
+      },
+      "formatted": "(id: string) => {\n  id: string\n  size: number\n  position: 'top' | 'left' | 'right' | 'bottom'\n  top: number\n  bottom: number\n  left: number\n  right: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Function that returns position and size information about a specific layout item."
+      },
+      "descriptionSource": {
+        "en": "useLayout"
+      }
+    },
+    "mainRect": {
+      "text": "Ref<Layer, Layer>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<Layer, Layer>\n",
+      "optional": false,
+      "description": {
+        "en": "Position and size information for the v-main area."
+      },
+      "descriptionSource": {
+        "en": "useLayout"
+      }
+    },
+    "mainStyles": {
+      "text": "Ref<CSSProperties, CSSProperties>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<CSSProperties, CSSProperties>\n",
+      "optional": false,
+      "description": {
+        "en": "CSS styles applied to the v-main area."
+      },
+      "descriptionSource": {
+        "en": "useLayout"
+      }
+    }
+  }
+}

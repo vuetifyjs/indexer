@@ -1,0 +1,195 @@
+{
+  "displayName": "VHover",
+  "fileName": "VHover",
+  "pathName": "v-hover",
+  "props": {
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VHover",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes hover functionality."
+      },
+      "descriptionSource": {
+        "en": "VHover"
+      }
+    },
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VHover",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "closeDelay": {
+      "text": "string | number | undefined",
+      "source": "delay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Milliseconds to wait before closing component. Only applies to hover and focus events."
+      },
+      "descriptionSource": {
+        "en": "delay"
+      }
+    },
+    "openDelay": {
+      "text": "string | number | undefined",
+      "source": "delay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Milliseconds to wait before opening component. Only applies to hover and focus events."
+      },
+      "descriptionSource": {
+        "en": "delay"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ isHovering: boolean | null; props: Record<string, unknown>; }",
+      "source": "vuetify/src/components/VHover/VHover.tsx#L9-L12",
+      "type": "object",
+      "properties": {
+        "isHovering": {
+          "text": "boolean | null",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "formatted": "boolean",
+          "optional": false
+        },
+        "props": {
+          "text": "Record<string, unknown>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "unknown",
+            "type": "unknown",
+            "formatted": "unknown"
+          },
+          "formatted": "Record<string, unknown>",
+          "optional": false
+        }
+      },
+      "formatted": "{ isHovering: boolean; props: Record<string, unknown> }\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

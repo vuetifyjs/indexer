@@ -1,0 +1,146 @@
+{
+  "displayName": "VPullToRefresh",
+  "fileName": "VPullToRefresh",
+  "pathName": "v-pull-to-refresh",
+  "props": {
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VPullToRefresh",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "pullDownThreshold": {
+      "text": "number | undefined",
+      "source": "VPullToRefresh",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 64,
+      "description": {
+        "en": "The distance the user must pull down to trigger a refresh."
+      },
+      "descriptionSource": {
+        "en": "VPullToRefresh"
+      }
+    }
+  },
+  "events": {
+    "load": {
+      "text": "[options: { done: () => void; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ done: () => void; }",
+          "source": "vuetify/src/labs/VPullToRefresh/VPullToRefresh.tsx#L33-L33",
+          "type": "object",
+          "properties": {
+            "done": {
+              "text": "() => void",
+              "source": "vuetify/src/labs/VPullToRefresh/VPullToRefresh.tsx#L33-L33",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ done: () => void }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ done: () => void }]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the user pulls down past the threshold."
+      },
+      "descriptionSource": {
+        "en": "VPullToRefresh"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "pullDownPanel": {
+      "text": "{ canRefresh: boolean; goingUp: boolean; refreshing: boolean; }",
+      "source": "vuetify/src/labs/VPullToRefresh/VPullToRefresh.tsx#L14-L18",
+      "type": "object",
+      "properties": {
+        "canRefresh": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "goingUp": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "refreshing": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{ canRefresh: boolean; goingUp: boolean; refreshing: boolean }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot to override the display of the progress indicator after a pull down"
+      },
+      "descriptionSource": {
+        "en": "VPullToRefresh"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

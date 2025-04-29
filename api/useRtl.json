@@ -1,0 +1,35 @@
+{
+  "fileName": "useRtl",
+  "displayName": "useRtl",
+  "pathName": "use-rtl",
+  "exposed": {
+    "isRtl": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Indicates if RTL is currently active or not."
+      },
+      "descriptionSource": {
+        "en": "useRtl"
+      }
+    },
+    "rtlClasses": {
+      "text": "Ref<string, string>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<string, string>\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useRtl"
+      }
+    }
+  }
+}

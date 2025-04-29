@@ -1,0 +1,265 @@
+{
+  "displayName": "VDivider",
+  "fileName": "VDivider",
+  "pathName": "v-divider",
+  "props": {
+    "length": {
+      "text": "string | number | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the dividers length. Default unit is px."
+      },
+      "descriptionSource": {
+        "en": "VDivider"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "opacity": {
+      "text": "string | number | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the component's opacity value"
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "inset": {
+      "text": "boolean | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Adds indentation (72px) for **normal** dividers, reduces max height for **vertical**."
+      },
+      "descriptionSource": {
+        "en": "VDivider"
+      }
+    },
+    "thickness": {
+      "text": "string | number | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the dividers thickness. Default unit is px."
+      },
+      "descriptionSource": {
+        "en": "VDivider"
+      }
+    },
+    "vertical": {
+      "text": "boolean | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays dividers vertically."
+      },
+      "descriptionSource": {
+        "en": "VDivider"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$divider-border-color": {
+      "default": "null"
+    },
+    "$divider-border-style": {
+      "default": "settings.$border-style-root"
+    },
+    "$divider-border-width": {
+      "default": "thin 0 0 0"
+    },
+    "$divider-content-padding": {
+      "default": "0 16px"
+    },
+    "$divider-content-vertical-padding": {
+      "default": "4px 0"
+    },
+    "$divider-flex": {
+      "default": "1 1 100%"
+    },
+    "$divider-inset-margin": {
+      "default": "72px"
+    },
+    "$divider-inset-max-width": {
+      "default": "calc(100% - #{$divider-inset-margin})"
+    },
+    "$divider-margin": {
+      "default": "8px"
+    },
+    "$divider-opacity": {
+      "default": "var(--v-border-opacity)"
+    },
+    "$divider-vertical-border-width": {
+      "default": "0 thin 0 0"
+    },
+    "$divider-vertical-inset-margin-bottom": {
+      "default": "$divider-margin"
+    },
+    "$divider-vertical-inset-margin-top": {
+      "default": "$divider-margin"
+    },
+    "$divider-vertical-inset-max-height": {
+      "default": "calc(100% - #{$divider-margin * 2})"
+    },
+    "$divider-vertical-margin-left": {
+      "default": "-1px"
+    },
+    "$divider-border": {
+      "default": "(\n  $divider-border-color,\n  $divider-border-style,\n  $divider-border-width\n)"
+    }
+  }
+}

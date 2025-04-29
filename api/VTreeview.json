@@ -1,0 +1,2653 @@
+{
+  "displayName": "VTreeview",
+  "fileName": "VTreeview",
+  "pathName": "v-treeview",
+  "props": {
+    "search": {
+      "text": "string | undefined",
+      "source": "VTreeview",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The search model for filtering results."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "modelValue": {
+      "text": "unknown[] | undefined",
+      "source": "VTreeview",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Allows one to control which nodes are selected. The array contains the values of currently selected items. It is equivalent to the `v-model:selected`"
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the active node - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Provides an alternative active style for `v-treeview` node. Only visible when `activatable` is `true` and should not be used in conjunction with the `shaped` prop."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "activated": {
+      "text": "any",
+      "source": "nested",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "Array of ids of activated nodes."
+      },
+      "descriptionSource": {
+        "en": "nested"
+      }
+    },
+    "filterMode": {
+      "text": "FilterMode | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterMode",
+          "source": "vuetify/src/composables/filter.tsx#L25-L25",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"every\"",
+              "type": "string",
+              "literal": "\"every\"",
+              "formatted": "\"every\""
+            },
+            {
+              "text": "\"some\"",
+              "type": "string",
+              "literal": "\"some\"",
+              "formatted": "\"some\""
+            },
+            {
+              "text": "\"union\"",
+              "type": "string",
+              "literal": "\"union\"",
+              "formatted": "\"union\""
+            },
+            {
+              "text": "\"intersection\"",
+              "type": "string",
+              "literal": "\"intersection\"",
+              "formatted": "\"intersection\""
+            }
+          ],
+          "formatted": "\"every\" | \"some\" | \"union\" | \"intersection\""
+        }
+      ],
+      "formatted": "'every' | 'some' | 'union' | 'intersection'\n",
+      "optional": false,
+      "default": "'intersection'",
+      "description": {
+        "en": "Controls how the results of `customFilter` and `customKeyFilter` are combined. All modes only apply `customFilter` to columns not specified in `customKeyFilter`.\n\n- **some**: There is at least one match from either the custom filter or the custom key filter.\n- **every**: All columns match either the custom filter or the custom key filter.\n- **union**: There is at least one match from the custom filter, or all columns match the custom key filters.\n- **intersection**: There is at least one match from the custom filter, and all columns match the custom key filters."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "noFilter": {
+      "text": "boolean | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Disables all item filtering."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "customFilter": {
+      "text": "FilterFunction | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterFunction",
+          "source": "vuetify/src/composables/filter.tsx#L22-L22",
+          "type": "ref",
+          "ref": "FilterFunction",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/filter.tsx#L22-L22\" target=\"_blank\">FilterFunction</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/filter.tsx#L22-L22\" target=\"_blank\">FilterFunction</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Function used to filter items, called for each filterable key on each item in the list. The first argument is the filterable value from the item, the second is the search term, and the third is the internal item object. The function should return true if the item should be included in the filtered list, or the index of the match in the value if it should be included with the result highlighted."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "customKeyFilter": {
+      "text": "unknown",
+      "source": "filter",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Function used on specific keys within the item object. `customFilter` is skipped for columns with `customKeyFilter` specified."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "filterKeys": {
+      "text": "FilterKeys | undefined",
+      "source": "filter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "FilterKeys",
+          "source": "vuetify/src/composables/filter.tsx#L24-L24",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "string[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string[]"
+            }
+          ],
+          "formatted": "string | string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "default": "['title']",
+      "description": {
+        "en": "Array of specific keys to filter on the item."
+      },
+      "descriptionSource": {
+        "en": "filter"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of component when not focused."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "activeColor": {
+      "text": "string | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The applied color when the component is in an active state."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "activeClass": {
+      "text": "string | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The class applied to the component when it is in an active state."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Disables selection for all nodes."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "expandIcon": {
+      "text": "IconValue | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$treeviewExpand'",
+      "description": {
+        "en": "Icon used to indicate that a node can be expanded."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "collapseIcon": {
+      "text": "IconValue | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$treeviewCollapse'",
+      "description": {
+        "en": "Icon to display when the list item is expanded."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "lines": {
+      "text": "false | \"one\" | \"two\" | \"three\" | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "false",
+          "type": "boolean",
+          "literal": "false",
+          "formatted": "false"
+        },
+        {
+          "text": "\"one\"",
+          "type": "string",
+          "literal": "\"one\"",
+          "formatted": "\"one\""
+        },
+        {
+          "text": "\"two\"",
+          "type": "string",
+          "literal": "\"two\"",
+          "formatted": "\"two\""
+        },
+        {
+          "text": "\"three\"",
+          "type": "string",
+          "literal": "\"three\"",
+          "formatted": "\"three\""
+        }
+      ],
+      "formatted": "false | 'one' | 'two' | 'three'\n",
+      "optional": false,
+      "default": "'one'",
+      "description": {
+        "en": "Designates a **minimum-height** for all children `v-list-item` components. This prop uses [line-clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) and is not supported in all browsers."
+      },
+      "descriptionSource": {
+        "en": "VList"
+      }
+    },
+    "slim": {
+      "text": "boolean | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Reduces horizontal spacing for badges, icons, tooltips, and avatars within slim list items to create a more compact visual representation."
+      },
+      "descriptionSource": {
+        "en": "VList"
+      }
+    },
+    "activatable": {
+      "text": "boolean | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows user to mark a node as active by clicking on it."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "selectable": {
+      "text": "boolean | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Will render a checkbox next to each node allowing them to be selected. Additionally, the **[openOnClick](/api/v-treeview/#props-open-on-click)** property will be applied internally."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "opened": {
+      "text": "any",
+      "source": "nested",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "An array containing the values of currently opened groups. Can be two-way bound with `v-model:opened`."
+      },
+      "descriptionSource": {
+        "en": "nested"
+      }
+    },
+    "selected": {
+      "text": "any",
+      "source": "nested",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "An array containing the values of currently selected items. Can be two-way bound with `v-model:selected`."
+      },
+      "descriptionSource": {
+        "en": "nested"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "activeStrategy": {
+      "text": "ActiveStrategyProp | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "ActiveStrategyProp",
+          "source": "vuetify/src/composables/nested/nested.ts#L40-L46",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"single-leaf\"",
+              "type": "string",
+              "literal": "\"single-leaf\"",
+              "formatted": "\"single-leaf\""
+            },
+            {
+              "text": "\"leaf\"",
+              "type": "string",
+              "literal": "\"leaf\"",
+              "formatted": "\"leaf\""
+            },
+            {
+              "text": "\"independent\"",
+              "type": "string",
+              "literal": "\"independent\"",
+              "formatted": "\"independent\""
+            },
+            {
+              "text": "\"single-independent\"",
+              "type": "string",
+              "literal": "\"single-independent\"",
+              "formatted": "\"single-independent\""
+            },
+            {
+              "text": "ActiveStrategy",
+              "source": "vuetify/src/composables/nested/activeStrategies.ts#L27-L31",
+              "type": "ref",
+              "ref": "ActiveStrategy",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>"
+            },
+            {
+              "text": "(mandatory: boolean) => ActiveStrategy",
+              "source": "vuetify/src/composables/nested/nested.ts#L46-L46",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "mandatory",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "ActiveStrategy",
+                "source": "vuetify/src/composables/nested/activeStrategies.ts#L27-L31",
+                "type": "ref",
+                "ref": "ActiveStrategy",
+                "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>"
+              },
+              "formatted": "(mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>"
+            }
+          ],
+          "formatted": "\"single-leaf\" | \"leaf\" | \"independent\" | \"single-independent\" | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a> | ((mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>)"
+        }
+      ],
+      "formatted": "  | 'single-leaf'\n  | 'leaf'\n  | 'independent'\n  | 'single-independent'\n  | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>\n  | ((mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/activeStrategies.ts#L27-L31\" target=\"_blank\">ActiveStrategy</a>)\n",
+      "optional": false,
+      "description": {
+        "en": "Affects how items with children behave when activated.\n- **leaf:** Only leaf nodes (items without children) can be activated.\n- **independent:** All nodes can be activated whether they have children or not.\n- **classic:** Activating a parent node will cause all children to be activated."
+      },
+      "descriptionSource": {
+        "en": "nested"
+      }
+    },
+    "selectStrategy": {
+      "text": "SelectStrategyProp | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "SelectStrategyProp",
+          "source": "vuetify/src/composables/nested/nested.ts#L47-L55",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"single-leaf\"",
+              "type": "string",
+              "literal": "\"single-leaf\"",
+              "formatted": "\"single-leaf\""
+            },
+            {
+              "text": "\"leaf\"",
+              "type": "string",
+              "literal": "\"leaf\"",
+              "formatted": "\"leaf\""
+            },
+            {
+              "text": "\"independent\"",
+              "type": "string",
+              "literal": "\"independent\"",
+              "formatted": "\"independent\""
+            },
+            {
+              "text": "\"single-independent\"",
+              "type": "string",
+              "literal": "\"single-independent\"",
+              "formatted": "\"single-independent\""
+            },
+            {
+              "text": "\"classic\"",
+              "type": "string",
+              "literal": "\"classic\"",
+              "formatted": "\"classic\""
+            },
+            {
+              "text": "\"trunk\"",
+              "type": "string",
+              "literal": "\"trunk\"",
+              "formatted": "\"trunk\""
+            },
+            {
+              "text": "SelectStrategy",
+              "source": "vuetify/src/composables/nested/selectStrategies.ts#L26-L30",
+              "type": "ref",
+              "ref": "SelectStrategy",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>"
+            },
+            {
+              "text": "(mandatory: boolean) => SelectStrategy",
+              "source": "vuetify/src/composables/nested/nested.ts#L55-L55",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "mandatory",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "SelectStrategy",
+                "source": "vuetify/src/composables/nested/selectStrategies.ts#L26-L30",
+                "type": "ref",
+                "ref": "SelectStrategy",
+                "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>"
+              },
+              "formatted": "(mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>"
+            }
+          ],
+          "formatted": "\"single-leaf\" | \"leaf\" | \"independent\" | \"single-independent\" | \"classic\" | \"trunk\" | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a> | ((mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>)"
+        }
+      ],
+      "formatted": "  | 'single-leaf'\n  | 'leaf'\n  | 'independent'\n  | 'single-independent'\n  | 'classic'\n  | 'trunk'\n  | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>\n  | ((mandatory: boolean) => <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/selectStrategies.ts#L26-L30\" target=\"_blank\">SelectStrategy</a>)\n",
+      "optional": false,
+      "default": "'single-leaf'",
+      "description": {
+        "en": "Affects how items with children behave when selected.\n- **leaf:** Only leaf nodes (items without children) can be selected.\n- **independent:** All nodes can be selected whether they have children or not.\n- **classic:** Selecting a parent node will cause all children to be selected, parent nodes will be displayed as selected if all their descendants are selected. Only leaf nodes will be added to the model.\n- **trunk**: Same as classic but if all of a node's children are selected then only that node will be added to the model."
+      },
+      "descriptionSource": {
+        "en": "nested"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "items": {
+      "text": "unknown[] | undefined",
+      "source": "list-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of items used to build the treeview."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "itemTitle": {
+      "text": "SelectItemKey",
+      "source": "list-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "'title'",
+      "description": {
+        "en": "Property on supplied `items` that contains its title."
+      },
+      "descriptionSource": {
+        "en": "list-items"
+      }
+    },
+    "itemValue": {
+      "text": "SelectItemKey",
+      "source": "list-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "'value'",
+      "description": {
+        "en": "Property on supplied `items` that contains its value."
+      },
+      "descriptionSource": {
+        "en": "list-items"
+      }
+    },
+    "itemChildren": {
+      "text": "SelectItemKey",
+      "source": "list-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "'children'",
+      "description": {
+        "en": "Property on supplied `items` that contains its children."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "itemProps": {
+      "text": "SelectItemKey",
+      "source": "list-items",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "'props'",
+      "description": {
+        "en": "Props object that will be applied to each item component. `true` will treat the original object as raw props and pass it directly to the component."
+      },
+      "descriptionSource": {
+        "en": "list-items"
+      }
+    },
+    "returnObject": {
+      "text": "boolean | undefined",
+      "source": "list-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "When `true` will make `v-model`, `active.sync` and `open.sync` return the complete object instead of just the key."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "valueComparator": {
+      "text": "typeof deepEqual | undefined",
+      "source": "list-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "typeof deepEqual",
+          "source": "vuetify/src/util/helpers.ts#L46-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "a",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            },
+            {
+              "name": "b",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(a: any, b: any) => boolean"
+        }
+      ],
+      "formatted": "(a: any, b: any) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"text\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
+        },
+        {
+          "text": "\"elevated\"",
+          "type": "string",
+          "literal": "\"elevated\"",
+          "formatted": "\"elevated\""
+        },
+        {
+          "text": "\"tonal\"",
+          "type": "string",
+          "literal": "\"tonal\"",
+          "formatted": "\"tonal\""
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        }
+      ],
+      "formatted": "'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain'\n",
+      "optional": false,
+      "default": "'text'",
+      "description": {
+        "en": "Applies a distinct style to the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "openOnClick": {
+      "text": "boolean | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "When `true` will cause nodes to be opened by clicking anywhere on it, instead of only opening by clicking on expand icon. When using this prop with `activatable` you will be unable to mark nodes with children as active."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "falseIcon": {
+      "text": "IconValue | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "The icon used when inactive."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "trueIcon": {
+      "text": "IconValue | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "The icon used when active."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "fluid": {
+      "text": "boolean | undefined",
+      "source": "VTreeview",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes indentation from nested items."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "openAll": {
+      "text": "boolean | undefined",
+      "source": "VTreeview",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "When `true` will cause all branch nodes to be opened when component is mounted."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "loadingIcon": {
+      "text": "string | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$loading'",
+      "description": {
+        "en": "Icon used when node is in a loading state."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "indeterminateIcon": {
+      "text": "IconValue | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$checkboxIndeterminate'",
+      "description": {
+        "en": "Icon used when node is in an indeterminate state. Only visible when `selectable` is `true`."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "selectedColor": {
+      "text": "string | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The color of the selection checkbox."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "loadChildren": {
+      "text": "((item: unknown) => Promise<void>) | undefined",
+      "source": "VTreeviewChildren",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "(item: unknown) => Promise<void>",
+          "source": "vuetify/src/labs/VTreeview/VTreeviewChildren.tsx#L37-L37",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "item",
+              "optional": false,
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "returnType": {
+            "text": "Promise<void>",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "ref",
+            "ref": "Promise",
+            "formatted": "Promise<void>"
+          },
+          "formatted": "(item: unknown) => Promise<void>"
+        }
+      ],
+      "formatted": "(item: unknown) => Promise<void>\n",
+      "optional": false,
+      "description": {
+        "en": "A function used when dynamically loading children. If this prop is set, then the supplied function will be run if expanding an item that has a `item-children` property that is an empty array. Supports returning a Promise."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[val: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "click:open": {
+      "text": "[value: { id: unknown; value: boolean; path: unknown[]; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ id: unknown; value: boolean; path: unknown[]; }",
+          "source": "vuetify/src/labs/VTreeview/VTreeview.tsx#L62-L62",
+          "type": "object",
+          "properties": {
+            "id": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "value": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "path": {
+              "text": "unknown[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "unknown",
+                  "type": "unknown",
+                  "formatted": "unknown"
+                }
+              ],
+              "formatted": "unknown[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ id: unknown; value: boolean; path: unknown[] }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ id: unknown; value: boolean; path: unknown[] }]\n",
+      "optional": false,
+      "description": {
+        "en": "Emits the item when it is clicked to open."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "click:select": {
+      "text": "[value: { id: unknown; value: boolean; path: unknown[]; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ id: unknown; value: boolean; path: unknown[]; }",
+          "source": "vuetify/src/labs/VTreeview/VTreeview.tsx#L63-L63",
+          "type": "object",
+          "properties": {
+            "id": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "value": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "path": {
+              "text": "unknown[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "unknown",
+                  "type": "unknown",
+                  "formatted": "unknown"
+                }
+              ],
+              "formatted": "unknown[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ id: unknown; value: boolean; path: unknown[] }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ id: unknown; value: boolean; path: unknown[] }]\n",
+      "optional": false,
+      "description": {
+        "en": "Emits the item when it is clicked to select."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "update:opened": {
+      "text": "[val: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Emits the array of open items when this value changes."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "update:selected": {
+      "text": "[val: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Emits the array of selected items when this value changes."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "update:activated": {
+      "text": "[val: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Emits the array of active items when this value changes."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    }
+  },
+  "slots": {
+    "prepend": {
+      "text": "ListItemSlot & { item: unknown; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "ListItemSlot",
+          "source": "vuetify/src/components/VList/VListItem.tsx#L37-L43",
+          "type": "object",
+          "properties": {
+            "isActive": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isOpen": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isSelected": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isIndeterminate": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "select": {
+              "text": "(value: boolean) => void",
+              "source": "vuetify/src/components/VList/VListItem.tsx#L42-L42",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(value: boolean) => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ isActive: boolean; isOpen: boolean; isSelected: boolean; isIndeterminate: boolean; select: (value: boolean) => void }"
+        },
+        {
+          "text": "{ item: unknown; }",
+          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: unknown }"
+        }
+      ],
+      "formatted": "{\n  isActive: boolean\n  isOpen: boolean\n  isSelected: boolean\n  isIndeterminate: boolean\n  select: (value: boolean) => void\n} & { item: unknown }\n",
+      "optional": false,
+      "description": {
+        "en": "Prepends content before label."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "append": {
+      "text": "ListItemSlot & { item: unknown; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "ListItemSlot",
+          "source": "vuetify/src/components/VList/VListItem.tsx#L37-L43",
+          "type": "object",
+          "properties": {
+            "isActive": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isOpen": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isSelected": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isIndeterminate": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "select": {
+              "text": "(value: boolean) => void",
+              "source": "vuetify/src/components/VList/VListItem.tsx#L42-L42",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(value: boolean) => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ isActive: boolean; isOpen: boolean; isSelected: boolean; isIndeterminate: boolean; select: (value: boolean) => void }"
+        },
+        {
+          "text": "{ item: unknown; }",
+          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: unknown }"
+        }
+      ],
+      "formatted": "{\n  isActive: boolean\n  isOpen: boolean\n  isSelected: boolean\n  isIndeterminate: boolean\n  select: (value: boolean) => void\n} & { item: unknown }\n",
+      "optional": false,
+      "description": {
+        "en": "Appends content after label."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "title": {
+      "text": "ListItemTitleSlot & { item: unknown; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "ListItemTitleSlot",
+          "source": "vuetify/src/components/VList/VListItem.tsx#L45-L47",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string | number | boolean | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                },
+                {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "formatted": "string | number | boolean",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string | number | boolean }"
+        },
+        {
+          "text": "{ item: unknown; }",
+          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: unknown }"
+        }
+      ],
+      "formatted": "{ title: string | number | boolean } & { item: unknown }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "subtitle": {
+      "text": "ListItemSubtitleSlot & { item: unknown; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "ListItemSubtitleSlot",
+          "source": "vuetify/src/components/VList/VListItem.tsx#L49-L51",
+          "type": "object",
+          "properties": {
+            "subtitle": {
+              "text": "string | number | boolean | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                },
+                {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "formatted": "string | number | boolean",
+              "optional": true
+            }
+          },
+          "formatted": "{ subtitle: string | number | boolean }"
+        },
+        {
+          "text": "{ item: unknown; }",
+          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: unknown }"
+        }
+      ],
+      "formatted": "{ subtitle: string | number | boolean } & { item: unknown }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's subtitle content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "item": {
+      "text": "{ props: { [key: string]: any; title: string; value: any; }; }",
+      "source": "vuetify/src/components/VList/VListChildren.tsx#L21-L21",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ [key: string]: any; title: string; value: any; }",
+          "source": "vuetify/src/composables/list-items.ts#L12-L16",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": false
+            },
+            "[string]": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string; value: any; [string]: any }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { title: string; value: any; [string]: any } }\n",
+      "optional": false,
+      "description": {
+        "en": "Define a custom item appearance."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "divider": {
+      "text": "{ props: { [key: string]: any; title: string; value: any; }; }",
+      "source": "vuetify/src/components/VList/VListChildren.tsx#L22-L22",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ [key: string]: any; title: string; value: any; }",
+          "source": "vuetify/src/composables/list-items.ts#L12-L16",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": false
+            },
+            "[string]": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string; value: any; [string]: any }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { title: string; value: any; [string]: any } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom divider."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "subheader": {
+      "text": "{ props: { [key: string]: any; title: string; value: any; }; }",
+      "source": "vuetify/src/components/VList/VListChildren.tsx#L23-L23",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ [key: string]: any; title: string; value: any; }",
+          "source": "vuetify/src/composables/list-items.ts#L12-L16",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": false
+            },
+            "[string]": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string; value: any; [string]: any }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { title: string; value: any; [string]: any } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom subheader."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    },
+    "header": {
+      "text": "{ props: { [key: string]: any; title: string; value: any; }; }",
+      "source": "vuetify/src/components/VList/VListChildren.tsx#L24-L24",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ [key: string]: any; title: string; value: any; }",
+          "source": "vuetify/src/composables/list-items.ts#L12-L16",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": false
+            },
+            "[string]": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string; value: any; [string]: any }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { title: string; value: any; [string]: any } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom header."
+      },
+      "descriptionSource": {
+        "en": "VTreeview"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

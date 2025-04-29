@@ -1,0 +1,664 @@
+{
+  "displayName": "VDatePickerMonth",
+  "fileName": "VDatePickerMonth",
+  "pathName": "v-date-picker-month",
+  "props": {
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "unknown[] | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "multiple": {
+      "text": "number | boolean | (string & {}) | \"range\" | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "string & {}",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "{}",
+              "type": "object",
+              "properties": {},
+              "formatted": "{  }"
+            }
+          ],
+          "formatted": "string & {  }"
+        },
+        {
+          "text": "\"range\"",
+          "type": "string",
+          "literal": "\"range\"",
+          "formatted": "\"range\""
+        }
+      ],
+      "formatted": "number | boolean | (string & {}) | 'range'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sets the multiple of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "transition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-transition'",
+      "description": {
+        "en": "The transition used when changing months into the future"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "month": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "year": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the year."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "hideWeekdays": {
+      "text": "boolean | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hide the days of the week letters."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "showWeek": {
+      "text": "boolean | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Show the week number."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "reverseTransition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-reverse-transition'",
+      "description": {
+        "en": "The transition used when changing months into the past"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "showAdjacentMonths": {
+      "text": "boolean | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Show adjacent months."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "weekdays": {
+      "text": "CalendarWeekdays[] | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "CalendarWeekdays[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "0",
+              "type": "number",
+              "literal": "0",
+              "formatted": "0"
+            },
+            {
+              "text": "1",
+              "type": "number",
+              "literal": "1",
+              "formatted": "1"
+            },
+            {
+              "text": "2",
+              "type": "number",
+              "literal": "2",
+              "formatted": "2"
+            },
+            {
+              "text": "4",
+              "type": "number",
+              "literal": "4",
+              "formatted": "4"
+            },
+            {
+              "text": "5",
+              "type": "number",
+              "literal": "5",
+              "formatted": "5"
+            },
+            {
+              "text": "6",
+              "type": "number",
+              "literal": "6",
+              "formatted": "6"
+            },
+            {
+              "text": "3",
+              "type": "number",
+              "literal": "3",
+              "formatted": "3"
+            }
+          ],
+          "formatted": "(0 | 1 | 2 | 4 | 5 | 6 | 3)[]"
+        }
+      ],
+      "formatted": "(0 | 1 | 2 | 4 | 5 | 6 | 3)[]\n",
+      "optional": false,
+      "default": "[0, 1, 2, 3, 4, 5, 6]",
+      "description": {
+        "en": "Sets the weekdays of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "weeksInMonth": {
+      "text": "\"static\" | \"dynamic\" | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"static\"",
+          "type": "string",
+          "literal": "\"static\"",
+          "formatted": "\"static\""
+        },
+        {
+          "text": "\"dynamic\"",
+          "type": "string",
+          "literal": "\"dynamic\"",
+          "formatted": "\"dynamic\""
+        }
+      ],
+      "formatted": "'static' | 'dynamic'\n",
+      "optional": false,
+      "default": "'dynamic'",
+      "description": {
+        "en": "A dynamic number of weeks in a month will grow and shrink depending on how many days are in the month. A static number always shows 7 weeks."
+      },
+      "descriptionSource": {
+        "en": "calendar"
+      }
+    },
+    "firstDayOfWeek": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the first day of the week, starting with 0 for Sunday."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "allowedDates": {
+      "text": "unknown[] | ((date: unknown) => boolean) | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        },
+        {
+          "text": "(date: unknown) => boolean",
+          "source": "vuetify/src/composables/calendar.ts#L55-L55",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: unknown) => boolean"
+        }
+      ],
+      "formatted": "unknown[] | ((date: unknown) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the allowed dates of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[date: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "update:month": {
+      "text": "[date: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Fired when the month changes."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "update:year": {
+      "text": "[date: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Fired when the year changes."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    }
+  },
+  "slots": {
+    "day": {
+      "text": "{ props: { onClick: () => void; }; item: any; i: number; }",
+      "source": "vuetify/src/components/VDatePicker/VDatePickerMonth.tsx#L20-L26",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ onClick: () => void; }",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerMonth.tsx#L21-L23",
+          "type": "object",
+          "properties": {
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VDatePicker/VDatePickerMonth.tsx#L22-L22",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ onClick: () => void }",
+          "optional": false
+        },
+        "item": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        },
+        "i": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { onClick: () => void }; item: any; i: number }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for a day in the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

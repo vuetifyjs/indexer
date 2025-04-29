@@ -1,0 +1,1270 @@
+{
+  "displayName": "VWindow",
+  "fileName": "VWindow",
+  "pathName": "v-window",
+  "props": {
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "reverse": {
+      "text": "boolean | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reverse the normal transition direction."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "modelValue": {
+      "text": "unknown",
+      "source": "VWindow",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-window-item--active'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": "'force'",
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "direction": {
+      "text": "\"horizontal\" | \"vertical\" | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "The transition direction when changing windows."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "continuous": {
+      "text": "boolean | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "If `true`, window will \"wrap around\" from the last item to the first, and from the first item to the last."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "nextIcon": {
+      "text": "IconValue | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "Icon used for the \"next\" button if `show-arrows` is `true`."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "prevIcon": {
+      "text": "IconValue | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "Icon used for the \"prev\" button if `show-arrows` is `true`."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "showArrows": {
+      "text": "string | boolean | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Display the \"next\" and \"prev\" buttons."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "touch": {
+      "text": "boolean | TouchHandlers | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TouchHandlers",
+          "source": "vuetify/src/directives/touch/index.ts#L9-L17",
+          "type": "ref",
+          "ref": "TouchHandlers",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/directives/touch/index.ts#L9-L17\" target=\"_blank\">TouchHandlers</a>"
+        }
+      ],
+      "formatted": "boolean | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/directives/touch/index.ts#L9-L17\" target=\"_blank\">TouchHandlers</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Provide a custom **left** and **right** function when swiped left or right."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ group: GroupProvide; }",
+      "source": "vuetify/src/components/VWindow/VWindow.tsx#L29-L29",
+      "type": "object",
+      "properties": {
+        "group": {
+          "text": "GroupProvide",
+          "source": "vuetify/src/composables/group.ts#L29-L45",
+          "type": "object",
+          "properties": {
+            "register": {
+              "text": "(item: GroupItem, cmp: ComponentInternalInstance) => void",
+              "source": "vuetify/src/composables/group.ts#L30-L30",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "text": "GroupItem",
+                  "source": "vuetify/src/composables/group.ts#L12-L17",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string",
+                      "optional": false
+                    },
+                    "value": {
+                      "text": "Ref<unknown, unknown>",
+                      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+                      "type": "ref",
+                      "ref": "Ref",
+                      "formatted": "Ref<unknown, unknown>",
+                      "optional": false
+                    },
+                    "disabled": {
+                      "text": "Ref<boolean | undefined, boolean | undefined>",
+                      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+                      "type": "ref",
+                      "ref": "Ref",
+                      "formatted": "Ref<boolean | undefined, boolean | undefined>",
+                      "optional": false
+                    },
+                    "useIndexAsValue": {
+                      "text": "boolean | undefined",
+                      "type": "anyOf",
+                      "items": [
+                        {
+                          "text": "undefined",
+                          "type": "UNSUPPORTED",
+                          "formatted": "undefined"
+                        },
+                        {
+                          "text": "boolean",
+                          "type": "boolean",
+                          "formatted": "boolean"
+                        }
+                      ],
+                      "formatted": "boolean",
+                      "optional": true
+                    }
+                  },
+                  "formatted": "{ id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }"
+                },
+                {
+                  "name": "cmp",
+                  "optional": false,
+                  "text": "ComponentInternalInstance",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1421-L1459",
+                  "type": "ref",
+                  "ref": "ComponentInternalInstance",
+                  "formatted": "ComponentInternalInstance"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(item: { id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }, cmp: ComponentInternalInstance) => void",
+              "optional": false
+            },
+            "unregister": {
+              "text": "(id: string) => void",
+              "source": "vuetify/src/composables/group.ts#L31-L31",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(id: string) => void",
+              "optional": false
+            },
+            "select": {
+              "text": "(id: string, value: boolean) => void",
+              "source": "vuetify/src/composables/group.ts#L32-L32",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(id: string, value: boolean) => void",
+              "optional": false
+            },
+            "selected": {
+              "text": "Ref<readonly string[], readonly string[]>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<readonly string[], readonly string[]>",
+              "optional": false
+            },
+            "isSelected": {
+              "text": "(id: string) => boolean",
+              "source": "vuetify/src/composables/group.ts#L34-L34",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "returnType": {
+                "text": "boolean",
+                "type": "boolean",
+                "formatted": "boolean"
+              },
+              "formatted": "(id: string) => boolean",
+              "optional": false
+            },
+            "prev": {
+              "text": "() => void",
+              "source": "vuetify/src/composables/group.ts#L35-L35",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "next": {
+              "text": "() => void",
+              "source": "vuetify/src/composables/group.ts#L36-L36",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "selectedClass": {
+              "text": "Ref<string | undefined, string | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<string | undefined, string | undefined>",
+              "optional": false
+            },
+            "items": {
+              "text": "Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "ref",
+              "ref": "Readonly",
+              "formatted": "Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>",
+              "optional": false
+            },
+            "disabled": {
+              "text": "Ref<boolean | undefined, boolean | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean | undefined, boolean | undefined>",
+              "optional": false
+            },
+            "getItemIndex": {
+              "text": "(value: unknown) => number",
+              "source": "vuetify/src/composables/group.ts#L44-L44",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "unknown",
+                  "type": "unknown",
+                  "formatted": "unknown"
+                }
+              ],
+              "returnType": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number"
+              },
+              "formatted": "(value: unknown) => number",
+              "optional": false
+            }
+          },
+          "formatted": "{ register: (item: { id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }, cmp: ComponentInternalInstance) => void; unregister: (id: string) => void; select: (id: string, value: boolean) => void; selected: Ref<readonly string[], readonly string[]>; isSelected: (id: string) => boolean; prev: () => void; next: () => void; selectedClass: Ref<string | undefined, string | undefined>; items: Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>; disabled: Ref<boolean | undefined, boolean | undefined>; getItemIndex: (value: unknown) => number }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  group: {\n    register: (\n      item: {\n        id: string\n        value: Ref<unknown, unknown>\n        disabled: Ref<boolean | undefined, boolean | undefined>\n        useIndexAsValue: boolean\n      },\n      cmp: ComponentInternalInstance,\n    ) => void\n    unregister: (id: string) => void\n    select: (id: string, value: boolean) => void\n    selected: Ref<readonly string[], readonly string[]>\n    isSelected: (id: string) => boolean\n    prev: () => void\n    next: () => void\n    selectedClass: Ref<string | undefined, string | undefined>\n    items: Readonly<\n      Ref<\n        { id: string; value: unknown; disabled: boolean | undefined }[],\n        { id: string; value: unknown; disabled: boolean | undefined }[]\n      >\n    >\n    disabled: Ref<boolean | undefined, boolean | undefined>\n    getItemIndex: (value: unknown) => number\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "additional": {
+      "text": "{ group: GroupProvide; }",
+      "source": "vuetify/src/components/VWindow/VWindow.tsx#L30-L30",
+      "type": "object",
+      "properties": {
+        "group": {
+          "text": "GroupProvide",
+          "source": "vuetify/src/composables/group.ts#L29-L45",
+          "type": "object",
+          "properties": {
+            "register": {
+              "text": "(item: GroupItem, cmp: ComponentInternalInstance) => void",
+              "source": "vuetify/src/composables/group.ts#L30-L30",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "text": "GroupItem",
+                  "source": "vuetify/src/composables/group.ts#L12-L17",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string",
+                      "optional": false
+                    },
+                    "value": {
+                      "text": "Ref<unknown, unknown>",
+                      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+                      "type": "ref",
+                      "ref": "Ref",
+                      "formatted": "Ref<unknown, unknown>",
+                      "optional": false
+                    },
+                    "disabled": {
+                      "text": "Ref<boolean | undefined, boolean | undefined>",
+                      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+                      "type": "ref",
+                      "ref": "Ref",
+                      "formatted": "Ref<boolean | undefined, boolean | undefined>",
+                      "optional": false
+                    },
+                    "useIndexAsValue": {
+                      "text": "boolean | undefined",
+                      "type": "anyOf",
+                      "items": [
+                        {
+                          "text": "undefined",
+                          "type": "UNSUPPORTED",
+                          "formatted": "undefined"
+                        },
+                        {
+                          "text": "boolean",
+                          "type": "boolean",
+                          "formatted": "boolean"
+                        }
+                      ],
+                      "formatted": "boolean",
+                      "optional": true
+                    }
+                  },
+                  "formatted": "{ id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }"
+                },
+                {
+                  "name": "cmp",
+                  "optional": false,
+                  "text": "ComponentInternalInstance",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1421-L1459",
+                  "type": "ref",
+                  "ref": "ComponentInternalInstance",
+                  "formatted": "ComponentInternalInstance"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(item: { id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }, cmp: ComponentInternalInstance) => void",
+              "optional": false
+            },
+            "unregister": {
+              "text": "(id: string) => void",
+              "source": "vuetify/src/composables/group.ts#L31-L31",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(id: string) => void",
+              "optional": false
+            },
+            "select": {
+              "text": "(id: string, value: boolean) => void",
+              "source": "vuetify/src/composables/group.ts#L32-L32",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(id: string, value: boolean) => void",
+              "optional": false
+            },
+            "selected": {
+              "text": "Ref<readonly string[], readonly string[]>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<readonly string[], readonly string[]>",
+              "optional": false
+            },
+            "isSelected": {
+              "text": "(id: string) => boolean",
+              "source": "vuetify/src/composables/group.ts#L34-L34",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "id",
+                  "optional": false,
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "returnType": {
+                "text": "boolean",
+                "type": "boolean",
+                "formatted": "boolean"
+              },
+              "formatted": "(id: string) => boolean",
+              "optional": false
+            },
+            "prev": {
+              "text": "() => void",
+              "source": "vuetify/src/composables/group.ts#L35-L35",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "next": {
+              "text": "() => void",
+              "source": "vuetify/src/composables/group.ts#L36-L36",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "selectedClass": {
+              "text": "Ref<string | undefined, string | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<string | undefined, string | undefined>",
+              "optional": false
+            },
+            "items": {
+              "text": "Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "ref",
+              "ref": "Readonly",
+              "formatted": "Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>",
+              "optional": false
+            },
+            "disabled": {
+              "text": "Ref<boolean | undefined, boolean | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean | undefined, boolean | undefined>",
+              "optional": false
+            },
+            "getItemIndex": {
+              "text": "(value: unknown) => number",
+              "source": "vuetify/src/composables/group.ts#L44-L44",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "unknown",
+                  "type": "unknown",
+                  "formatted": "unknown"
+                }
+              ],
+              "returnType": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number"
+              },
+              "formatted": "(value: unknown) => number",
+              "optional": false
+            }
+          },
+          "formatted": "{ register: (item: { id: string; value: Ref<unknown, unknown>; disabled: Ref<boolean | undefined, boolean | undefined>; useIndexAsValue: boolean }, cmp: ComponentInternalInstance) => void; unregister: (id: string) => void; select: (id: string, value: boolean) => void; selected: Ref<readonly string[], readonly string[]>; isSelected: (id: string) => boolean; prev: () => void; next: () => void; selectedClass: Ref<string | undefined, string | undefined>; items: Readonly<Ref<{ id: string; value: unknown; disabled: boolean | undefined; }[], { id: string; value: unknown; disabled: boolean | undefined; }[]>>; disabled: Ref<boolean | undefined, boolean | undefined>; getItemIndex: (value: unknown) => number }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  group: {\n    register: (\n      item: {\n        id: string\n        value: Ref<unknown, unknown>\n        disabled: Ref<boolean | undefined, boolean | undefined>\n        useIndexAsValue: boolean\n      },\n      cmp: ComponentInternalInstance,\n    ) => void\n    unregister: (id: string) => void\n    select: (id: string, value: boolean) => void\n    selected: Ref<readonly string[], readonly string[]>\n    isSelected: (id: string) => boolean\n    prev: () => void\n    next: () => void\n    selectedClass: Ref<string | undefined, string | undefined>\n    items: Readonly<\n      Ref<\n        { id: string; value: unknown; disabled: boolean | undefined }[],\n        { id: string; value: unknown; disabled: boolean | undefined }[]\n      >\n    >\n    disabled: Ref<boolean | undefined, boolean | undefined>\n    getItemIndex: (value: unknown) => number\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for additional content at the end of the component."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "prev": {
+      "text": "{ props: ControlProps; }",
+      "source": "vuetify/src/components/VWindow/VWindow.tsx#L31-L31",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "ControlProps",
+          "source": "vuetify/src/components/VWindow/VWindow.tsx#L43-L48",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "text": "IconValue",
+              "source": "vuetify/src/composables/icons.tsx#L12-L15",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "(string | [path: string, opacity: number])[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "[path: string, opacity: number]",
+                      "type": "array",
+                      "items": [
+                        {
+                          "text": "string",
+                          "type": "ref",
+                          "ref": "",
+                          "formatted": "string"
+                        },
+                        {
+                          "text": "number",
+                          "type": "number",
+                          "formatted": "number"
+                        }
+                      ],
+                      "length": 2,
+                      "formatted": "[string, number]"
+                    }
+                  ],
+                  "formatted": "(string | [string, number])[]"
+                },
+                {
+                  "text": "JSXComponent",
+                  "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "new () => any",
+                      "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                      "type": "constructor",
+                      "formatted": "new () => any"
+                    },
+                    {
+                      "text": "FunctionalComponent<any, {}, any, {}>",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                      "type": "ref",
+                      "ref": "FunctionalComponent",
+                      "formatted": "FunctionalComponent"
+                    }
+                  ],
+                  "formatted": "(new () => any) | FunctionalComponent"
+                }
+              ],
+              "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+              "optional": false
+            },
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VWindow/VWindow.tsx#L46-L46",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "aria-label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ icon: string | (string | [string, number])[] | (new () => any) | FunctionalComponent; class: string; onClick: () => void; 'aria-label': string }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  props: {\n    icon:\n      | string\n      | (string | [string, number])[]\n      | (new () => any)\n      | FunctionalComponent\n    class: string\n    onClick: () => void\n    'aria-label': string\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot displaying the arrow switching to the previous item."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    },
+    "next": {
+      "text": "{ props: ControlProps; }",
+      "source": "vuetify/src/components/VWindow/VWindow.tsx#L32-L32",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "ControlProps",
+          "source": "vuetify/src/components/VWindow/VWindow.tsx#L43-L48",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "text": "IconValue",
+              "source": "vuetify/src/composables/icons.tsx#L12-L15",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "(string | [path: string, opacity: number])[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "[path: string, opacity: number]",
+                      "type": "array",
+                      "items": [
+                        {
+                          "text": "string",
+                          "type": "ref",
+                          "ref": "",
+                          "formatted": "string"
+                        },
+                        {
+                          "text": "number",
+                          "type": "number",
+                          "formatted": "number"
+                        }
+                      ],
+                      "length": 2,
+                      "formatted": "[string, number]"
+                    }
+                  ],
+                  "formatted": "(string | [string, number])[]"
+                },
+                {
+                  "text": "JSXComponent",
+                  "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "new () => any",
+                      "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                      "type": "constructor",
+                      "formatted": "new () => any"
+                    },
+                    {
+                      "text": "FunctionalComponent<any, {}, any, {}>",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                      "type": "ref",
+                      "ref": "FunctionalComponent",
+                      "formatted": "FunctionalComponent"
+                    }
+                  ],
+                  "formatted": "(new () => any) | FunctionalComponent"
+                }
+              ],
+              "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+              "optional": false
+            },
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VWindow/VWindow.tsx#L46-L46",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "aria-label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ icon: string | (string | [string, number])[] | (new () => any) | FunctionalComponent; class: string; onClick: () => void; 'aria-label': string }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  props: {\n    icon:\n      | string\n      | (string | [string, number])[]\n      | (new () => any)\n      | FunctionalComponent\n    class: string\n    onClick: () => void\n    'aria-label': string\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot displaying the arrow switching to the next item."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    }
+  },
+  "exposed": {
+    "group": {
+      "text": "{ register: (item: GroupItem, cmp: ComponentInternalInstance) => void; unregister: (id: string) => void; select: (id: string, value: boolean) => void; selected: readonly string[]; isSelected: (id: string) => boolean; prev: () => void; next: () => void; selectedClass: string | undefined; items: { id: string; value: unknown; disabled: boolean | undefined; }[]; disabled: boolean | undefined; getItemIndex: (value: unknown) => number; }",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L636-L638",
+      "type": "ref",
+      "ref": "__type",
+      "formatted": "{\n  register: (item: GroupItem, cmp: ComponentInternalInstance) => void\n  unregister: (id: string) => void\n  select: (id: string, value: boolean) => void\n  selected: readonly string[]\n  isSelected: (id: string) => boolean\n  prev: () => void\n  next: () => void\n  selectedClass: string | undefined\n  items: { id: string; value: unknown; disabled: boolean | undefined }[]\n  disabled: boolean | undefined\n  getItemIndex: (value: unknown) => number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Returns item group data, state and helper methods."
+      },
+      "descriptionSource": {
+        "en": "VWindow"
+      }
+    }
+  },
+  "sass": {
+    "$window-transition": {
+      "default": ".3s cubic-bezier(.25, .8, .50, 1)"
+    },
+    "$window-controls-padding": {
+      "default": "0 16px"
+    }
+  }
+}

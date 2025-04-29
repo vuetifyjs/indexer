@@ -1,0 +1,50 @@
+{
+  "displayName": "VFieldLabel",
+  "fileName": "VFieldLabel",
+  "pathName": "v-field-label",
+  "props": {
+    "floating": {
+      "text": "boolean | undefined",
+      "source": "VFieldLabel",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Elevates the label above the slotted content."
+      },
+      "descriptionSource": {
+        "en": "VFieldLabel"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

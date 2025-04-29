@@ -1,0 +1,101 @@
+{
+  "fileName": "v-scroll",
+  "displayName": "v-scroll",
+  "pathName": "v-scroll-directive",
+  "value": {
+    "text": "EventListener | { handler: EventListener; options?: AddEventListenerOptions | undefined; } | (EventListenerObject & { options?: AddEventListenerOptions | undefined; })",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "EventListener",
+        "source": "typescript/lib/lib.dom.d.ts#L2297-L2299",
+        "type": "ref",
+        "ref": "EventListener",
+        "formatted": "EventListener"
+      },
+      {
+        "text": "{ handler: EventListener; options?: AddEventListenerOptions | undefined; }",
+        "source": "vuetify/src/directives/scroll/index.ts#L5-L8",
+        "type": "object",
+        "properties": {
+          "handler": {
+            "text": "EventListener",
+            "source": "typescript/lib/lib.dom.d.ts#L2297-L2299",
+            "type": "ref",
+            "ref": "EventListener",
+            "formatted": "EventListener",
+            "optional": false
+          },
+          "options": {
+            "text": "AddEventListenerOptions | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "UNSUPPORTED",
+                "formatted": "undefined"
+              },
+              {
+                "text": "AddEventListenerOptions",
+                "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+                "type": "ref",
+                "ref": "AddEventListenerOptions",
+                "formatted": "AddEventListenerOptions"
+              }
+            ],
+            "formatted": "AddEventListenerOptions",
+            "optional": true
+          }
+        },
+        "formatted": "{ handler: EventListener; options: AddEventListenerOptions }"
+      },
+      {
+        "text": "EventListenerObject & { options?: AddEventListenerOptions | undefined; }",
+        "type": "allOf",
+        "items": [
+          {
+            "text": "EventListenerObject",
+            "source": "typescript/lib/lib.dom.d.ts#L2301-L2303",
+            "type": "ref",
+            "ref": "EventListenerObject",
+            "formatted": "EventListenerObject"
+          },
+          {
+            "text": "{ options?: AddEventListenerOptions | undefined; }",
+            "source": "vuetify/src/directives/scroll/index.ts#L8-L8",
+            "type": "object",
+            "properties": {
+              "options": {
+                "text": "AddEventListenerOptions | undefined",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "undefined",
+                    "type": "UNSUPPORTED",
+                    "formatted": "undefined"
+                  },
+                  {
+                    "text": "AddEventListenerOptions",
+                    "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+                    "type": "ref",
+                    "ref": "AddEventListenerOptions",
+                    "formatted": "AddEventListenerOptions"
+                  }
+                ],
+                "formatted": "AddEventListenerOptions",
+                "optional": true
+              }
+            },
+            "formatted": "{ options: AddEventListenerOptions }"
+          }
+        ],
+        "formatted": "EventListenerObject & { options: AddEventListenerOptions }"
+      }
+    ],
+    "formatted": "  | EventListener\n  | { handler: EventListener; options: AddEventListenerOptions }\n  | (EventListenerObject & { options: AddEventListenerOptions })\n",
+    "optional": false,
+    "description": {
+      "en": "A handler function that is invoked whenever the target element is scrolled, or an object of [event listener options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)."
+    }
+  }
+}

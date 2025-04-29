@@ -1,0 +1,1486 @@
+{
+  "fileName": "useDate",
+  "displayName": "useDate",
+  "pathName": "use-date",
+  "exposed": {
+    "locale": {
+      "text": "any",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": true,
+      "description": {
+        "en": "Returns the current locale being used."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "date": {
+      "text": "(value?: any) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L56-L56",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "value",
+          "optional": false,
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(value: any) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Takes any value and returns a date object."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "format": {
+      "text": "(date: unknown, formatString: string) => string",
+      "source": "vuetify/lib/framework.d.ts#L57-L57",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "formatString",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "formatted": "(date: unknown, formatString: string) => string\n",
+      "optional": false,
+      "description": {
+        "en": "Takes a date object and returns it in a specified format."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "toJsDate": {
+      "text": "(value: unknown) => Date",
+      "source": "vuetify/lib/framework.d.ts#L58-L58",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "value",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "Date",
+        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+        "type": "ref",
+        "ref": "Date",
+        "formatted": "Date"
+      },
+      "formatted": "(value: unknown) => Date\n",
+      "optional": false,
+      "description": {
+        "en": "Converts date value to a JS Date Object."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "parseISO": {
+      "text": "(date: string) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L59-L59",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: string) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Parses a date string in ISO format."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "toISO": {
+      "text": "(date: unknown) => string",
+      "source": "vuetify/lib/framework.d.ts#L60-L60",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "formatted": "(date: unknown) => string\n",
+      "optional": false,
+      "description": {
+        "en": "Converts date value to a ISO Date Object."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "startOfDay": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L61-L61",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the first second of the day."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "endOfDay": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L62-L62",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the last second of the day."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "startOfWeek": {
+      "text": "(date: unknown, firstDayOfWeek?: string | number | undefined) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L63-L63",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "firstDayOfWeek",
+          "optional": false,
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, firstDayOfWeek: string | number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the first day of the week."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "endOfWeek": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L64-L64",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the last day of the week."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "startOfMonth": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L65-L65",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns first day of the month."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "endOfMonth": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L66-L66",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the last day of the month."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "startOfYear": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L67-L67",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the first day of the year."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "endOfYear": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L68-L68",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the last day of the year."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isAfter": {
+      "text": "(date: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L69-L69",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the first date is after the second date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isAfterDay": {
+      "text": "(value: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L70-L70",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "value",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(value: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the first date is after the second date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isSameDay": {
+      "text": "(date: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L71-L71",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the two dates are the same day."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isSameMonth": {
+      "text": "(date: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L72-L72",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the two dates are the same month."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isSameYear": {
+      "text": "(value: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L73-L73",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "value",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(value: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the two dates are the same year."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isBefore": {
+      "text": "(date: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L74-L74",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the first date is before the second date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isEqual": {
+      "text": "(date: unknown, comparing: unknown) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L75-L75",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, comparing: unknown) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the two dates are equal."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isValid": {
+      "text": "(date: any) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L76-L76",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: any) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the date is valid."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "isWithinRange": {
+      "text": "(date: unknown, range: [unknown, unknown]) => boolean",
+      "source": "vuetify/lib/framework.d.ts#L77-L77",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "range",
+          "optional": false,
+          "text": "[unknown, unknown]",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            },
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "length": 2,
+          "formatted": "[unknown, unknown]"
+        }
+      ],
+      "returnType": {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      "formatted": "(date: unknown, range: [unknown, unknown]) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the first date is within the range of the second and third dates."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "addMinutes": {
+      "text": "(date: unknown, amount: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L78-L78",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, amount: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Adds the specified number of minutes to the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "addHours": {
+      "text": "(date: unknown, amount: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L79-L79",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, amount: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Adds the specified number of hours to the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "addDays": {
+      "text": "(date: unknown, amount: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L80-L80",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, amount: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Adds the specified number of days to the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "addWeeks": {
+      "text": "(date: unknown, amount: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L81-L81",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, amount: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Adds the specified number of weeks to the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "addMonths": {
+      "text": "(date: unknown, amount: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L82-L82",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "amount",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, amount: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Adds the specified number of months to the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getYear": {
+      "text": "(date: unknown) => number",
+      "source": "vuetify/lib/framework.d.ts#L83-L83",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the year of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "setYear": {
+      "text": "(date: unknown, year: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L84-L84",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "year",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, year: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the year of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getDiff": {
+      "text": "(date: unknown, comparing: unknown, unit?: string | undefined) => number",
+      "source": "vuetify/lib/framework.d.ts#L85-L85",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "comparing",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "unit",
+          "optional": false,
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown, comparing: unknown, unit: string) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the difference between two dates in the specified unit."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getWeekArray": {
+      "text": "(date: unknown, firstDayOfWeek?: string | number | undefined) => unknown[][]",
+      "source": "vuetify/lib/framework.d.ts#L86-L86",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "firstDayOfWeek",
+          "optional": false,
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown[][]",
+        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+        "type": "array",
+        "items": [
+          {
+            "text": "unknown[]",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "array",
+            "items": [
+              {
+                "text": "unknown",
+                "type": "unknown",
+                "formatted": "unknown"
+              }
+            ],
+            "formatted": "unknown[]"
+          }
+        ],
+        "formatted": "unknown[][]"
+      },
+      "formatted": "(date: unknown, firstDayOfWeek: string | number) => unknown[][]\n",
+      "optional": false,
+      "description": {
+        "en": "Returns an array of the days of the week of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getWeekdays": {
+      "text": "(firstDayOfWeek?: string | number | undefined) => string[]",
+      "source": "vuetify/lib/framework.d.ts#L87-L87",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "firstDayOfWeek",
+          "optional": false,
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number"
+        }
+      ],
+      "returnType": {
+        "text": "string[]",
+        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+        "type": "array",
+        "items": [
+          {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          }
+        ],
+        "formatted": "string[]"
+      },
+      "formatted": "(firstDayOfWeek: string | number) => string[]\n",
+      "optional": false,
+      "description": {
+        "en": "Returns an array of the names of the days of the week."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getWeek": {
+      "text": "(date: unknown, firstDayOfWeek?: string | number | undefined, firstWeekMinSize?: number | undefined) => number",
+      "source": "vuetify/lib/framework.d.ts#L88-L88",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "firstDayOfWeek",
+          "optional": false,
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number"
+        },
+        {
+          "name": "firstWeekMinSize",
+          "optional": false,
+          "text": "number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(\n  date: unknown,\n  firstDayOfWeek: string | number,\n  firstWeekMinSize: number,\n) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the week of the year of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getMonth": {
+      "text": "(date: unknown) => number",
+      "source": "vuetify/lib/framework.d.ts#L89-L89",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the month of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "setMonth": {
+      "text": "(date: unknown, month: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L90-L90",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "month",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, month: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the month of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getDate": {
+      "text": "(date: unknown) => number",
+      "source": "vuetify/lib/framework.d.ts#L91-L91",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the day of the month of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "setDate": {
+      "text": "(date: unknown, day: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L92-L92",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "day",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, day: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the day of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getNextMonth": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L93-L93",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the next month of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getPreviousMonth": {
+      "text": "(date: unknown) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L94-L94",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the previous month of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getHours": {
+      "text": "(date: unknown) => number",
+      "source": "vuetify/lib/framework.d.ts#L95-L95",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the hours of the day of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "setHours": {
+      "text": "(date: unknown, hours: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L96-L96",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "hours",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, hours: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the hours of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "getMinutes": {
+      "text": "(date: unknown) => number",
+      "source": "vuetify/lib/framework.d.ts#L97-L97",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "returnType": {
+        "text": "number",
+        "type": "number",
+        "formatted": "number"
+      },
+      "formatted": "(date: unknown) => number\n",
+      "optional": false,
+      "description": {
+        "en": "Returns the minutes of the hour of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    },
+    "setMinutes": {
+      "text": "(date: unknown, minutes: number) => unknown",
+      "source": "vuetify/lib/framework.d.ts#L98-L98",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "date",
+          "optional": false,
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        },
+        {
+          "name": "minutes",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "(date: unknown, minutes: number) => unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minutes of the date."
+      },
+      "descriptionSource": {
+        "en": "useDate"
+      }
+    }
+  }
+}

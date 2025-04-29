@@ -1,0 +1,2085 @@
+{
+  "displayName": "VStepper",
+  "fileName": "VStepper",
+  "pathName": "v-stepper",
+  "props": {
+    "flat": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the stepper's elevation."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VSheet",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "modelValue": {
+      "text": "any",
+      "source": "group",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the component's location. Can combine by using a space separated string."
+      },
+      "descriptionSource": {
+        "en": "location"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all children components into a disabled state."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-stepper-item--selected'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": "'force'",
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "position": {
+      "text": "\"fixed\" | \"absolute\" | \"static\" | \"relative\" | \"sticky\" | undefined",
+      "source": "position",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"fixed\"",
+          "type": "string",
+          "literal": "\"fixed\"",
+          "formatted": "\"fixed\""
+        },
+        {
+          "text": "\"absolute\"",
+          "type": "string",
+          "literal": "\"absolute\"",
+          "formatted": "\"absolute\""
+        },
+        {
+          "text": "\"static\"",
+          "type": "string",
+          "literal": "\"static\"",
+          "formatted": "\"static\""
+        },
+        {
+          "text": "\"relative\"",
+          "type": "string",
+          "literal": "\"relative\"",
+          "formatted": "\"relative\""
+        },
+        {
+          "text": "\"sticky\"",
+          "type": "string",
+          "literal": "\"sticky\"",
+          "formatted": "\"sticky\""
+        }
+      ],
+      "formatted": "'fixed' | 'absolute' | 'static' | 'relative' | 'sticky'\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the position for the component."
+      },
+      "descriptionSource": {
+        "en": "position"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "items": {
+      "text": "readonly StepperItem[] | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly StepperItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "Record<string, any>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "record",
+              "key": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              "value": {
+                "text": "any",
+                "type": "any",
+                "formatted": "any"
+              },
+              "formatted": "Record<string, any>"
+            }
+          ],
+          "formatted": "(string | Record<string, any>)[]"
+        }
+      ],
+      "formatted": "(string | Record<string, any>)[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of strings or objects used for automatically generating children components."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "itemTitle": {
+      "text": "string | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'title'",
+      "description": {
+        "en": "Property on supplied `items` that contains its title."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "itemValue": {
+      "text": "string | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'value'",
+      "description": {
+        "en": "Property on supplied `items` that contains its value."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the stepper into a mobile state, removing labels from stepper items."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "altLabels": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Places the labels beneath the step."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "completeIcon": {
+      "text": "IconValue | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Icon to display when step is marked as completed."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    },
+    "editIcon": {
+      "text": "IconValue | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Icon to display when step is editable."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    },
+    "editable": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Marks step as editable."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "errorIcon": {
+      "text": "IconValue | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Icon to display when step has an error."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    },
+    "hideActions": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hide actions bar (prev and next buttons)."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "nonLinear": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allow user to jump to any step."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "prevText": {
+      "text": "string | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.stepper.prev'",
+      "description": {
+        "en": "The text used for the Prev button."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "nextText": {
+      "text": "string | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.stepper.next'",
+      "description": {
+        "en": "The text used for the Next button."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[v: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "actions": {
+      "text": "VStepperSlot",
+      "source": "vuetify/src/components/VStepper/VStepper.tsx#L28-L31",
+      "type": "object",
+      "properties": {
+        "prev": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VStepper/VStepper.tsx#L29-L29",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "next": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VStepper/VStepper.tsx#L30-L30",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{ prev: () => void; next: () => void }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing [v-stepper-actions](/api/v-stepper-actions/)."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "default": {
+      "text": "VStepperSlot",
+      "source": "vuetify/src/components/VStepper/VStepper.tsx#L28-L31",
+      "type": "object",
+      "properties": {
+        "prev": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VStepper/VStepper.tsx#L29-L29",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "next": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VStepper/VStepper.tsx#L30-L30",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{ prev: () => void; next: () => void }\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "header": {
+      "text": "StepperItem",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L25-L25",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Record<string, any>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "any",
+            "type": "any",
+            "formatted": "any"
+          },
+          "formatted": "Record<string, any>"
+        }
+      ],
+      "formatted": "string | Record<string, any>\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing the header."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "header-item": {
+      "text": "StepperItemSlot",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L27-L34",
+      "type": "object",
+      "properties": {
+        "canEdit": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasError": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasCompleted": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "subtitle": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "step": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  canEdit: boolean\n  hasError: boolean\n  hasCompleted: boolean\n  title: string | number\n  subtitle: string | number\n  step: any\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing all header items."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "icon": {
+      "text": "StepperItemSlot",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L27-L34",
+      "type": "object",
+      "properties": {
+        "canEdit": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasError": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasCompleted": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "subtitle": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "step": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  canEdit: boolean\n  hasError: boolean\n  hasCompleted: boolean\n  title: string | number\n  subtitle: string | number\n  step: any\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing all stepper item icons."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "title": {
+      "text": "StepperItemSlot",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L27-L34",
+      "type": "object",
+      "properties": {
+        "canEdit": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasError": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasCompleted": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "subtitle": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "step": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  canEdit: boolean\n  hasError: boolean\n  hasCompleted: boolean\n  title: string | number\n  subtitle: string | number\n  step: any\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "subtitle": {
+      "text": "StepperItemSlot",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L27-L34",
+      "type": "object",
+      "properties": {
+        "canEdit": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasError": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasCompleted": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "subtitle": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "step": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  canEdit: boolean\n  hasError: boolean\n  hasCompleted: boolean\n  title: string | number\n  subtitle: string | number\n  step: any\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's subtitle content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "item": {
+      "text": "StepperItem",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L25-L25",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Record<string, any>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "any",
+            "type": "any",
+            "formatted": "any"
+          },
+          "formatted": "Record<string, any>"
+        }
+      ],
+      "formatted": "string | Record<string, any>\n",
+      "optional": false,
+      "description": {
+        "en": "Define a custom item appearance."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prev": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing the prev step functionality"
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "next": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing the next step functionality"
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "[`header-item.${string}`]": {
+      "text": "StepperItemSlot",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L27-L34",
+      "type": "object",
+      "properties": {
+        "canEdit": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasError": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "hasCompleted": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "subtitle": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        },
+        "step": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  canEdit: boolean\n  hasError: boolean\n  hasCompleted: boolean\n  title: string | number\n  subtitle: string | number\n  step: any\n}\n",
+      "optional": true,
+      "description": {
+        "en": "Slot for customizing header items when using the [items](/api/v-stepper/#props-items) prop."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "[`item.${string}`]": {
+      "text": "StepperItem",
+      "source": "vuetify/src/components/VStepper/VStepperItem.tsx#L25-L25",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Record<string, any>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "any",
+            "type": "any",
+            "formatted": "any"
+          },
+          "formatted": "Record<string, any>"
+        }
+      ],
+      "formatted": "string | Record<string, any>\n",
+      "optional": true,
+      "description": {
+        "en": "Slot for customizing the content for each step."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    }
+  },
+  "exposed": {
+    "prev": {
+      "text": "() => void",
+      "source": "vuetify/src/composables/group.ts#L35-L35",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Move to the prev step."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    },
+    "next": {
+      "text": "() => void",
+      "source": "vuetify/src/composables/group.ts#L36-L36",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Move to the next step."
+      },
+      "descriptionSource": {
+        "en": "VStepper"
+      }
+    }
+  },
+  "sass": {
+    "$stepper-actions-padding": {
+      "default": "1rem"
+    },
+    "$stepper-actions-stepper-padding": {
+      "default": "0 1.5rem 1rem"
+    },
+    "$stepper-actions-stepper-window-item-padding": {
+      "default": "1.5rem 0 0"
+    },
+    "$stepper-alt-labels-flex-basis": {
+      "default": "175px"
+    },
+    "$stepper-alt-labels-header-divider": {
+      "default": "35px -67px 0"
+    },
+    "$stepper-border-radius": {
+      "default": "4px"
+    },
+    "$stepper-elevation": {
+      "default": "2"
+    },
+    "$stepper-item-opacity": {
+      "default": "var(--v-medium-emphasis-opacity)"
+    },
+    "$stepper-item-padding": {
+      "default": "1.5rem"
+    },
+    "$stepper-item-transition-duration": {
+      "default": ".2s"
+    },
+    "$stepper-item-transition-property": {
+      "default": "opacity"
+    },
+    "$stepper-item-transition-timing-function": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "$stepper-header-divider-margin": {
+      "default": "0 -16px"
+    },
+    "$stepper-header-elevation": {
+      "default": "2"
+    },
+    "$stepper-window-margin": {
+      "default": "1.5rem"
+    },
+    "$stepper-item-avatar-background": {
+      "default": "rgba(var(--v-theme-surface-variant), var(--v-medium-emphasis-opacity))"
+    },
+    "$stepper-item-avatar-color": {
+      "default": "rgb(var(--v-theme-on-surface-variant))"
+    },
+    "$stepper-item-avatar-font-size": {
+      "default": ".75rem"
+    },
+    "$stepper-item-avatar-margin-inline-end": {
+      "default": "8px"
+    },
+    "$stepper-item-avatar-icon-font-size": {
+      "default": ".875rem"
+    },
+    "$stepper-item-alt-labels-margin-bottom": {
+      "default": "16px"
+    },
+    "$stepper-item-title-line-height": {
+      "default": "1"
+    },
+    "$stepper-item-subtitle-font-size": {
+      "default": ".75rem"
+    },
+    "$stepper-item-subtitle-line-height": {
+      "default": "1"
+    },
+    "$stepper-item-subtitle-opacity": {
+      "default": "var(--v-medium-emphasis-opacity)"
+    }
+  }
+}

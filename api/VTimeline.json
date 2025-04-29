@@ -1,0 +1,600 @@
+{
+  "displayName": "VTimeline",
+  "fileName": "VTimeline",
+  "pathName": "v-timeline",
+  "props": {
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "size"
+      }
+    },
+    "iconColor": {
+      "text": "string | undefined",
+      "source": "VTimelineItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Color of the icon."
+      },
+      "descriptionSource": {
+        "en": "VTimelineItem"
+      }
+    },
+    "direction": {
+      "text": "TimelineDirection | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "TimelineDirection",
+          "source": "vuetify/src/components/VTimeline/VTimeline.tsx#L20-L20",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"horizontal\"",
+              "type": "string",
+              "literal": "\"horizontal\"",
+              "formatted": "\"horizontal\""
+            },
+            {
+              "text": "\"vertical\"",
+              "type": "string",
+              "literal": "\"vertical\"",
+              "formatted": "\"vertical\""
+            }
+          ],
+          "formatted": "\"horizontal\" | \"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'vertical'",
+      "description": {
+        "en": "Display timeline in a **vertical** or **horizontal** direction."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "align": {
+      "text": "TimelineAlign | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "TimelineAlign",
+          "source": "vuetify/src/components/VTimeline/VTimeline.tsx#L22-L22",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"start\"",
+              "type": "string",
+              "literal": "\"start\"",
+              "formatted": "\"start\""
+            },
+            {
+              "text": "\"center\"",
+              "type": "string",
+              "literal": "\"center\"",
+              "formatted": "\"center\""
+            }
+          ],
+          "formatted": "\"start\" | \"center\""
+        }
+      ],
+      "formatted": "'start' | 'center'\n",
+      "optional": false,
+      "default": "'center'",
+      "description": {
+        "en": "Places the timeline dot at the top or center of the timeline item."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "justify": {
+      "text": "string | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'auto'",
+      "description": {
+        "en": "Places timeline line at the center or automatically on the left or right side."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "lineThickness": {
+      "text": "string | number | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 2,
+      "description": {
+        "en": "Thickness of the timeline line."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "lineColor": {
+      "text": "string | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Color of the timeline line."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "dotColor": {
+      "text": "string | undefined",
+      "source": "VTimelineItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Color of the item dot."
+      },
+      "descriptionSource": {
+        "en": "VTimelineItem"
+      }
+    },
+    "fillDot": {
+      "text": "boolean | undefined",
+      "source": "VTimelineItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Remove outer border of item dot, making the color fill the entire dot."
+      },
+      "descriptionSource": {
+        "en": "VTimelineItem"
+      }
+    },
+    "hideOpposite": {
+      "text": "boolean | undefined",
+      "source": "VTimelineItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Hide opposite content if it exists."
+      },
+      "descriptionSource": {
+        "en": "VTimelineItem"
+      }
+    },
+    "lineInset": {
+      "text": "string | number | undefined",
+      "source": "VTimelineItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Specifies the distance between the line and the dot of timeline items."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "side": {
+      "text": "TimelineSide",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        }
+      ],
+      "formatted": "'start' | 'end'\n",
+      "optional": false,
+      "description": {
+        "en": "Display all timeline items on one side of the timeline, either **start** or **end**."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
+    "truncateLine": {
+      "text": "TimelineTruncateLine",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"both\"",
+          "type": "string",
+          "literal": "\"both\"",
+          "formatted": "\"both\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'both'\n",
+      "optional": false,
+      "description": {
+        "en": "Truncate timeline directly at the **start** or **end** of the line, or on **both** ends."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$timeline-density-comfortable-grid-template-end": {
+      "default": "min-content min-content auto"
+    },
+    "$timeline-density-comfortable-grid-template-start": {
+      "default": "auto min-content min-content"
+    },
+    "$timeline-density-compact-grid-template-end": {
+      "default": "0 min-content auto"
+    },
+    "$timeline-density-compact-grid-template-start": {
+      "default": "auto min-content 0"
+    },
+    "$timeline-dot-border-radius": {
+      "default": "50%"
+    },
+    "$timeline-dot-divider-background": {
+      "default": "rgb(var(--v-theme-surface-light))"
+    },
+    "$timeline-dot-size": {
+      "default": "38px"
+    },
+    "$timeline-inner-dot-divider-background": {
+      "default": "rgb(var(--v-theme-on-surface))"
+    },
+    "$timeline-inset-divider-line": {
+      "default": "var(--v-timeline-line-inset)"
+    },
+    "$timeline-inset-line-size": {
+      "default": "4px"
+    },
+    "$timeline-divider-dot-elevation": {
+      "default": "0"
+    },
+    "$timeline-divider-line-background": {
+      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
+    },
+    "$timeline-divider-line-horizontal-width": {
+      "default": "var(--v-timeline-line-inset, 0px)"
+    },
+    "$timeline-divider-line-thickness": {
+      "default": "var(--v-timeline-line-thickness)"
+    },
+    "$timeline-item-grid-template-center": {
+      "default": "minmax(auto, 50%) min-content minmax(auto, 50%)"
+    },
+    "$timeline-item-grid-template-auto": {
+      "default": "auto min-content auto"
+    },
+    "$timeline-item-padding": {
+      "default": "24px"
+    },
+    "$timeline-dot-border-sizes": {
+      "default": "tools.map-deep-merge(\n  (\n    'x-small': 6px,\n    'small': 8px,\n    'default': 8px,\n    'large': 8px,\n    'x-large': 10px,\n  ),\n  $timeline-dot-border-sizes\n)"
+    }
+  }
+}

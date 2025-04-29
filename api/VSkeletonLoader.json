@@ -1,0 +1,911 @@
+{
+  "displayName": "VSkeletonLoader",
+  "fileName": "VSkeletonLoader",
+  "pathName": "v-skeleton-loader",
+  "props": {
+    "type": {
+      "text": "\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\" | readonly (\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[] | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"image\"",
+          "type": "string",
+          "literal": "\"image\"",
+          "formatted": "\"image\""
+        },
+        {
+          "text": "string & {}",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "{}",
+              "type": "object",
+              "properties": {},
+              "formatted": "{  }"
+            }
+          ],
+          "formatted": "string & {  }"
+        },
+        {
+          "text": "\"chip\"",
+          "type": "string",
+          "literal": "\"chip\"",
+          "formatted": "\"chip\""
+        },
+        {
+          "text": "\"subtitle\"",
+          "type": "string",
+          "literal": "\"subtitle\"",
+          "formatted": "\"subtitle\""
+        },
+        {
+          "text": "\"divider\"",
+          "type": "string",
+          "literal": "\"divider\"",
+          "formatted": "\"divider\""
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"article\"",
+          "type": "string",
+          "literal": "\"article\"",
+          "formatted": "\"article\""
+        },
+        {
+          "text": "\"button\"",
+          "type": "string",
+          "literal": "\"button\"",
+          "formatted": "\"button\""
+        },
+        {
+          "text": "\"table\"",
+          "type": "string",
+          "literal": "\"table\"",
+          "formatted": "\"table\""
+        },
+        {
+          "text": "\"avatar\"",
+          "type": "string",
+          "literal": "\"avatar\"",
+          "formatted": "\"avatar\""
+        },
+        {
+          "text": "\"heading\"",
+          "type": "string",
+          "literal": "\"heading\"",
+          "formatted": "\"heading\""
+        },
+        {
+          "text": "\"sentences\"",
+          "type": "string",
+          "literal": "\"sentences\"",
+          "formatted": "\"sentences\""
+        },
+        {
+          "text": "\"paragraph\"",
+          "type": "string",
+          "literal": "\"paragraph\"",
+          "formatted": "\"paragraph\""
+        },
+        {
+          "text": "\"ossein\"",
+          "type": "string",
+          "literal": "\"ossein\"",
+          "formatted": "\"ossein\""
+        },
+        {
+          "text": "\"actions\"",
+          "type": "string",
+          "literal": "\"actions\"",
+          "formatted": "\"actions\""
+        },
+        {
+          "text": "\"card\"",
+          "type": "string",
+          "literal": "\"card\"",
+          "formatted": "\"card\""
+        },
+        {
+          "text": "\"card-avatar\"",
+          "type": "string",
+          "literal": "\"card-avatar\"",
+          "formatted": "\"card-avatar\""
+        },
+        {
+          "text": "\"date-picker\"",
+          "type": "string",
+          "literal": "\"date-picker\"",
+          "formatted": "\"date-picker\""
+        },
+        {
+          "text": "\"date-picker-options\"",
+          "type": "string",
+          "literal": "\"date-picker-options\"",
+          "formatted": "\"date-picker-options\""
+        },
+        {
+          "text": "\"date-picker-days\"",
+          "type": "string",
+          "literal": "\"date-picker-days\"",
+          "formatted": "\"date-picker-days\""
+        },
+        {
+          "text": "\"list-item\"",
+          "type": "string",
+          "literal": "\"list-item\"",
+          "formatted": "\"list-item\""
+        },
+        {
+          "text": "\"list-item-avatar\"",
+          "type": "string",
+          "literal": "\"list-item-avatar\"",
+          "formatted": "\"list-item-avatar\""
+        },
+        {
+          "text": "\"list-item-two-line\"",
+          "type": "string",
+          "literal": "\"list-item-two-line\"",
+          "formatted": "\"list-item-two-line\""
+        },
+        {
+          "text": "\"list-item-avatar-two-line\"",
+          "type": "string",
+          "literal": "\"list-item-avatar-two-line\"",
+          "formatted": "\"list-item-avatar-two-line\""
+        },
+        {
+          "text": "\"list-item-three-line\"",
+          "type": "string",
+          "literal": "\"list-item-three-line\"",
+          "formatted": "\"list-item-three-line\""
+        },
+        {
+          "text": "\"list-item-avatar-three-line\"",
+          "type": "string",
+          "literal": "\"list-item-avatar-three-line\"",
+          "formatted": "\"list-item-avatar-three-line\""
+        },
+        {
+          "text": "\"table-heading\"",
+          "type": "string",
+          "literal": "\"table-heading\"",
+          "formatted": "\"table-heading\""
+        },
+        {
+          "text": "\"table-thead\"",
+          "type": "string",
+          "literal": "\"table-thead\"",
+          "formatted": "\"table-thead\""
+        },
+        {
+          "text": "\"table-tbody\"",
+          "type": "string",
+          "literal": "\"table-tbody\"",
+          "formatted": "\"table-tbody\""
+        },
+        {
+          "text": "\"table-row-divider\"",
+          "type": "string",
+          "literal": "\"table-row-divider\"",
+          "formatted": "\"table-row-divider\""
+        },
+        {
+          "text": "\"table-row\"",
+          "type": "string",
+          "literal": "\"table-row\"",
+          "formatted": "\"table-row\""
+        },
+        {
+          "text": "\"table-tfoot\"",
+          "type": "string",
+          "literal": "\"table-tfoot\"",
+          "formatted": "\"table-tfoot\""
+        },
+        {
+          "text": "readonly (\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "\"image\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"image\""
+            },
+            {
+              "text": "string & {}",
+              "type": "ref",
+              "ref": "",
+              "formatted": "string & {}"
+            },
+            {
+              "text": "\"chip\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"chip\""
+            },
+            {
+              "text": "\"subtitle\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"subtitle\""
+            },
+            {
+              "text": "\"divider\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"divider\""
+            },
+            {
+              "text": "\"text\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"text\""
+            },
+            {
+              "text": "\"article\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"article\""
+            },
+            {
+              "text": "\"button\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"button\""
+            },
+            {
+              "text": "\"table\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table\""
+            },
+            {
+              "text": "\"avatar\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"avatar\""
+            },
+            {
+              "text": "\"heading\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"heading\""
+            },
+            {
+              "text": "\"sentences\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"sentences\""
+            },
+            {
+              "text": "\"paragraph\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"paragraph\""
+            },
+            {
+              "text": "\"ossein\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"ossein\""
+            },
+            {
+              "text": "\"actions\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"actions\""
+            },
+            {
+              "text": "\"card\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"card\""
+            },
+            {
+              "text": "\"card-avatar\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"card-avatar\""
+            },
+            {
+              "text": "\"date-picker\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"date-picker\""
+            },
+            {
+              "text": "\"date-picker-options\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"date-picker-options\""
+            },
+            {
+              "text": "\"date-picker-days\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"date-picker-days\""
+            },
+            {
+              "text": "\"list-item\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item\""
+            },
+            {
+              "text": "\"list-item-avatar\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item-avatar\""
+            },
+            {
+              "text": "\"list-item-two-line\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item-two-line\""
+            },
+            {
+              "text": "\"list-item-avatar-two-line\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item-avatar-two-line\""
+            },
+            {
+              "text": "\"list-item-three-line\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item-three-line\""
+            },
+            {
+              "text": "\"list-item-avatar-three-line\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"list-item-avatar-three-line\""
+            },
+            {
+              "text": "\"table-heading\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-heading\""
+            },
+            {
+              "text": "\"table-thead\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-thead\""
+            },
+            {
+              "text": "\"table-tbody\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-tbody\""
+            },
+            {
+              "text": "\"table-row-divider\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-row-divider\""
+            },
+            {
+              "text": "\"table-row\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-row\""
+            },
+            {
+              "text": "\"table-tfoot\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"table-tfoot\""
+            }
+          ],
+          "formatted": "(\"image\" | string & {} | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]"
+        }
+      ],
+      "formatted": "  | 'image'\n  | (string & {})\n  | 'chip'\n  | 'subtitle'\n  | 'divider'\n  | 'text'\n  | 'article'\n  | 'button'\n  | 'table'\n  | 'avatar'\n  | 'heading'\n  | 'sentences'\n  | 'paragraph'\n  | 'ossein'\n  | 'actions'\n  | 'card'\n  | 'card-avatar'\n  | 'date-picker'\n  | 'date-picker-options'\n  | 'date-picker-days'\n  | 'list-item'\n  | 'list-item-avatar'\n  | 'list-item-two-line'\n  | 'list-item-avatar-two-line'\n  | 'list-item-three-line'\n  | 'list-item-avatar-three-line'\n  | 'table-heading'\n  | 'table-thead'\n  | 'table-tbody'\n  | 'table-row-divider'\n  | 'table-row'\n  | 'table-tfoot'\n  | (\n      | 'image'\n      | (string & {})\n      | 'chip'\n      | 'subtitle'\n      | 'divider'\n      | 'text'\n      | 'article'\n      | 'button'\n      | 'table'\n      | 'avatar'\n      | 'heading'\n      | 'sentences'\n      | 'paragraph'\n      | 'ossein'\n      | 'actions'\n      | 'card'\n      | 'card-avatar'\n      | 'date-picker'\n      | 'date-picker-options'\n      | 'date-picker-days'\n      | 'list-item'\n      | 'list-item-avatar'\n      | 'list-item-two-line'\n      | 'list-item-avatar-two-line'\n      | 'list-item-three-line'\n      | 'list-item-avatar-three-line'\n      | 'table-heading'\n      | 'table-thead'\n      | 'table-tbody'\n      | 'table-row-divider'\n      | 'table-row'\n      | 'table-tfoot'\n    )[]\n",
+      "optional": false,
+      "default": "'ossein'",
+      "description": {
+        "en": "A string delimited list of skeleton components to create such as `type=\"text@3\"` or `type=\"card, list-item\"`. Will recursively generate a corresponding skeleton from the provided string. Also supports short-hand for multiple elements such as **article@3** and **paragraph@2** which will generate 3 _article_ skeletons and 2 _paragraph_ skeletons. Please see below for a list of available pre-defined options."
+      },
+      "descriptionSource": {
+        "en": "VSkeletonLoader"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "loading": {
+      "text": "boolean | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies a loading animation with a on-hover loading cursor. A value of **false** will only work when there is content in the `default` slot."
+      },
+      "descriptionSource": {
+        "en": "VSkeletonLoader"
+      }
+    },
+    "boilerplate": {
+      "text": "boolean | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Remove the loading animation from the skeleton."
+      },
+      "descriptionSource": {
+        "en": "VSkeletonLoader"
+      }
+    },
+    "loadingText": {
+      "text": "string | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.loading'",
+      "description": {
+        "en": "aria-label for the element in a loading state."
+      },
+      "descriptionSource": {
+        "en": "VSkeletonLoader"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$skeleton-loader-actions-button-margin": {
+      "default": "12px"
+    },
+    "$skeleton-loader-actions-padding": {
+      "default": "16px 16px 8px"
+    },
+    "$skeleton-loader-avatar-height": {
+      "default": "48px"
+    },
+    "$skeleton-loader-avatar-margin": {
+      "default": "8px 16px"
+    },
+    "$skeleton-loader-avatar-width": {
+      "default": "48px"
+    },
+    "$skeleton-loader-background": {
+      "default": "rgb(var(--v-theme-surface))"
+    },
+    "$skeleton-loader-bone-background": {
+      "default": "linear-gradient(90deg, rgba(var(--v-theme-surface), 0), rgba(var(--v-theme-surface), .3), rgba(var(--v-theme-surface), 0))"
+    },
+    "$skeleton-loader-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$skeleton-loader-button-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$skeleton-loader-button-height": {
+      "default": "36px"
+    },
+    "$skeleton-loader-button-width": {
+      "default": "64px"
+    },
+    "$skeleton-loader-chip-border-radius": {
+      "default": "16px"
+    },
+    "$skeleton-loader-chip-height": {
+      "default": "32px"
+    },
+    "$skeleton-loader-chip-width": {
+      "default": "96px"
+    },
+    "$skeleton-loader-date-picker-border-radius": {
+      "default": "inherit"
+    },
+    "$skeleton-loader-date-picker-days-margin": {
+      "default": "4px"
+    },
+    "$skeleton-loader-date-picker-heading-max-width": {
+      "default": "256px"
+    },
+    "$skeleton-loader-date-picker-heading-width": {
+      "default": "40%"
+    },
+    "$skeleton-loader-date-picker-text-max-width": {
+      "default": "88px"
+    },
+    "$skeleton-loader-date-picker-text-width": {
+      "default": "20%"
+    },
+    "$skeleton-loader-divider-border-radius": {
+      "default": "1px"
+    },
+    "$skeleton-loader-divider-height": {
+      "default": "2px"
+    },
+    "$skeleton-loader-gutter": {
+      "default": "16px"
+    },
+    "$skeleton-loader-heading-border-radius": {
+      "default": "12px"
+    },
+    "$skeleton-loader-heading-height": {
+      "default": "24px"
+    },
+    "$skeleton-loader-image-height": {
+      "default": "150px"
+    },
+    "$skeleton-loader-loading-animation": {
+      "default": "loading 1.5s infinite"
+    },
+    "$skeleton-loader-loading-transform": {
+      "default": "translateX(-100%)"
+    },
+    "$skeleton-loader-subtitle-max-width": {
+      "default": "70%"
+    },
+    "$skeleton-loader-subtitle-text-border-radius": {
+      "default": "8px"
+    },
+    "$skeleton-loader-subtitle-text-height": {
+      "default": "16px"
+    },
+    "$skeleton-loader-table-cell-height": {
+      "default": "48px"
+    },
+    "$skeleton-loader-table-cell-width": {
+      "default": "88px"
+    },
+    "$skeleton-loader-table-row-margin": {
+      "default": "0 8px"
+    },
+    "$skeleton-loader-table-row-text-margin": {
+      "default": "8px"
+    },
+    "$skeleton-loader-text-background": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-border-opacity))"
+    },
+    "$skeleton-loader-text-border-radius": {
+      "default": "6px"
+    },
+    "$skeleton-loader-text-height": {
+      "default": "12px"
+    },
+    "$skeleton-loader-text-three-text-max-width": {
+      "default": "70%"
+    },
+    "$skeleton-loader-text-two-text-margin-top": {
+      "default": "-8px"
+    },
+    "$skeleton-loader-text-two-text-max-width": {
+      "default": "50%"
+    }
+  }
+}

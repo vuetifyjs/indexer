@@ -1,0 +1,468 @@
+{
+  "displayName": "VLayout",
+  "fileName": "VLayout",
+  "pathName": "v-layout",
+  "props": {
+    "fullHeight": {
+      "text": "boolean | undefined",
+      "source": "layout",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sets the component height to 100%."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "overlaps": {
+      "text": "string[] | undefined",
+      "source": "layout",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "getLayoutItem": {
+      "text": "(id: string) => { size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; } | undefined",
+      "source": "vuetify/src/composables/layout.ts#L245-L247",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "id",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "returnType": {
+        "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; } | undefined",
+        "type": "anyOf",
+        "items": [
+          {
+            "text": "undefined",
+            "type": "UNSUPPORTED",
+            "formatted": "undefined"
+          },
+          {
+            "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }",
+            "source": "vuetify/src/composables/layout.ts#L236-L241",
+            "type": "object",
+            "properties": {
+              "size": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "position": {
+                "text": "Position",
+                "source": "vuetify/src/composables/layout.ts#L23-L23",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "\"top\"",
+                    "type": "string",
+                    "literal": "\"top\"",
+                    "formatted": "\"top\""
+                  },
+                  {
+                    "text": "\"left\"",
+                    "type": "string",
+                    "literal": "\"left\"",
+                    "formatted": "\"left\""
+                  },
+                  {
+                    "text": "\"right\"",
+                    "type": "string",
+                    "literal": "\"right\"",
+                    "formatted": "\"right\""
+                  },
+                  {
+                    "text": "\"bottom\"",
+                    "type": "string",
+                    "literal": "\"bottom\"",
+                    "formatted": "\"bottom\""
+                  }
+                ],
+                "formatted": "\"top\" | \"left\" | \"right\" | \"bottom\"",
+                "optional": false
+              },
+              "top": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "bottom": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "left": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "right": {
+                "text": "number",
+                "type": "number",
+                "formatted": "number",
+                "optional": false
+              },
+              "id": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string",
+                "optional": false
+              }
+            },
+            "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+          }
+        ],
+        "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+      },
+      "formatted": "(id: string) => {\n  size: number\n  position: 'top' | 'left' | 'right' | 'bottom'\n  top: number\n  bottom: number\n  left: number\n  right: number\n  id: string\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Function that returns position and size information about a specific layout item."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    },
+    "items": {
+      "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ size: number; position: Position; top: number; bottom: number; left: number; right: number; id: string; }",
+          "source": "vuetify/src/composables/layout.ts#L236-L241",
+          "type": "object",
+          "properties": {
+            "size": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "position": {
+              "text": "Position",
+              "source": "vuetify/src/composables/layout.ts#L23-L23",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "\"top\"",
+                  "type": "string",
+                  "literal": "\"top\"",
+                  "formatted": "\"top\""
+                },
+                {
+                  "text": "\"left\"",
+                  "type": "string",
+                  "literal": "\"left\"",
+                  "formatted": "\"left\""
+                },
+                {
+                  "text": "\"right\"",
+                  "type": "string",
+                  "literal": "\"right\"",
+                  "formatted": "\"right\""
+                },
+                {
+                  "text": "\"bottom\"",
+                  "type": "string",
+                  "literal": "\"bottom\"",
+                  "formatted": "\"bottom\""
+                }
+              ],
+              "formatted": "\"top\" | \"left\" | \"right\" | \"bottom\"",
+              "optional": false
+            },
+            "top": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "bottom": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "left": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "right": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "id": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ size: number; position: \"top\" | \"left\" | \"right\" | \"bottom\"; top: number; bottom: number; left: number; right: number; id: string }"
+        }
+      ],
+      "formatted": "{\n  size: number\n  position: 'top' | 'left' | 'right' | 'bottom'\n  top: number\n  bottom: number\n  left: number\n  right: number\n  id: string\n}[]\n",
+      "optional": false,
+      "description": {
+        "en": "A array of all registered layout items."
+      },
+      "descriptionSource": {
+        "en": "layout"
+      }
+    }
+  },
+  "sass": {}
+}

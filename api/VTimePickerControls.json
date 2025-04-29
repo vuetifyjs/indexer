@@ -1,0 +1,468 @@
+{
+  "displayName": "VTimePickerControls",
+  "fileName": "VTimePickerControls",
+  "pathName": "v-time-picker-controls",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "value": {
+      "text": "number | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The current value of the timepicker."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "readonly": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Makes the timepicker readonly."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "ampmInTitle": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays AM/PM in the title."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "ampm": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Enables AM/PM mode."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "viewMode": {
+      "text": "VTimePickerViewMode | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "VTimePickerViewMode",
+          "source": "vuetify/src/labs/VTimePicker/shared.ts#L1-L1",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"hour\"",
+              "type": "string",
+              "literal": "\"hour\"",
+              "formatted": "\"hour\""
+            },
+            {
+              "text": "\"minute\"",
+              "type": "string",
+              "literal": "\"minute\"",
+              "formatted": "\"minute\""
+            },
+            {
+              "text": "\"second\"",
+              "type": "string",
+              "literal": "\"second\"",
+              "formatted": "\"second\""
+            }
+          ],
+          "formatted": "\"hour\" | \"minute\" | \"second\""
+        }
+      ],
+      "formatted": "'hour' | 'minute' | 'second'\n",
+      "optional": false,
+      "description": {
+        "en": "The current view mode of the timepicker. Can be either `hour`, `minute`, or `second`."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "hour": {
+      "text": "number | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The current hour value."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "minute": {
+      "text": "number | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The current minute value."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "second": {
+      "text": "number | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The current second value."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "useSeconds": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Enables the display and selection of seconds in the timepicker."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "ampmReadonly": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Makes AM/PM controls readonly."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "period": {
+      "text": "Period | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Period",
+          "source": "vuetify/src/labs/VTimePicker/VTimePickerControls.tsx#L17-L17",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"am\"",
+              "type": "string",
+              "literal": "\"am\"",
+              "formatted": "\"am\""
+            },
+            {
+              "text": "\"pm\"",
+              "type": "string",
+              "literal": "\"pm\"",
+              "formatted": "\"pm\""
+            }
+          ],
+          "formatted": "\"am\" | \"pm\""
+        }
+      ],
+      "formatted": "'am' | 'pm'\n",
+      "optional": false,
+      "description": {
+        "en": "The current period value. either `am` or `pm`."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    }
+  },
+  "events": {
+    "update:period": {
+      "text": "[data: Period]",
+      "type": "array",
+      "items": [
+        {
+          "text": "Period",
+          "source": "vuetify/src/labs/VTimePicker/VTimePickerControls.tsx#L17-L17",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"am\"",
+              "type": "string",
+              "literal": "\"am\"",
+              "formatted": "\"am\""
+            },
+            {
+              "text": "\"pm\"",
+              "type": "string",
+              "literal": "\"pm\"",
+              "formatted": "\"pm\""
+            }
+          ],
+          "formatted": "\"am\" | \"pm\""
+        }
+      ],
+      "length": 1,
+      "formatted": "['am' | 'pm']\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the period is changed. The event payload is either `am` or `pm`."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "update:viewMode": {
+      "text": "[data: VTimePickerViewMode]",
+      "type": "array",
+      "items": [
+        {
+          "text": "VTimePickerViewMode",
+          "source": "vuetify/src/labs/VTimePicker/shared.ts#L1-L1",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"hour\"",
+              "type": "string",
+              "literal": "\"hour\"",
+              "formatted": "\"hour\""
+            },
+            {
+              "text": "\"minute\"",
+              "type": "string",
+              "literal": "\"minute\"",
+              "formatted": "\"minute\""
+            },
+            {
+              "text": "\"second\"",
+              "type": "string",
+              "literal": "\"second\"",
+              "formatted": "\"second\""
+            }
+          ],
+          "formatted": "\"hour\" | \"minute\" | \"second\""
+        }
+      ],
+      "length": 1,
+      "formatted": "['hour' | 'minute' | 'second']\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the view mode is changed. The event payload is either `hour`, `minute`, or `second`."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

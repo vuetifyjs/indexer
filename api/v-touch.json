@@ -1,0 +1,733 @@
+{
+  "fileName": "v-touch",
+  "displayName": "v-touch",
+  "pathName": "v-touch-directive",
+  "value": {
+    "text": "TouchValue | undefined",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "undefined",
+        "type": "UNSUPPORTED",
+        "formatted": "undefined"
+      },
+      {
+        "text": "TouchValue",
+        "source": "vuetify/src/directives/touch/index.ts#L32-L35",
+        "type": "object",
+        "properties": {
+          "parent": {
+            "text": "boolean | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "boolean",
+                "type": "boolean",
+                "formatted": "boolean"
+              }
+            ],
+            "formatted": "boolean",
+            "optional": true
+          },
+          "options": {
+            "text": "AddEventListenerOptions | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "AddEventListenerOptions",
+                "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+                "type": "ref",
+                "ref": "AddEventListenerOptions",
+                "formatted": "AddEventListenerOptions"
+              }
+            ],
+            "formatted": "AddEventListenerOptions",
+            "optional": true
+          },
+          "start": {
+            "text": "((wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L10-L10",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapperEvent",
+                    "optional": false,
+                    "text": "{ originalEvent: TouchEvent; } & TouchData",
+                    "type": "allOf",
+                    "items": [
+                      {
+                        "text": "{ originalEvent: TouchEvent; }",
+                        "source": "vuetify/src/directives/touch/index.ts#L10-L10",
+                        "type": "object",
+                        "properties": {
+                          "originalEvent": {
+                            "text": "TouchEvent",
+                            "source": "typescript/lib/lib.dom.d.ts#L16708-L16723",
+                            "type": "ref",
+                            "ref": "TouchEvent",
+                            "formatted": "TouchEvent",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ originalEvent: TouchEvent }"
+                      },
+                      {
+                        "text": "TouchData",
+                        "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                        "type": "object",
+                        "properties": {
+                          "touchstartX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchstartY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                      }
+                    ],
+                    "formatted": "{ originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "end": {
+            "text": "((wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L11-L11",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapperEvent",
+                    "optional": false,
+                    "text": "{ originalEvent: TouchEvent; } & TouchData",
+                    "type": "allOf",
+                    "items": [
+                      {
+                        "text": "{ originalEvent: TouchEvent; }",
+                        "source": "vuetify/src/directives/touch/index.ts#L11-L11",
+                        "type": "object",
+                        "properties": {
+                          "originalEvent": {
+                            "text": "TouchEvent",
+                            "source": "typescript/lib/lib.dom.d.ts#L16708-L16723",
+                            "type": "ref",
+                            "ref": "TouchEvent",
+                            "formatted": "TouchEvent",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ originalEvent: TouchEvent }"
+                      },
+                      {
+                        "text": "TouchData",
+                        "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                        "type": "object",
+                        "properties": {
+                          "touchstartX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchstartY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                      }
+                    ],
+                    "formatted": "{ originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "move": {
+            "text": "((wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapperEvent: { originalEvent: TouchEvent; } & TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L12-L12",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapperEvent",
+                    "optional": false,
+                    "text": "{ originalEvent: TouchEvent; } & TouchData",
+                    "type": "allOf",
+                    "items": [
+                      {
+                        "text": "{ originalEvent: TouchEvent; }",
+                        "source": "vuetify/src/directives/touch/index.ts#L12-L12",
+                        "type": "object",
+                        "properties": {
+                          "originalEvent": {
+                            "text": "TouchEvent",
+                            "source": "typescript/lib/lib.dom.d.ts#L16708-L16723",
+                            "type": "ref",
+                            "ref": "TouchEvent",
+                            "formatted": "TouchEvent",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ originalEvent: TouchEvent }"
+                      },
+                      {
+                        "text": "TouchData",
+                        "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                        "type": "object",
+                        "properties": {
+                          "touchstartX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchstartY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchmoveY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "touchendY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetX": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          },
+                          "offsetY": {
+                            "text": "number",
+                            "type": "number",
+                            "formatted": "number",
+                            "optional": false
+                          }
+                        },
+                        "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                      }
+                    ],
+                    "formatted": "{ originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "left": {
+            "text": "((wrapper: TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapper: TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L13-L13",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapper",
+                    "optional": false,
+                    "text": "TouchData",
+                    "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                    "type": "object",
+                    "properties": {
+                      "touchstartX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchstartY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      }
+                    },
+                    "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "right": {
+            "text": "((wrapper: TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapper: TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L14-L14",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapper",
+                    "optional": false,
+                    "text": "TouchData",
+                    "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                    "type": "object",
+                    "properties": {
+                      "touchstartX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchstartY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      }
+                    },
+                    "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "up": {
+            "text": "((wrapper: TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapper: TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L15-L15",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapper",
+                    "optional": false,
+                    "text": "TouchData",
+                    "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                    "type": "object",
+                    "properties": {
+                      "touchstartX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchstartY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      }
+                    },
+                    "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          },
+          "down": {
+            "text": "((wrapper: TouchData) => void) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(wrapper: TouchData) => void",
+                "source": "vuetify/src/directives/touch/index.ts#L16-L16",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "wrapper",
+                    "optional": false,
+                    "text": "TouchData",
+                    "source": "vuetify/src/directives/touch/index.ts#L19-L28",
+                    "type": "object",
+                    "properties": {
+                      "touchstartX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchstartY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchmoveY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "touchendY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetX": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      },
+                      "offsetY": {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number",
+                        "optional": false
+                      }
+                    },
+                    "formatted": "{ touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }"
+                  }
+                ],
+                "returnType": {
+                  "text": "void",
+                  "type": "void",
+                  "formatted": "void"
+                },
+                "formatted": "(wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void"
+              }
+            ],
+            "formatted": "((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void)",
+            "optional": true
+          }
+        },
+        "formatted": "{ parent: boolean; options: AddEventListenerOptions; start: ((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); end: ((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); move: ((wrapperEvent: { originalEvent: TouchEvent } & { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); left: ((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); right: ((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); up: ((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void); down: ((wrapper: { touchstartX: number; touchstartY: number; touchmoveX: number; touchmoveY: number; touchendX: number; touchendY: number; offsetX: number; offsetY: number }) => void) }"
+      }
+    ],
+    "formatted": "{\n  parent: boolean\n  options: AddEventListenerOptions\n  start: (\n    wrapperEvent: { originalEvent: TouchEvent } & {\n      touchstartX: number\n      touchstartY: number\n      touchmoveX: number\n      touchmoveY: number\n      touchendX: number\n      touchendY: number\n      offsetX: number\n      offsetY: number\n    },\n  ) => void\n  end: (\n    wrapperEvent: { originalEvent: TouchEvent } & {\n      touchstartX: number\n      touchstartY: number\n      touchmoveX: number\n      touchmoveY: number\n      touchendX: number\n      touchendY: number\n      offsetX: number\n      offsetY: number\n    },\n  ) => void\n  move: (\n    wrapperEvent: { originalEvent: TouchEvent } & {\n      touchstartX: number\n      touchstartY: number\n      touchmoveX: number\n      touchmoveY: number\n      touchendX: number\n      touchendY: number\n      offsetX: number\n      offsetY: number\n    },\n  ) => void\n  left: (wrapper: {\n    touchstartX: number\n    touchstartY: number\n    touchmoveX: number\n    touchmoveY: number\n    touchendX: number\n    touchendY: number\n    offsetX: number\n    offsetY: number\n  }) => void\n  right: (wrapper: {\n    touchstartX: number\n    touchstartY: number\n    touchmoveX: number\n    touchmoveY: number\n    touchendX: number\n    touchendY: number\n    offsetX: number\n    offsetY: number\n  }) => void\n  up: (wrapper: {\n    touchstartX: number\n    touchstartY: number\n    touchmoveX: number\n    touchmoveY: number\n    touchendX: number\n    touchendY: number\n    offsetX: number\n    offsetY: number\n  }) => void\n  down: (wrapper: {\n    touchstartX: number\n    touchstartY: number\n    touchmoveX: number\n    touchmoveY: number\n    touchendX: number\n    touchendY: number\n    offsetX: number\n    offsetY: number\n  }) => void\n}\n",
+    "optional": true,
+    "description": {
+      "en": "The value is always an object. The `start`, `end`, `move`, `left`, `right`, `up` and `down` functions can be used to invoke a function when the corresponding touch action occurs. If the `parent` option attaches the touch listeners to the parent element instead of the element the directive is used on. The `options` object is described [here](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)."
+    }
+  }
+}

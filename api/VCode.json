@@ -1,0 +1,72 @@
+{
+  "displayName": "VCode",
+  "fileName": "VCode",
+  "pathName": "v-code",
+  "props": {
+    "tag": {
+      "text": "string | undefined",
+      "source": "VCode",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'code'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$code-background-color": {
+      "default": "rgb(var(--v-theme-code))"
+    },
+    "$code-color": {
+      "default": "rgb(var(--v-theme-on-code))"
+    },
+    "$code-border-radius": {
+      "default": "4px"
+    },
+    "$code-line-height": {
+      "default": "1.8"
+    },
+    "$code-font-size": {
+      "default": "0.9em"
+    },
+    "$code-font-weight": {
+      "default": "normal"
+    },
+    "$code-padding": {
+      "default": ".2em .4em"
+    }
+  }
+}

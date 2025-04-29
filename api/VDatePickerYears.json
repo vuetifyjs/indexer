@@ -1,0 +1,259 @@
+{
+  "displayName": "VDatePickerYears",
+  "fileName": "VDatePickerYears",
+  "pathName": "v-date-picker-years",
+  "props": {
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "number | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "VDatePickerYears",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerYears"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "VDatePickerYears",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerYears"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[year: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "year": {
+      "text": "{ year: { text: string; value: number; }; i: number; props: { active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void; }; }",
+      "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L20-L34",
+      "type": "object",
+      "properties": {
+        "year": {
+          "text": "{ text: string; value: number; }",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L21-L24",
+          "type": "object",
+          "properties": {
+            "text": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ text: string; value: number }",
+          "optional": false
+        },
+        "i": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "props": {
+          "text": "{ active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void; }",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L26-L33",
+          "type": "object",
+          "properties": {
+            "active": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "color": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "rounded": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "text": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "variant": {
+              "text": "\"flat\" | \"text\"",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "\"flat\"",
+                  "type": "string",
+                  "literal": "\"flat\"",
+                  "formatted": "\"flat\""
+                },
+                {
+                  "text": "\"text\"",
+                  "type": "string",
+                  "literal": "\"text\"",
+                  "formatted": "\"text\""
+                }
+              ],
+              "formatted": "\"flat\" | \"text\"",
+              "optional": false
+            },
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L32-L32",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ active: boolean; color: string; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  year: { text: string; value: number }\n  i: number\n  props: {\n    active: boolean\n    color: string\n    rounded: boolean\n    text: string\n    variant: 'flat' | 'text'\n    onClick: () => void\n  }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the year."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerYears"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

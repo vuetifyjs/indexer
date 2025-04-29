@@ -1,0 +1,422 @@
+{
+  "displayName": "VVirtualScroll",
+  "fileName": "VVirtualScroll",
+  "pathName": "v-virtual-scroll",
+  "props": {
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Height of the component as a css value/"
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "items": {
+      "text": "readonly unknown[] | undefined",
+      "source": "VVirtualScroll",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "The array of items to display."
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    },
+    "renderless": {
+      "text": "boolean | undefined",
+      "source": "VVirtualScroll",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Disables default component rendering functionality. The parent node must be [a positioned element](https://developer.mozilla.org/en-US/docs/Web/CSS/position#types_of_positioning), e.g. using `position: relative;`"
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    },
+    "itemHeight": {
+      "text": "string | number | undefined",
+      "source": "virtual",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Height in pixels of each item to display."
+      },
+      "descriptionSource": {
+        "en": "virtual"
+      }
+    },
+    "itemKey": {
+      "text": "SelectItemKey",
+      "source": "virtual",
+      "type": "ref",
+      "ref": "SelectItemKey",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/helpers.ts#L82-L86\" target=\"_blank\">SelectItemKey</a>\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Should point to a property with a unique value for each item, if not set then item index will be used as a key which may result in unnecessary re-renders."
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "VVirtualScrollSlot<unknown> | (VVirtualScrollSlot<unknown> & { itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; })",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "VVirtualScrollSlot<unknown>",
+          "source": "vuetify/src/components/VVirtualScroll/VVirtualScroll.tsx#L28-L31",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "index": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: unknown; index: number }"
+        },
+        {
+          "text": "VVirtualScrollSlot<unknown> & { itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "VVirtualScrollSlot<unknown>",
+              "source": "vuetify/src/components/VVirtualScroll/VVirtualScroll.tsx#L28-L31",
+              "type": "object",
+              "properties": {
+                "item": {
+                  "text": "unknown",
+                  "type": "unknown",
+                  "formatted": "unknown",
+                  "optional": false
+                },
+                "index": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ item: unknown; index: number }"
+            },
+            {
+              "text": "{ itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; }",
+              "source": "vuetify/src/components/VVirtualScroll/VVirtualScroll.tsx#L51-L53",
+              "type": "object",
+              "properties": {
+                "itemRef": {
+                  "text": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+                  "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+                  "type": "ref",
+                  "ref": "Ref",
+                  "formatted": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+                  "optional": false
+                }
+              },
+              "formatted": "{ itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined> }"
+            }
+          ],
+          "formatted": "{ item: unknown; index: number } & { itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined> }"
+        }
+      ],
+      "formatted": "  | { item: unknown; index: number }\n  | ({ item: unknown; index: number } & {\n      itemRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n    })\n",
+      "optional": false,
+      "description": {
+        "en": "Default slot to render a single item."
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    }
+  },
+  "exposed": {
+    "calculateVisibleItems": {
+      "text": "() => void",
+      "source": "vuetify/src/composables/virtual.ts#L195-L198",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Trigger updating the currently rendered items based on scroll position."
+      },
+      "descriptionSource": {
+        "en": "VVirtualScroll"
+      }
+    },
+    "scrollToIndex": {
+      "text": "(index: number) => void",
+      "source": "vuetify/src/composables/virtual.ts#L234-L241",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "index",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "(index: number) => void\n",
+      "optional": false,
+      "description": {
+        "en": "Scrolls to the item at a given index."
+      },
+      "descriptionSource": {
+        "en": "virtual"
+      }
+    }
+  },
+  "sass": {}
+}

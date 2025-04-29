@@ -1,0 +1,241 @@
+{
+  "displayName": "VMessages",
+  "fileName": "VMessages",
+  "pathName": "v-messages",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VMessages",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VMessages",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the messages are visible or not."
+      },
+      "descriptionSource": {
+        "en": "VMessages"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; leaveAbsolute: boolean; group: boolean; } | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        },
+        {
+          "text": "{ component: Component; leaveAbsolute: boolean; group: boolean; }",
+          "source": "vuetify/src/components/VMessages/VMessages.tsx#L37-L41",
+          "type": "object",
+          "properties": {
+            "component": {
+              "text": "Component",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+              "type": "ref",
+              "ref": "Component",
+              "formatted": "Component",
+              "optional": false
+            },
+            "leaveAbsolute": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "group": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ component: Component; leaveAbsolute: boolean; group: boolean }"
+        }
+      ],
+      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component; leaveAbsolute: boolean; group: boolean }\n",
+      "optional": false,
+      "default": "{\n  component: {name: 'slide-y-transition'},\n  leaveAbsolute: true,\n  group: true\n}",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
+      }
+    },
+    "messages": {
+      "text": "string | readonly string[] | undefined",
+      "source": "VMessages",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "readonly string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Displays a list of messages or a single message if using a string."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "message": {
+      "text": "VMessageSlot",
+      "source": "vuetify/src/components/VMessages/VMessages.tsx#L19-L21",
+      "type": "object",
+      "properties": {
+        "message": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        }
+      },
+      "formatted": "{ message: string }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot used to customize the message content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$messages-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$messages-font-size": {
+      "default": "12px"
+    },
+    "$messages-line-height": {
+      "default": "$messages-font-size"
+    },
+    "$messages-min-height": {
+      "default": "14px"
+    },
+    "$messages-transition-duration": {
+      "default": "150ms"
+    }
+  }
+}

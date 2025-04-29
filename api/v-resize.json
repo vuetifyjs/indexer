@@ -1,0 +1,21 @@
+{
+  "fileName": "v-resize",
+  "displayName": "v-resize",
+  "pathName": "v-resize-directive",
+  "value": {
+    "text": "() => void",
+    "source": "vuetify/src/directives/resize/index.ts#L5-L5",
+    "type": "function",
+    "parameters": [],
+    "returnType": {
+      "text": "void",
+      "type": "void",
+      "formatted": "void"
+    },
+    "formatted": "() => void\n",
+    "optional": false,
+    "description": {
+      "en": "A function that will be invoked each time the browser window is resized."
+    }
+  }
+}

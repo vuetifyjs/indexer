@@ -1,0 +1,202 @@
+{
+  "displayName": "VLayoutItem",
+  "fileName": "VLayoutItem",
+  "pathName": "v-layout-item",
+  "props": {
+    "position": {
+      "text": "\"top\" | \"bottom\" | \"left\" | \"right\"",
+      "source": "VLayoutItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "\"top\"",
+          "type": "string",
+          "literal": "\"top\"",
+          "formatted": "\"top\""
+        },
+        {
+          "text": "\"bottom\"",
+          "type": "string",
+          "literal": "\"bottom\"",
+          "formatted": "\"bottom\""
+        },
+        {
+          "text": "\"left\"",
+          "type": "string",
+          "literal": "\"left\"",
+          "formatted": "\"left\""
+        },
+        {
+          "text": "\"right\"",
+          "type": "string",
+          "literal": "\"right\"",
+          "formatted": "\"right\""
+        }
+      ],
+      "formatted": "'top' | 'bottom' | 'left' | 'right'\n",
+      "optional": false,
+      "description": {
+        "en": "The position of the item."
+      },
+      "descriptionSource": {
+        "en": "VLayoutItem"
+      }
+    },
+    "absolute": {
+      "text": "boolean | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies **position: absolute** to the component."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "VLayoutItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 300,
+      "description": {
+        "en": "Sets the height and width of the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "name": {
+      "text": "string | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Assign a specific name for layout registration."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VLayoutItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "order": {
+      "text": "string | number | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Adjust the order of the component in relation to its registration order."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

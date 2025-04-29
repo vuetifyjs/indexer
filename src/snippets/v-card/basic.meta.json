@@ -1,8 +1,0 @@
-{
-  "id": "v-card-basic",
-  "component": "v-card",
-  "tags": ["basic", "title-prop"],
-  "title": "Basic Card",
-  "description": "A v-card using the title prop.",
-  "category": "layout"
-}

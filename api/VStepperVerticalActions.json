@@ -1,0 +1,230 @@
+{
+  "displayName": "VStepperVerticalActions",
+  "fileName": "VStepperVerticalActions",
+  "pathName": "v-stepper-vertical-actions",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | \"next\" | \"prev\" | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"next\"",
+          "type": "string",
+          "literal": "\"next\"",
+          "formatted": "\"next\""
+        },
+        {
+          "text": "\"prev\"",
+          "type": "string",
+          "literal": "\"prev\"",
+          "formatted": "\"prev\""
+        }
+      ],
+      "formatted": "boolean | 'next' | 'prev'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prevText": {
+      "text": "string | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.stepper.prev'",
+      "description": {
+        "en": "The text used for the Prev button."
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    },
+    "nextText": {
+      "text": "string | undefined",
+      "source": "VStepperActions",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.stepper.next'",
+      "description": {
+        "en": "The text used for the Next button."
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    }
+  },
+  "events": {
+    "click:prev": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when clicking the prev button."
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    },
+    "click:next": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event emitted when clicking the next button."
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    }
+  },
+  "slots": {
+    "prev": {
+      "text": "{ props: { onClick: () => void; }; }",
+      "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L15-L17",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ onClick: () => void; }",
+          "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L16-L16",
+          "type": "object",
+          "properties": {
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L16-L16",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ onClick: () => void }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { onClick: () => void } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing the prev step functionality"
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    },
+    "next": {
+      "text": "{ props: { onClick: () => void; }; }",
+      "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L18-L20",
+      "type": "object",
+      "properties": {
+        "props": {
+          "text": "{ onClick: () => void; }",
+          "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L19-L19",
+          "type": "object",
+          "properties": {
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VStepper/VStepperActions.tsx#L19-L19",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ onClick: () => void }",
+          "optional": false
+        }
+      },
+      "formatted": "{ props: { onClick: () => void } }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for customizing the next step functionality"
+      },
+      "descriptionSource": {
+        "en": "VStepperActions"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

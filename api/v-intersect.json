@@ -1,0 +1,148 @@
+{
+  "fileName": "v-intersect",
+  "displayName": "v-intersect",
+  "pathName": "v-intersect-directive",
+  "value": {
+    "text": "ObserveHandler | { handler: ObserveHandler; options?: IntersectionObserverInit | undefined; } | undefined",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "undefined",
+        "type": "UNSUPPORTED",
+        "formatted": "undefined"
+      },
+      {
+        "text": "ObserveHandler",
+        "source": "vuetify/src/directives/intersect/index.ts#L9-L13",
+        "type": "function",
+        "parameters": [
+          {
+            "name": "isIntersecting",
+            "optional": false,
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          {
+            "name": "entries",
+            "optional": false,
+            "text": "IntersectionObserverEntry[]",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "array",
+            "items": [
+              {
+                "text": "IntersectionObserverEntry",
+                "source": "typescript/lib/lib.dom.d.ts#L8573-L8588",
+                "type": "ref",
+                "ref": "IntersectionObserverEntry",
+                "formatted": "IntersectionObserverEntry"
+              }
+            ],
+            "formatted": "IntersectionObserverEntry[]"
+          },
+          {
+            "name": "observer",
+            "optional": false,
+            "text": "IntersectionObserver",
+            "source": "typescript/lib/lib.dom.d.ts#L8546-L8561",
+            "type": "ref",
+            "ref": "IntersectionObserver",
+            "formatted": "IntersectionObserver"
+          }
+        ],
+        "returnType": {
+          "text": "void",
+          "type": "void",
+          "formatted": "void"
+        },
+        "formatted": "(isIntersecting: boolean, entries: IntersectionObserverEntry[], observer: IntersectionObserver) => void"
+      },
+      {
+        "text": "{ handler: ObserveHandler; options?: IntersectionObserverInit | undefined; }",
+        "source": "vuetify/src/directives/intersect/index.ts#L16-L16",
+        "type": "object",
+        "properties": {
+          "handler": {
+            "text": "ObserveHandler",
+            "source": "vuetify/src/directives/intersect/index.ts#L9-L13",
+            "type": "ref",
+            "ref": "ObserveHandler",
+            "formatted": "ObserveHandler",
+            "optional": false
+          },
+          "options": {
+            "text": "IntersectionObserverInit | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "ref",
+                "ref": "",
+                "formatted": "undefined"
+              },
+              {
+                "text": "IntersectionObserverInit",
+                "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+                "type": "ref",
+                "ref": "IntersectionObserverInit",
+                "formatted": "IntersectionObserverInit"
+              }
+            ],
+            "formatted": "IntersectionObserverInit",
+            "optional": true
+          }
+        },
+        "formatted": "{ handler: ObserveHandler; options: IntersectionObserverInit }"
+      }
+    ],
+    "formatted": "  | ((\n      isIntersecting: boolean,\n      entries: IntersectionObserverEntry[],\n      observer: IntersectionObserver,\n    ) => void)\n  | { handler: ObserveHandler; options: IntersectionObserverInit }\n",
+    "optional": true,
+    "description": {
+      "en": "A handler function that is invoked when the element that the directive is attached to enters or leaves the visible browser area, or an object of [IntersectionObserver options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)."
+    }
+  },
+  "modifiers": {
+    "once": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "The handler function is only invoked once, the first time the element is visible."
+      }
+    },
+    "quiet": {
+      "text": "boolean | undefined",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean",
+      "optional": true,
+      "description": {
+        "en": "Will not invoke the handler function if the element is visible when the IntersectionObserver is created."
+      }
+    }
+  }
+}

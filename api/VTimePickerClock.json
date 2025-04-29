@@ -1,0 +1,403 @@
+{
+  "displayName": "VTimePickerClock",
+  "fileName": "VTimePickerClock",
+  "pathName": "v-time-picker-clock",
+  "props": {
+    "modelValue": {
+      "text": "number | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "readonly": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "When true, the picker is in a read-only state, and users cannot modify the selected time."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "max": {
+      "text": "number",
+      "source": "VTimePickerClock",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Defines the maximum time value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "min": {
+      "text": "number",
+      "source": "VTimePickerClock",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Defines the minimum time value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "step": {
+      "text": "number | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 1,
+      "description": {
+        "en": "Defines the increments between selectable times, such as a step of 1 for every minute or a larger step for every 5 or 15 minutes."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "rotate": {
+      "text": "number | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Controls rotation, specifying the degree of rotation for the clock hands."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "format": {
+      "text": "Function | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function"
+        }
+      ],
+      "formatted": "Function\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the format of the displayed time, either 12-hour or 24-hour, depending on the component's setup."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "ampm": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays time in a 12-hour format."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "scrollable": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows the time selection to be scrollable, enhancing user experience for devices with scroll inputs."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "displayedValue": {
+      "text": "any",
+      "source": "VTimePickerClock",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "Used to display a custom value on the clock."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "double": {
+      "text": "boolean | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "If set, this probably indicates a double rotation or a mode where more than one set of values (like hours and minutes) is displayed on the clock at the same time."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
+    "allowedValues": {
+      "text": "((value: number) => boolean) | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "(value: number) => boolean",
+          "source": "vuetify/src/labs/VTimePicker/VTimePickerClock.tsx#L19-L19",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(value: number) => boolean"
+        }
+      ],
+      "formatted": "(value: number) => boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Restricts which hours can be selected."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    }
+  },
+  "events": {
+    "input": {
+      "text": "[val: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "The updated bound model."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "change": {
+      "text": "[val: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "The event that is triggered when the selected time is changed."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

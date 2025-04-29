@@ -1,0 +1,347 @@
+{
+  "displayName": "VTable",
+  "fileName": "VTable",
+  "pathName": "v-table",
+  "props": {
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Use the height prop to set the height of the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "hover": {
+      "text": "boolean | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Will add a hover effect to a table's row when the mouse is over it."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
+    "fixedHeader": {
+      "text": "boolean | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Use the fixed-header prop together with the height prop to fix the header to the top of the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
+    "fixedFooter": {
+      "text": "boolean | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Use the fixed-footer prop together with the height prop to fix the footer to the bottom of the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "top": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot to add content above the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
+    "bottom": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot to add content below the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
+    "wrapper": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slots for custom rendering of the table wrapper."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$table-background": {
+      "default": "rgb(var(--v-theme-surface))"
+    },
+    "$table-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$table-density": {
+      "default": "('default': 0, 'comfortable': -2, 'compact': -4)"
+    },
+    "$table-header-height": {
+      "default": "56px"
+    },
+    "$table-header-font-weight": {
+      "default": "500"
+    },
+    "$table-header-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'caption', 'size')"
+    },
+    "$table-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'body-2', 'size')"
+    },
+    "$table-row-height": {
+      "default": "52px"
+    },
+    "$table-row-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'size')"
+    },
+    "$table-border-color": {
+      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
+    },
+    "$table-border": {
+      "default": "thin solid $table-border-color"
+    },
+    "$table-hover-color": {
+      "default": "rgba(var(--v-border-color), var(--v-hover-opacity))"
+    },
+    "$table-line-height": {
+      "default": "1.5"
+    },
+    "$table-column-padding": {
+      "default": "0 16px"
+    },
+    "$table-transition-duration": {
+      "default": "0.28s"
+    },
+    "$table-transition-property": {
+      "default": "box-shadow, opacity, background, height"
+    },
+    "$table-transition-timing-function": {
+      "default": "settings.$standard-easing"
+    },
+    "$table-theme": {
+      "default": "(\n  $table-background,\n  $table-color,\n)"
+    }
+  }
+}

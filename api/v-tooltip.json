@@ -1,0 +1,238 @@
+{
+  "fileName": "v-tooltip",
+  "displayName": "v-tooltip",
+  "pathName": "v-tooltip-directive",
+  "value": {
+    "text": "string | boolean | Record<string, any>",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      {
+        "text": "boolean",
+        "type": "boolean",
+        "formatted": "boolean"
+      },
+      {
+        "text": "Record<string, any>",
+        "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+        "type": "record",
+        "key": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        "value": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        },
+        "formatted": "Record<string, any>"
+      }
+    ],
+    "formatted": "string | boolean | Record<string, any>\n",
+    "optional": false,
+    "description": {
+      "en": "**string**: Sets the tooltip content.  \n**boolean**: Controls visibility, tooltip content will be the innerText of the bound element.  \n**object**: Use any [VTooltip props](/api/v-tooltip), content can be set with `text`. Keys are camelCase."
+    }
+  },
+  "argument": {
+    "text": "\"top\" | \"bottom\" | \"start\" | \"end\" | \"left\" | \"right\" | \"center\" | \"center-center\" | \"top-start\" | \"top-end\" | \"top-left\" | \"top-right\" | \"top-center\" | \"bottom-start\" | \"bottom-end\" | \"bottom-left\" | \"bottom-right\" | \"bottom-center\" | \"start-top\" | \"start-bottom\" | \"start-center\" | \"end-top\" | \"end-bottom\" | \"end-center\" | \"left-top\" | \"left-bottom\" | \"left-center\" | \"right-top\" | \"right-bottom\" | \"right-center\" | undefined",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "undefined",
+        "type": "UNSUPPORTED",
+        "formatted": "undefined"
+      },
+      {
+        "text": "\"top\"",
+        "type": "string",
+        "literal": "\"top\"",
+        "formatted": "\"top\""
+      },
+      {
+        "text": "\"bottom\"",
+        "type": "string",
+        "literal": "\"bottom\"",
+        "formatted": "\"bottom\""
+      },
+      {
+        "text": "\"start\"",
+        "type": "string",
+        "literal": "\"start\"",
+        "formatted": "\"start\""
+      },
+      {
+        "text": "\"end\"",
+        "type": "string",
+        "literal": "\"end\"",
+        "formatted": "\"end\""
+      },
+      {
+        "text": "\"left\"",
+        "type": "string",
+        "literal": "\"left\"",
+        "formatted": "\"left\""
+      },
+      {
+        "text": "\"right\"",
+        "type": "string",
+        "literal": "\"right\"",
+        "formatted": "\"right\""
+      },
+      {
+        "text": "\"center\"",
+        "type": "string",
+        "literal": "\"center\"",
+        "formatted": "\"center\""
+      },
+      {
+        "text": "\"center-center\"",
+        "type": "string",
+        "literal": "\"center-center\"",
+        "formatted": "\"center-center\""
+      },
+      {
+        "text": "\"top-start\"",
+        "type": "string",
+        "literal": "\"top-start\"",
+        "formatted": "\"top-start\""
+      },
+      {
+        "text": "\"top-end\"",
+        "type": "string",
+        "literal": "\"top-end\"",
+        "formatted": "\"top-end\""
+      },
+      {
+        "text": "\"top-left\"",
+        "type": "string",
+        "literal": "\"top-left\"",
+        "formatted": "\"top-left\""
+      },
+      {
+        "text": "\"top-right\"",
+        "type": "string",
+        "literal": "\"top-right\"",
+        "formatted": "\"top-right\""
+      },
+      {
+        "text": "\"top-center\"",
+        "type": "string",
+        "literal": "\"top-center\"",
+        "formatted": "\"top-center\""
+      },
+      {
+        "text": "\"bottom-start\"",
+        "type": "string",
+        "literal": "\"bottom-start\"",
+        "formatted": "\"bottom-start\""
+      },
+      {
+        "text": "\"bottom-end\"",
+        "type": "string",
+        "literal": "\"bottom-end\"",
+        "formatted": "\"bottom-end\""
+      },
+      {
+        "text": "\"bottom-left\"",
+        "type": "string",
+        "literal": "\"bottom-left\"",
+        "formatted": "\"bottom-left\""
+      },
+      {
+        "text": "\"bottom-right\"",
+        "type": "string",
+        "literal": "\"bottom-right\"",
+        "formatted": "\"bottom-right\""
+      },
+      {
+        "text": "\"bottom-center\"",
+        "type": "string",
+        "literal": "\"bottom-center\"",
+        "formatted": "\"bottom-center\""
+      },
+      {
+        "text": "\"start-top\"",
+        "type": "string",
+        "literal": "\"start-top\"",
+        "formatted": "\"start-top\""
+      },
+      {
+        "text": "\"start-bottom\"",
+        "type": "string",
+        "literal": "\"start-bottom\"",
+        "formatted": "\"start-bottom\""
+      },
+      {
+        "text": "\"start-center\"",
+        "type": "string",
+        "literal": "\"start-center\"",
+        "formatted": "\"start-center\""
+      },
+      {
+        "text": "\"end-top\"",
+        "type": "string",
+        "literal": "\"end-top\"",
+        "formatted": "\"end-top\""
+      },
+      {
+        "text": "\"end-bottom\"",
+        "type": "string",
+        "literal": "\"end-bottom\"",
+        "formatted": "\"end-bottom\""
+      },
+      {
+        "text": "\"end-center\"",
+        "type": "string",
+        "literal": "\"end-center\"",
+        "formatted": "\"end-center\""
+      },
+      {
+        "text": "\"left-top\"",
+        "type": "string",
+        "literal": "\"left-top\"",
+        "formatted": "\"left-top\""
+      },
+      {
+        "text": "\"left-bottom\"",
+        "type": "string",
+        "literal": "\"left-bottom\"",
+        "formatted": "\"left-bottom\""
+      },
+      {
+        "text": "\"left-center\"",
+        "type": "string",
+        "literal": "\"left-center\"",
+        "formatted": "\"left-center\""
+      },
+      {
+        "text": "\"right-top\"",
+        "type": "string",
+        "literal": "\"right-top\"",
+        "formatted": "\"right-top\""
+      },
+      {
+        "text": "\"right-bottom\"",
+        "type": "string",
+        "literal": "\"right-bottom\"",
+        "formatted": "\"right-bottom\""
+      },
+      {
+        "text": "\"right-center\"",
+        "type": "string",
+        "literal": "\"right-center\"",
+        "formatted": "\"right-center\""
+      }
+    ],
+    "formatted": "\"top\" | \"bottom\" | \"start\" | \"end\" | \"left\" | \"right\" | \"center\" | \"center-center\" | \"top-start\" | \"top-end\" | \"top-left\" | \"top-right\" | \"top-center\" | \"bottom-start\" | \"bottom-end\" | \"bottom-left\" | \"bottom-right\" | \"bottom-center\" | \"start-top\" | \"start-bottom\" | \"start-center\" | \"end-top\" | \"end-bottom\" | \"end-center\" | \"left-top\" | \"left-bottom\" | \"left-center\" | \"right-top\" | \"right-bottom\" | \"right-center\"",
+    "optional": false,
+    "description": {
+      "en": "Applies the VTooltip location prop."
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "displayName": "VExpandTransition",
+  "fileName": "VExpandTransition",
+  "pathName": "v-expand-transition",
+  "props": {
+    "mode": {
+      "text": "\"default\" | \"in-out\" | \"out-in\" | undefined",
+      "source": "expand-transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"default\"",
+          "type": "string",
+          "literal": "\"default\"",
+          "formatted": "\"default\""
+        },
+        {
+          "text": "\"in-out\"",
+          "type": "string",
+          "literal": "\"in-out\"",
+          "formatted": "\"in-out\""
+        },
+        {
+          "text": "\"out-in\"",
+          "type": "string",
+          "literal": "\"out-in\"",
+          "formatted": "\"out-in\""
+        }
+      ],
+      "formatted": "'default' | 'in-out' | 'out-in'\n",
+      "optional": false,
+      "default": "'in-out'",
+      "description": {
+        "en": "Sets the transition mode (does not apply to transition-group). You can find more information on the Vue documentation [for transition modes](https://vuejs.org/api/built-in-components.html#transition)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "expand-transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "group": {
+      "text": "boolean | undefined",
+      "source": "expand-transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Creates a `transition-group` component. You can find more information in the [vue docs](https://vuejs.org/api/built-in-components.html#transitiongroup)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

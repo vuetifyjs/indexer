@@ -1,0 +1,775 @@
+{
+  "displayName": "VBreadcrumbs",
+  "fileName": "VBreadcrumbs",
+  "pathName": "v-breadcrumbs",
+  "props": {
+    "activeColor": {
+      "text": "string | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The applied color when the component is in an active state."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'ul'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "icon": {
+      "text": "IconValue | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "divider": {
+      "text": "string | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'/'",
+      "description": {
+        "en": "Specifies the dividing character between items."
+      },
+      "descriptionSource": {
+        "en": "VBreadcrumbs"
+      }
+    },
+    "activeClass": {
+      "text": "string | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The class applied to the component when it is in an active state."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "items": {
+      "text": "BreadcrumbItem[] | undefined",
+      "source": "VBreadcrumbs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "BreadcrumbItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "InternalBreadcrumbItem",
+              "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+              "type": "allOf",
+              "items": [
+                {
+                  "text": "Partial<LinkProps>",
+                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                  "type": "ref",
+                  "ref": "Partial",
+                  "formatted": "Partial<LinkProps>"
+                },
+                {
+                  "text": "{ title: string; disabled?: boolean | undefined; }",
+                  "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string",
+                      "optional": false
+                    },
+                    "disabled": {
+                      "text": "boolean | undefined",
+                      "type": "anyOf",
+                      "items": [
+                        {
+                          "text": "undefined",
+                          "type": "ref",
+                          "ref": "",
+                          "formatted": "undefined"
+                        },
+                        {
+                          "text": "boolean",
+                          "type": "boolean",
+                          "formatted": "boolean"
+                        }
+                      ],
+                      "formatted": "boolean",
+                      "optional": true
+                    }
+                  },
+                  "formatted": "{ title: string; disabled: boolean }"
+                }
+              ],
+              "formatted": "Partial<LinkProps> & { title: string; disabled: boolean }"
+            }
+          ],
+          "formatted": "(string | (Partial<LinkProps> & { title: string; disabled: boolean }))[]"
+        }
+      ],
+      "formatted": "(\n  | string\n  | (Partial<LinkProps> & { title: string; disabled: boolean })\n)[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of strings or objects used for automatically generating children components."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "prepend": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The slot used for prepend content."
+      },
+      "descriptionSource": {
+        "en": "VBreadcrumbs"
+      }
+    },
+    "title": {
+      "text": "{ item: InternalBreadcrumbItem; index: number; }",
+      "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L63-L63",
+      "type": "object",
+      "properties": {
+        "item": {
+          "text": "InternalBreadcrumbItem",
+          "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "Partial<LinkProps>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "ref",
+              "ref": "Partial",
+              "formatted": "Partial<LinkProps>"
+            },
+            {
+              "text": "{ title: string; disabled?: boolean | undefined; }",
+              "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "disabled": {
+                  "text": "boolean | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "UNSUPPORTED",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "boolean",
+                      "type": "boolean",
+                      "formatted": "boolean"
+                    }
+                  ],
+                  "formatted": "boolean",
+                  "optional": true
+                }
+              },
+              "formatted": "{ title: string; disabled: boolean }"
+            }
+          ],
+          "formatted": "Partial<LinkProps> & { title: string; disabled: boolean }",
+          "optional": false
+        },
+        "index": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  item: Partial<LinkProps> & { title: string; disabled: boolean }\n  index: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The slot used to display the title of each breadcrumb."
+      },
+      "descriptionSource": {
+        "en": "VBreadcrumbs"
+      }
+    },
+    "divider": {
+      "text": "{ item: BreadcrumbItem; index: number; }",
+      "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L64-L64",
+      "type": "object",
+      "properties": {
+        "item": {
+          "text": "BreadcrumbItem",
+          "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L33-L33",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "InternalBreadcrumbItem",
+              "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+              "type": "allOf",
+              "items": [
+                {
+                  "text": "Partial<LinkProps>",
+                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                  "type": "ref",
+                  "ref": "Partial",
+                  "formatted": "Partial<LinkProps>"
+                },
+                {
+                  "text": "{ title: string; disabled?: boolean | undefined; }",
+                  "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string",
+                      "optional": false
+                    },
+                    "disabled": {
+                      "text": "boolean | undefined",
+                      "type": "anyOf",
+                      "items": [
+                        {
+                          "text": "undefined",
+                          "type": "UNSUPPORTED",
+                          "formatted": "undefined"
+                        },
+                        {
+                          "text": "boolean",
+                          "type": "boolean",
+                          "formatted": "boolean"
+                        }
+                      ],
+                      "formatted": "boolean",
+                      "optional": true
+                    }
+                  },
+                  "formatted": "{ title: string; disabled: boolean }"
+                }
+              ],
+              "formatted": "Partial<LinkProps> & { title: string; disabled: boolean }"
+            }
+          ],
+          "formatted": "string | Partial<LinkProps> & { title: string; disabled: boolean }",
+          "optional": false
+        },
+        "index": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  item: string | (Partial<LinkProps> & { title: string; disabled: boolean })\n  index: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The slot used for dividers."
+      },
+      "descriptionSource": {
+        "en": "VBreadcrumbs"
+      }
+    },
+    "item": {
+      "text": "{ item: InternalBreadcrumbItem; index: number; }",
+      "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L65-L65",
+      "type": "object",
+      "properties": {
+        "item": {
+          "text": "InternalBreadcrumbItem",
+          "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "Partial<LinkProps>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "ref",
+              "ref": "Partial",
+              "formatted": "Partial<LinkProps>"
+            },
+            {
+              "text": "{ title: string; disabled?: boolean | undefined; }",
+              "source": "vuetify/src/components/VBreadcrumbs/VBreadcrumbs.tsx#L28-L31",
+              "type": "object",
+              "properties": {
+                "title": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "disabled": {
+                  "text": "boolean | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "UNSUPPORTED",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "boolean",
+                      "type": "boolean",
+                      "formatted": "boolean"
+                    }
+                  ],
+                  "formatted": "boolean",
+                  "optional": true
+                }
+              },
+              "formatted": "{ title: string; disabled: boolean }"
+            }
+          ],
+          "formatted": "Partial<LinkProps> & { title: string; disabled: boolean }",
+          "optional": false
+        },
+        "index": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  item: Partial<LinkProps> & { title: string; disabled: boolean }\n  index: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Define a custom item appearance."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$breadcrumbs-density": {
+      "default": "('default': 0, 'comfortable': -1, 'compact': -2)"
+    },
+    "$breadcrumbs-divider-padding": {
+      "default": "0 8px"
+    },
+    "$breadcrumbs-item-disabled-opacity": {
+      "default": "var(--v-disabled-opacity)"
+    },
+    "$breadcrumbs-item-icon-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'body-1', 'size')"
+    },
+    "$breadcrumbs-item-icon-margin-inline-end": {
+      "default": "2px"
+    },
+    "$breadcrumbs-item-icon-margin-inline-start": {
+      "default": "-4px"
+    },
+    "$breadcrumbs-item-link-text-decoration": {
+      "default": "underline"
+    },
+    "$breadcrumbs-item-padding": {
+      "default": "0 4px"
+    },
+    "$breadcrumbs-line-height": {
+      "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'line-height')"
+    },
+    "$breadcrumbs-padding-y": {
+      "default": "16px"
+    },
+    "$breadcrumbs-padding-x": {
+      "default": "12px"
+    },
+    "$breadcrumbs-rounded-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$breadcrumbs-vertical-align": {
+      "default": "middle"
+    }
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "fileName": "useLocale",
+  "displayName": "useLocale",
+  "pathName": "use-locale",
+  "exposed": {
+    "name": {
+      "text": "string",
+      "type": "string",
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Name of the locale adapter used."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "messages": {
+      "text": "Ref<LocaleMessages, LocaleMessages>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<LocaleMessages, LocaleMessages>\n",
+      "optional": false,
+      "description": {
+        "en": "Locale messages."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "current": {
+      "text": "Ref<string, string>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<string, string>\n",
+      "optional": false,
+      "description": {
+        "en": "Current locale."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "fallback": {
+      "text": "Ref<string, string>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<string, string>\n",
+      "optional": false,
+      "description": {
+        "en": "Fallback locale."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "t": {
+      "text": "(key: string, ...params: unknown[]) => string",
+      "source": "vuetify/lib/framework.d.ts#L19-L19",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "key",
+          "optional": false,
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "name": "params",
+          "optional": false,
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "returnType": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "formatted": "(key: string, params: unknown[]) => string\n",
+      "optional": false,
+      "description": {
+        "en": "Function to localize strings."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "n": {
+      "text": "(value: number) => string",
+      "source": "vuetify/lib/framework.d.ts#L20-L20",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "value",
+          "optional": false,
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "returnType": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "formatted": "(value: number) => string\n",
+      "optional": false,
+      "description": {
+        "en": "Function to localize numbers."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "provide": {
+      "text": "(props: LocaleOptions) => LocaleInstance",
+      "source": "vuetify/lib/framework.d.ts#L21-L21",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "props",
+          "optional": false,
+          "text": "LocaleOptions",
+          "source": "vuetify/lib/framework.d.ts#L8-L13",
+          "type": "object",
+          "properties": {
+            "messages": {
+              "text": "LocaleMessages | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "LocaleMessages",
+                  "source": "vuetify/lib/framework.d.ts#L5-L7",
+                  "type": "object",
+                  "properties": {
+                    "[string]": {
+                      "text": "string | LocaleMessages",
+                      "type": "anyOf",
+                      "items": [
+                        {
+                          "text": "string",
+                          "type": "string",
+                          "formatted": "string"
+                        },
+                        {
+                          "text": "LocaleMessages",
+                          "source": "vuetify/lib/framework.d.ts#L5-L7",
+                          "type": "ref",
+                          "ref": "LocaleMessages",
+                          "formatted": "LocaleMessages"
+                        }
+                      ],
+                      "formatted": "string | LocaleMessages",
+                      "optional": true
+                    }
+                  },
+                  "formatted": "{ [string]: string | LocaleMessages }"
+                }
+              ],
+              "formatted": "{ [string]: string | LocaleMessages }",
+              "optional": true
+            },
+            "locale": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "fallback": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "adapter": {
+              "text": "LocaleInstance | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "LocaleInstance",
+                  "source": "vuetify/lib/framework.d.ts#L14-L22",
+                  "type": "ref",
+                  "ref": "LocaleInstance",
+                  "formatted": "LocaleInstance"
+                }
+              ],
+              "formatted": "LocaleInstance",
+              "optional": true
+            }
+          },
+          "formatted": "{ messages: { [string]: string | LocaleMessages }; locale: string; fallback: string; adapter: LocaleInstance }"
+        }
+      ],
+      "returnType": {
+        "text": "LocaleInstance",
+        "source": "vuetify/lib/framework.d.ts#L14-L22",
+        "type": "ref",
+        "ref": "LocaleInstance",
+        "formatted": "LocaleInstance"
+      },
+      "formatted": "(props: {\n  messages: { [string]: string | LocaleMessages }\n  locale: string\n  fallback: string\n  adapter: LocaleInstance\n}) => LocaleInstance\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "isRtl": {
+      "text": "Ref<boolean, boolean>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<boolean, boolean>\n",
+      "optional": false,
+      "description": {
+        "en": "Indicates if RTL is currently active or not."
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "rtl": {
+      "text": "Ref<Record<string, boolean>, Record<string, boolean>>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<Record<string, boolean>, Record<string, boolean>>\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    },
+    "rtlClasses": {
+      "text": "Ref<string, string>",
+      "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+      "type": "ref",
+      "ref": "Ref",
+      "formatted": "Ref<string, string>\n",
+      "optional": false,
+      "description": {
+        "en": "**FOR INTERNAL USE ONLY**"
+      },
+      "descriptionSource": {
+        "en": "useLocale"
+      }
+    }
+  }
+}

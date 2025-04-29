@@ -1,0 +1,139 @@
+{
+  "fileName": "v-click-outside",
+  "displayName": "v-click-outside",
+  "pathName": "v-click-outside-directive",
+  "value": {
+    "text": "((e: MouseEvent) => void) | ClickOutsideBindingArgs",
+    "type": "anyOf",
+    "items": [
+      {
+        "text": "(e: MouseEvent) => void",
+        "source": "vuetify/src/directives/click-outside/index.ts#L14-L14",
+        "type": "function",
+        "parameters": [
+          {
+            "name": "e",
+            "optional": false,
+            "text": "MouseEvent",
+            "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+            "type": "ref",
+            "ref": "MouseEvent",
+            "formatted": "MouseEvent"
+          }
+        ],
+        "returnType": {
+          "text": "void",
+          "type": "void",
+          "formatted": "void"
+        },
+        "formatted": "(e: MouseEvent) => void"
+      },
+      {
+        "text": "ClickOutsideBindingArgs",
+        "source": "vuetify/src/directives/click-outside/index.ts#L7-L11",
+        "type": "object",
+        "properties": {
+          "handler": {
+            "text": "(e: MouseEvent) => void",
+            "source": "vuetify/src/directives/click-outside/index.ts#L8-L8",
+            "type": "function",
+            "parameters": [
+              {
+                "name": "e",
+                "optional": false,
+                "text": "MouseEvent",
+                "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+                "type": "ref",
+                "ref": "MouseEvent",
+                "formatted": "MouseEvent"
+              }
+            ],
+            "returnType": {
+              "text": "void",
+              "type": "void",
+              "formatted": "void"
+            },
+            "formatted": "(e: MouseEvent) => void",
+            "optional": false
+          },
+          "closeConditional": {
+            "text": "((e: Event) => boolean) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "UNSUPPORTED",
+                "formatted": "undefined"
+              },
+              {
+                "text": "(e: Event) => boolean",
+                "source": "vuetify/src/directives/click-outside/index.ts#L9-L9",
+                "type": "function",
+                "parameters": [
+                  {
+                    "name": "e",
+                    "optional": false,
+                    "text": "Event",
+                    "source": "typescript/lib/lib.dom.d.ts#L2163-L2276",
+                    "type": "ref",
+                    "ref": "Event",
+                    "formatted": "Event"
+                  }
+                ],
+                "returnType": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                },
+                "formatted": "(e: Event) => boolean"
+              }
+            ],
+            "formatted": "((e: Event) => boolean)",
+            "optional": true
+          },
+          "include": {
+            "text": "(() => HTMLElement[]) | undefined",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "undefined",
+                "type": "UNSUPPORTED",
+                "formatted": "undefined"
+              },
+              {
+                "text": "() => HTMLElement[]",
+                "source": "vuetify/src/directives/click-outside/index.ts#L10-L10",
+                "type": "function",
+                "parameters": [],
+                "returnType": {
+                  "text": "HTMLElement[]",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "HTMLElement",
+                      "source": "typescript/lib/lib.dom.d.ts#L4166-L4220",
+                      "type": "ref",
+                      "ref": "HTMLElement",
+                      "formatted": "HTMLElement"
+                    }
+                  ],
+                  "formatted": "HTMLElement[]"
+                },
+                "formatted": "() => HTMLElement[]"
+              }
+            ],
+            "formatted": "(() => HTMLElement[])",
+            "optional": true
+          }
+        },
+        "formatted": "{ handler: (e: MouseEvent) => void; closeConditional: ((e: Event) => boolean); include: (() => HTMLElement[]) }"
+      }
+    ],
+    "formatted": "  | ((e: MouseEvent) => void)\n  | {\n      handler: (e: MouseEvent) => void\n      closeConditional: (e: Event) => boolean\n      include: () => HTMLElement[]\n    }\n",
+    "optional": false,
+    "description": {
+      "en": "Takes either a function that is invoked when user clicks outside of the element the directive is attached to, or an object containing `handler`, `closeConditional` and `include` callbacks."
+    }
+  }
+}

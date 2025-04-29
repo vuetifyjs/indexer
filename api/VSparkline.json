@@ -1,0 +1,756 @@
+{
+  "displayName": "VSparkline",
+  "fileName": "VSparkline",
+  "pathName": "v-sparkline",
+  "props": {
+    "type": {
+      "text": "\"trend\" | \"bar\" | undefined",
+      "source": "VSparkline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"trend\"",
+          "type": "string",
+          "literal": "\"trend\"",
+          "formatted": "\"trend\""
+        },
+        {
+          "text": "\"bar\"",
+          "type": "string",
+          "literal": "\"bar\"",
+          "formatted": "\"bar\""
+        }
+      ],
+      "formatted": "'trend' | 'bar'\n",
+      "optional": false,
+      "default": "'trend'",
+      "description": {
+        "en": "Choose between a trendline or bars."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "fill": {
+      "text": "boolean | undefined",
+      "source": "VTrendline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Using the **fill** property allows you to better customize the look and feel of your sparkline."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "The maximum value of the sparkline."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "modelValue": {
+      "text": "SparklineItem[] | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "SparklineItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            },
+            {
+              "text": "{ value: number; }",
+              "source": "vuetify/src/components/VSparkline/util/line.ts#L7-L7",
+              "type": "object",
+              "properties": {
+                "value": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ value: number }"
+            }
+          ],
+          "formatted": "(string | number | { value: number })[]"
+        }
+      ],
+      "formatted": "(string | number | { value: number })[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 75,
+      "description": {
+        "en": "Height of the SVG trendline or bars."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 300,
+      "description": {
+        "en": "Width of the SVG trendline or bars."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "id": {
+      "text": "string | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The id of the component."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "itemValue": {
+      "text": "string | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'value'",
+      "description": {
+        "en": "The value of the item."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "labels": {
+      "text": "SparklineItem[] | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "SparklineItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            },
+            {
+              "text": "{ value: number; }",
+              "source": "vuetify/src/components/VSparkline/util/line.ts#L7-L7",
+              "type": "object",
+              "properties": {
+                "value": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ value: number }"
+            }
+          ],
+          "formatted": "(string | number | { value: number })[]"
+        }
+      ],
+      "formatted": "(string | number | { value: number })[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of string labels that correspond to the same index as its data counterpart."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "min": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "The minimum value of the sparkline."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "padding": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 8,
+      "description": {
+        "en": "Low `smooth` or high `line-width` values may result in cropping, increase padding to compensate."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "autoLineWidth": {
+      "text": "boolean | undefined",
+      "source": "VBarline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Automatically expand bars to use space efficiently."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "autoDraw": {
+      "text": "boolean | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Trace the length of the line when first rendered."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "autoDrawDuration": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Amount of time (in ms) to run the trace animation."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "autoDrawEasing": {
+      "text": "string | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'ease'",
+      "description": {
+        "en": "The easing function to use for the trace animation."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "gradient": {
+      "text": "string[] | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of colors to use as a linear-gradient."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "gradientDirection": {
+      "text": "\"top\" | \"bottom\" | \"left\" | \"right\" | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"top\"",
+          "type": "string",
+          "literal": "\"top\"",
+          "formatted": "\"top\""
+        },
+        {
+          "text": "\"bottom\"",
+          "type": "string",
+          "literal": "\"bottom\"",
+          "formatted": "\"bottom\""
+        },
+        {
+          "text": "\"left\"",
+          "type": "string",
+          "literal": "\"left\"",
+          "formatted": "\"left\""
+        },
+        {
+          "text": "\"right\"",
+          "type": "string",
+          "literal": "\"right\"",
+          "formatted": "\"right\""
+        }
+      ],
+      "formatted": "'top' | 'bottom' | 'left' | 'right'\n",
+      "optional": false,
+      "default": "'top'",
+      "description": {
+        "en": "The direction the gradient should run."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "labelSize": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 7,
+      "description": {
+        "en": "The label font size."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "lineWidth": {
+      "text": "string | number | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 4,
+      "description": {
+        "en": "The thickness of the line, in px."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "showLabels": {
+      "text": "boolean | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Show labels below each data point."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    },
+    "smooth": {
+      "text": "string | number | boolean | undefined",
+      "source": "Line",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Number of px to use as a corner radius. `true` defaults to 8, `false` is 0."
+      },
+      "descriptionSource": {
+        "en": "VSparkline"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "label": {
+      "text": "{ index: number; value: string; }",
+      "source": "vuetify/src/components/VSparkline/VSparkline.tsx#L29-L29",
+      "type": "object",
+      "properties": {
+        "index": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "value": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        }
+      },
+      "formatted": "{ index: number; value: string }\n",
+      "optional": false,
+      "description": {
+        "en": "The default slot of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

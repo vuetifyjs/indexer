@@ -1,0 +1,258 @@
+{
+  "displayName": "VItem",
+  "fileName": "VItem",
+  "pathName": "v-item",
+  "props": {
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {
+    "group:selected": {
+      "text": "[val: { value: boolean; }]",
+      "type": "array",
+      "items": [
+        {
+          "text": "{ value: boolean; }",
+          "source": "vuetify/src/components/VItemGroup/VItem.tsx#L25-L25",
+          "type": "object",
+          "properties": {
+            "value": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ value: boolean }"
+        }
+      ],
+      "length": 1,
+      "formatted": "[{ value: boolean }]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when an item is selected within a group."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ isSelected: boolean | undefined; selectedClass: boolean | (string | undefined)[] | undefined; select: ((value: boolean) => void) | undefined; toggle: (() => void) | undefined; value: unknown; disabled: boolean | undefined; }",
+      "source": "vuetify/src/components/VItemGroup/VItem.tsx#L9-L16",
+      "type": "object",
+      "properties": {
+        "isSelected": {
+          "text": "boolean | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "formatted": "boolean",
+          "optional": false
+        },
+        "selectedClass": {
+          "text": "boolean | (string | undefined)[] | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            },
+            {
+              "text": "(string | undefined)[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "(string)[]"
+            }
+          ],
+          "formatted": "boolean | (string)[]",
+          "optional": false
+        },
+        "select": {
+          "text": "((value: boolean) => void) | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "(value: boolean) => void",
+              "source": "vuetify/src/components/VItemGroup/VItem.tsx#L12-L12",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "(value: boolean) => void"
+            }
+          ],
+          "formatted": "((value: boolean) => void)",
+          "optional": false
+        },
+        "toggle": {
+          "text": "(() => void) | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "() => void",
+              "source": "vuetify/src/components/VItemGroup/VItem.tsx#L13-L13",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void"
+            }
+          ],
+          "formatted": "(() => void)",
+          "optional": false
+        },
+        "value": {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown",
+          "optional": false
+        },
+        "disabled": {
+          "text": "boolean | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  isSelected: boolean\n  selectedClass: boolean | string[]\n  select: (value: boolean) => void\n  toggle: () => void\n  value: unknown\n  disabled: boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

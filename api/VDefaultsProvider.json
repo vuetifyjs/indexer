@@ -1,0 +1,225 @@
+{
+  "displayName": "VDefaultsProvider",
+  "fileName": "VDefaultsProvider",
+  "pathName": "v-defaults-provider",
+  "props": {
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Turns off all calculations of new default values for improved performance in situations where defaults propagation isn't necessary."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    },
+    "root": {
+      "text": "string | boolean | undefined",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Force current defaults to match the application root defaults."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    },
+    "reset": {
+      "text": "string | number | undefined",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Reset the default values up the nested chain by {n} amount."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    },
+    "scoped": {
+      "text": "boolean | undefined",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Prevents the ability for default values to be inherited from parent components."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    },
+    "defaults": {
+      "text": "DefaultsOptions",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Partial<{ [key: string]: Record<string, unknown> | undefined; global?: Record<string, unknown> | undefined; }>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "object",
+          "properties": {
+            "global": {
+              "text": "Record<string, unknown> | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "Record<string, unknown>",
+                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                  "type": "record",
+                  "key": {
+                    "text": "string",
+                    "type": "string",
+                    "formatted": "string"
+                  },
+                  "value": {
+                    "text": "unknown",
+                    "type": "unknown",
+                    "formatted": "unknown"
+                  },
+                  "formatted": "Record<string, unknown>"
+                }
+              ],
+              "formatted": "Record<string, unknown>",
+              "optional": true
+            },
+            "[string]": {
+              "text": "Record<string, unknown> | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "Record<string, unknown>",
+                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                  "type": "record",
+                  "key": {
+                    "text": "string",
+                    "type": "string",
+                    "formatted": "string"
+                  },
+                  "value": {
+                    "text": "unknown",
+                    "type": "unknown",
+                    "formatted": "unknown"
+                  },
+                  "formatted": "Record<string, unknown>"
+                }
+              ],
+              "formatted": "Record<string, unknown>",
+              "optional": true
+            }
+          },
+          "formatted": "{ global: Record<string, unknown>; [string]: Record<string, unknown> }"
+        }
+      ],
+      "formatted": "{\n  global: Record<string, unknown>\n  [string]: Record<string, unknown>\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Specify new default prop values for components. Keep in mind that this will be merged with previously defined values."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

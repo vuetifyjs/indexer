@@ -1,0 +1,370 @@
+{
+  "displayName": "VConfirmEdit",
+  "fileName": "VConfirmEdit",
+  "pathName": "v-confirm-edit",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VConfirmEdit",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "unknown",
+      "source": "VConfirmEdit",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Represents the committed v-model value"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "disabled": {
+      "text": "boolean | (\"cancel\" | \"save\")[] | undefined",
+      "source": "VConfirmEdit",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "(\"cancel\" | \"save\")[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "\"cancel\"",
+              "type": "string",
+              "literal": "\"cancel\"",
+              "formatted": "\"cancel\""
+            },
+            {
+              "text": "\"save\"",
+              "type": "string",
+              "literal": "\"save\"",
+              "formatted": "\"save\""
+            }
+          ],
+          "formatted": "(\"cancel\" | \"save\")[]"
+        }
+      ],
+      "formatted": "boolean | ('cancel' | 'save')[]\n",
+      "optional": false,
+      "description": {
+        "en": "Control the disabled state of action buttons. If not provided, internal logic will be used to determine the disabled state."
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "cancelText": {
+      "text": "string | undefined",
+      "source": "VConfirmEdit",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.confirmEdit.cancel'",
+      "description": {
+        "en": "Text for the cancel button"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "okText": {
+      "text": "string | undefined",
+      "source": "VConfirmEdit",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.confirmEdit.ok'",
+      "description": {
+        "en": "Text for the ok button"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "hideActions": {
+      "text": "boolean | undefined",
+      "source": "VConfirmEdit",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Prevent showing the default actions buttons. Does not affect `<component :is=\"actions\" />`"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "cancel": {
+      "text": "[]",
+      "type": "array",
+      "items": [],
+      "length": 0,
+      "formatted": "[]\n",
+      "optional": false,
+      "description": {
+        "en": "The event emitted when the user clicks the Cancel button"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "save": {
+      "text": "[value: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "The event emitted when the user clicks the Save button"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ model: Ref<unknown, unknown>; save: () => void; cancel: () => void; isPristine: boolean; readonly actions: (props?: {} | undefined) => VNode<RendererNode, RendererElement, { [key: string]: any; }>; }",
+      "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L17-L23",
+      "type": "object",
+      "properties": {
+        "model": {
+          "text": "Ref<unknown, unknown>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<unknown, unknown>",
+          "optional": false
+        },
+        "save": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L19-L19",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "cancel": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L20-L20",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "actions": {
+          "text": "(props?: {} | undefined) => VNode<RendererNode, RendererElement, { [key: string]: any; }>",
+          "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L22-L22",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "props",
+              "optional": false,
+              "text": "{} | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "{}",
+                  "type": "object",
+                  "properties": {},
+                  "formatted": "{  }"
+                }
+              ],
+              "formatted": "{  }"
+            }
+          ],
+          "returnType": {
+            "text": "VNode<RendererNode, RendererElement, { [key: string]: any; }>",
+            "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1204-L1229",
+            "type": "ref",
+            "ref": "VNode",
+            "formatted": "VNode<RendererNode, RendererElement, { [key: string]: any; }>"
+          },
+          "formatted": "(props: {  }) => VNode<RendererNode, RendererElement, { [key: string]: any; }>",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  model: Ref<unknown, unknown>\n  save: () => void\n  cancel: () => void\n  isPristine: boolean\n  actions: (props: {}) => VNode<\n    RendererNode,\n    RendererElement,\n    { [key: string]: any }\n  >\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "save": {
+      "text": "() => void",
+      "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L90-L93",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Manually commit the change"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "cancel": {
+      "text": "() => void",
+      "source": "vuetify/src/components/VConfirmEdit/VConfirmEdit.tsx#L95-L98",
+      "type": "function",
+      "parameters": [],
+      "returnType": {
+        "text": "void",
+        "type": "void",
+        "formatted": "void"
+      },
+      "formatted": "() => void\n",
+      "optional": false,
+      "description": {
+        "en": "Manually cancel the change"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
+    "isPristine": {
+      "text": "boolean",
+      "type": "boolean",
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Returns true if the input has not been modified in any way."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "sass": {}
+}

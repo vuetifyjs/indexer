@@ -1,0 +1,228 @@
+{
+  "displayName": "VDatePickerMonths",
+  "fileName": "VDatePickerMonths",
+  "pathName": "v-date-picker-months",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "number | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "VDatePickerMonths",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum selectable date. Months after this date will be disabled."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    },
+    "year": {
+      "text": "number | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the year for the given months."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "VDatePickerMonths",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum selectable date. Months before this date will be disabled."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[date: any]",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "length": 1,
+      "formatted": "[any]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "month": {
+      "text": "{ month: { text: string; value: number; }; i: number; props: { onClick: () => void; }; }",
+      "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L19-L28",
+      "type": "object",
+      "properties": {
+        "month": {
+          "text": "{ text: string; value: number; }",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L20-L23",
+          "type": "object",
+          "properties": {
+            "text": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "value": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ text: string; value: number }",
+          "optional": false
+        },
+        "i": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        },
+        "props": {
+          "text": "{ onClick: () => void; }",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L25-L27",
+          "type": "object",
+          "properties": {
+            "onClick": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L26-L26",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ onClick: () => void }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  month: { text: string; value: number }\n  i: number\n  props: { onClick: () => void }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

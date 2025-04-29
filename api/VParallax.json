@@ -1,0 +1,91 @@
+{
+  "displayName": "VParallax",
+  "fileName": "VParallax",
+  "pathName": "v-parallax",
+  "props": {
+    "scale": {
+      "text": "string | number | undefined",
+      "source": "VParallax",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0.5,
+      "description": {
+        "en": "The scale of the parallax image."
+      },
+      "descriptionSource": {
+        "en": "VParallax"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "placeholder": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the input's placeholder text."
+      },
+      "descriptionSource": {
+        "en": "VParallax"
+      }
+    },
+    "error": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "VParallax"
+      }
+    },
+    "sources": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "A list of `<source>` elements."
+      },
+      "descriptionSource": {
+        "en": "VParallax"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

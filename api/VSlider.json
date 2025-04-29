@@ -1,0 +1,2603 @@
+{
+  "displayName": "VSlider",
+  "fileName": "VSlider",
+  "pathName": "v-slider",
+  "props": {
+    "reverse": {
+      "text": "boolean | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reverses the slider direction."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "name": {
+      "text": "string | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the component's name attribute."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "error": {
+      "text": "boolean | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "label": {
+      "text": "string | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 100,
+      "description": {
+        "en": "Sets the maximum allowed value."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "modelValue": {
+      "text": "string | number | undefined",
+      "source": "VSlider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "disabled": {
+      "text": "boolean | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "id": {
+      "text": "string | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the DOM id on the component."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of the input when it is not focused."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 2,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "appendIcon": {
+      "text": "IconValue | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prependIcon": {
+      "text": "IconValue | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Prepends an icon to the component, uses the same syntax as `v-icon`."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "ripple": {
+      "text": "boolean | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Applies the [v-ripple](/directives/ripple) directive."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "readonly": {
+      "text": "boolean | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Puts input in readonly state."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "centerAffix": {
+      "text": "boolean | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Vertically align **appendInner**, **prependInner**, **clearIcon** and **label** in the center."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "glow": {
+      "text": "boolean | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Makes prepend/append icons full opacity when the input is focused and apply color."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "iconColor": {
+      "text": "string | boolean | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sets the color of the prepend/append icons."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "hideSpinButtons": {
+      "text": "boolean | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hides spin buttons on the input when type is set to `number`."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "hint": {
+      "text": "string | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Displays hint text below the input when focused. Force this always open with the [persistent-hint](#props-persistent-hint) property."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "persistentHint": {
+      "text": "boolean | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces [hint](#props-hint) to always be visible."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "messages": {
+      "text": "string | readonly string[] | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "readonly string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Displays a list of messages or a single message if using a string."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "direction": {
+      "text": "\"horizontal\" | \"vertical\" | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "Changes the direction of the input."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "errorMessages": {
+      "text": "string | readonly string[] | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "readonly string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Puts the input in an error state and passes through custom error messages. Will be combined with any validations that occur from the **rules** prop. This field will not trigger validation."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "maxErrors": {
+      "text": "string | number | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 1,
+      "description": {
+        "en": "Control the maximum number of shown errors from validation."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "rules": {
+      "text": "readonly ValidationRule[] | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly ValidationRule[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "ValidationRule",
+              "source": "vuetify/src/composables/validation.ts#L17-L21",
+              "type": "ref",
+              "ref": "ValidationRule",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Accepts a mixed array of types `function`, `boolean` and `string`. Functions pass an input value as an argument and must return either `true` / `false` or a `string` containing an error message. The input field will enter an error state if a function returns (or any value in the array contains) `false` or is a `string`."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "validateOn": {
+      "text": "ValidateOn | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "ValidateOn",
+          "source": "vuetify/src/composables/validation.ts#L24-L31",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"eager\"",
+              "type": "string",
+              "literal": "\"eager\"",
+              "formatted": "\"eager\""
+            },
+            {
+              "text": "\"lazy\"",
+              "type": "string",
+              "literal": "\"lazy\"",
+              "formatted": "\"lazy\""
+            },
+            {
+              "text": "ValidateOnValue",
+              "source": "vuetify/src/composables/validation.ts#L23-L23",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "\"blur\"",
+                  "type": "string",
+                  "literal": "\"blur\"",
+                  "formatted": "\"blur\""
+                },
+                {
+                  "text": "\"input\"",
+                  "type": "string",
+                  "literal": "\"input\"",
+                  "formatted": "\"input\""
+                },
+                {
+                  "text": "\"submit\"",
+                  "type": "string",
+                  "literal": "\"submit\"",
+                  "formatted": "\"submit\""
+                },
+                {
+                  "text": "\"invalid-input\"",
+                  "type": "string",
+                  "literal": "\"invalid-input\"",
+                  "formatted": "\"invalid-input\""
+                }
+              ],
+              "formatted": "\"blur\" | \"input\" | \"submit\" | \"invalid-input\""
+            },
+            {
+              "text": "\"blur lazy\"",
+              "type": "string",
+              "literal": "\"blur lazy\"",
+              "formatted": "\"blur lazy\""
+            },
+            {
+              "text": "\"input lazy\"",
+              "type": "string",
+              "literal": "\"input lazy\"",
+              "formatted": "\"input lazy\""
+            },
+            {
+              "text": "\"submit lazy\"",
+              "type": "string",
+              "literal": "\"submit lazy\"",
+              "formatted": "\"submit lazy\""
+            },
+            {
+              "text": "\"invalid-input lazy\"",
+              "type": "string",
+              "literal": "\"invalid-input lazy\"",
+              "formatted": "\"invalid-input lazy\""
+            },
+            {
+              "text": "\"blur eager\"",
+              "type": "string",
+              "literal": "\"blur eager\"",
+              "formatted": "\"blur eager\""
+            },
+            {
+              "text": "\"input eager\"",
+              "type": "string",
+              "literal": "\"input eager\"",
+              "formatted": "\"input eager\""
+            },
+            {
+              "text": "\"submit eager\"",
+              "type": "string",
+              "literal": "\"submit eager\"",
+              "formatted": "\"submit eager\""
+            },
+            {
+              "text": "\"invalid-input eager\"",
+              "type": "string",
+              "literal": "\"invalid-input eager\"",
+              "formatted": "\"invalid-input eager\""
+            },
+            {
+              "text": "\"lazy blur\"",
+              "type": "string",
+              "literal": "\"lazy blur\"",
+              "formatted": "\"lazy blur\""
+            },
+            {
+              "text": "\"lazy input\"",
+              "type": "string",
+              "literal": "\"lazy input\"",
+              "formatted": "\"lazy input\""
+            },
+            {
+              "text": "\"lazy submit\"",
+              "type": "string",
+              "literal": "\"lazy submit\"",
+              "formatted": "\"lazy submit\""
+            },
+            {
+              "text": "\"lazy invalid-input\"",
+              "type": "string",
+              "literal": "\"lazy invalid-input\"",
+              "formatted": "\"lazy invalid-input\""
+            },
+            {
+              "text": "\"eager blur\"",
+              "type": "string",
+              "literal": "\"eager blur\"",
+              "formatted": "\"eager blur\""
+            },
+            {
+              "text": "\"eager input\"",
+              "type": "string",
+              "literal": "\"eager input\"",
+              "formatted": "\"eager input\""
+            },
+            {
+              "text": "\"eager submit\"",
+              "type": "string",
+              "literal": "\"eager submit\"",
+              "formatted": "\"eager submit\""
+            },
+            {
+              "text": "\"eager invalid-input\"",
+              "type": "string",
+              "literal": "\"eager invalid-input\"",
+              "formatted": "\"eager invalid-input\""
+            }
+          ],
+          "formatted": "\"eager\" | \"lazy\" | \"blur\" | \"input\" | \"submit\" | \"invalid-input\" | \"blur lazy\" | \"input lazy\" | \"submit lazy\" | \"invalid-input lazy\" | \"blur eager\" | \"input eager\" | \"submit eager\" | \"invalid-input eager\" | \"lazy blur\" | \"lazy input\" | \"lazy submit\" | \"lazy invalid-input\" | \"eager blur\" | \"eager input\" | \"eager submit\" | \"eager invalid-input\""
+        }
+      ],
+      "formatted": "  | 'eager'\n  | 'lazy'\n  | 'blur'\n  | 'input'\n  | 'submit'\n  | 'invalid-input'\n  | 'blur lazy'\n  | 'input lazy'\n  | 'submit lazy'\n  | 'invalid-input lazy'\n  | 'blur eager'\n  | 'input eager'\n  | 'submit eager'\n  | 'invalid-input eager'\n  | 'lazy blur'\n  | 'lazy input'\n  | 'lazy submit'\n  | 'lazy invalid-input'\n  | 'eager blur'\n  | 'eager input'\n  | 'eager submit'\n  | 'eager invalid-input'\n",
+      "optional": false,
+      "description": {
+        "en": "Change what type of event triggers validation to run."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "validationValue": {
+      "text": "any",
+      "source": "validation",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when applying validation rules."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "focused": {
+      "text": "boolean | undefined",
+      "source": "focus",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces a focused state styling on the component."
+      },
+      "descriptionSource": {
+        "en": "focus"
+      }
+    },
+    "hideDetails": {
+      "text": "boolean | \"auto\" | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"auto\"",
+          "type": "string",
+          "literal": "\"auto\"",
+          "formatted": "\"auto\""
+        }
+      ],
+      "formatted": "boolean | 'auto'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hides hint and validation errors. When set to `auto` messages will be rendered only if there's a message (hint, error message, counter value etc) to display."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "min": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Sets the minimum allowed value."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "step": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "If greater than 0, sets step interval for ticks."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "thumbColor": {
+      "text": "string | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the thumb and thumb label color."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "thumbLabel": {
+      "text": "boolean | \"always\" | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"always\"",
+          "type": "string",
+          "literal": "\"always\"",
+          "formatted": "\"always\""
+        }
+      ],
+      "formatted": "boolean | 'always'\n",
+      "optional": false,
+      "description": {
+        "en": "Show thumb label. If `true` it shows label when using slider. If set to `'always'` it always shows label."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "thumbSize": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 20,
+      "description": {
+        "en": "Controls the size of the thumb label."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "showTicks": {
+      "text": "boolean | \"always\" | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"always\"",
+          "type": "string",
+          "literal": "\"always\"",
+          "formatted": "\"always\""
+        }
+      ],
+      "formatted": "boolean | 'always'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Show track ticks. If `true` it shows ticks when using slider. If set to `'always'` it always shows ticks."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "ticks": {
+      "text": "readonly number[] | Record<number, string> | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        },
+        {
+          "text": "Record<number, string>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "number",
+            "type": "number",
+            "formatted": "number"
+          },
+          "value": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "formatted": "Record<number, string>"
+        }
+      ],
+      "formatted": "number[] | Record<number, string>\n",
+      "optional": false,
+      "description": {
+        "en": "Show track ticks. If `true` it shows ticks when using slider. If set to `'always'` it always shows ticks."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "tickSize": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 2,
+      "description": {
+        "en": "Controls the size of **ticks**"
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "trackColor": {
+      "text": "string | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the track's color"
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "trackFillColor": {
+      "text": "string | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the track's fill color"
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    },
+    "trackSize": {
+      "text": "string | number | undefined",
+      "source": "Slider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 4,
+      "description": {
+        "en": "Sets the track's size (height)."
+      },
+      "descriptionSource": {
+        "en": "Slider"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[v: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "click:prepend": {
+      "text": "[MouseEvent]",
+      "type": "array",
+      "items": [
+        {
+          "text": "MouseEvent",
+          "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+          "type": "ref",
+          "ref": "MouseEvent",
+          "formatted": "MouseEvent"
+        }
+      ],
+      "length": 1,
+      "formatted": "[MouseEvent]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when prepended icon is clicked."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "click:append": {
+      "text": "[MouseEvent]",
+      "type": "array",
+      "items": [
+        {
+          "text": "MouseEvent",
+          "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+          "type": "ref",
+          "ref": "MouseEvent",
+          "formatted": "MouseEvent"
+        }
+      ],
+      "length": 1,
+      "formatted": "[MouseEvent]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when appended icon is clicked."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "update:focused": {
+      "text": "[value: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's focus state changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "start": {
+      "text": "[value: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Slider value emitted at start of slider movement."
+      },
+      "descriptionSource": {
+        "en": "VSlider"
+      }
+    },
+    "end": {
+      "text": "[value: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Slider value emitted at the end of slider movement."
+      },
+      "descriptionSource": {
+        "en": "VSlider"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "VInputSlot",
+      "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
+      "type": "object",
+      "properties": {
+        "id": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "messagesId": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "validate": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L37-L37",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prepend": {
+      "text": "VInputSlot",
+      "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
+      "type": "object",
+      "properties": {
+        "id": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "messagesId": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "validate": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L37-L37",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item outside the input and before input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "append": {
+      "text": "VInputSlot",
+      "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
+      "type": "object",
+      "properties": {
+        "id": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "messagesId": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "validate": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L37-L37",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item inside the input and after input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "details": {
+      "text": "VInputSlot",
+      "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
+      "type": "object",
+      "properties": {
+        "id": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "messagesId": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "validate": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L37-L37",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom input details to modifying the display of [messages](#props-messages)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "message": {
+      "text": "VMessageSlot",
+      "source": "vuetify/src/components/VMessages/VMessages.tsx#L19-L21",
+      "type": "object",
+      "properties": {
+        "message": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        }
+      },
+      "formatted": "{ message: string }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot used to customize the message content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "thumb-label": {
+      "text": "{ modelValue: number; }",
+      "source": "vuetify/src/components/VSlider/VSliderThumb.tsx#L26-L26",
+      "type": "object",
+      "properties": {
+        "modelValue": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{ modelValue: number }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the thumb label."
+      },
+      "descriptionSource": {
+        "en": "VSlider"
+      }
+    },
+    "tick-label": {
+      "text": "{ tick: Tick; index: number; }",
+      "source": "vuetify/src/components/VSlider/VSliderTrack.tsx#L20-L20",
+      "type": "object",
+      "properties": {
+        "tick": {
+          "text": "Tick",
+          "source": "vuetify/src/components/VSlider/slider.ts#L15-L19",
+          "type": "object",
+          "properties": {
+            "value": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "position": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "label": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            }
+          },
+          "formatted": "{ value: number; position: number; label: string }",
+          "optional": false
+        },
+        "index": {
+          "text": "number",
+          "type": "number",
+          "formatted": "number",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  tick: { value: number; position: number; label: string }\n  index: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the tick label."
+      },
+      "descriptionSource": {
+        "en": "VSlider"
+      }
+    },
+    "label": {
+      "text": "VInputSlot",
+      "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
+      "type": "object",
+      "properties": {
+        "id": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "messagesId": {
+          "text": "ComputedRef<string>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "Ref<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+          "type": "ref",
+          "ref": "Ref",
+          "formatted": "Ref<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L35-L35",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L36-L36",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        },
+        "validate": {
+          "text": "() => void",
+          "source": "vuetify/src/components/VInput/VInput.tsx#L37-L37",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "() => void",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default slot of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$slider-horizontal-start": {
+      "default": "8px"
+    },
+    "$slider-horizontal-min-height": {
+      "default": "32px"
+    },
+    "$slider-horizontal-end": {
+      "default": "8px"
+    },
+    "$slider-label-margin-end": {
+      "default": "12px"
+    },
+    "$slider-label-margin-start": {
+      "default": "12px"
+    },
+    "$slider-state-track-background-opacity": {
+      "default": "0.4"
+    },
+    "$slider-thumb-hover-opacity": {
+      "default": "var(--v-hover-opacity)"
+    },
+    "$slider-thumb-focus-opacity": {
+      "default": "var(--v-focus-opacity)"
+    },
+    "$slider-thumb-pressed-opacity": {
+      "default": "var(--v-pressed-opacity)"
+    },
+    "$slider-thumb-border-radius": {
+      "default": "50%"
+    },
+    "$slider-thumb-focused-size-increase": {
+      "default": "24px"
+    },
+    "$slider-thumb-label-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'caption', 'size')"
+    },
+    "$slider-thumb-label-border-radius": {
+      "default": "4px"
+    },
+    "$slider-thumb-label-height": {
+      "default": "25px"
+    },
+    "$slider-thumb-label-min-width": {
+      "default": "35px"
+    },
+    "$slider-thumb-label-wedge-size": {
+      "default": "6px"
+    },
+    "$slider-thumb-label-offset": {
+      "default": "calc(var(--v-slider-thumb-size) / 2)"
+    },
+    "$slider-thumb-label-transition": {
+      "default": ".2s settings.$accelerated-easing"
+    },
+    "$slider-thumb-label-padding": {
+      "default": "6px"
+    },
+    "$slider-thumb-touch-size": {
+      "default": "42px"
+    },
+    "$slider-tick-background": {
+      "default": "rgb(var(--v-theme-surface-light))"
+    },
+    "$slider-tick-border-radius": {
+      "default": "2px"
+    },
+    "$slider-tick-label-margin-top": {
+      "default": "8px"
+    },
+    "$slider-tick-label-margin-start": {
+      "default": "12px"
+    },
+    "$slider-track-border-radius": {
+      "default": "6px"
+    },
+    "$slider-track-active-size-offset": {
+      "default": "2px"
+    },
+    "$slider-transition": {
+      "default": ".3s cubic-bezier(0.25, 0.8, 0.5, 1)"
+    },
+    "$slider-vertical-margin-bottom": {
+      "default": "12px"
+    },
+    "$slider-vertical-margin-top": {
+      "default": "12px"
+    },
+    "$slider-vertical-min-height": {
+      "default": "300px"
+    },
+    "$slider-track-active-size": {
+      "default": "calc(var(--v-slider-track-size) + #{$slider-track-active-size-offset})"
+    }
+  }
+}

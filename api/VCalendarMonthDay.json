@@ -1,0 +1,633 @@
+{
+  "displayName": "VCalendarMonthDay",
+  "fileName": "VCalendarMonthDay",
+  "pathName": "v-calendar-month-day",
+  "props": {
+    "color": {
+      "text": "string | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Controls the **active** state of the item. This is typically used to highlight the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "title": {
+      "text": "string | number | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "day": {
+      "text": "CalendarDay | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "CalendarDay",
+          "source": "vuetify/src/composables/calendar.ts#L32-L49",
+          "type": "object",
+          "properties": {
+            "date": {
+              "text": "Date",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "ref",
+              "ref": "Date",
+              "formatted": "Date",
+              "optional": false
+            },
+            "formatted": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "isAdjacent": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isDisabled": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isEnd": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isHidden": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isSame": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isSelected": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isStart": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isToday": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isWeekEnd": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isWeekStart": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            },
+            "isoDate": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "localized": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "month": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            },
+            "year": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+        }
+      ],
+      "formatted": "{\n  date: Date\n  formatted: string\n  isAdjacent: boolean\n  isDisabled: boolean\n  isEnd: boolean\n  isHidden: boolean\n  isSame: boolean\n  isSelected: boolean\n  isStart: boolean\n  isToday: boolean\n  isWeekEnd: boolean\n  isWeekStart: boolean\n  isoDate: string\n  localized: string\n  month: number\n  year: number\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Represents the specific day in the month view of the calendar."
+      },
+      "descriptionSource": {
+        "en": "VCalendarMonthDay"
+      }
+    },
+    "events": {
+      "text": "any[] | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Array of events associated with this specific day."
+      },
+      "descriptionSource": {
+        "en": "VCalendarMonthDay"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "dayBody": {
+      "text": "{ day?: CalendarDay | undefined; events?: any[] | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L16-L16",
+      "type": "object",
+      "properties": {
+        "day": {
+          "text": "CalendarDay | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "CalendarDay",
+              "source": "vuetify/src/composables/calendar.ts#L32-L49",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "text": "Date",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "ref",
+                  "ref": "Date",
+                  "formatted": "Date",
+                  "optional": false
+                },
+                "formatted": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "isAdjacent": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isDisabled": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isHidden": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSame": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSelected": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isToday": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isoDate": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "localized": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "month": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                },
+                "year": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+            }
+          ],
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }",
+          "optional": true
+        },
+        "events": {
+          "text": "any[] | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]"
+            }
+          ],
+          "formatted": "any[]",
+          "optional": true
+        }
+      },
+      "formatted": "{\n  day: {\n    date: Date\n    formatted: string\n    isAdjacent: boolean\n    isDisabled: boolean\n    isEnd: boolean\n    isHidden: boolean\n    isSame: boolean\n    isSelected: boolean\n    isStart: boolean\n    isToday: boolean\n    isWeekEnd: boolean\n    isWeekStart: boolean\n    isoDate: string\n    localized: string\n    month: number\n    year: number\n  }\n  events: any[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L16-L16.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarMonthDay"
+      }
+    },
+    "dayEvent": {
+      "text": "{ day?: CalendarDay | undefined; allDay: boolean; event: Record<string, unknown>; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L17-L17",
+      "type": "object",
+      "properties": {
+        "day": {
+          "text": "CalendarDay | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "CalendarDay",
+              "source": "vuetify/src/composables/calendar.ts#L32-L49",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "text": "Date",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "ref",
+                  "ref": "Date",
+                  "formatted": "Date",
+                  "optional": false
+                },
+                "formatted": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "isAdjacent": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isDisabled": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isHidden": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSame": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSelected": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isToday": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isoDate": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "localized": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "month": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                },
+                "year": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+            }
+          ],
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }",
+          "optional": true
+        },
+        "allDay": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "event": {
+          "text": "Record<string, unknown>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "unknown",
+            "type": "unknown",
+            "formatted": "unknown"
+          },
+          "formatted": "Record<string, unknown>",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  day: {\n    date: Date\n    formatted: string\n    isAdjacent: boolean\n    isDisabled: boolean\n    isEnd: boolean\n    isHidden: boolean\n    isSame: boolean\n    isSelected: boolean\n    isStart: boolean\n    isToday: boolean\n    isWeekEnd: boolean\n    isWeekStart: boolean\n    isoDate: string\n    localized: string\n    month: number\n    year: number\n  }\n  allDay: boolean\n  event: Record<string, unknown>\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L17-L17.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarMonthDay"
+      }
+    },
+    "dayTitle": {
+      "text": "{ title?: string | number | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L18-L18",
+      "type": "object",
+      "properties": {
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        }
+      },
+      "formatted": "{ title: string | number }\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarMonthDay.tsx#L18-L18.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendarMonthDay"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

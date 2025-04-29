@@ -1,0 +1,54 @@
+{
+  "displayName": "VBreadcrumbsDivider",
+  "fileName": "VBreadcrumbsDivider",
+  "pathName": "v-breadcrumbs-divider",
+  "props": {
+    "divider": {
+      "text": "string | number | undefined",
+      "source": "VBreadcrumbsDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the dividing character between items."
+      },
+      "descriptionSource": {
+        "en": "VBreadcrumbsDivider"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

@@ -1,0 +1,1018 @@
+{
+  "displayName": "VCarouselItem",
+  "fileName": "VCarouselItem",
+  "pathName": "v-carousel-item",
+  "props": {
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "position": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies [object-position](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) styles to the image and placeholder elements."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "absolute": {
+      "text": "boolean | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies position: absolute to the component."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Prevents the item from becoming active when using the \"next\" and \"prev\" buttons or the `toggle` method."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    },
+    "alt": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Alternate text for screen readers. Leave empty for decorative images."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "cover": {
+      "text": "boolean | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Resizes the background image to cover the entire container."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "draggable": {
+      "text": "boolean | \"true\" | \"false\" | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"true\"",
+          "type": "string",
+          "literal": "\"true\"",
+          "formatted": "\"true\""
+        },
+        {
+          "text": "\"false\"",
+          "type": "string",
+          "literal": "\"false\"",
+          "formatted": "\"false\""
+        }
+      ],
+      "formatted": "boolean | 'true' | 'false'\n",
+      "optional": false,
+      "description": {
+        "en": "Controls the `draggable` behavior of the image. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable)."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "eager": {
+      "text": "boolean | undefined",
+      "source": "lazy",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "gradient": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The gradient to apply to the image. Only supports [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient) syntax, anything else should be done with classes."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "lazySrc": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Something to show while waiting for the main image to load, typically a small base64-encoded thumbnail. Has a slight blur filter applied.  \nNOTE: This prop has no effect unless either `height` or `aspect-ratio` are provided."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "options": {
+      "text": "IntersectionObserverInit | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IntersectionObserverInit",
+          "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+          "type": "ref",
+          "ref": "IntersectionObserverInit",
+          "formatted": "IntersectionObserverInit"
+        }
+      ],
+      "formatted": "IntersectionObserverInit\n",
+      "optional": false,
+      "default": "{\n  root: undefined,\n  rootMargin: undefined,\n  threshold: undefined\n}",
+      "description": {
+        "en": "Options that are passed to the [Intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) constructor."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "sizes": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "For use with `srcset`, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes)."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "src": {
+      "text": "string | srcObject | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "srcObject",
+          "source": "vuetify/src/components/VImg/VImg.tsx#L42-L47",
+          "type": "object",
+          "properties": {
+            "src": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "srcset": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "lazySrc": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "aspect": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ src: string; srcset: string; lazySrc: string; aspect: number }"
+        }
+      ],
+      "formatted": "  | string\n  | { src: string; srcset: string; lazySrc: string; aspect: number }\n",
+      "optional": false,
+      "default": "",
+      "description": {
+        "en": "The image URL. This prop is mandatory."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "srcset": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "A set of alternate images to use based on device size. [Read more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset)."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "aspectRatio": {
+      "text": "string | number | undefined",
+      "source": "VResponsive",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Calculated as `width/height`, so for a 1920x1080px image this will be `1.7778`. Will be calculated automatically if omitted."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "contentClass": {
+      "text": "any",
+      "source": "VResponsive",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a custom class to the internal content element."
+      },
+      "descriptionSource": {
+        "en": "VResponsive"
+      }
+    },
+    "inline": {
+      "text": "boolean | undefined",
+      "source": "VResponsive",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Display as an inline element instead of a block, also disables flex-grow."
+      },
+      "descriptionSource": {
+        "en": "VResponsive"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | undefined",
+      "source": "VWindowItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "The transition to use when switching from `lazy-src` to `src`. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "crossorigin": {
+      "text": "\"\" | \"anonymous\" | \"use-credentials\" | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"\"",
+          "type": "string",
+          "literal": "\"\"",
+          "formatted": "\"\""
+        },
+        {
+          "text": "\"anonymous\"",
+          "type": "string",
+          "literal": "\"anonymous\"",
+          "formatted": "\"anonymous\""
+        },
+        {
+          "text": "\"use-credentials\"",
+          "type": "string",
+          "literal": "\"use-credentials\"",
+          "formatted": "\"use-credentials\""
+        }
+      ],
+      "formatted": "'' | 'anonymous' | 'use-credentials'\n",
+      "optional": false,
+      "description": {
+        "en": "Specify that images should be fetched with CORS enabled [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#crossorigin)"
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "referrerpolicy": {
+      "text": "\"no-referrer\" | \"no-referrer-when-downgrade\" | \"origin\" | \"origin-when-cross-origin\" | \"same-origin\" | \"strict-origin\" | \"strict-origin-when-cross-origin\" | \"unsafe-url\" | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"no-referrer\"",
+          "type": "string",
+          "literal": "\"no-referrer\"",
+          "formatted": "\"no-referrer\""
+        },
+        {
+          "text": "\"no-referrer-when-downgrade\"",
+          "type": "string",
+          "literal": "\"no-referrer-when-downgrade\"",
+          "formatted": "\"no-referrer-when-downgrade\""
+        },
+        {
+          "text": "\"origin\"",
+          "type": "string",
+          "literal": "\"origin\"",
+          "formatted": "\"origin\""
+        },
+        {
+          "text": "\"origin-when-cross-origin\"",
+          "type": "string",
+          "literal": "\"origin-when-cross-origin\"",
+          "formatted": "\"origin-when-cross-origin\""
+        },
+        {
+          "text": "\"same-origin\"",
+          "type": "string",
+          "literal": "\"same-origin\"",
+          "formatted": "\"same-origin\""
+        },
+        {
+          "text": "\"strict-origin\"",
+          "type": "string",
+          "literal": "\"strict-origin\"",
+          "formatted": "\"strict-origin\""
+        },
+        {
+          "text": "\"strict-origin-when-cross-origin\"",
+          "type": "string",
+          "literal": "\"strict-origin-when-cross-origin\"",
+          "formatted": "\"strict-origin-when-cross-origin\""
+        },
+        {
+          "text": "\"unsafe-url\"",
+          "type": "string",
+          "literal": "\"unsafe-url\"",
+          "formatted": "\"unsafe-url\""
+        }
+      ],
+      "formatted": "  | 'no-referrer'\n  | 'no-referrer-when-downgrade'\n  | 'origin'\n  | 'origin-when-cross-origin'\n  | 'same-origin'\n  | 'strict-origin'\n  | 'strict-origin-when-cross-origin'\n  | 'unsafe-url'\n",
+      "optional": false,
+      "description": {
+        "en": "Define which referrer is sent when fetching the resource [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#referrerpolicy)"
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "reverseTransition": {
+      "text": "string | boolean | undefined",
+      "source": "VWindowItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the reverse transition."
+      },
+      "descriptionSource": {
+        "en": "VWindowItem"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "placeholder": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Display an overlay while the image is loading."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "error": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Will be shown if the image fails to load, replacing the placeholder slot."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "sources": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "A list of `<source>` elements. If this slot is used v-img will render a `<picture>` instead of `<img>`."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

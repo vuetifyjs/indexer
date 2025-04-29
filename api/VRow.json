@@ -1,0 +1,1155 @@
+{
+  "displayName": "VRow",
+  "fileName": "VRow",
+  "pathName": "v-row",
+  "props": {
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "align": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Applies the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) css property. Available options are: **start**, **center**, **end**, **baseline** and **stretch**."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContent": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Applies the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) css property. Available options are: **start**, **center**, **end**, **space-between**, **space-around** and **stretch**."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "dense": {
+      "text": "boolean | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reduces the gutter between `v-col`s."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "noGutters": {
+      "text": "boolean | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the gutter between `v-col`s."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignSm": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-items** property on small and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignMd": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-items** property on medium and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignLg": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-items** property on large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignXl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-items** property on extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignXxl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"baseline\"",
+          "type": "string",
+          "literal": "\"baseline\"",
+          "formatted": "\"baseline\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        }
+      ],
+      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-items** property on extra extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justifySm": {
+      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **justify-content** property on small and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justifyMd": {
+      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **justify-content** property on medium and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justifyLg": {
+      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **justify-content** property on large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justifyXl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **justify-content** property on extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justifyXxl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **justify-content** property on extra extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContentSm": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-content** property on small and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContentMd": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-content** property on medium and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContentLg": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-content** property on large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContentXl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-content** property on extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContentXxl": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Changes the **align-content** property on extra extra large and greater breakpoints."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "justify": {
+      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Applies the [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) css property. Available options are: **start**, **center**, **end**, **space-between** and **space-around**."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

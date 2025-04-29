@@ -1,0 +1,1340 @@
+{
+  "displayName": "VDataTableHeaders",
+  "fileName": "VDataTableHeaders",
+  "pathName": "v-data-table-headers",
+  "props": {
+    "loading": {
+      "text": "string | boolean | undefined",
+      "source": "loader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
+      },
+      "descriptionSource": {
+        "en": "loader"
+      }
+    },
+    "sticky": {
+      "text": "boolean | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Deprecated, use `fixed-header` instead."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "disableSort": {
+      "text": "boolean | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Toggles rendering of sort button."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "fixedHeader": {
+      "text": "boolean | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sticks the header to the top of the table."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "multiSort": {
+      "text": "boolean | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sort on multiple columns at the same time."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "sortAscIcon": {
+      "text": "IconValue | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$sortAsc'",
+      "description": {
+        "en": "Icon used for ascending sort button."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "sortDescIcon": {
+      "text": "IconValue | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$sortDesc'",
+      "description": {
+        "en": "Icon used for descending sort button."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "headerProps": {
+      "text": "unknown",
+      "source": "VDataTableHeaders",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Additional props to be be passed to the default header"
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "headers": {
+      "text": "HeadersSlotProps",
+      "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L30-L40",
+      "type": "object",
+      "properties": {
+        "headers": {
+          "text": "InternalDataTableHeader[][]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "InternalDataTableHeader[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "InternalDataTableHeader",
+                  "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+                  "type": "ref",
+                  "ref": "InternalDataTableHeader",
+                  "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+                }
+              ],
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[]"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[][]",
+          "optional": false
+        },
+        "columns": {
+          "text": "InternalDataTableHeader[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[]",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "someSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "allSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "getSortIcon": {
+          "text": "(column: InternalDataTableHeader) => IconValue",
+          "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L38-L38",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "IconValue",
+            "source": "vuetify/src/composables/icons.tsx#L12-L15",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              {
+                "text": "(string | [path: string, opacity: number])[]",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "array",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "[path: string, opacity: number]",
+                    "type": "array",
+                    "items": [
+                      {
+                        "text": "string",
+                        "type": "ref",
+                        "ref": "",
+                        "formatted": "string"
+                      },
+                      {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number"
+                      }
+                    ],
+                    "length": 2,
+                    "formatted": "[string, number]"
+                  }
+                ],
+                "formatted": "(string | [string, number])[]"
+              },
+              {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              }
+            ],
+            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "optional": false
+        },
+        "isSorted": {
+          "text": "(column: InternalDataTableHeader) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L81-L83",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  headers: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[][]\n  columns: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[]\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  selectAll: (value: boolean) => void\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot to replace the default rendering of the `<thead>` element."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "loader": {
+      "text": "LoaderSlotProps",
+      "source": "vuetify/src/composables/loader.tsx#L12-L15",
+      "type": "object",
+      "properties": {
+        "color": {
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string",
+          "optional": false
+        },
+        "isActive": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{ color: string; isActive: boolean }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom loader (displayed when [loading](#props-loading) prop is equal to true)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "header.data-table-select": {
+      "text": "VDataTableHeaderCellColumnSlotProps",
+      "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L42-L51",
+      "type": "object",
+      "properties": {
+        "column": {
+          "text": "InternalDataTableHeader",
+          "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+          "type": "ref",
+          "ref": "InternalDataTableHeader",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "isSorted": {
+          "text": "(column: InternalDataTableHeader) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L81-L83",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "someSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "allSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "getSortIcon": {
+          "text": "(column: InternalDataTableHeader) => IconValue",
+          "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L50-L50",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "IconValue",
+            "source": "vuetify/src/composables/icons.tsx#L12-L15",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              {
+                "text": "(string | [path: string, opacity: number])[]",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "array",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "[path: string, opacity: number]",
+                    "type": "array",
+                    "items": [
+                      {
+                        "text": "string",
+                        "type": "ref",
+                        "ref": "",
+                        "formatted": "string"
+                      },
+                      {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number"
+                      }
+                    ],
+                    "length": 2,
+                    "formatted": "[string, number]"
+                  }
+                ],
+                "formatted": "(string | [string, number])[]"
+              },
+              {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              }
+            ],
+            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the select-all checkbox in the header."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "header.data-table-expand": {
+      "text": "VDataTableHeaderCellColumnSlotProps",
+      "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L42-L51",
+      "type": "object",
+      "properties": {
+        "column": {
+          "text": "InternalDataTableHeader",
+          "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+          "type": "ref",
+          "ref": "InternalDataTableHeader",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "isSorted": {
+          "text": "(column: InternalDataTableHeader) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L81-L83",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "someSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "allSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "getSortIcon": {
+          "text": "(column: InternalDataTableHeader) => IconValue",
+          "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L50-L50",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "IconValue",
+            "source": "vuetify/src/composables/icons.tsx#L12-L15",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              {
+                "text": "(string | [path: string, opacity: number])[]",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "array",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "[path: string, opacity: number]",
+                    "type": "array",
+                    "items": [
+                      {
+                        "text": "string",
+                        "type": "ref",
+                        "ref": "",
+                        "formatted": "string"
+                      },
+                      {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number"
+                      }
+                    ],
+                    "length": 2,
+                    "formatted": "[string, number]"
+                  }
+                ],
+                "formatted": "(string | [string, number])[]"
+              },
+              {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              }
+            ],
+            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the expand button in the header."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "[`header.${string}`]": {
+      "text": "VDataTableHeaderCellColumnSlotProps",
+      "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L42-L51",
+      "type": "object",
+      "properties": {
+        "column": {
+          "text": "InternalDataTableHeader",
+          "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+          "type": "ref",
+          "ref": "InternalDataTableHeader",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>",
+          "optional": false
+        },
+        "selectAll": {
+          "text": "(value: boolean) => void",
+          "source": "vuetify/src/components/VDataTable/composables/select.ts#L161-L170",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "value",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(value: boolean) => void",
+          "optional": false
+        },
+        "isSorted": {
+          "text": "(column: InternalDataTableHeader) => boolean",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L81-L83",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean",
+          "optional": false
+        },
+        "toggleSort": {
+          "text": "(column: InternalDataTableHeader) => void",
+          "source": "vuetify/src/components/VDataTable/composables/sort.ts#L55-L79",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "void",
+            "type": "void",
+            "formatted": "void"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void",
+          "optional": false
+        },
+        "sortBy": {
+          "text": "readonly SortItem[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "SortItem",
+              "source": "vuetify/src/components/VDataTable/composables/sort.ts#L30-L30",
+              "type": "ref",
+              "ref": "SortItem",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]",
+          "optional": false
+        },
+        "someSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "allSelected": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        },
+        "getSortIcon": {
+          "text": "(column: InternalDataTableHeader) => IconValue",
+          "source": "vuetify/src/components/VDataTable/VDataTableHeaders.tsx#L50-L50",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "column",
+              "optional": false,
+              "text": "InternalDataTableHeader",
+              "source": "vuetify/src/components/VDataTable/types.ts#L34-L44",
+              "type": "ref",
+              "ref": "InternalDataTableHeader",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>"
+            }
+          ],
+          "returnType": {
+            "text": "IconValue",
+            "source": "vuetify/src/composables/icons.tsx#L12-L15",
+            "type": "anyOf",
+            "items": [
+              {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              {
+                "text": "(string | [path: string, opacity: number])[]",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "array",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "[path: string, opacity: number]",
+                    "type": "array",
+                    "items": [
+                      {
+                        "text": "string",
+                        "type": "ref",
+                        "ref": "",
+                        "formatted": "string"
+                      },
+                      {
+                        "text": "number",
+                        "type": "number",
+                        "formatted": "number"
+                      }
+                    ],
+                    "length": 2,
+                    "formatted": "[string, number]"
+                  }
+                ],
+                "formatted": "(string | [string, number])[]"
+              },
+              {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              }
+            ],
+            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          },
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "optional": true,
+      "description": {
+        "en": "Slot for custom rendering of a header cell."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

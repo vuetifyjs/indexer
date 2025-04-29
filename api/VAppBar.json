@@ -1,0 +1,959 @@
+{
+  "displayName": "VAppBar",
+  "fileName": "VAppBar",
+  "pathName": "v-app-bar",
+  "props": {
+    "image": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies a [v-img](/components/images) as the component's background."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "title": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "flat": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the component's **box-shadow**."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "collapse": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Morphs the component into a collapsed state, reducing its maximum width."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VAppBar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "location": {
+      "text": "\"top\" | \"bottom\" | undefined",
+      "source": "VAppBar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"top\"",
+          "type": "string",
+          "literal": "\"top\"",
+          "formatted": "\"top\""
+        },
+        {
+          "text": "\"bottom\"",
+          "type": "string",
+          "literal": "\"bottom\"",
+          "formatted": "\"bottom\""
+        }
+      ],
+      "formatted": "'top' | 'bottom'\n",
+      "optional": false,
+      "default": "'top'",
+      "description": {
+        "en": "Aligns the component towards the top or bottom."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "absolute": {
+      "text": "boolean | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies position: absolute to the component."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/components/VToolbar/VToolbar.tsx#L30-L30",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"prominent\"",
+              "type": "string",
+              "literal": "\"prominent\"",
+              "formatted": "\"prominent\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"prominent\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'prominent' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "extended": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Use this prop to increase the height of the toolbar _without_ using the `extension` slot for adding content. May be used in conjunction with the **extension-height** prop, and any of the other props that affect the height of the toolbar, e.g. **prominent**, **dense**, etc., **WITH THE EXCEPTION** of **height**."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "extensionHeight": {
+      "text": "string | number | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 48,
+      "description": {
+        "en": "Designate an explicit height for the `extension` slot."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "floating": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies **display: inline-flex** to the component."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VAppBar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 64,
+      "description": {
+        "en": "Designates a specific height for the toolbar. Overrides the heights imposed by other props, e.g. **prominent**, **dense**, **extended**, etc."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'header'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "name": {
+      "text": "string | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Assign a specific name for layout registration."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "order": {
+      "text": "string | number | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Adjust the order of the component in relation to its registration order."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "scrollTarget": {
+      "text": "string | undefined",
+      "source": "scroll",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "The element to target for scrolling events. Uses `window` by default."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "scrollThreshold": {
+      "text": "string | number | undefined",
+      "source": "scroll",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 300,
+      "description": {
+        "en": "The amount of scroll distance down before **scroll-behavior** activates."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "scrollBehavior": {
+      "text": "(string & {}) | \"hide\" | \"fully-hide\" | \"inverted\" | \"collapse\" | \"elevate\" | \"fade-image\" | undefined",
+      "source": "VAppBar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string & {}",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "{}",
+              "type": "object",
+              "properties": {},
+              "formatted": "{  }"
+            }
+          ],
+          "formatted": "string & {  }"
+        },
+        {
+          "text": "\"hide\"",
+          "type": "string",
+          "literal": "\"hide\"",
+          "formatted": "\"hide\""
+        },
+        {
+          "text": "\"fully-hide\"",
+          "type": "string",
+          "literal": "\"fully-hide\"",
+          "formatted": "\"fully-hide\""
+        },
+        {
+          "text": "\"inverted\"",
+          "type": "string",
+          "literal": "\"inverted\"",
+          "formatted": "\"inverted\""
+        },
+        {
+          "text": "\"collapse\"",
+          "type": "string",
+          "literal": "\"collapse\"",
+          "formatted": "\"collapse\""
+        },
+        {
+          "text": "\"elevate\"",
+          "type": "string",
+          "literal": "\"elevate\"",
+          "formatted": "\"elevate\""
+        },
+        {
+          "text": "\"fade-image\"",
+          "type": "string",
+          "literal": "\"fade-image\"",
+          "formatted": "\"fade-image\""
+        }
+      ],
+      "formatted": "  | (string & {})\n  | 'hide'\n  | 'fully-hide'\n  | 'inverted'\n  | 'collapse'\n  | 'elevate'\n  | 'fade-image'\n",
+      "optional": false,
+      "description": {
+        "en": "Specify an action to take when the scroll position of **scroll-target** reaches **scroll-threshold**. Accepts any combination of hide, inverted, collapse, elevate, and fade-image. Multiple values can be used, separated by a space."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "image": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Expects the [`v-img`](/components/images/) component."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    },
+    "prepend": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item outside the input and before input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "append": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Adds an item inside the input and after input content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "title": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "extension": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "Slot positioned directly under the main content of the toolbar. Height of this slot can be set explicitly with the **extension-height** prop."
+      },
+      "descriptionSource": {
+        "en": "VAppBar"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$app-bar-background": {
+      "default": "rgb(var(--v-theme-surface))"
+    },
+    "$app-bar-border-color": {
+      "default": "variables.$border-color-root"
+    },
+    "$app-bar-border-radius": {
+      "default": "map.get(variables.$rounded, '0')"
+    },
+    "$app-bar-border-style": {
+      "default": "variables.$border-style-root"
+    },
+    "$app-bar-border-thin-width": {
+      "default": "0 0 thin"
+    },
+    "$app-bar-border-width": {
+      "default": "0"
+    },
+    "$app-bar-collapsed-border-radius": {
+      "default": "24px"
+    },
+    "$app-bar-collapsed-max-width": {
+      "default": "112px"
+    },
+    "$app-bar-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$app-bar-density-comfortable-padding": {
+      "default": "4px"
+    },
+    "$app-bar-density-compact-padding": {
+      "default": "0"
+    },
+    "$app-bar-density-default-padding": {
+      "default": "8px"
+    },
+    "$app-bar-elevation": {
+      "default": "4"
+    },
+    "$app-bar-flat-elevation": {
+      "default": "0"
+    },
+    "$app-bar-image-height": {
+      "default": "inherit"
+    },
+    "$app-bar-image-object-fit": {
+      "default": "cover"
+    },
+    "$app-bar-image-width": {
+      "default": "inherit"
+    },
+    "$app-bar-padding-end": {
+      "default": "4px"
+    },
+    "$app-bar-padding-start": {
+      "default": "4px"
+    },
+    "$app-bar-prominent-height": {
+      "default": "128px"
+    },
+    "$app-bar-rounded-border-radius": {
+      "default": "variables.$border-radius-root"
+    },
+    "$app-bar-scrolled-title-padding-bottom": {
+      "default": "9px"
+    },
+    "$app-bar-shaped-border-radius": {
+      "default": "map.get(variables.$rounded, 'xl') $app-bar-border-radius"
+    },
+    "$app-bar-title-font-size": {
+      "default": "functions.map-deep-get(variables.$typography, 'h5', 'size')"
+    },
+    "$app-bar-title-padding": {
+      "default": "6px 20px"
+    },
+    "$app-bar-transition": {
+      "default": ".2s variables.$standard-easing"
+    },
+    "$app-bar-border": {
+      "default": "(\n  $app-bar-border-color,\n  $app-bar-border-style,\n  $app-bar-border-width,\n  $app-bar-border-thin-width\n)"
+    },
+    "$app-bar-theme": {
+      "default": "(\n  $app-bar-background,\n  $app-bar-color\n)"
+    }
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "displayName": "VValidation",
+  "fileName": "VValidation",
+  "pathName": "v-validation",
+  "props": {
+    "name": {
+      "text": "string | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the component's name attribute."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "error": {
+      "text": "boolean | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "label": {
+      "text": "string | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "unknown",
+      "source": "validation",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "readonly": {
+      "text": "boolean | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Puts input in readonly state."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "errorMessages": {
+      "text": "string | readonly string[] | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "readonly string[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string[]"
+        }
+      ],
+      "formatted": "string | string[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Puts the input in an error state and passes through custom error messages. Will be combined with any validations that occur from the **rules** prop. This field will not trigger validation."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "maxErrors": {
+      "text": "string | number | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 1,
+      "description": {
+        "en": "Control the maximum number of shown errors from validation."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "rules": {
+      "text": "readonly ValidationRule[] | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly ValidationRule[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "ValidationRule",
+              "source": "vuetify/src/composables/validation.ts#L17-L21",
+              "type": "ref",
+              "ref": "ValidationRule",
+              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>"
+            }
+          ],
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Accepts a mixed array of types `function`, `boolean` and `string`. Functions pass an input value as an argument and must return either `true` / `false` or a `string` containing an error message. The input field will enter an error state if a function returns (or any value in the array contains) `false` or is a `string`."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "validateOn": {
+      "text": "ValidateOn | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "ValidateOn",
+          "source": "vuetify/src/composables/validation.ts#L24-L31",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"eager\"",
+              "type": "string",
+              "literal": "\"eager\"",
+              "formatted": "\"eager\""
+            },
+            {
+              "text": "\"lazy\"",
+              "type": "string",
+              "literal": "\"lazy\"",
+              "formatted": "\"lazy\""
+            },
+            {
+              "text": "ValidateOnValue",
+              "source": "vuetify/src/composables/validation.ts#L23-L23",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "\"blur\"",
+                  "type": "string",
+                  "literal": "\"blur\"",
+                  "formatted": "\"blur\""
+                },
+                {
+                  "text": "\"input\"",
+                  "type": "string",
+                  "literal": "\"input\"",
+                  "formatted": "\"input\""
+                },
+                {
+                  "text": "\"submit\"",
+                  "type": "string",
+                  "literal": "\"submit\"",
+                  "formatted": "\"submit\""
+                },
+                {
+                  "text": "\"invalid-input\"",
+                  "type": "string",
+                  "literal": "\"invalid-input\"",
+                  "formatted": "\"invalid-input\""
+                }
+              ],
+              "formatted": "\"blur\" | \"input\" | \"submit\" | \"invalid-input\""
+            },
+            {
+              "text": "\"blur lazy\"",
+              "type": "string",
+              "literal": "\"blur lazy\"",
+              "formatted": "\"blur lazy\""
+            },
+            {
+              "text": "\"input lazy\"",
+              "type": "string",
+              "literal": "\"input lazy\"",
+              "formatted": "\"input lazy\""
+            },
+            {
+              "text": "\"submit lazy\"",
+              "type": "string",
+              "literal": "\"submit lazy\"",
+              "formatted": "\"submit lazy\""
+            },
+            {
+              "text": "\"invalid-input lazy\"",
+              "type": "string",
+              "literal": "\"invalid-input lazy\"",
+              "formatted": "\"invalid-input lazy\""
+            },
+            {
+              "text": "\"blur eager\"",
+              "type": "string",
+              "literal": "\"blur eager\"",
+              "formatted": "\"blur eager\""
+            },
+            {
+              "text": "\"input eager\"",
+              "type": "string",
+              "literal": "\"input eager\"",
+              "formatted": "\"input eager\""
+            },
+            {
+              "text": "\"submit eager\"",
+              "type": "string",
+              "literal": "\"submit eager\"",
+              "formatted": "\"submit eager\""
+            },
+            {
+              "text": "\"invalid-input eager\"",
+              "type": "string",
+              "literal": "\"invalid-input eager\"",
+              "formatted": "\"invalid-input eager\""
+            },
+            {
+              "text": "\"lazy blur\"",
+              "type": "string",
+              "literal": "\"lazy blur\"",
+              "formatted": "\"lazy blur\""
+            },
+            {
+              "text": "\"lazy input\"",
+              "type": "string",
+              "literal": "\"lazy input\"",
+              "formatted": "\"lazy input\""
+            },
+            {
+              "text": "\"lazy submit\"",
+              "type": "string",
+              "literal": "\"lazy submit\"",
+              "formatted": "\"lazy submit\""
+            },
+            {
+              "text": "\"lazy invalid-input\"",
+              "type": "string",
+              "literal": "\"lazy invalid-input\"",
+              "formatted": "\"lazy invalid-input\""
+            },
+            {
+              "text": "\"eager blur\"",
+              "type": "string",
+              "literal": "\"eager blur\"",
+              "formatted": "\"eager blur\""
+            },
+            {
+              "text": "\"eager input\"",
+              "type": "string",
+              "literal": "\"eager input\"",
+              "formatted": "\"eager input\""
+            },
+            {
+              "text": "\"eager submit\"",
+              "type": "string",
+              "literal": "\"eager submit\"",
+              "formatted": "\"eager submit\""
+            },
+            {
+              "text": "\"eager invalid-input\"",
+              "type": "string",
+              "literal": "\"eager invalid-input\"",
+              "formatted": "\"eager invalid-input\""
+            }
+          ],
+          "formatted": "\"eager\" | \"lazy\" | \"blur\" | \"input\" | \"submit\" | \"invalid-input\" | \"blur lazy\" | \"input lazy\" | \"submit lazy\" | \"invalid-input lazy\" | \"blur eager\" | \"input eager\" | \"submit eager\" | \"invalid-input eager\" | \"lazy blur\" | \"lazy input\" | \"lazy submit\" | \"lazy invalid-input\" | \"eager blur\" | \"eager input\" | \"eager submit\" | \"eager invalid-input\""
+        }
+      ],
+      "formatted": "  | 'eager'\n  | 'lazy'\n  | 'blur'\n  | 'input'\n  | 'submit'\n  | 'invalid-input'\n  | 'blur lazy'\n  | 'input lazy'\n  | 'submit lazy'\n  | 'invalid-input lazy'\n  | 'blur eager'\n  | 'input eager'\n  | 'submit eager'\n  | 'invalid-input eager'\n  | 'lazy blur'\n  | 'lazy input'\n  | 'lazy submit'\n  | 'lazy invalid-input'\n  | 'eager blur'\n  | 'eager input'\n  | 'eager submit'\n  | 'eager invalid-input'\n",
+      "optional": false,
+      "description": {
+        "en": "Change what type of event triggers validation to run."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "validationValue": {
+      "text": "any",
+      "source": "validation",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when applying validation rules."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "focused": {
+      "text": "boolean | undefined",
+      "source": "focus",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces a focused state styling on the component."
+      },
+      "descriptionSource": {
+        "en": "focus"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "[value: unknown]",
+      "type": "array",
+      "items": [
+        {
+          "text": "unknown",
+          "type": "unknown",
+          "formatted": "unknown"
+        }
+      ],
+      "length": 1,
+      "formatted": "[unknown]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "update:focused": {
+      "text": "[boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's focus state changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "{ errorMessages: ComputedRef<string[]>; isDirty: ComputedRef<boolean>; isDisabled: ComputedRef<boolean>; isReadonly: ComputedRef<boolean>; isPristine: ShallowRef<boolean, boolean>; isValid: ComputedRef<boolean | null>; isValidating: ShallowRef<boolean, boolean>; reset: () => Promise<void>; resetValidation: () => Promise<void>; validate: (silent?: boolean) => Promise<string[]>; validationClasses: ComputedRef<{ [x: string]: boolean; }>; }",
+      "source": "vuetify/src/composables/validation.ts#L254-L266",
+      "type": "object",
+      "properties": {
+        "errorMessages": {
+          "text": "ComputedRef<string[]>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<string[]>",
+          "optional": false
+        },
+        "isDirty": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isDisabled": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isReadonly": {
+          "text": "ComputedRef<boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean>",
+          "optional": false
+        },
+        "isPristine": {
+          "text": "ShallowRef<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L446-L448",
+          "type": "ref",
+          "ref": "ShallowRef",
+          "formatted": "ShallowRef<boolean, boolean>",
+          "optional": false
+        },
+        "isValid": {
+          "text": "ComputedRef<boolean | null>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<boolean | null>",
+          "optional": false
+        },
+        "isValidating": {
+          "text": "ShallowRef<boolean, boolean>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L446-L448",
+          "type": "ref",
+          "ref": "ShallowRef",
+          "formatted": "ShallowRef<boolean, boolean>",
+          "optional": false
+        },
+        "reset": {
+          "text": "() => Promise<void>",
+          "source": "vuetify/src/composables/validation.ts#L207-L211",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "Promise<void>",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "ref",
+            "ref": "Promise",
+            "formatted": "Promise<void>"
+          },
+          "formatted": "() => Promise<void>",
+          "optional": false
+        },
+        "resetValidation": {
+          "text": "() => Promise<void>",
+          "source": "vuetify/src/composables/validation.ts#L213-L220",
+          "type": "function",
+          "parameters": [],
+          "returnType": {
+            "text": "Promise<void>",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "ref",
+            "ref": "Promise",
+            "formatted": "Promise<void>"
+          },
+          "formatted": "() => Promise<void>",
+          "optional": false
+        },
+        "validate": {
+          "text": "(silent?: boolean) => Promise<string[]>",
+          "source": "vuetify/src/composables/validation.ts#L222-L252",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "silent",
+              "optional": false,
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            }
+          ],
+          "returnType": {
+            "text": "Promise<string[]>",
+            "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+            "type": "ref",
+            "ref": "Promise",
+            "formatted": "Promise<string[]>"
+          },
+          "formatted": "(silent: boolean) => Promise<string[]>",
+          "optional": false
+        },
+        "validationClasses": {
+          "text": "ComputedRef<{ [x: string]: boolean; }>",
+          "source": "@vue/reactivity/dist/reactivity.d.ts#L355-L357",
+          "type": "ref",
+          "ref": "ComputedRef",
+          "formatted": "ComputedRef<{ [x: string]: boolean; }>",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  errorMessages: ComputedRef<string[]>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: ShallowRef<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: ShallowRef<boolean, boolean>\n  reset: () => Promise<void>\n  resetValidation: () => Promise<void>\n  validate: (silent: boolean) => Promise<string[]>\n  validationClasses: ComputedRef<{ [x: string]: boolean }>\n}\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}

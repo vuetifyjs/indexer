@@ -1,0 +1,119 @@
+{
+  "displayName": "VLabel",
+  "fileName": "VLabel",
+  "pathName": "v-label",
+  "props": {
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VLabel",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "events": {
+    "click": {
+      "text": "[MouseEvent]",
+      "type": "array",
+      "items": [
+        {
+          "text": "MouseEvent",
+          "source": "typescript/lib/lib.dom.d.ts#L9825-L9876",
+          "type": "ref",
+          "ref": "MouseEvent",
+          "formatted": "MouseEvent"
+        }
+      ],
+      "length": 1,
+      "formatted": "[MouseEvent]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component is clicked."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {
+    "$label-color": {
+      "default": "inherit"
+    },
+    "$label-disabled-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-disabled-opacity))"
+    },
+    "$label-display": {
+      "default": "inline-flex"
+    },
+    "$label-error-color": {
+      "default": "rgb(var(--v-theme-error))"
+    },
+    "$label-font-size": {
+      "default": "1rem"
+    },
+    "$label-letter-spacing": {
+      "default": ".009375em"
+    },
+    "$label-opacity": {
+      "default": "var(--v-medium-emphasis-opacity)"
+    }
+  }
+}

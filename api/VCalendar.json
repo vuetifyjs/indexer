@@ -1,0 +1,1850 @@
+{
+  "displayName": "VCalendar",
+  "fileName": "VCalendar",
+  "pathName": "v-calendar",
+  "props": {
+    "title": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.calendar.today'",
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "modelValue": {
+      "text": "unknown[] | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "hideHeader": {
+      "text": "boolean | undefined",
+      "source": "VCalendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the header is hidden in the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "hideWeekNumber": {
+      "text": "boolean | undefined",
+      "source": "VCalendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Toggles the display of week numbers in a calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "month": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the month for the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "showAdjacentMonths": {
+      "text": "boolean | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Shows or hides days from adjacent months."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "year": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the year for the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "weekdays": {
+      "text": "CalendarWeekdays[] | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "CalendarWeekdays[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "0",
+              "type": "number",
+              "literal": "0",
+              "formatted": "0"
+            },
+            {
+              "text": "1",
+              "type": "number",
+              "literal": "1",
+              "formatted": "1"
+            },
+            {
+              "text": "2",
+              "type": "number",
+              "literal": "2",
+              "formatted": "2"
+            },
+            {
+              "text": "4",
+              "type": "number",
+              "literal": "4",
+              "formatted": "4"
+            },
+            {
+              "text": "5",
+              "type": "number",
+              "literal": "5",
+              "formatted": "5"
+            },
+            {
+              "text": "6",
+              "type": "number",
+              "literal": "6",
+              "formatted": "6"
+            },
+            {
+              "text": "3",
+              "type": "number",
+              "literal": "3",
+              "formatted": "3"
+            }
+          ],
+          "formatted": "(0 | 1 | 2 | 4 | 5 | 6 | 3)[]"
+        }
+      ],
+      "formatted": "(0 | 1 | 2 | 4 | 5 | 6 | 3)[]\n",
+      "optional": false,
+      "default": "[0, 1, 2, 3, 4, 5, 6]",
+      "description": {
+        "en": "Specifies which days of the week to display."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "weeksInMonth": {
+      "text": "\"static\" | \"dynamic\" | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"static\"",
+          "type": "string",
+          "literal": "\"static\"",
+          "formatted": "\"static\""
+        },
+        {
+          "text": "\"dynamic\"",
+          "type": "string",
+          "literal": "\"dynamic\"",
+          "formatted": "\"dynamic\""
+        }
+      ],
+      "formatted": "'static' | 'dynamic'\n",
+      "optional": false,
+      "default": "'dynamic'",
+      "description": {
+        "en": "A dynamic number of weeks in a month will grow and shrink depending on how many days are in the month. A static number always shows 7 weeks."
+      },
+      "descriptionSource": {
+        "en": "calendar"
+      }
+    },
+    "firstDayOfWeek": {
+      "text": "string | number | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the first day of the week, starting with 0 for Sunday."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "allowedDates": {
+      "text": "unknown[] | ((date: unknown) => boolean) | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        },
+        {
+          "text": "(date: unknown) => boolean",
+          "source": "vuetify/src/composables/calendar.ts#L55-L55",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: unknown) => boolean"
+        }
+      ],
+      "formatted": "unknown[] | ((date: unknown) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Determines which dates are selectable."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "displayValue": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The value that determines the month to show. This is different from modelValue, which determines the selected value."
+      },
+      "descriptionSource": {
+        "en": "calendar"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Maximum date or value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Minimum date or value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "hideDayHeader": {
+      "text": "boolean | undefined",
+      "source": "VCalendarDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the day header is visible in the calendar day view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarDay"
+      }
+    },
+    "intervals": {
+      "text": "number | undefined",
+      "source": "VCalendarDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 24,
+      "description": {
+        "en": "Total number of intervals in a day view."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "day": {
+      "text": "unknown",
+      "source": "VCalendarInterval",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "default": "{}",
+      "description": {
+        "en": "Represents the specific day associated with the interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "dayIndex": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Index of the day this interval is a part of, in a week or month view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "events": {
+      "text": "any[] | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Array of events specific to this interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalDivisions": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 2,
+      "description": {
+        "en": "Number of subdivisions within this interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalDuration": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 60,
+      "description": {
+        "en": "Duration of this specific interval in minutes."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalHeight": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 48,
+      "description": {
+        "en": "Height of the interval in pixels in the calendar view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalFormat": {
+      "text": "string | Function | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function"
+        }
+      ],
+      "formatted": "string | Function\n",
+      "optional": false,
+      "default": "'fullTime12h'",
+      "description": {
+        "en": "Formatting rule for displaying the interval, as a string or function."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "intervalStart": {
+      "text": "number | undefined",
+      "source": "VCalendarInterval",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Starting time for this specific interval."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
+    "nextIcon": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "The icon to use for the next button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "prevIcon": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "The icon to use for the prev button."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    },
+    "viewMode": {
+      "text": "\"month\" | \"day\" | \"week\" | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"month\"",
+          "type": "string",
+          "literal": "\"month\"",
+          "formatted": "\"month\""
+        },
+        {
+          "text": "\"day\"",
+          "type": "string",
+          "literal": "\"day\"",
+          "formatted": "\"day\""
+        },
+        {
+          "text": "\"week\"",
+          "type": "string",
+          "literal": "\"week\"",
+          "formatted": "\"week\""
+        }
+      ],
+      "formatted": "'month' | 'day' | 'week'\n",
+      "optional": false,
+      "default": "'month'",
+      "description": {
+        "en": "The current view mode of the calendar."
+      },
+      "descriptionSource": {
+        "en": "VCalendarHeader"
+      }
+    }
+  },
+  "events": {
+    "update:modelValue": {
+      "text": "any[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "next": {
+      "text": "any[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when moving to the next time period."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "prev": {
+      "text": "any[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when moving to the previous time period."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "today": {
+      "text": "any[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/typescript/lib/lib.es5.d.ts#L4-L4.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    }
+  },
+  "slots": {
+    "intervalBody": {
+      "text": "{ interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L22-L22",
+      "type": "object",
+      "properties": {
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L22-L22.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "intervalEvent": {
+      "text": "{ height: string; margin: string; eventClass: string; event: any; interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L23-L29",
+      "type": "object",
+      "properties": {
+        "height": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "margin": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "eventClass": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "event": {
+          "text": "any",
+          "type": "any",
+          "formatted": "any",
+          "optional": false
+        },
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  height: string\n  margin: string\n  eventClass: string\n  event: any\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L23-L29.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "intervalTitle": {
+      "text": "{ interval: Interval; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L30-L30",
+      "type": "object",
+      "properties": {
+        "interval": {
+          "text": "Interval",
+          "source": "vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L14-L19",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            },
+            "start": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "end": {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown",
+              "optional": false
+            },
+            "events": {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; start: unknown; end: unknown; events: any[] }",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  interval: { label: string; start: unknown; end: unknown; events: any[] }\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendarInterval.tsx#L30-L30.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "interval": {
+      "text": "Record<string, unknown>",
+      "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+      "type": "record",
+      "key": {
+        "text": "string",
+        "type": "string",
+        "formatted": "string"
+      },
+      "value": {
+        "text": "unknown",
+        "type": "unknown",
+        "formatted": "unknown"
+      },
+      "formatted": "Record<string, unknown>\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/typescript/lib/lib.es5.d.ts#L6-L6.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "day-body": {
+      "text": "{ day?: CalendarDay | undefined; events?: any[] | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L31-L31",
+      "type": "object",
+      "properties": {
+        "day": {
+          "text": "CalendarDay | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "CalendarDay",
+              "source": "vuetify/src/composables/calendar.ts#L32-L49",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "text": "Date",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "ref",
+                  "ref": "Date",
+                  "formatted": "Date",
+                  "optional": false
+                },
+                "formatted": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "isAdjacent": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isDisabled": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isHidden": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSame": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSelected": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isToday": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isoDate": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "localized": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "month": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                },
+                "year": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+            }
+          ],
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }",
+          "optional": true
+        },
+        "events": {
+          "text": "any[] | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]"
+            }
+          ],
+          "formatted": "any[]",
+          "optional": true
+        }
+      },
+      "formatted": "{\n  day: {\n    date: Date\n    formatted: string\n    isAdjacent: boolean\n    isDisabled: boolean\n    isEnd: boolean\n    isHidden: boolean\n    isSame: boolean\n    isSelected: boolean\n    isStart: boolean\n    isToday: boolean\n    isWeekEnd: boolean\n    isWeekStart: boolean\n    isoDate: string\n    localized: string\n    month: number\n    year: number\n  }\n  events: any[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendar.tsx#L31-L31.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "day-title": {
+      "text": "{ title?: string | number | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L32-L32",
+      "type": "object",
+      "properties": {
+        "title": {
+          "text": "string | number | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "string | number",
+          "optional": true
+        }
+      },
+      "formatted": "{ title: string | number }\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendar.tsx#L32-L32.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "day-event": {
+      "text": "{ day?: CalendarDay | undefined; allDay: Boolean; event?: Record<string, unknown> | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L33-L33",
+      "type": "object",
+      "properties": {
+        "day": {
+          "text": "CalendarDay | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "CalendarDay",
+              "source": "vuetify/src/composables/calendar.ts#L32-L49",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "text": "Date",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "ref",
+                  "ref": "Date",
+                  "formatted": "Date",
+                  "optional": false
+                },
+                "formatted": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "isAdjacent": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isDisabled": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isHidden": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSame": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSelected": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isToday": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isoDate": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "localized": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "month": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                },
+                "year": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+            }
+          ],
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }",
+          "optional": true
+        },
+        "allDay": {
+          "text": "Boolean",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Boolean",
+          "formatted": "Boolean",
+          "optional": false
+        },
+        "event": {
+          "text": "Record<string, unknown> | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "Record<string, unknown>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "record",
+              "key": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              "value": {
+                "text": "unknown",
+                "type": "unknown",
+                "formatted": "unknown"
+              },
+              "formatted": "Record<string, unknown>"
+            }
+          ],
+          "formatted": "Record<string, unknown>",
+          "optional": true
+        }
+      },
+      "formatted": "{\n  day: {\n    date: Date\n    formatted: string\n    isAdjacent: boolean\n    isDisabled: boolean\n    isEnd: boolean\n    isHidden: boolean\n    isSame: boolean\n    isSelected: boolean\n    isStart: boolean\n    isToday: boolean\n    isWeekEnd: boolean\n    isWeekStart: boolean\n    isoDate: string\n    localized: string\n    month: number\n    year: number\n  }\n  allDay: Boolean\n  event: Record<string, unknown>\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendar.tsx#L33-L33.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "header": {
+      "text": "{ title: string; clickNext: Function; clickPrev: Function; clickToday: Function; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L34-L34",
+      "type": "object",
+      "properties": {
+        "title": {
+          "text": "string",
+          "type": "string",
+          "formatted": "string",
+          "optional": false
+        },
+        "clickNext": {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function",
+          "optional": false
+        },
+        "clickPrev": {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function",
+          "optional": false
+        },
+        "clickToday": {
+          "text": "Function",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Function",
+          "formatted": "Function",
+          "optional": false
+        }
+      },
+      "formatted": "{\n  title: string\n  clickNext: Function\n  clickPrev: Function\n  clickToday: Function\n}\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom header content."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "day-interval": {
+      "text": "{ day?: CalendarDay | undefined; dayIndex: Number; events?: any[] | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L35-L35",
+      "type": "object",
+      "properties": {
+        "day": {
+          "text": "CalendarDay | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "CalendarDay",
+              "source": "vuetify/src/composables/calendar.ts#L32-L49",
+              "type": "object",
+              "properties": {
+                "date": {
+                  "text": "Date",
+                  "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                  "type": "ref",
+                  "ref": "Date",
+                  "formatted": "Date",
+                  "optional": false
+                },
+                "formatted": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "isAdjacent": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isDisabled": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isHidden": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSame": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isSelected": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isToday": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekEnd": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isWeekStart": {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean",
+                  "optional": false
+                },
+                "isoDate": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "localized": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string",
+                  "optional": false
+                },
+                "month": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                },
+                "year": {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number",
+                  "optional": false
+                }
+              },
+              "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }"
+            }
+          ],
+          "formatted": "{ date: Date; formatted: string; isAdjacent: boolean; isDisabled: boolean; isEnd: boolean; isHidden: boolean; isSame: boolean; isSelected: boolean; isStart: boolean; isToday: boolean; isWeekEnd: boolean; isWeekStart: boolean; isoDate: string; localized: string; month: number; year: number }",
+          "optional": true
+        },
+        "dayIndex": {
+          "text": "Number",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Number",
+          "formatted": "Number",
+          "optional": false
+        },
+        "events": {
+          "text": "any[] | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "any[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "formatted": "any[]"
+            }
+          ],
+          "formatted": "any[]",
+          "optional": true
+        }
+      },
+      "formatted": "{\n  day: {\n    date: Date\n    formatted: string\n    isAdjacent: boolean\n    isDisabled: boolean\n    isEnd: boolean\n    isHidden: boolean\n    isSame: boolean\n    isSelected: boolean\n    isStart: boolean\n    isToday: boolean\n    isWeekEnd: boolean\n    isWeekStart: boolean\n    isoDate: string\n    localized: string\n    month: number\n    year: number\n  }\n  dayIndex: Number\n  events: any[]\n}\n",
+      "optional": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/vuetify/src/labs/VCalendar/VCalendar.tsx#L35-L35.json))"
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "title": {
+      "text": "{ title?: string | undefined; }",
+      "source": "vuetify/src/labs/VCalendar/VCalendar.tsx#L36-L36",
+      "type": "object",
+      "properties": {
+        "title": {
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string",
+          "optional": true
+        }
+      },
+      "formatted": "{ title: string }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {
+    "daysInMonth": {
+      "text": "CalendarDay[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "CalendarDay",
+          "source": "vuetify/src/composables/calendar.ts#L32-L49",
+          "type": "ref",
+          "ref": "CalendarDay",
+          "formatted": "CalendarDay"
+        }
+      ],
+      "formatted": "CalendarDay[]\n",
+      "optional": false,
+      "description": {
+        "en": "Provides data about the days in the selected month."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "daysInWeek": {
+      "text": "CalendarDay[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "CalendarDay",
+          "source": "vuetify/src/composables/calendar.ts#L32-L49",
+          "type": "ref",
+          "ref": "CalendarDay",
+          "formatted": "CalendarDay"
+        }
+      ],
+      "formatted": "CalendarDay[]\n",
+      "optional": false,
+      "description": {
+        "en": "Provides data about the days in the selected week."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "genDays": {
+      "text": "(days: Date[], today: Date) => CalendarDay[]",
+      "source": "vuetify/src/composables/calendar.ts#L154-L183",
+      "type": "function",
+      "parameters": [
+        {
+          "name": "days",
+          "optional": false,
+          "text": "Date[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "Date",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "ref",
+              "ref": "Date",
+              "formatted": "Date"
+            }
+          ],
+          "formatted": "Date[]"
+        },
+        {
+          "name": "today",
+          "optional": false,
+          "text": "Date",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "ref",
+          "ref": "Date",
+          "formatted": "Date"
+        }
+      ],
+      "returnType": {
+        "text": "CalendarDay[]",
+        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+        "type": "array",
+        "items": [
+          {
+            "text": "CalendarDay",
+            "source": "vuetify/src/composables/calendar.ts#L32-L49",
+            "type": "ref",
+            "ref": "CalendarDay",
+            "formatted": "CalendarDay"
+          }
+        ],
+        "formatted": "CalendarDay[]"
+      },
+      "formatted": "(days: Date[], today: Date) => CalendarDay[]\n",
+      "optional": false,
+      "description": {
+        "en": "Generates day objects based on provided dates."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    }
+  },
+  "sass": {}
+}

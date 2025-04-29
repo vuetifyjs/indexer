@@ -1,0 +1,112 @@
+{
+  "displayName": "VLocaleProvider",
+  "fileName": "VLocaleProvider",
+  "pathName": "v-locale-provider",
+  "props": {
+    "messages": {
+      "text": "unknown",
+      "source": "VLocaleProvider",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Displays a list of messages or a single message if using a string."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "locale": {
+      "text": "string | undefined",
+      "source": "VLocaleProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a locale to use."
+      },
+      "descriptionSource": {
+        "en": "VLocaleProvider"
+      }
+    },
+    "fallbackLocale": {
+      "text": "string | undefined",
+      "source": "VLocaleProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a fallback locale to use when a locale is not found."
+      },
+      "descriptionSource": {
+        "en": "VLocaleProvider"
+      }
+    },
+    "rtl": {
+      "text": "boolean | undefined",
+      "source": "VLocaleProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a RTL mode."
+      },
+      "descriptionSource": {
+        "en": "VLocaleProvider"
+      }
+    }
+  },
+  "events": {},
+  "slots": {
+    "default": {
+      "text": "never",
+      "type": "never",
+      "formatted": "never\n",
+      "optional": false,
+      "description": {
+        "en": "The default Vue slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    }
+  },
+  "exposed": {},
+  "sass": {}
+}
