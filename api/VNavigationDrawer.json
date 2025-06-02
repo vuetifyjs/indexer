@@ -53,55 +53,8 @@
         "en": "layout-item"
       }
     },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'nav'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "image": {
-      "text": "string | undefined",
+    "width": {
+      "text": "string | number | undefined",
       "source": "VNavigationDrawer",
       "type": "anyOf",
       "items": [
@@ -114,15 +67,21 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "string | number\n",
       "optional": false,
+      "default": 256,
       "description": {
-        "en": "Apply a specific background image to the component."
+        "en": "Sets the width for the component."
       },
       "descriptionSource": {
-        "en": "VNavigationDrawer"
+        "en": "generic"
       }
     },
     "border": {
@@ -159,6 +118,36 @@
       },
       "descriptionSource": {
         "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
       }
     },
     "rounded": {
@@ -222,6 +211,53 @@
         "en": "rounded"
       }
     },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'nav'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "VNavigationDrawer",
@@ -247,250 +283,6 @@
         "en": "generic"
       }
     },
-    "sticky": {
-      "text": "boolean | undefined",
-      "source": "VNavigationDrawer",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "When true, the drawer will remain visible when scrolling past the top of the page."
-      },
-      "descriptionSource": {
-        "en": "VNavigationDrawer"
-      }
-    },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "VNavigationDrawer",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 256,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "mobile": {
-      "text": "boolean | null | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
-      },
-      "descriptionSource": {
-        "en": "display"
-      }
-    },
-    "mobileBreakpoint": {
-      "text": "number | DisplayBreakpoint | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "DisplayBreakpoint",
-          "source": "vuetify/src/composables/display.ts#L13-L13",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"xs\"",
-              "type": "string",
-              "literal": "\"xs\"",
-              "formatted": "\"xs\""
-            },
-            {
-              "text": "\"sm\"",
-              "type": "string",
-              "literal": "\"sm\"",
-              "formatted": "\"sm\""
-            },
-            {
-              "text": "\"md\"",
-              "type": "string",
-              "literal": "\"md\"",
-              "formatted": "\"md\""
-            },
-            {
-              "text": "\"lg\"",
-              "type": "string",
-              "literal": "\"lg\"",
-              "formatted": "\"lg\""
-            },
-            {
-              "text": "\"xl\"",
-              "type": "string",
-              "literal": "\"xl\"",
-              "formatted": "\"xl\""
-            },
-            {
-              "text": "\"xxl\"",
-              "type": "string",
-              "literal": "\"xxl\"",
-              "formatted": "\"xxl\""
-            }
-          ],
-          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
-        }
-      ],
-      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the designated mobile breakpoint for the component. This will apply alternate styles for mobile devices such as the `temporary` prop, or activate the `bottom` prop when the breakpoint value is met. Setting the value to `0` will disable this functionality."
-      },
-      "descriptionSource": {
-        "en": "VNavigationDrawer"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "location": {
-      "text": "\"top\" | \"left\" | \"right\" | \"bottom\" | \"start\" | \"end\" | undefined",
-      "source": "VNavigationDrawer",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"top\"",
-          "type": "string",
-          "literal": "\"top\"",
-          "formatted": "\"top\""
-        },
-        {
-          "text": "\"left\"",
-          "type": "string",
-          "literal": "\"left\"",
-          "formatted": "\"left\""
-        },
-        {
-          "text": "\"right\"",
-          "type": "string",
-          "literal": "\"right\"",
-          "formatted": "\"right\""
-        },
-        {
-          "text": "\"bottom\"",
-          "type": "string",
-          "literal": "\"bottom\"",
-          "formatted": "\"bottom\""
-        },
-        {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
-          "text": "\"end\"",
-          "type": "string",
-          "literal": "\"end\"",
-          "formatted": "\"end\""
-        }
-      ],
-      "formatted": "'top' | 'left' | 'right' | 'bottom' | 'start' | 'end'\n",
-      "optional": false,
-      "default": "'start'",
-      "description": {
-        "en": "Controls the edge of the screen the drawer is attached to."
-      },
-      "descriptionSource": {
-        "en": "VNavigationDrawer"
-      }
-    },
     "absolute": {
       "text": "boolean | undefined",
       "source": "layout-item",
@@ -512,37 +304,6 @@
       "default": false,
       "description": {
         "en": "Applies **position: absolute** to the component."
-      },
-      "descriptionSource": {
-        "en": "layout-item"
-      }
-    },
-    "order": {
-      "text": "string | number | undefined",
-      "source": "layout-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Adjust the order of the component in relation to its registration order."
       },
       "descriptionSource": {
         "en": "layout-item"
@@ -574,6 +335,32 @@
       "default": "null",
       "description": {
         "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "persistent": {
+      "text": "boolean | undefined",
+      "source": "VNavigationDrawer",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Clicking outside or pressing **esc** key will not dismiss the dialog."
       },
       "descriptionSource": {
         "en": "generic"
@@ -670,6 +457,202 @@
         "en": "delay"
       }
     },
+    "location": {
+      "text": "\"top\" | \"left\" | \"right\" | \"bottom\" | \"start\" | \"end\" | undefined",
+      "source": "VNavigationDrawer",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"top\"",
+          "type": "string",
+          "literal": "\"top\"",
+          "formatted": "\"top\""
+        },
+        {
+          "text": "\"left\"",
+          "type": "string",
+          "literal": "\"left\"",
+          "formatted": "\"left\""
+        },
+        {
+          "text": "\"right\"",
+          "type": "string",
+          "literal": "\"right\"",
+          "formatted": "\"right\""
+        },
+        {
+          "text": "\"bottom\"",
+          "type": "string",
+          "literal": "\"bottom\"",
+          "formatted": "\"bottom\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        }
+      ],
+      "formatted": "'top' | 'left' | 'right' | 'bottom' | 'start' | 'end'\n",
+      "optional": false,
+      "default": "'start'",
+      "description": {
+        "en": "Controls the edge of the screen the drawer is attached to."
+      },
+      "descriptionSource": {
+        "en": "VNavigationDrawer"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "image": {
+      "text": "string | undefined",
+      "source": "VNavigationDrawer",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Apply a specific background image to the component."
+      },
+      "descriptionSource": {
+        "en": "VNavigationDrawer"
+      }
+    },
+    "floating": {
+      "text": "boolean | undefined",
+      "source": "VNavigationDrawer",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "A floating drawer has no visible container (no border-right)."
+      },
+      "descriptionSource": {
+        "en": "VNavigationDrawer"
+      }
+    },
+    "sticky": {
+      "text": "boolean | undefined",
+      "source": "VNavigationDrawer",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "When true, the drawer will remain visible when scrolling past the top of the page."
+      },
+      "descriptionSource": {
+        "en": "VNavigationDrawer"
+      }
+    },
+    "order": {
+      "text": "string | number | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Adjust the order of the component in relation to its registration order."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
     "disableResizeWatcher": {
       "text": "boolean | undefined",
       "source": "VNavigationDrawer",
@@ -742,33 +725,7 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Collapses the drawer to a **mini-variant** until hovering with the mouse."
-      },
-      "descriptionSource": {
-        "en": "VNavigationDrawer"
-      }
-    },
-    "floating": {
-      "text": "boolean | undefined",
-      "source": "VNavigationDrawer",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "A floating drawer has no visible container (no border-right)."
+        "en": "Collapses the drawer to a **rail-variant** until hovering with the mouse."
       },
       "descriptionSource": {
         "en": "VNavigationDrawer"
@@ -888,32 +845,6 @@
         "en": "VNavigationDrawer"
       }
     },
-    "persistent": {
-      "text": "boolean | undefined",
-      "source": "VNavigationDrawer",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Clicking outside or pressing **esc** key will not dismiss the dialog."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "touchless": {
       "text": "boolean | undefined",
       "source": "VNavigationDrawer",
@@ -935,6 +866,75 @@
       "default": false,
       "description": {
         "en": "Disable mobile touch functionality."
+      },
+      "descriptionSource": {
+        "en": "VNavigationDrawer"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the designated mobile breakpoint for the component. This will apply alternate styles for mobile devices such as the `temporary` prop, or activate the `bottom` prop when the breakpoint value is met. Setting the value to `0` will disable this functionality."
       },
       "descriptionSource": {
         "en": "VNavigationDrawer"
@@ -1091,6 +1091,9 @@
     "$navigation-drawer-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$navigation-drawer-border": {
+      "default": "(\n  $navigation-drawer-border-color,\n  $navigation-drawer-border-style,\n  $navigation-drawer-border-width,\n  $navigation-drawer-border-thin-width\n)"
+    },
     "$navigation-drawer-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -1139,8 +1142,14 @@
     "$navigation-drawer-rounded-border-radius": {
       "default": "settings.$border-radius-root"
     },
+    "$navigation-drawer-scrim-opacity": {
+      "default": ".2"
+    },
     "$navigation-drawer-temporary-elevation": {
       "default": "16"
+    },
+    "$navigation-drawer-theme": {
+      "default": "(\n  $navigation-drawer-background,\n  $navigation-drawer-color\n)"
     },
     "$navigation-drawer-transition-duration": {
       "default": "0.2s"
@@ -1150,15 +1159,6 @@
     },
     "$navigation-drawer-transition-timing-function": {
       "default": "settings.$standard-easing"
-    },
-    "$navigation-drawer-scrim-opacity": {
-      "default": ".2"
-    },
-    "$navigation-drawer-border": {
-      "default": "(\n  $navigation-drawer-border-color,\n  $navigation-drawer-border-style,\n  $navigation-drawer-border-width,\n  $navigation-drawer-border-thin-width\n)"
-    },
-    "$navigation-drawer-theme": {
-      "default": "(\n  $navigation-drawer-background,\n  $navigation-drawer-color\n)"
     }
   }
 }

@@ -3,8 +3,8 @@
   "fileName": "VTimePickerClock",
   "pathName": "v-time-picker-clock",
   "props": {
-    "modelValue": {
-      "text": "number | undefined",
+    "readonly": {
+      "text": "boolean | undefined",
       "source": "VTimePickerClock",
       "type": "anyOf",
       "items": [
@@ -14,43 +14,19 @@
           "formatted": "undefined"
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "number\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+        "en": "When true, the picker is in a read-only state, and users cannot modify the selected time."
       },
       "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VTimePickerClock",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
+        "en": "VTimePickerClock"
       }
     },
     "disabled": {
@@ -79,8 +55,8 @@
         "en": "generic"
       }
     },
-    "readonly": {
-      "text": "boolean | undefined",
+    "color": {
+      "text": "string | undefined",
       "source": "VTimePickerClock",
       "type": "anyOf",
       "items": [
@@ -90,19 +66,18 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "When true, the picker is in a read-only state, and users cannot modify the selected time."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "VTimePickerClock"
+        "en": "generic"
       }
     },
     "max": {
@@ -157,7 +132,7 @@
         "en": "VTimePickerClock"
       }
     },
-    "rotate": {
+    "modelValue": {
       "text": "number | undefined",
       "source": "VTimePickerClock",
       "type": "anyOf",
@@ -175,12 +150,11 @@
       ],
       "formatted": "number\n",
       "optional": false,
-      "default": 0,
       "description": {
-        "en": "Controls rotation, specifying the degree of rotation for the clock hands."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "VTimePickerClock"
+        "en": "generic"
       }
     },
     "format": {
@@ -301,6 +275,32 @@
         "en": "VTimePickerClock"
       }
     },
+    "rotate": {
+      "text": "number | undefined",
+      "source": "VTimePickerClock",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Controls rotation, specifying the degree of rotation for the clock hands."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerClock"
+      }
+    },
     "allowedValues": {
       "text": "((value: number) => boolean) | undefined",
       "source": "VTimePickerClock",
@@ -343,26 +343,6 @@
     }
   },
   "events": {
-    "input": {
-      "text": "[val: number]",
-      "type": "array",
-      "items": [
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "length": 1,
-      "formatted": "[number]\n",
-      "optional": false,
-      "description": {
-        "en": "The updated bound model."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "change": {
       "text": "[val: number]",
       "type": "array",
@@ -381,6 +361,26 @@
       },
       "descriptionSource": {
         "en": "VTimePickerClock"
+      }
+    },
+    "input": {
+      "text": "[val: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "The updated bound model."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     }
   },

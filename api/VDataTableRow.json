@@ -16,6 +16,83 @@
         "en": "VDataTableRow"
       }
     },
+    "cellProps": {
+      "text": "CellProps<unknown> | undefined",
+      "source": "VDataTableRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "CellProps<unknown>",
+          "source": "vuetify/src/components/VDataTable/types.ts#L90-L90",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "Record<string, any>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "record",
+              "key": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              "value": {
+                "text": "any",
+                "type": "any",
+                "formatted": "any"
+              },
+              "formatted": "Record<string, any>"
+            },
+            {
+              "text": "CellPropsFunction<unknown>",
+              "source": "vuetify/src/components/VDataTable/types.ts#L91-L93",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "data",
+                  "optional": false,
+                  "text": "Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">",
+                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                  "type": "ref",
+                  "ref": "Pick",
+                  "formatted": "Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">"
+                }
+              ],
+              "returnType": {
+                "text": "Record<string, any>",
+                "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                "type": "record",
+                "key": {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                "value": {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                },
+                "formatted": "Record<string, any>"
+              },
+              "formatted": "(data: Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">) => Record<string, any>"
+            }
+          ],
+          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">) => Record<string, any>)"
+        }
+      ],
+      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<\n        ItemKeySlot<unknown>,\n        'value' | 'item' | 'index' | 'internalItem' | 'column'\n      >,\n    ) => Record<string, any>)\n",
+      "optional": false,
+      "description": {
+        "en": "Props to be applied to the cell."
+      },
+      "descriptionSource": {
+        "en": "VDataTableRow"
+      }
+    },
     "index": {
       "text": "number | undefined",
       "source": "VDataTableRow",
@@ -139,83 +216,6 @@
       },
       "descriptionSource": {
         "en": "display"
-      }
-    },
-    "cellProps": {
-      "text": "CellProps<unknown> | undefined",
-      "source": "VDataTableRow",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "CellProps<unknown>",
-          "source": "vuetify/src/components/VDataTable/types.ts#L90-L90",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "Record<string, any>",
-              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-              "type": "record",
-              "key": {
-                "text": "string",
-                "type": "string",
-                "formatted": "string"
-              },
-              "value": {
-                "text": "any",
-                "type": "any",
-                "formatted": "any"
-              },
-              "formatted": "Record<string, any>"
-            },
-            {
-              "text": "CellPropsFunction<unknown>",
-              "source": "vuetify/src/components/VDataTable/types.ts#L91-L93",
-              "type": "function",
-              "parameters": [
-                {
-                  "name": "data",
-                  "optional": false,
-                  "text": "Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"column\" | \"internalItem\">",
-                  "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-                  "type": "ref",
-                  "ref": "Pick",
-                  "formatted": "Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"column\" | \"internalItem\">"
-                }
-              ],
-              "returnType": {
-                "text": "Record<string, any>",
-                "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-                "type": "record",
-                "key": {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                "value": {
-                  "text": "any",
-                  "type": "any",
-                  "formatted": "any"
-                },
-                "formatted": "Record<string, any>"
-              },
-              "formatted": "(data: Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"column\" | \"internalItem\">) => Record<string, any>"
-            }
-          ],
-          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<unknown>, \"value\" | \"item\" | \"index\" | \"column\" | \"internalItem\">) => Record<string, any>)"
-        }
-      ],
-      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<\n        ItemKeySlot<unknown>,\n        'value' | 'item' | 'index' | 'column' | 'internalItem'\n      >,\n    ) => Record<string, any>)\n",
-      "optional": false,
-      "description": {
-        "en": "Props to be applied to the cell."
-      },
-      "descriptionSource": {
-        "en": "VDataTableRow"
       }
     }
   },

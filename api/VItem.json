@@ -16,31 +16,6 @@
         "en": "group-item"
       }
     },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "group-item",
@@ -62,6 +37,31 @@
       "default": false,
       "description": {
         "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
       },
       "descriptionSource": {
         "en": "generic"

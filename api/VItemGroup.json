@@ -127,6 +127,57 @@
         "en": "theme"
       }
     },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
     "modelValue": {
       "text": "unknown",
       "source": "group",
@@ -170,57 +221,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "multiple": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Allows one to select multiple items."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets a maximum number of selections that can be made."
-      },
-      "descriptionSource": {
-        "en": "group"
       }
     }
   },

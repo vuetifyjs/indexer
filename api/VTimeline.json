@@ -3,6 +3,103 @@
   "fileName": "VTimeline",
   "pathName": "v-timeline",
   "props": {
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "size"
+      }
+    },
+    "align": {
+      "text": "TimelineAlign | undefined",
+      "source": "VTimeline",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "TimelineAlign",
+          "source": "vuetify/src/components/VTimeline/VTimeline.tsx#L22-L22",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"start\"",
+              "type": "string",
+              "literal": "\"start\"",
+              "formatted": "\"start\""
+            },
+            {
+              "text": "\"center\"",
+              "type": "string",
+              "literal": "\"center\"",
+              "formatted": "\"center\""
+            }
+          ],
+          "formatted": "\"start\" | \"center\""
+        }
+      ],
+      "formatted": "'start' | 'center'\n",
+      "optional": false,
+      "default": "'center'",
+      "description": {
+        "en": "Places the timeline dot at the top or center of the timeline item."
+      },
+      "descriptionSource": {
+        "en": "VTimeline"
+      }
+    },
     "density": {
       "text": "Density | undefined",
       "source": "density",
@@ -102,62 +199,6 @@
         "en": "tag"
       }
     },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "size": {
-      "text": "string | number | undefined",
-      "source": "size",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
-      },
-      "descriptionSource": {
-        "en": "size"
-      }
-    },
     "iconColor": {
       "text": "string | undefined",
       "source": "VTimelineItem",
@@ -224,8 +265,8 @@
         "en": "VTimeline"
       }
     },
-    "align": {
-      "text": "TimelineAlign | undefined",
+    "side": {
+      "text": "TimelineSide",
       "source": "VTimeline",
       "type": "anyOf",
       "items": [
@@ -235,31 +276,22 @@
           "formatted": "undefined"
         },
         {
-          "text": "TimelineAlign",
-          "source": "vuetify/src/components/VTimeline/VTimeline.tsx#L22-L22",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"start\"",
-              "type": "string",
-              "literal": "\"start\"",
-              "formatted": "\"start\""
-            },
-            {
-              "text": "\"center\"",
-              "type": "string",
-              "literal": "\"center\"",
-              "formatted": "\"center\""
-            }
-          ],
-          "formatted": "\"start\" | \"center\""
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
         }
       ],
-      "formatted": "'start' | 'center'\n",
+      "formatted": "'start' | 'end'\n",
       "optional": false,
-      "default": "'center'",
       "description": {
-        "en": "Places the timeline dot at the top or center of the timeline item."
+        "en": "Display all timeline items on one side of the timeline, either **start** or **end**."
       },
       "descriptionSource": {
         "en": "VTimeline"
@@ -454,38 +486,6 @@
         "en": "VTimeline"
       }
     },
-    "side": {
-      "text": "TimelineSide",
-      "source": "VTimeline",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
-          "text": "\"end\"",
-          "type": "string",
-          "literal": "\"end\"",
-          "formatted": "\"end\""
-        }
-      ],
-      "formatted": "'start' | 'end'\n",
-      "optional": false,
-      "description": {
-        "en": "Display all timeline items on one side of the timeline, either **start** or **end**."
-      },
-      "descriptionSource": {
-        "en": "VTimeline"
-      }
-    },
     "truncateLine": {
       "text": "TimelineTruncateLine",
       "source": "VTimeline",
@@ -554,8 +554,23 @@
     "$timeline-density-compact-grid-template-start": {
       "default": "auto min-content 0"
     },
+    "$timeline-divider-dot-elevation": {
+      "default": "0"
+    },
+    "$timeline-divider-line-background": {
+      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
+    },
+    "$timeline-divider-line-horizontal-width": {
+      "default": "var(--v-timeline-line-inset, 0px)"
+    },
+    "$timeline-divider-line-thickness": {
+      "default": "var(--v-timeline-line-thickness)"
+    },
     "$timeline-dot-border-radius": {
       "default": "50%"
+    },
+    "$timeline-dot-border-sizes": {
+      "default": "tools.map-deep-merge(\n  (\n    'x-small': 6px,\n    'small': 8px,\n    'default': 8px,\n    'large': 8px,\n    'x-large': 10px,\n  ),\n  $timeline-dot-border-sizes\n)"
     },
     "$timeline-dot-divider-background": {
       "default": "rgb(var(--v-theme-surface-light))"
@@ -572,29 +587,14 @@
     "$timeline-inset-line-size": {
       "default": "4px"
     },
-    "$timeline-divider-dot-elevation": {
-      "default": "0"
-    },
-    "$timeline-divider-line-background": {
-      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
-    },
-    "$timeline-divider-line-horizontal-width": {
-      "default": "var(--v-timeline-line-inset, 0px)"
-    },
-    "$timeline-divider-line-thickness": {
-      "default": "var(--v-timeline-line-thickness)"
+    "$timeline-item-grid-template-auto": {
+      "default": "auto min-content auto"
     },
     "$timeline-item-grid-template-center": {
       "default": "minmax(auto, 50%) min-content minmax(auto, 50%)"
     },
-    "$timeline-item-grid-template-auto": {
-      "default": "auto min-content auto"
-    },
     "$timeline-item-padding": {
       "default": "24px"
-    },
-    "$timeline-dot-border-sizes": {
-      "default": "tools.map-deep-merge(\n  (\n    'x-small': 6px,\n    'small': 8px,\n    'default': 8px,\n    'large': 8px,\n    'x-large': 10px,\n  ),\n  $timeline-dot-border-sizes\n)"
     }
   }
 }

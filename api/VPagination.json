@@ -34,140 +34,6 @@
         "en": "VPagination"
       }
     },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "size": {
-      "text": "string | number | undefined",
-      "source": "size",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
-      },
-      "descriptionSource": {
-        "en": "size"
-      }
-    },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'nav'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "start": {
-      "text": "string | number | undefined",
-      "source": "VPagination",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 1,
-      "description": {
-        "en": "Specify the starting page."
-      },
-      "descriptionSource": {
-        "en": "VPagination"
-      }
-    },
     "border": {
       "text": "string | number | boolean | undefined",
       "source": "border",
@@ -202,6 +68,62 @@
       },
       "descriptionSource": {
         "en": "border"
+      }
+    },
+    "start": {
+      "text": "string | number | undefined",
+      "source": "VPagination",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 1,
+      "description": {
+        "en": "Specify the starting page."
+      },
+      "descriptionSource": {
+        "en": "VPagination"
+      }
+    },
+    "modelValue": {
+      "text": "number | undefined",
+      "source": "VPagination",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "density": {
@@ -254,6 +176,36 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
       }
     },
     "rounded": {
@@ -317,6 +269,78 @@
         "en": "rounded"
       }
     },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'nav'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "variant",
@@ -343,7 +367,7 @@
       }
     },
     "variant": {
-      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
       "source": "variant",
       "type": "anyOf",
       "items": [
@@ -353,16 +377,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
           "text": "\"text\"",
           "type": "string",
           "literal": "\"text\"",
           "formatted": "\"text\""
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
         },
         {
           "text": "\"elevated\"",
@@ -389,66 +413,11 @@
           "formatted": "\"plain\""
         }
       ],
-      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
       "optional": false,
       "default": "'text'",
       "description": {
         "en": "Applies a distinct style to the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "modelValue": {
-      "text": "number | undefined",
-      "source": "VPagination",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
         "en": "generic"
@@ -478,6 +447,63 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "size"
+      }
+    },
+    "ariaLabel": {
+      "text": "string | undefined",
+      "source": "VPagination",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.pagination.ariaLabel.root'",
+      "description": {
+        "en": "Label for the root element."
+      },
+      "descriptionSource": {
+        "en": "VPagination"
       }
     },
     "activeColor": {
@@ -526,27 +552,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -576,12 +581,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": "'$next'",
       "description": {
@@ -612,27 +638,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -662,72 +667,37 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": "'$prev'",
       "description": {
         "en": "The icon to use for the prev button."
-      },
-      "descriptionSource": {
-        "en": "VPagination"
-      }
-    },
-    "ariaLabel": {
-      "text": "string | undefined",
-      "source": "VPagination",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'$vuetify.pagination.ariaLabel.root'",
-      "description": {
-        "en": "Label for the root element."
-      },
-      "descriptionSource": {
-        "en": "VPagination"
-      }
-    },
-    "totalVisible": {
-      "text": "string | number | undefined",
-      "source": "VPagination",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Specify the total visible pagination numbers."
       },
       "descriptionSource": {
         "en": "VPagination"
@@ -754,27 +724,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -804,12 +753,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": "'$first'",
       "description": {
@@ -840,27 +810,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -890,16 +839,67 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": "'$last'",
       "description": {
         "en": "The icon to use for the last button."
+      },
+      "descriptionSource": {
+        "en": "VPagination"
+      }
+    },
+    "totalVisible": {
+      "text": "string | number | undefined",
+      "source": "VPagination",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specify the total visible pagination numbers."
       },
       "descriptionSource": {
         "en": "VPagination"
@@ -1135,26 +1135,6 @@
         "en": "generic"
       }
     },
-    "prev": {
-      "text": "[value: number]",
-      "type": "array",
-      "items": [
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "length": 1,
-      "formatted": "[number]\n",
-      "optional": false,
-      "description": {
-        "en": "Emitted when clicking on go to previous button."
-      },
-      "descriptionSource": {
-        "en": "VPagination"
-      }
-    },
     "next": {
       "text": "[value: number]",
       "type": "array",
@@ -1170,6 +1150,26 @@
       "optional": false,
       "description": {
         "en": "Emitted when clicking on go to next button."
+      },
+      "descriptionSource": {
+        "en": "VPagination"
+      }
+    },
+    "prev": {
+      "text": "[value: number]",
+      "type": "array",
+      "items": [
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "length": 1,
+      "formatted": "[number]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when clicking on go to previous button."
       },
       "descriptionSource": {
         "en": "VPagination"
@@ -1295,27 +1295,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1347,9 +1326,30 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
           "optional": false
         },
         "onClick": {
@@ -1394,7 +1394,7 @@
           "optional": false
         }
       },
-      "formatted": "{\n  icon:\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
+      "formatted": "{\n  icon:\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
       "optional": false,
       "description": {
         "en": "Define a custom appearance for the first button."
@@ -1419,27 +1419,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1471,9 +1450,30 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
           "optional": false
         },
         "onClick": {
@@ -1518,7 +1518,7 @@
           "optional": false
         }
       },
-      "formatted": "{\n  icon:\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
+      "formatted": "{\n  icon:\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
       "optional": false,
       "description": {
         "en": "Define a custom appearance for the previous button."
@@ -1543,27 +1543,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1595,9 +1574,30 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
           "optional": false
         },
         "onClick": {
@@ -1642,7 +1642,7 @@
           "optional": false
         }
       },
-      "formatted": "{\n  icon:\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
+      "formatted": "{\n  icon:\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
       "optional": false,
       "description": {
         "en": "Define a custom appearance for the next button."
@@ -1667,27 +1667,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1719,9 +1698,30 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
           "optional": false
         },
         "onClick": {
@@ -1766,7 +1766,7 @@
           "optional": false
         }
       },
-      "formatted": "{\n  icon:\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
+      "formatted": "{\n  icon:\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  onClick: (e: Event) => void\n  disabled: boolean\n  'aria-label': string\n  'aria-disabled': boolean\n}\n",
       "optional": false,
       "description": {
         "en": "Define a custom appearance for the last button."

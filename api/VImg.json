@@ -320,147 +320,6 @@
         "en": "generic"
       }
     },
-    "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "TransitionProps & { component?: Component | undefined; }",
-          "type": "allOf",
-          "items": [
-            {
-              "text": "TransitionProps",
-              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
-              "type": "ref",
-              "ref": "TransitionProps",
-              "formatted": "TransitionProps"
-            },
-            {
-              "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
-              "type": "object",
-              "properties": {
-                "component": {
-                  "text": "Component | undefined",
-                  "type": "anyOf",
-                  "items": [
-                    {
-                      "text": "undefined",
-                      "type": "ref",
-                      "ref": "",
-                      "formatted": "undefined"
-                    },
-                    {
-                      "text": "Component",
-                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-                      "type": "ref",
-                      "ref": "Component",
-                      "formatted": "Component"
-                    }
-                  ],
-                  "formatted": "Component",
-                  "optional": true
-                }
-              },
-              "formatted": "{ component: Component }"
-            }
-          ],
-          "formatted": "TransitionProps & { component: Component }"
-        }
-      ],
-      "formatted": "string | boolean | (TransitionProps & { component: Component })\n",
-      "optional": false,
-      "default": "'fade-transition'",
-      "description": {
-        "en": "The transition to use when switching from `lazy-src` to `src`. Can be one of the [built in](/styles/transitions/) or custom transition."
-      },
-      "descriptionSource": {
-        "en": "VImg"
-      }
-    },
-    "contentClass": {
-      "text": "any",
-      "source": "VResponsive",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "Apply a custom class to the internal content element."
-      },
-      "descriptionSource": {
-        "en": "VResponsive"
-      }
-    },
-    "eager": {
-      "text": "boolean | undefined",
-      "source": "VImg",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "options": {
-      "text": "IntersectionObserverInit | undefined",
-      "source": "VImg",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IntersectionObserverInit",
-          "source": "typescript/lib/lib.dom.d.ts#L2-L2",
-          "type": "ref",
-          "ref": "IntersectionObserverInit",
-          "formatted": "IntersectionObserverInit"
-        }
-      ],
-      "formatted": "IntersectionObserverInit\n",
-      "optional": false,
-      "default": "{\n  root: undefined,\n  rootMargin: undefined,\n  threshold: undefined\n}",
-      "description": {
-        "en": "Options that are passed to the [Intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) constructor."
-      },
-      "descriptionSource": {
-        "en": "VImg"
-      }
-    },
     "alt": {
       "text": "string | undefined",
       "source": "VImg",
@@ -623,6 +482,165 @@
         "en": "VImg"
       }
     },
+    "inline": {
+      "text": "boolean | undefined",
+      "source": "VResponsive",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Display as an inline element instead of a block, also disables flex-grow."
+      },
+      "descriptionSource": {
+        "en": "VResponsive"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | null | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        }
+      ],
+      "formatted": "string | boolean | (TransitionProps & { component: Component })\n",
+      "optional": false,
+      "default": "'fade-transition'",
+      "description": {
+        "en": "The transition to use when switching from `lazy-src` to `src`. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "eager": {
+      "text": "boolean | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "options": {
+      "text": "IntersectionObserverInit | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IntersectionObserverInit",
+          "source": "typescript/lib/lib.dom.d.ts#L2-L2",
+          "type": "ref",
+          "ref": "IntersectionObserverInit",
+          "formatted": "IntersectionObserverInit"
+        }
+      ],
+      "formatted": "IntersectionObserverInit\n",
+      "optional": false,
+      "default": "{\n  root: undefined,\n  rootMargin: undefined,\n  threshold: undefined\n}",
+      "description": {
+        "en": "Options that are passed to the [Intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) constructor."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
     "cover": {
       "text": "boolean | undefined",
       "source": "VImg",
@@ -779,27 +797,14 @@
         "en": "VImg"
       }
     },
-    "inline": {
-      "text": "boolean | undefined",
+    "contentClass": {
+      "text": "any",
       "source": "VResponsive",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
+      "type": "any",
+      "formatted": "any\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Display as an inline element instead of a block, also disables flex-grow."
+        "en": "Apply a custom class to the internal content element."
       },
       "descriptionSource": {
         "en": "VResponsive"
@@ -1187,14 +1192,14 @@
     }
   },
   "sass": {
-    "$img-rounded-border-radius": {
-      "default": "settings.$border-radius-root"
+    "$img-card-media-height": {
+      "default": "200px"
     },
     "$img-preload-filter": {
       "default": "blur(4px)"
     },
-    "$img-card-media-height": {
-      "default": "200px"
+    "$img-rounded-border-radius": {
+      "default": "settings.$border-radius-root"
     }
   }
 }

@@ -3,6 +3,19 @@
   "fileName": "VCalendarInterval",
   "pathName": "v-calendar-interval",
   "props": {
+    "index": {
+      "text": "number",
+      "source": "VCalendarInterval",
+      "type": "number",
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Index or position of the interval in the day view."
+      },
+      "descriptionSource": {
+        "en": "VCalendarInterval"
+      }
+    },
     "day": {
       "text": "unknown",
       "source": "VCalendarInterval",
@@ -207,19 +220,6 @@
       "default": 0,
       "description": {
         "en": "Starting time for this specific interval."
-      },
-      "descriptionSource": {
-        "en": "VCalendarInterval"
-      }
-    },
-    "index": {
-      "text": "number",
-      "source": "VCalendarInterval",
-      "type": "number",
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Index or position of the interval in the day view."
       },
       "descriptionSource": {
         "en": "VCalendarInterval"

@@ -408,6 +408,9 @@
     "$btn-group-background": {
       "default": "transparent"
     },
+    "$btn-group-border": {
+      "default": "(\n  $btn-group-border-color,\n  $btn-group-border-style,\n  $btn-group-border-width,\n  $btn-group-border-thin-width\n)"
+    },
     "$btn-group-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -426,20 +429,17 @@
     "$btn-group-color": {
       "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
     },
-    "$btn-group-height": {
-      "default": "48px"
-    },
     "$btn-group-elevation": {
       "default": "0"
     },
-    "$btn-group-tile-border-radius": {
-      "default": "0"
-    },
-    "$btn-group-border": {
-      "default": "(\n  $btn-group-border-color,\n  $btn-group-border-style,\n  $btn-group-border-width,\n  $btn-group-border-thin-width\n)"
+    "$btn-group-height": {
+      "default": "48px"
     },
     "$btn-group-theme": {
       "default": "(\n  $btn-group-background,\n  $btn-group-color\n)"
+    },
+    "$btn-group-tile-border-radius": {
+      "default": "0"
     }
   }
 }

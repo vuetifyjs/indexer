@@ -1154,8 +1154,17 @@
   },
   "exposed": {},
   "sass": {
+    "$alert-append-close-margin-inline-start": {
+      "default": "16px"
+    },
+    "$alert-append-margin-inline-start": {
+      "default": "16px"
+    },
     "$alert-background": {
       "default": "rgb(var(--v-theme-surface-light))"
+    },
+    "$alert-border": {
+      "default": "(\n  $alert-border-color,\n  $alert-border-style,\n  $alert-border-width,\n  $alert-border-thin-width\n)"
     },
     "$alert-border-color": {
       "default": "currentColor"
@@ -1199,11 +1208,8 @@
     "$alert-prepend-margin-inline-end": {
       "default": "16px"
     },
-    "$alert-append-margin-inline-start": {
-      "default": "16px"
-    },
-    "$alert-append-close-margin-inline-start": {
-      "default": "16px"
+    "$alert-text-line-height": {
+      "default": "1.35"
     },
     "$alert-title-font-size": {
       "default": "tools.map-deep-get(settings.$typography, 'h6', 'size')"
@@ -1231,12 +1237,6 @@
     },
     "$alert-title-word-wrap": {
       "default": "break-word"
-    },
-    "$alert-text-line-height": {
-      "default": "1.35"
-    },
-    "$alert-border": {
-      "default": "(\n  $alert-border-color,\n  $alert-border-style,\n  $alert-border-width,\n  $alert-border-thin-width\n)"
     },
     "$alert-variants": {
       "default": "(\n  $alert-background,\n  $alert-color,\n  $alert-elevation,\n  $alert-plain-opacity,\n  'v-alert'\n)"

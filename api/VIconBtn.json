@@ -3,62 +3,6 @@
   "fileName": "VIconBtn",
   "pathName": "v-icon-btn",
   "props": {
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "size": {
-      "text": "string | number | undefined",
-      "source": "VIconBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Sets the height and width of the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "text": {
       "text": "string | number | boolean | undefined",
       "source": "VIconBtn",
@@ -89,138 +33,6 @@
       "optional": false,
       "description": {
         "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'button'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "icon": {
-      "text": "IconValue | undefined",
-      "source": "VIconBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            }
-          ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
-        }
-      ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "description": {
-        "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -262,9 +74,9 @@
         "en": "border"
       }
     },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
+    "icon": {
+      "text": "IconValue | undefined",
+      "source": "VIconBtn",
       "type": "anyOf",
       "items": [
         {
@@ -273,133 +85,75 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "string | number | boolean\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "variant": {
-      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
-          "text": "\"text\"",
-          "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
-        },
-        {
-          "text": "\"elevated\"",
-          "type": "string",
-          "literal": "\"elevated\"",
-          "formatted": "\"elevated\""
-        },
-        {
-          "text": "\"tonal\"",
-          "type": "string",
-          "literal": "\"tonal\"",
-          "formatted": "\"tonal\""
-        },
-        {
-          "text": "\"outlined\"",
-          "type": "string",
-          "literal": "\"outlined\"",
-          "formatted": "\"outlined\""
-        },
-        {
-          "text": "\"plain\"",
-          "type": "string",
-          "literal": "\"plain\"",
-          "formatted": "\"plain\""
-        }
-      ],
-      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
-      "optional": false,
-      "default": "'flat'",
-      "description": {
-        "en": "Applies a distinct style to the component."
+        "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -495,9 +249,44 @@
         "en": "elevation"
       }
     },
-    "active": {
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
       "text": "boolean | undefined",
-      "source": "VIconBtn",
+      "source": "rounded",
       "type": "anyOf",
       "items": [
         {
@@ -513,11 +302,166 @@
       ],
       "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "When undefined (default), the component utilizes its default variant, otherwise it will use the activeVariant if active is true, or the baseVariant if active is false."
+        "en": "Removes any applied **border-radius** from the component."
       },
       "descriptionSource": {
-        "en": "VIconBtn"
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'button'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
+        },
+        {
+          "text": "\"elevated\"",
+          "type": "string",
+          "literal": "\"elevated\"",
+          "formatted": "\"elevated\""
+        },
+        {
+          "text": "\"tonal\"",
+          "type": "string",
+          "literal": "\"tonal\"",
+          "formatted": "\"tonal\""
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        }
+      ],
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "optional": false,
+      "default": "'flat'",
+      "description": {
+        "en": "Applies a distinct style to the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "disabled": {
@@ -546,6 +490,62 @@
         "en": "generic"
       }
     },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "VIconBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VIconBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "description": {
+        "en": "When undefined (default), the component utilizes its default variant, otherwise it will use the activeVariant if active is true, or the baseVariant if active is false."
+      },
+      "descriptionSource": {
+        "en": "VIconBtn"
+      }
+    },
     "activeColor": {
       "text": "string | undefined",
       "source": "VIconBtn",
@@ -569,58 +569,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "readonly": {
-      "text": "boolean | undefined",
-      "source": "VIconBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VIconBtn.json))"
-      },
-      "descriptionSource": {
-        "en": "VIconBtn"
-      }
-    },
-    "loading": {
-      "text": "boolean | undefined",
-      "source": "VIconBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VIconBtn.json))"
-      },
-      "descriptionSource": {
-        "en": "VIconBtn"
       }
     },
     "opacity": {
@@ -678,16 +626,16 @@
                   "type": "anyOf",
                   "items": [
                     {
-                      "text": "\"small\"",
-                      "type": "string",
-                      "literal": "\"small\"",
-                      "formatted": "\"small\""
-                    },
-                    {
                       "text": "\"default\"",
                       "type": "string",
                       "literal": "\"default\"",
                       "formatted": "\"default\""
+                    },
+                    {
+                      "text": "\"small\"",
+                      "type": "string",
+                      "literal": "\"small\"",
+                      "formatted": "\"small\""
                     },
                     {
                       "text": "\"x-small\"",
@@ -708,7 +656,7 @@
                       "formatted": "\"x-large\""
                     }
                   ],
-                  "formatted": "\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\""
+                  "formatted": "\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\""
                 },
                 {
                   "text": "number",
@@ -717,17 +665,69 @@
                 }
               ],
               "length": 2,
-              "formatted": "[(\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\"), number]"
+              "formatted": "[(\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\"), number]"
             }
           ],
-          "formatted": "[(\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\"), number][]"
+          "formatted": "[(\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\"), number][]"
         }
       ],
-      "formatted": "['small' | 'default' | 'x-small' | 'large' | 'x-large', number][]\n",
+      "formatted": "['default' | 'small' | 'x-small' | 'large' | 'x-large', number][]\n",
       "optional": false,
       "default": "[\n  ['x-small', 16],\n  ['small', 24],\n  ['default', 40],\n  ['large', 48],\n  ['x-large', 56]\n]",
       "description": {
         "en": "An array of tuples that define the button sizes for each named size."
+      },
+      "descriptionSource": {
+        "en": "VIconBtn"
+      }
+    },
+    "loading": {
+      "text": "boolean | undefined",
+      "source": "VIconBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays circular progress bar in place of the icon."
+      },
+      "descriptionSource": {
+        "en": "VIconBtn"
+      }
+    },
+    "readonly": {
+      "text": "boolean | undefined",
+      "source": "VIconBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the button in a readonly state. Cannot be clicked or navigated to by keyboard."
       },
       "descriptionSource": {
         "en": "VIconBtn"
@@ -759,7 +759,7 @@
       }
     },
     "baseVariant": {
-      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
       "source": "VIconBtn",
       "type": "anyOf",
       "items": [
@@ -769,16 +769,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
           "text": "\"text\"",
           "type": "string",
           "literal": "\"text\"",
           "formatted": "\"text\""
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
         },
         {
           "text": "\"elevated\"",
@@ -805,7 +805,7 @@
           "formatted": "\"plain\""
         }
       ],
-      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
       "optional": false,
       "default": "'tonal'",
       "description": {
@@ -866,16 +866,16 @@
                   "type": "anyOf",
                   "items": [
                     {
-                      "text": "\"small\"",
-                      "type": "string",
-                      "literal": "\"small\"",
-                      "formatted": "\"small\""
-                    },
-                    {
                       "text": "\"default\"",
                       "type": "string",
                       "literal": "\"default\"",
                       "formatted": "\"default\""
+                    },
+                    {
+                      "text": "\"small\"",
+                      "type": "string",
+                      "literal": "\"small\"",
+                      "formatted": "\"small\""
                     },
                     {
                       "text": "\"x-small\"",
@@ -896,7 +896,7 @@
                       "formatted": "\"x-large\""
                     }
                   ],
-                  "formatted": "\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\""
+                  "formatted": "\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\""
                 },
                 {
                   "text": "number",
@@ -905,13 +905,13 @@
                 }
               ],
               "length": 2,
-              "formatted": "[(\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\"), number]"
+              "formatted": "[(\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\"), number]"
             }
           ],
-          "formatted": "[(\"small\" | \"default\" | \"x-small\" | \"large\" | \"x-large\"), number][]"
+          "formatted": "[(\"default\" | \"small\" | \"x-small\" | \"large\" | \"x-large\"), number][]"
         }
       ],
-      "formatted": "['small' | 'default' | 'x-small' | 'large' | 'x-large', number][]\n",
+      "formatted": "['default' | 'small' | 'x-small' | 'large' | 'x-large', number][]\n",
       "optional": false,
       "default": "[\n  ['x-small', 10],\n  ['small', 16],\n  ['default', 24],\n  ['large', 28],\n  ['x-large', 32]\n]",
       "description": {
@@ -972,27 +972,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1022,12 +1001,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "When active is a boolean, this icon is used when active is true."
@@ -1037,7 +1037,7 @@
       }
     },
     "activeVariant": {
-      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
       "source": "VIconBtn",
       "type": "anyOf",
       "items": [
@@ -1047,16 +1047,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
           "text": "\"text\"",
           "type": "string",
           "literal": "\"text\"",
           "formatted": "\"text\""
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
         },
         {
           "text": "\"elevated\"",
@@ -1083,7 +1083,7 @@
           "formatted": "\"plain\""
         }
       ],
-      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
       "optional": false,
       "description": {
         "en": "When active is a boolean, this variant is used when active is true."
@@ -1138,7 +1138,7 @@
       "formatted": "[boolean]\n",
       "optional": false,
       "description": {
-        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VIconBtn.json))"
+        "en": "Event that is emitted when the active state changes."
       },
       "descriptionSource": {
         "en": "VIconBtn"

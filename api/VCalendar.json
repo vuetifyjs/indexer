@@ -3,31 +3,6 @@
   "fileName": "VCalendar",
   "pathName": "v-calendar",
   "props": {
-    "title": {
-      "text": "string | undefined",
-      "source": "VCalendarHeader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a title text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "text": {
       "text": "string | undefined",
       "source": "VCalendarHeader",
@@ -54,39 +29,6 @@
         "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "unknown[] | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "unknown[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "unknown",
-              "type": "unknown",
-              "formatted": "unknown"
-            }
-          ],
-          "formatted": "unknown[]"
-        }
-      ],
-      "formatted": "unknown[]\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "calendar",
@@ -108,6 +50,57 @@
       "default": "null",
       "description": {
         "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Maximum date or value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Minimum date or value that can be selected."
+      },
+      "descriptionSource": {
+        "en": "VCalendar"
+      }
+    },
+    "title": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -451,30 +444,37 @@
         "en": "calendar"
       }
     },
-    "max": {
-      "text": "unknown",
+    "modelValue": {
+      "text": "unknown[] | undefined",
       "source": "calendar",
-      "type": "unknown",
-      "formatted": "unknown\n",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
       "optional": false,
       "description": {
-        "en": "Maximum date or value that can be selected."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "VCalendar"
-      }
-    },
-    "min": {
-      "text": "unknown",
-      "source": "calendar",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Minimum date or value that can be selected."
-      },
-      "descriptionSource": {
-        "en": "VCalendar"
+        "en": "generic"
       }
     },
     "hideDayHeader": {
@@ -831,26 +831,6 @@
     }
   },
   "events": {
-    "update:modelValue": {
-      "text": "any[]",
-      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-      "type": "array",
-      "items": [
-        {
-          "text": "any",
-          "type": "any",
-          "formatted": "any"
-        }
-      ],
-      "formatted": "any[]\n",
-      "optional": false,
-      "description": {
-        "en": "Event that is emitted when the component's model changes."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "next": {
       "text": "any[]",
       "source": "typescript/lib/lib.es5.d.ts#L4-L4",
@@ -909,6 +889,26 @@
       },
       "descriptionSource": {
         "en": "VCalendar"
+      }
+    },
+    "update:modelValue": {
+      "text": "any[]",
+      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+      "type": "array",
+      "items": [
+        {
+          "text": "any",
+          "type": "any",
+          "formatted": "any"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "description": {
+        "en": "Event that is emitted when the component's model changes."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     }
   },

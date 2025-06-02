@@ -3,60 +3,6 @@
   "fileName": "VTooltip",
   "pathName": "v-tooltip",
   "props": {
-    "modelValue": {
-      "text": "boolean | undefined",
-      "source": "VOverlay",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "location": {
-      "text": "Anchor | undefined",
-      "source": "VOverlay-location-strategies",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Anchor",
-          "source": "vuetify/src/util/anchor.ts#L8-L14",
-          "type": "ref",
-          "ref": "Anchor",
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
-        }
-      ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
-      "optional": false,
-      "default": "'end'",
-      "description": {
-        "en": "Specifies the anchor point for positioning the component, using directional cues to align it either horizontally, vertically, or both.."
-      },
-      "descriptionSource": {
-        "en": "VOverlay-activator"
-      }
-    },
     "theme": {
       "text": "string | undefined",
       "source": "theme",
@@ -82,9 +28,60 @@
         "en": "theme"
       }
     },
-    "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | undefined",
-      "source": "transition",
+    "id": {
+      "text": "string | undefined",
+      "source": "VTooltip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "HTML id attribute of the tooltip overlay. If not set, a globally unique id will be used."
+      },
+      "descriptionSource": {
+        "en": "VTooltip"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VOverlay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
       "type": "anyOf",
       "items": [
         {
@@ -98,62 +95,220 @@
           "formatted": "string"
         },
         {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "eager": {
+      "text": "boolean | undefined",
+      "source": "lazy",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
           "text": "boolean",
           "type": "boolean",
           "formatted": "boolean"
-        },
-        {
-          "text": "TransitionProps & { component?: Component | undefined; }",
-          "type": "allOf",
-          "items": [
-            {
-              "text": "TransitionProps",
-              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
-              "type": "ref",
-              "ref": "TransitionProps",
-              "formatted": "TransitionProps"
-            },
-            {
-              "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
-              "type": "object",
-              "properties": {
-                "component": {
-                  "text": "Component | undefined",
-                  "type": "anyOf",
-                  "items": [
-                    {
-                      "text": "undefined",
-                      "type": "ref",
-                      "ref": "",
-                      "formatted": "undefined"
-                    },
-                    {
-                      "text": "Component",
-                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-                      "type": "ref",
-                      "ref": "Component",
-                      "formatted": "Component"
-                    }
-                  ],
-                  "formatted": "Component",
-                  "optional": true
-                }
-              },
-              "formatted": "{ component: Component }"
-            }
-          ],
-          "formatted": "TransitionProps & { component: Component }"
         }
       ],
-      "formatted": "string | boolean | (TransitionProps & { component: Component })\n",
+      "formatted": "boolean\n",
       "optional": false,
-      "default": false,
+      "default": true,
       "description": {
-        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
       },
       "descriptionSource": {
-        "en": "transition"
+        "en": "generic"
+      }
+    },
+    "maxHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minHeight": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VTooltip",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "activator": {
@@ -292,32 +447,6 @@
         "en": "VOverlay-activator"
       }
     },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "VOverlay",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the ability to click or target the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "opacity": {
       "text": "string | number | undefined",
       "source": "VOverlay",
@@ -342,7 +471,7 @@
       "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "Sets the overlay opacity."
+        "en": "Sets the opacity of the scrim element. Only applies if `scrim` is enabled."
       },
       "descriptionSource": {
         "en": "VOverlay"
@@ -372,6 +501,32 @@
       },
       "descriptionSource": {
         "en": "VOverlay"
+      }
+    },
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VOverlay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "scrim": {
@@ -695,213 +850,6 @@
         "en": "VTooltip"
       }
     },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "maxHeight": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the maximum height for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "maxWidth": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the maximum width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "minHeight": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the minimum height for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "minWidth": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Sets the minimum width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "eager": {
-      "text": "boolean | undefined",
-      "source": "lazy",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": true,
-      "description": {
-        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "locationStrategy": {
       "text": "\"static\" | \"connected\" | LocationStrategyFunction | undefined",
       "source": "VOverlay-location-strategies",
@@ -940,6 +888,34 @@
       },
       "descriptionSource": {
         "en": "VOverlay-location-strategies"
+      }
+    },
+    "location": {
+      "text": "Anchor | undefined",
+      "source": "VOverlay-location-strategies",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
+      "optional": false,
+      "default": "'end'",
+      "description": {
+        "en": "Specifies the anchor point for positioning the component, using directional cues to align it either horizontally, vertically, or both.."
+      },
+      "descriptionSource": {
+        "en": "VOverlay-activator"
       }
     },
     "origin": {
@@ -1020,14 +996,14 @@
       "optional": false,
       "default": 10,
       "description": {
-        "en": "A single value that offsets content away from the target based upon what side it is on."
+        "en": "Increases distance from the target. When passed as a pair of numbers, the second value shifts anchor along the side and away from the target."
       },
       "descriptionSource": {
         "en": "VOverlay-location-strategies"
       }
     },
     "scrollStrategy": {
-      "text": "\"close\" | \"none\" | \"block\" | \"reposition\" | ScrollStrategyFunction | undefined",
+      "text": "\"none\" | \"close\" | \"block\" | \"reposition\" | ScrollStrategyFunction | undefined",
       "source": "VOverlay-scroll-strategies",
       "type": "anyOf",
       "items": [
@@ -1037,16 +1013,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"close\"",
-          "type": "string",
-          "literal": "\"close\"",
-          "formatted": "\"close\""
-        },
-        {
           "text": "\"none\"",
           "type": "string",
           "literal": "\"none\"",
           "formatted": "\"none\""
+        },
+        {
+          "text": "\"close\"",
+          "type": "string",
+          "literal": "\"close\"",
+          "formatted": "\"close\""
         },
         {
           "text": "\"block\"",
@@ -1068,7 +1044,7 @@
           "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>"
         }
       ],
-      "formatted": "'close' | 'none' | 'block' | 'reposition' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>\n",
+      "formatted": "'none' | 'close' | 'block' | 'reposition' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>\n",
       "optional": false,
       "default": "'reposition'",
       "description": {
@@ -1076,6 +1052,85 @@
       },
       "descriptionSource": {
         "en": "VOverlay-scroll-strategies"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | null | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        }
+      ],
+      "formatted": "string | boolean | (TransitionProps & { component: Component })\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
       }
     },
     "attach": {
@@ -1114,56 +1169,6 @@
       },
       "descriptionSource": {
         "en": "VOverlay"
-      }
-    },
-    "id": {
-      "text": "string | undefined",
-      "source": "VTooltip",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "HTML id attribute of the tooltip overlay. If not set, a globally unique id will be used."
-      },
-      "descriptionSource": {
-        "en": "VTooltip"
-      }
-    },
-    "text": {
-      "text": "string | undefined",
-      "source": "VTooltip",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "interactive": {
@@ -1498,9 +1503,6 @@
     "$tooltip-background-color": {
       "default": "rgb(var(--v-theme-surface-variant))"
     },
-    "$tooltip-text-color": {
-      "default": "rgb(var(--v-theme-on-surface-variant))"
-    },
     "$tooltip-border-radius": {
       "default": "settings.$border-radius-root"
     },
@@ -1510,17 +1512,20 @@
     "$tooltip-line-height": {
       "default": "1.6"
     },
+    "$tooltip-overflow-wrap": {
+      "default": "break-word"
+    },
+    "$tooltip-padding": {
+      "default": "5px 16px"
+    },
+    "$tooltip-text-color": {
+      "default": "rgb(var(--v-theme-on-surface-variant))"
+    },
     "$tooltip-transition-enter-duration": {
       "default": "150ms"
     },
     "$tooltip-transition-leave-duration": {
       "default": "75ms"
-    },
-    "$tooltip-padding": {
-      "default": "5px 16px"
-    },
-    "$tooltip-overflow-wrap": {
-      "default": "break-word"
     }
   }
 }

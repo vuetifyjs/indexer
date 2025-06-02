@@ -29,6 +29,19 @@
         "en": "VTextField"
       }
     },
+    "modelValue": {
+      "text": "any",
+      "source": "validation",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "type": {
       "text": "string | undefined",
       "source": "VTextField",
@@ -53,108 +66,6 @@
       },
       "descriptionSource": {
         "en": "VTextField"
-      }
-    },
-    "reverse": {
-      "text": "boolean | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Reverses the input orientation."
-      },
-      "descriptionSource": {
-        "en": "VTextField"
-      }
-    },
-    "name": {
-      "text": "string | undefined",
-      "source": "validation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the component's name attribute."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "error": {
-      "text": "boolean | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts the input in a manual error state."
-      },
-      "descriptionSource": {
-        "en": "VField"
-      }
-    },
-    "label": {
-      "text": "string | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "color": {
@@ -182,17 +93,82 @@
         "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "any",
-      "source": "validation",
-      "type": "any",
-      "formatted": "any\n",
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
       "optional": false,
+      "default": "'default'",
       "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+        "en": "Adjusts the vertical height used by the component."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "reverse": {
+      "text": "boolean | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reverses the input orientation."
+      },
+      "descriptionSource": {
+        "en": "VTextField"
       }
     },
     "rounded": {
@@ -281,6 +257,31 @@
         "en": "theme"
       }
     },
+    "name": {
+      "text": "string | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the component's name attribute."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "VField",
@@ -307,9 +308,9 @@
         "en": "VField"
       }
     },
-    "maxWidth": {
-      "text": "string | number | undefined",
-      "source": "dimension",
+    "placeholder": {
+      "text": "string | undefined",
+      "source": "VTextField",
       "type": "anyOf",
       "items": [
         {
@@ -321,50 +322,15 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
         }
       ],
-      "formatted": "string | number\n",
+      "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the maximum width for the component."
+        "en": "Sets the input’s placeholder text."
       },
       "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "minWidth": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the minimum width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
+        "en": "VTextField"
       }
     },
     "width": {
@@ -472,9 +438,9 @@
         "en": "VTextField"
       }
     },
-    "baseColor": {
-      "text": "string | undefined",
-      "source": "VField",
+    "autofocus": {
+      "text": "boolean | undefined",
+      "source": "VTextField",
       "type": "anyOf",
       "items": [
         {
@@ -483,70 +449,19 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Sets the color of the input when it is not focused."
+        "en": "Enables autofocus."
       },
       "descriptionSource": {
-        "en": "VField"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
+        "en": "VTextField"
       }
     },
     "variant": {
@@ -612,9 +527,9 @@
         "en": "generic"
       }
     },
-    "appendIcon": {
-      "text": "IconValue | undefined",
-      "source": "VInput",
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VField",
       "type": "anyOf",
       "items": [
         {
@@ -623,75 +538,126 @@
           "formatted": "undefined"
         },
         {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "maxWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "minWidth": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of the input when it is not focused."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Controls the **active** state of the item. This is typically used to highlight the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -718,6 +684,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -747,6 +734,39 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "description": {
+        "en": "Prepends an icon to the outside the component's input, uses the same syntax as `v-icon`."
+      },
+      "descriptionSource": {
+        "en": "VTextField"
+      }
+    },
+    "appendIcon": {
+      "text": "IconValue | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
             },
             {
               "text": "JSXComponent",
@@ -768,49 +788,49 @@
                 }
               ],
               "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "description": {
-        "en": "Prepends an icon to the outside the component's input, uses the same syntax as `v-icon`."
+        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
       },
       "descriptionSource": {
-        "en": "VTextField"
-      }
-    },
-    "loading": {
-      "text": "string | boolean | undefined",
-      "source": "loader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
-      },
-      "descriptionSource": {
-        "en": "VInput"
+        "en": "generic"
       }
     },
     "readonly": {
@@ -844,7 +864,71 @@
         "en": "validation"
       }
     },
-    "bgColor": {
+    "loading": {
+      "text": "string | boolean | undefined",
+      "source": "loader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "direction": {
+      "text": "\"horizontal\" | \"vertical\" | undefined",
+      "source": "VInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "Changes the direction of the input."
+      },
+      "descriptionSource": {
+        "en": "VInput"
+      }
+    },
+    "label": {
       "text": "string | undefined",
       "source": "VField",
       "type": "anyOf",
@@ -863,36 +947,10 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "autofocus": {
-      "text": "boolean | undefined",
-      "source": "VTextField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Enables autofocus."
-      },
-      "descriptionSource": {
-        "en": "VTextField"
       }
     },
     "counter": {
@@ -931,9 +989,9 @@
         "en": "generic"
       }
     },
-    "placeholder": {
-      "text": "string | undefined",
-      "source": "VTextField",
+    "focused": {
+      "text": "boolean | undefined",
+      "source": "focus",
       "type": "anyOf",
       "items": [
         {
@@ -942,18 +1000,19 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Sets the input’s placeholder text."
+        "en": "Forces a focused state styling on the component."
       },
       "descriptionSource": {
-        "en": "VTextField"
+        "en": "focus"
       }
     },
     "persistentPlaceholder": {
@@ -1231,9 +1290,9 @@
         "en": "generic"
       }
     },
-    "direction": {
-      "text": "\"horizontal\" | \"vertical\" | undefined",
-      "source": "VInput",
+    "error": {
+      "text": "boolean | undefined",
+      "source": "VField",
       "type": "anyOf",
       "items": [
         {
@@ -1242,26 +1301,19 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"horizontal\"",
-          "type": "string",
-          "literal": "\"horizontal\"",
-          "formatted": "\"horizontal\""
-        },
-        {
-          "text": "\"vertical\"",
-          "type": "string",
-          "literal": "\"vertical\"",
-          "formatted": "\"vertical\""
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "'horizontal' | 'vertical'\n",
+      "formatted": "boolean\n",
       "optional": false,
-      "default": "'horizontal'",
+      "default": false,
       "description": {
-        "en": "Changes the direction of the input."
+        "en": "Puts the input in a manual error state."
       },
       "descriptionSource": {
-        "en": "VInput"
+        "en": "VField"
       }
     },
     "errorMessages": {
@@ -1340,7 +1392,7 @@
       }
     },
     "rules": {
-      "text": "readonly ValidationRule[] | undefined",
+      "text": "readonly (string | boolean | PromiseLike<ValidationResult> | ((value: any) => ValidationResult) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string | undefined)?])[] | undefined",
       "source": "validation",
       "type": "anyOf",
       "items": [
@@ -1350,22 +1402,130 @@
           "formatted": "undefined"
         },
         {
-          "text": "readonly ValidationRule[]",
+          "text": "readonly (string | boolean | PromiseLike<ValidationResult> | ((value: any) => ValidationResult) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string | undefined)?])[]",
           "source": "typescript/lib/lib.es5.d.ts#L4-L4",
           "type": "array",
           "items": [
             {
-              "text": "ValidationRule",
-              "source": "vuetify/src/composables/validation.ts#L17-L21",
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            },
+            {
+              "text": "PromiseLike<ValidationResult>",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "ref",
-              "ref": "ValidationRule",
-              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>"
+              "ref": "PromiseLike",
+              "formatted": "PromiseLike<ValidationResult>"
+            },
+            {
+              "text": "(value: any) => ValidationResult",
+              "source": "vuetify/src/composables/validation.ts#L21-L21",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "returnType": {
+                "text": "ValidationResult",
+                "source": "vuetify/src/composables/validation.ts#L17-L17",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "false",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "false"
+                  },
+                  {
+                    "text": "true",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "true"
+                  }
+                ],
+                "formatted": "string | false | true"
+              },
+              "formatted": "(value: any) => string | false | true"
+            },
+            {
+              "text": "(value: any) => PromiseLike<ValidationResult>",
+              "source": "vuetify/src/composables/validation.ts#L22-L22",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "returnType": {
+                "text": "PromiseLike<ValidationResult>",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "ref",
+                "ref": "PromiseLike",
+                "formatted": "PromiseLike<ValidationResult>"
+              },
+              "formatted": "(value: any) => PromiseLike<ValidationResult>"
+            },
+            {
+              "text": "[string, any, (string | undefined)?]",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                },
+                {
+                  "text": "string | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "UNSUPPORTED",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    }
+                  ],
+                  "formatted": "string"
+                }
+              ],
+              "length": 3,
+              "formatted": "[string, any, (string)]"
             }
           ],
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]"
+          "formatted": "(string | boolean | PromiseLike<ValidationResult> | ((value: any) => string | false | true) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string)])[]"
         }
       ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]\n",
+      "formatted": "(\n  | string\n  | boolean\n  | PromiseLike<ValidationResult>\n  | ((value: any) => string | false | true)\n  | ((value: any) => PromiseLike<ValidationResult>)\n  | [string, any, string]\n)[]\n",
       "optional": false,
       "default": "[]",
       "description": {
@@ -1387,24 +1547,12 @@
         },
         {
           "text": "ValidateOn",
-          "source": "vuetify/src/composables/validation.ts#L24-L31",
+          "source": "vuetify/src/composables/validation.ts#L25-L32",
           "type": "anyOf",
           "items": [
             {
-              "text": "\"eager\"",
-              "type": "string",
-              "literal": "\"eager\"",
-              "formatted": "\"eager\""
-            },
-            {
-              "text": "\"lazy\"",
-              "type": "string",
-              "literal": "\"lazy\"",
-              "formatted": "\"lazy\""
-            },
-            {
               "text": "ValidateOnValue",
-              "source": "vuetify/src/composables/validation.ts#L23-L23",
+              "source": "vuetify/src/composables/validation.ts#L24-L24",
               "type": "anyOf",
               "items": [
                 {
@@ -1529,12 +1677,24 @@
               "type": "string",
               "literal": "\"eager invalid-input\"",
               "formatted": "\"eager invalid-input\""
+            },
+            {
+              "text": "\"lazy\"",
+              "type": "string",
+              "literal": "\"lazy\"",
+              "formatted": "\"lazy\""
+            },
+            {
+              "text": "\"eager\"",
+              "type": "string",
+              "literal": "\"eager\"",
+              "formatted": "\"eager\""
             }
           ],
-          "formatted": "\"eager\" | \"lazy\" | \"blur\" | \"input\" | \"submit\" | \"invalid-input\" | \"blur lazy\" | \"input lazy\" | \"submit lazy\" | \"invalid-input lazy\" | \"blur eager\" | \"input eager\" | \"submit eager\" | \"invalid-input eager\" | \"lazy blur\" | \"lazy input\" | \"lazy submit\" | \"lazy invalid-input\" | \"eager blur\" | \"eager input\" | \"eager submit\" | \"eager invalid-input\""
+          "formatted": "\"blur\" | \"input\" | \"submit\" | \"invalid-input\" | \"blur lazy\" | \"input lazy\" | \"submit lazy\" | \"invalid-input lazy\" | \"blur eager\" | \"input eager\" | \"submit eager\" | \"invalid-input eager\" | \"lazy blur\" | \"lazy input\" | \"lazy submit\" | \"lazy invalid-input\" | \"eager blur\" | \"eager input\" | \"eager submit\" | \"eager invalid-input\" | \"lazy\" | \"eager\""
         }
       ],
-      "formatted": "  | 'eager'\n  | 'lazy'\n  | 'blur'\n  | 'input'\n  | 'submit'\n  | 'invalid-input'\n  | 'blur lazy'\n  | 'input lazy'\n  | 'submit lazy'\n  | 'invalid-input lazy'\n  | 'blur eager'\n  | 'input eager'\n  | 'submit eager'\n  | 'invalid-input eager'\n  | 'lazy blur'\n  | 'lazy input'\n  | 'lazy submit'\n  | 'lazy invalid-input'\n  | 'eager blur'\n  | 'eager input'\n  | 'eager submit'\n  | 'eager invalid-input'\n",
+      "formatted": "  | 'blur'\n  | 'input'\n  | 'submit'\n  | 'invalid-input'\n  | 'blur lazy'\n  | 'input lazy'\n  | 'submit lazy'\n  | 'invalid-input lazy'\n  | 'blur eager'\n  | 'input eager'\n  | 'submit eager'\n  | 'invalid-input eager'\n  | 'lazy blur'\n  | 'lazy input'\n  | 'lazy submit'\n  | 'lazy invalid-input'\n  | 'eager blur'\n  | 'eager input'\n  | 'eager submit'\n  | 'eager invalid-input'\n  | 'lazy'\n  | 'eager'\n",
       "optional": false,
       "description": {
         "en": "Change what type of event triggers validation to run."
@@ -1554,32 +1714,6 @@
       },
       "descriptionSource": {
         "en": "validation"
-      }
-    },
-    "focused": {
-      "text": "boolean | undefined",
-      "source": "focus",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces a focused state styling on the component."
-      },
-      "descriptionSource": {
-        "en": "focus"
       }
     },
     "hideDetails": {
@@ -1635,6 +1769,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1664,33 +1819,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "description": {
         "en": "Creates a [v-icon](/api/v-icon/) component in the **append-inner** slot."
@@ -1746,6 +1880,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1775,33 +1930,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$clear'",
       "description": {
@@ -1809,32 +1943,6 @@
       },
       "descriptionSource": {
         "en": "VTextField"
-      }
-    },
-    "active": {
-      "text": "boolean | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Controls the **active** state of the item. This is typically used to highlight the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "dirty": {
@@ -1910,6 +2018,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1939,33 +2068,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "description": {
         "en": "Prepends an icon inside the component's input, uses the same syntax as `v-icon`."
@@ -2080,6 +2188,26 @@
         "en": "generic"
       }
     },
+    "update:focused": {
+      "text": "[focused: boolean]",
+      "type": "array",
+      "items": [
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "length": 1,
+      "formatted": "[boolean]\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the input is focused or blurred"
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
     "click:prepend": {
       "text": "[MouseEvent]",
       "type": "array",
@@ -2122,26 +2250,6 @@
       },
       "descriptionSource": {
         "en": "VTextField"
-      }
-    },
-    "update:focused": {
-      "text": "[focused: boolean]",
-      "type": "array",
-      "items": [
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "length": 1,
-      "formatted": "[boolean]\n",
-      "optional": false,
-      "description": {
-        "en": "Emitted when the input is focused or blurred"
-      },
-      "descriptionSource": {
-        "en": "VField"
       }
     },
     "click:clear": {
@@ -2256,7 +2364,7 @@
     }
   },
   "slots": {
-    "details": {
+    "prepend": {
       "text": "VInputSlot",
       "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
       "type": "object",
@@ -2368,222 +2476,10 @@
       "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
       "optional": false,
       "description": {
-        "en": "Slot for custom input details to modifying the display of [messages](#props-messages)."
+        "en": "Adds an item outside the input and before input content."
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "label": {
-      "text": "DefaultInputSlot & { label: string | undefined; props: Record<string, any>; }",
-      "type": "allOf",
-      "items": [
-        {
-          "text": "DefaultInputSlot",
-          "source": "vuetify/src/components/VField/VField.tsx#L41-L47",
-          "type": "object",
-          "properties": {
-            "isActive": {
-              "text": "Ref<boolean, boolean>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<boolean, boolean>",
-              "optional": false
-            },
-            "isFocused": {
-              "text": "Ref<boolean, boolean>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<boolean, boolean>",
-              "optional": false
-            },
-            "controlRef": {
-              "text": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
-              "optional": false
-            },
-            "focus": {
-              "text": "() => void",
-              "source": "vuetify/src/components/VField/VField.tsx#L45-L45",
-              "type": "function",
-              "parameters": [],
-              "returnType": {
-                "text": "void",
-                "type": "void",
-                "formatted": "void"
-              },
-              "formatted": "() => void",
-              "optional": false
-            },
-            "blur": {
-              "text": "() => void",
-              "source": "vuetify/src/components/VField/VField.tsx#L46-L46",
-              "type": "function",
-              "parameters": [],
-              "returnType": {
-                "text": "void",
-                "type": "void",
-                "formatted": "void"
-              },
-              "formatted": "() => void",
-              "optional": false
-            }
-          },
-          "formatted": "{ isActive: Ref<boolean, boolean>; isFocused: Ref<boolean, boolean>; controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; focus: () => void; blur: () => void }"
-        },
-        {
-          "text": "{ label: string | undefined; props: Record<string, any>; }",
-          "source": "vuetify/src/components/VField/VField.tsx#L102-L102",
-          "type": "object",
-          "properties": {
-            "label": {
-              "text": "string | undefined",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "undefined",
-                  "type": "UNSUPPORTED",
-                  "formatted": "undefined"
-                },
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                }
-              ],
-              "formatted": "string",
-              "optional": false
-            },
-            "props": {
-              "text": "Record<string, any>",
-              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-              "type": "record",
-              "key": {
-                "text": "string",
-                "type": "string",
-                "formatted": "string"
-              },
-              "value": {
-                "text": "any",
-                "type": "any",
-                "formatted": "any"
-              },
-              "formatted": "Record<string, any>",
-              "optional": false
-            }
-          },
-          "formatted": "{ label: string; props: Record<string, any> }"
-        }
-      ],
-      "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n} & { label: string; props: Record<string, any> }\n",
-      "optional": false,
-      "description": {
-        "en": "The default slot of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
-      },
-      "descriptionSource": {
-        "en": "VField"
-      }
-    },
-    "clear": {
-      "text": "DefaultInputSlot & { props: Record<string, any>; }",
-      "type": "allOf",
-      "items": [
-        {
-          "text": "DefaultInputSlot",
-          "source": "vuetify/src/components/VField/VField.tsx#L41-L47",
-          "type": "object",
-          "properties": {
-            "isActive": {
-              "text": "Ref<boolean, boolean>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<boolean, boolean>",
-              "optional": false
-            },
-            "isFocused": {
-              "text": "Ref<boolean, boolean>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<boolean, boolean>",
-              "optional": false
-            },
-            "controlRef": {
-              "text": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
-              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
-              "type": "ref",
-              "ref": "Ref",
-              "formatted": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
-              "optional": false
-            },
-            "focus": {
-              "text": "() => void",
-              "source": "vuetify/src/components/VField/VField.tsx#L45-L45",
-              "type": "function",
-              "parameters": [],
-              "returnType": {
-                "text": "void",
-                "type": "void",
-                "formatted": "void"
-              },
-              "formatted": "() => void",
-              "optional": false
-            },
-            "blur": {
-              "text": "() => void",
-              "source": "vuetify/src/components/VField/VField.tsx#L46-L46",
-              "type": "function",
-              "parameters": [],
-              "returnType": {
-                "text": "void",
-                "type": "void",
-                "formatted": "void"
-              },
-              "formatted": "() => void",
-              "optional": false
-            }
-          },
-          "formatted": "{ isActive: Ref<boolean, boolean>; isFocused: Ref<boolean, boolean>; controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; focus: () => void; blur: () => void }"
-        },
-        {
-          "text": "{ props: Record<string, any>; }",
-          "source": "vuetify/src/components/VField/VField.tsx#L99-L99",
-          "type": "object",
-          "properties": {
-            "props": {
-              "text": "Record<string, any>",
-              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-              "type": "record",
-              "key": {
-                "text": "string",
-                "type": "string",
-                "formatted": "string"
-              },
-              "value": {
-                "text": "any",
-                "type": "any",
-                "formatted": "any"
-              },
-              "formatted": "Record<string, any>",
-              "optional": false
-            }
-          },
-          "formatted": "{ props: Record<string, any> }"
-        }
-      ],
-      "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n} & { props: Record<string, any> }\n",
-      "optional": false,
-      "description": {
-        "en": "Slot for custom clear icon (displayed when the **clearable** prop is equal to true)."
-      },
-      "descriptionSource": {
-        "en": "VField"
       }
     },
     "append": {
@@ -2704,7 +2600,46 @@
         "en": "generic"
       }
     },
-    "prepend": {
+    "loader": {
+      "text": "LoaderSlotProps",
+      "source": "vuetify/src/composables/loader.tsx#L12-L15",
+      "type": "object",
+      "properties": {
+        "color": {
+          "text": "string | undefined",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "undefined",
+              "type": "UNSUPPORTED",
+              "formatted": "undefined"
+            },
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            }
+          ],
+          "formatted": "string",
+          "optional": false
+        },
+        "isActive": {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean",
+          "optional": false
+        }
+      },
+      "formatted": "{ color: string; isActive: boolean }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom loader (displayed when [loading](#props-loading) prop is equal to true)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "details": {
       "text": "VInputSlot",
       "source": "vuetify/src/components/VInput/VInput.tsx#L26-L38",
       "type": "object",
@@ -2816,46 +2751,7 @@
       "formatted": "{\n  id: ComputedRef<string>\n  messagesId: ComputedRef<string>\n  isDirty: ComputedRef<boolean>\n  isDisabled: ComputedRef<boolean>\n  isReadonly: ComputedRef<boolean>\n  isPristine: Ref<boolean, boolean>\n  isValid: ComputedRef<boolean | null>\n  isValidating: Ref<boolean, boolean>\n  reset: () => void\n  resetValidation: () => void\n  validate: () => void\n}\n",
       "optional": false,
       "description": {
-        "en": "Adds an item outside the input and before input content."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "loader": {
-      "text": "LoaderSlotProps",
-      "source": "vuetify/src/composables/loader.tsx#L12-L15",
-      "type": "object",
-      "properties": {
-        "color": {
-          "text": "string | undefined",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "undefined",
-              "type": "UNSUPPORTED",
-              "formatted": "undefined"
-            },
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            }
-          ],
-          "formatted": "string",
-          "optional": false
-        },
-        "isActive": {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean",
-          "optional": false
-        }
-      },
-      "formatted": "{ color: string; isActive: boolean }\n",
-      "optional": false,
-      "description": {
-        "en": "Slot for custom loader (displayed when [loading](#props-loading) prop is equal to true)."
+        "en": "Slot for custom input details to modifying the display of [messages](#props-messages)."
       },
       "descriptionSource": {
         "en": "generic"
@@ -2880,6 +2776,103 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "clear": {
+      "text": "DefaultInputSlot & { props: Record<string, any>; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "DefaultInputSlot",
+          "source": "vuetify/src/components/VField/VField.tsx#L41-L47",
+          "type": "object",
+          "properties": {
+            "isActive": {
+              "text": "Ref<boolean, boolean>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean, boolean>",
+              "optional": false
+            },
+            "isFocused": {
+              "text": "Ref<boolean, boolean>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean, boolean>",
+              "optional": false
+            },
+            "controlRef": {
+              "text": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+              "optional": false
+            },
+            "focus": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VField/VField.tsx#L45-L45",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "blur": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VField/VField.tsx#L46-L46",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ isActive: Ref<boolean, boolean>; isFocused: Ref<boolean, boolean>; controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; focus: () => void; blur: () => void }"
+        },
+        {
+          "text": "{ props: Record<string, any>; }",
+          "source": "vuetify/src/components/VField/VField.tsx#L99-L99",
+          "type": "object",
+          "properties": {
+            "props": {
+              "text": "Record<string, any>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "record",
+              "key": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              "value": {
+                "text": "any",
+                "type": "any",
+                "formatted": "any"
+              },
+              "formatted": "Record<string, any>",
+              "optional": false
+            }
+          },
+          "formatted": "{ props: Record<string, any> }"
+        }
+      ],
+      "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n} & { props: Record<string, any> }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for custom clear icon (displayed when the **clearable** prop is equal to true)."
+      },
+      "descriptionSource": {
+        "en": "VField"
       }
     },
     "prepend-inner": {
@@ -3006,10 +2999,125 @@
       "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n}\n",
       "optional": false,
       "description": {
-        "en": "Adds an item inside the input content."
+        "en": "Slot that is appended to the input."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VField"
+      }
+    },
+    "label": {
+      "text": "DefaultInputSlot & { label: string | undefined; props: Record<string, any>; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "DefaultInputSlot",
+          "source": "vuetify/src/components/VField/VField.tsx#L41-L47",
+          "type": "object",
+          "properties": {
+            "isActive": {
+              "text": "Ref<boolean, boolean>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean, boolean>",
+              "optional": false
+            },
+            "isFocused": {
+              "text": "Ref<boolean, boolean>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<boolean, boolean>",
+              "optional": false
+            },
+            "controlRef": {
+              "text": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+              "source": "@vue/reactivity/dist/reactivity.d.ts#L419-L428",
+              "type": "ref",
+              "ref": "Ref",
+              "formatted": "Ref<HTMLElement | undefined, HTMLElement | undefined>",
+              "optional": false
+            },
+            "focus": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VField/VField.tsx#L45-L45",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            },
+            "blur": {
+              "text": "() => void",
+              "source": "vuetify/src/components/VField/VField.tsx#L46-L46",
+              "type": "function",
+              "parameters": [],
+              "returnType": {
+                "text": "void",
+                "type": "void",
+                "formatted": "void"
+              },
+              "formatted": "() => void",
+              "optional": false
+            }
+          },
+          "formatted": "{ isActive: Ref<boolean, boolean>; isFocused: Ref<boolean, boolean>; controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>; focus: () => void; blur: () => void }"
+        },
+        {
+          "text": "{ label: string | undefined; props: Record<string, any>; }",
+          "source": "vuetify/src/components/VField/VField.tsx#L102-L102",
+          "type": "object",
+          "properties": {
+            "label": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": false
+            },
+            "props": {
+              "text": "Record<string, any>",
+              "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+              "type": "record",
+              "key": {
+                "text": "string",
+                "type": "string",
+                "formatted": "string"
+              },
+              "value": {
+                "text": "any",
+                "type": "any",
+                "formatted": "any"
+              },
+              "formatted": "Record<string, any>",
+              "optional": false
+            }
+          },
+          "formatted": "{ label: string; props: Record<string, any> }"
+        }
+      ],
+      "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n} & { label: string; props: Record<string, any> }\n",
+      "optional": false,
+      "description": {
+        "en": "The default slot of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "VField"
       }
     },
     "default": {
@@ -3095,7 +3203,7 @@
   "exposed": {
     "reset": {
       "text": "() => Promise<void>",
-      "source": "vuetify/src/composables/validation.ts#L207-L211",
+      "source": "vuetify/src/composables/validation.ts#L182-L186",
       "type": "function",
       "parameters": [],
       "returnType": {
@@ -3116,7 +3224,7 @@
     },
     "resetValidation": {
       "text": "() => Promise<void>",
-      "source": "vuetify/src/composables/validation.ts#L213-L220",
+      "source": "vuetify/src/composables/validation.ts#L188-L195",
       "type": "function",
       "parameters": [],
       "returnType": {
@@ -3137,7 +3245,7 @@
     },
     "validate": {
       "text": "(silent?: boolean) => Promise<string[]>",
-      "source": "vuetify/src/composables/validation.ts#L222-L252",
+      "source": "vuetify/src/composables/validation.ts#L197-L227",
       "type": "function",
       "parameters": [
         {
@@ -3252,10 +3360,10 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VTextField.json))"
+        "en": "The color of the icon."
       },
       "descriptionSource": {
-        "en": "VTextField"
+        "en": "VField"
       }
     }
   },

@@ -3,63 +3,6 @@
   "fileName": "VCounter",
   "pathName": "v-counter",
   "props": {
-    "active": {
-      "text": "boolean | undefined",
-      "source": "VCounter",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Determines whether the counter is visible or not."
-      },
-      "descriptionSource": {
-        "en": "VCounter"
-      }
-    },
-    "value": {
-      "text": "string | number | undefined",
-      "source": "VCounter",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Sets the current counter value."
-      },
-      "descriptionSource": {
-        "en": "VCounter"
-      }
-    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "VCounter",
@@ -116,8 +59,65 @@
         "en": "VCounter"
       }
     },
+    "value": {
+      "text": "string | number | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Sets the current counter value."
+      },
+      "descriptionSource": {
+        "en": "VCounter"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VCounter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the counter is visible or not."
+      },
+      "descriptionSource": {
+        "en": "VCounter"
+      }
+    },
     "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; } | undefined",
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; } | null | undefined",
       "source": "transition",
       "type": "anyOf",
       "items": [
@@ -125,6 +125,11 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
         },
         {
           "text": "string",
@@ -149,7 +154,7 @@
             },
             {
               "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
               "type": "object",
               "properties": {
                 "component": {

@@ -55,9 +55,9 @@
         "en": "VTab"
       }
     },
-    "color": {
+    "activeColor": {
       "text": "string | undefined",
-      "source": "variant",
+      "source": "VBtn",
       "type": "anyOf",
       "items": [
         {
@@ -74,10 +74,407 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "The applied color when the component is in an active state."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of component when not focused."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "prependIcon": {
+      "text": "IconValue | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Creates a [v-icon](/api/v-icon/) component in the **prepend** slot before default content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "appendIcon": {
+      "text": "IconValue | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "description": {
+        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "readonly": {
+      "text": "boolean | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the button in a readonly state. Cannot be clicked or navigated to by keyboard."
+      },
+      "descriptionSource": {
+        "en": "VBtn"
+      }
+    },
+    "slim": {
+      "text": "boolean | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reduces padding to 0 8px."
+      },
+      "descriptionSource": {
+        "en": "VBtn"
+      }
+    },
+    "stacked": {
+      "text": "boolean | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays the tab as a flex-column."
+      },
+      "descriptionSource": {
+        "en": "VTab"
+      }
+    },
+    "ripple": {
+      "text": "boolean | { class: string; } | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "{ class: string; }",
+          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
+          "type": "object",
+          "properties": {
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ class: string }"
+        }
+      ],
+      "formatted": "boolean | { class: string }\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Applies the [v-ripple](/directives/ripple) directive."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "text": {
+      "text": "string | number | boolean | undefined",
+      "source": "VBtn",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
       }
     },
     "density": {
@@ -160,333 +557,6 @@
       },
       "descriptionSource": {
         "en": "dimension"
-      }
-    },
-    "border": {
-      "text": "string | number | boolean | undefined",
-      "source": "border",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
-      },
-      "descriptionSource": {
-        "en": "border"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'button'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "exact": {
-      "text": "boolean | undefined",
-      "source": "router",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Exactly match the link. Without this, '/' will match every route. You can find more information about the [**exact** prop](https://router.vuejs.org/api/#exact) on the vue-router documentation."
-      },
-      "descriptionSource": {
-        "en": "router"
-      }
-    },
-    "baseColor": {
-      "text": "string | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the color of component when not focused."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "activeColor": {
-      "text": "string | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "The applied color when the component is in an active state."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the ability to click or target the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "slim": {
-      "text": "boolean | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Reduces padding to 0 8px."
-      },
-      "descriptionSource": {
-        "en": "VBtn"
       }
     },
     "maxHeight": {
@@ -639,114 +709,9 @@
         "en": "dimension"
       }
     },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
-      }
-    },
-    "variant": {
-      "text": "\"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"text\" | \"plain\" | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
-          "text": "\"elevated\"",
-          "type": "string",
-          "literal": "\"elevated\"",
-          "formatted": "\"elevated\""
-        },
-        {
-          "text": "\"tonal\"",
-          "type": "string",
-          "literal": "\"tonal\"",
-          "formatted": "\"tonal\""
-        },
-        {
-          "text": "\"outlined\"",
-          "type": "string",
-          "literal": "\"outlined\"",
-          "formatted": "\"outlined\""
-        },
-        {
-          "text": "\"text\"",
-          "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
-        },
-        {
-          "text": "\"plain\"",
-          "type": "string",
-          "literal": "\"plain\"",
-          "formatted": "\"plain\""
-        }
-      ],
-      "formatted": "'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain'\n",
-      "optional": false,
-      "default": "'text'",
-      "description": {
-        "en": "Applies a distinct style to the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "text": {
-      "text": "string | number | boolean | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "size": {
+    "elevation": {
       "text": "string | number | undefined",
-      "source": "size",
+      "source": "elevation",
       "type": "anyOf",
       "items": [
         {
@@ -767,220 +732,16 @@
       ],
       "formatted": "string | number\n",
       "optional": false,
-      "default": "'default'",
       "description": {
-        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
       },
       "descriptionSource": {
-        "en": "size"
+        "en": "elevation"
       }
     },
-    "appendIcon": {
-      "text": "IconValue | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            }
-          ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
-        }
-      ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "description": {
-        "en": "Creates a [v-icon](/api/v-icon/) component after default content in the **append** slot."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "prependIcon": {
-      "text": "IconValue | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            }
-          ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
-        }
-      ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "description": {
-        "en": "Creates a [v-icon](/api/v-icon/) component in the **prepend** slot before default content."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "direction": {
-      "text": "\"horizontal\" | \"vertical\" | undefined",
-      "source": "VTab",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"horizontal\"",
-          "type": "string",
-          "literal": "\"horizontal\"",
-          "formatted": "\"horizontal\""
-        },
-        {
-          "text": "\"vertical\"",
-          "type": "string",
-          "literal": "\"vertical\"",
-          "formatted": "\"vertical\""
-        }
-      ],
-      "formatted": "'horizontal' | 'vertical'\n",
-      "optional": false,
-      "default": "'horizontal'",
-      "description": {
-        "en": "Changes the direction of the tabs. Can be either `horizontal` or `vertical`."
-      },
-      "descriptionSource": {
-        "en": "VTab"
-      }
-    },
-    "readonly": {
+    "disabled": {
       "text": "boolean | undefined",
-      "source": "VBtn",
+      "source": "group-item",
       "type": "anyOf",
       "items": [
         {
@@ -998,10 +759,36 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Puts the button in a readonly state. Cannot be clicked or navigated to by keyboard."
+        "en": "Removes the ability to click or target the component."
       },
       "descriptionSource": {
-        "en": "VBtn"
+        "en": "generic"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-tab--selected'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "loading": {
@@ -1035,6 +822,67 @@
         "en": "loader"
       }
     },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
     "href": {
       "text": "string | undefined",
       "source": "router",
@@ -1060,9 +908,9 @@
         "en": "router"
       }
     },
-    "ripple": {
-      "text": "boolean | { class: string; } | undefined",
-      "source": "VBtn",
+    "exact": {
+      "text": "boolean | undefined",
+      "source": "router",
       "type": "anyOf",
       "items": [
         {
@@ -1074,35 +922,138 @@
           "text": "boolean",
           "type": "boolean",
           "formatted": "boolean"
-        },
-        {
-          "text": "{ class: string; }",
-          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
-          "type": "object",
-          "properties": {
-            "class": {
-              "text": "string",
-              "type": "string",
-              "formatted": "string",
-              "optional": false
-            }
-          },
-          "formatted": "{ class: string }"
         }
       ],
-      "formatted": "boolean | { class: string }\n",
+      "formatted": "boolean\n",
       "optional": false,
-      "default": true,
+      "default": false,
       "description": {
-        "en": "Applies the [v-ripple](/directives/ripple) directive."
+        "en": "Exactly match the link. Without this, '/' will match every route. You can find more information about the [**exact** prop](https://router.vuejs.org/api/#exact) on the vue-router documentation."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "router"
       }
     },
-    "selectedClass": {
+    "to": {
+      "text": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined",
+      "source": "router",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "RouteLocationAsRelativeGeneric",
+          "source": "vue-router/dist/vue-router.d.ts#L606-L613",
+          "type": "ref",
+          "ref": "RouteLocationAsRelativeGeneric",
+          "formatted": "RouteLocationAsRelativeGeneric"
+        },
+        {
+          "text": "RouteLocationAsPathGeneric",
+          "source": "vue-router/dist/vue-router.d.ts#L575-L580",
+          "type": "ref",
+          "ref": "RouteLocationAsPathGeneric",
+          "formatted": "RouteLocationAsPathGeneric"
+        }
+      ],
+      "formatted": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric\n",
+      "optional": false,
+      "description": {
+        "en": "Denotes the target route of the link. You can find more information about the [**to** prop](https://router.vuejs.org/api/#to) on the vue-router documentation."
+      },
+      "descriptionSource": {
+        "en": "router"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "size"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'button'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
       "text": "string | undefined",
-      "source": "group-item",
+      "source": "theme",
       "type": "anyOf",
       "items": [
         {
@@ -1118,9 +1069,90 @@
       ],
       "formatted": "string\n",
       "optional": false,
-      "default": "'v-tab--selected'",
       "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"elevated\"",
+          "type": "string",
+          "literal": "\"elevated\"",
+          "formatted": "\"elevated\""
+        },
+        {
+          "text": "\"tonal\"",
+          "type": "string",
+          "literal": "\"tonal\"",
+          "formatted": "\"tonal\""
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        }
+      ],
+      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "optional": false,
+      "default": "'text'",
+      "description": {
+        "en": "Applies a distinct style to the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -1152,27 +1184,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1202,12 +1213,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | boolean\n  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | boolean\n  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": false,
       "description": {
@@ -1215,6 +1247,39 @@
       },
       "descriptionSource": {
         "en": "VBtn"
+      }
+    },
+    "direction": {
+      "text": "\"vertical\" | \"horizontal\" | undefined",
+      "source": "VTab",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        }
+      ],
+      "formatted": "'vertical' | 'horizontal'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "Changes the direction of the tabs. Can be either `horizontal` or `vertical`."
+      },
+      "descriptionSource": {
+        "en": "VTab"
       }
     },
     "sliderColor": {
@@ -1266,71 +1331,6 @@
       },
       "descriptionSource": {
         "en": "VTab"
-      }
-    },
-    "stacked": {
-      "text": "boolean | undefined",
-      "source": "VBtn",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Displays the tab as a flex-column."
-      },
-      "descriptionSource": {
-        "en": "VTab"
-      }
-    },
-    "to": {
-      "text": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined",
-      "source": "router",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "RouteLocationAsRelativeGeneric",
-          "source": "vue-router/dist/vue-router.d.ts#L606-L613",
-          "type": "ref",
-          "ref": "RouteLocationAsRelativeGeneric",
-          "formatted": "RouteLocationAsRelativeGeneric"
-        },
-        {
-          "text": "RouteLocationAsPathGeneric",
-          "source": "vue-router/dist/vue-router.d.ts#L575-L580",
-          "type": "ref",
-          "ref": "RouteLocationAsPathGeneric",
-          "formatted": "RouteLocationAsPathGeneric"
-        }
-      ],
-      "formatted": "string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric\n",
-      "optional": false,
-      "description": {
-        "en": "Denotes the target route of the link. You can find more information about the [**to** prop](https://router.vuejs.org/api/#to) on the vue-router documentation."
-      },
-      "descriptionSource": {
-        "en": "router"
       }
     }
   },

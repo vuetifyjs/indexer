@@ -3,57 +3,6 @@
   "fileName": "VDatePickerMonth",
   "pathName": "v-date-picker-month",
   "props": {
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Removes the ability to click or target the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "modelValue": {
       "text": "unknown[] | undefined",
       "source": "calendar",
@@ -85,6 +34,83 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "calendar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "calendar",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
       }
     },
     "multiple": {
@@ -137,45 +163,6 @@
       "default": false,
       "description": {
         "en": "Sets the multiple of the month."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "max": {
-      "text": "unknown",
-      "source": "calendar",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the maximum date of the month."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "transition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-transition'",
-      "description": {
-        "en": "The transition used when changing months into the future"
       },
       "descriptionSource": {
         "en": "VDatePickerMonth"
@@ -241,6 +228,58 @@
         "en": "VDatePickerMonth"
       }
     },
+    "transition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-transition'",
+      "description": {
+        "en": "The transition used when changing months into the future"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "reverseTransition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-reverse-transition'",
+      "description": {
+        "en": "The transition used when changing months into the past"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
     "hideWeekdays": {
       "text": "boolean | undefined",
       "source": "VDatePickerMonth",
@@ -288,32 +327,6 @@
       "default": false,
       "description": {
         "en": "Show the week number."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "reverseTransition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-reverse-transition'",
-      "description": {
-        "en": "The transition used when changing months into the past"
       },
       "descriptionSource": {
         "en": "VDatePickerMonth"
@@ -527,19 +540,6 @@
       "optional": false,
       "description": {
         "en": "Sets the allowed dates of the month."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "min": {
-      "text": "unknown",
-      "source": "calendar",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the minimum date of the month."
       },
       "descriptionSource": {
         "en": "VDatePickerMonth"

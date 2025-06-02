@@ -3,6 +3,19 @@
   "fileName": "VWindowItem",
   "pathName": "v-window-item",
   "props": {
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "group-item",
@@ -55,19 +68,6 @@
         "en": "generic"
       }
     },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
-      }
-    },
     "transition": {
       "text": "string | boolean | undefined",
       "source": "VWindowItem",
@@ -96,6 +96,31 @@
       },
       "descriptionSource": {
         "en": "VWindowItem"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "reverseTransition": {
@@ -127,31 +152,6 @@
       "descriptionSource": {
         "en": "VWindowItem"
       }
-    },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
     }
   },
   "events": {
@@ -161,7 +161,7 @@
       "items": [
         {
           "text": "{ value: boolean; }",
-          "source": "vuetify/src/components/VWindow/VWindowItem.tsx#L43-L43",
+          "source": "vuetify/src/components/VWindow/VWindowItem.tsx#L41-L41",
           "type": "object",
           "properties": {
             "value": {

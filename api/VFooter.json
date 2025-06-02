@@ -53,9 +53,9 @@
         "en": "layout-item"
       }
     },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VFooter",
       "type": "anyOf",
       "items": [
         {
@@ -69,35 +69,19 @@
           "formatted": "string"
         },
         {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
         }
       ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "formatted": "string | number\n",
       "optional": false,
-      "default": "'footer'",
+      "default": "'auto'",
       "description": {
-        "en": "Specify a custom tag used on the root element."
+        "en": "Sets the height for the component."
       },
       "descriptionSource": {
-        "en": "tag"
+        "en": "generic"
       }
     },
     "border": {
@@ -134,6 +118,36 @@
       },
       "descriptionSource": {
         "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
       }
     },
     "rounded": {
@@ -197,6 +211,53 @@
         "en": "rounded"
       }
     },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'footer'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "VFooter",
@@ -220,67 +281,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "VFooter",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": "'auto'",
-      "description": {
-        "en": "Sets the height for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
       }
     },
     "absolute": {
@@ -307,6 +307,32 @@
       },
       "descriptionSource": {
         "en": "layout-item"
+      }
+    },
+    "app": {
+      "text": "boolean | undefined",
+      "source": "VFooter",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines the position of the footer. If true, the footer would be given a fixed position at the bottom of the viewport. If false, the footer is set to the bottom of the page."
+      },
+      "descriptionSource": {
+        "en": "VFooter"
       }
     },
     "order": {
@@ -339,32 +365,6 @@
       "descriptionSource": {
         "en": "layout-item"
       }
-    },
-    "app": {
-      "text": "boolean | undefined",
-      "source": "VFooter",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Determines the position of the footer. If true, the footer would be given a fixed position at the bottom of the viewport. If false, the footer is set to the bottom of the page."
-      },
-      "descriptionSource": {
-        "en": "VFooter"
-      }
     }
   },
   "events": {},
@@ -387,8 +387,14 @@
     "$footer-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$footer-border": {
+      "default": "(\n  $footer-border-color,\n  $footer-border-style,\n  $footer-border-width,\n  $footer-border-thin-width\n)"
+    },
     "$footer-border-color": {
       "default": "settings.$border-color-root"
+    },
+    "$footer-border-radius": {
+      "default": "map.get(settings.$rounded, 0)"
     },
     "$footer-border-style": {
       "default": "settings.$border-style-root"
@@ -399,20 +405,17 @@
     "$footer-border-width": {
       "default": "0"
     },
-    "$footer-border-radius": {
-      "default": "map.get(settings.$rounded, 0)"
-    },
     "$footer-color": {
       "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$footer-elevation": {
+      "default": "0"
     },
     "$footer-flex": {
       "default": "1 1 auto"
     },
     "$footer-font-size": {
       "default": "14px"
-    },
-    "$footer-elevation": {
-      "default": "0"
     },
     "$footer-padding": {
       "default": "8px 16px"
@@ -423,14 +426,11 @@
     "$footer-rounded-border-radius": {
       "default": "settings.$border-radius-root"
     },
-    "$footer-transition": {
-      "default": ".2s variables.$standard-easing"
-    },
-    "$footer-border": {
-      "default": "(\n  $footer-border-color,\n  $footer-border-style,\n  $footer-border-width,\n  $footer-border-thin-width\n)"
-    },
     "$footer-theme": {
       "default": "(\n  $footer-background,\n  $footer-color\n)"
+    },
+    "$footer-transition": {
+      "default": ".2s variables.$standard-easing"
     }
   }
 }

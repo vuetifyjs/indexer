@@ -29,151 +29,9 @@
         "en": "VStepper"
       }
     },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'div'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VSheet",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets a maximum number of selections that can be made."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "modelValue": {
-      "text": "any",
-      "source": "group",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "location": {
-      "text": "Anchor | null | undefined",
-      "source": "location",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "Anchor",
-          "source": "vuetify/src/util/anchor.ts#L8-L14",
-          "type": "ref",
-          "ref": "Anchor",
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
-        }
-      ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
-      "optional": false,
-      "description": {
-        "en": "Specifies the component's location. Can combine by using a space separated string."
-      },
-      "descriptionSource": {
-        "en": "location"
-      }
-    },
-    "rounded": {
+    "border": {
       "text": "string | number | boolean | undefined",
-      "source": "rounded",
+      "source": "border",
       "type": "anyOf",
       "items": [
         {
@@ -199,88 +57,12 @@
       ],
       "formatted": "string | number | boolean\n",
       "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
       "default": false,
       "description": {
-        "en": "Removes any applied **border-radius** from the component."
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
       },
       "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts all children components into a disabled state."
-      },
-      "descriptionSource": {
-        "en": "group"
+        "en": "border"
       }
     },
     "height": {
@@ -463,42 +245,6 @@
         "en": "dimension"
       }
     },
-    "border": {
-      "text": "string | number | boolean | undefined",
-      "source": "border",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
-      },
-      "descriptionSource": {
-        "en": "border"
-      }
-    },
     "elevation": {
       "text": "string | number | undefined",
       "source": "elevation",
@@ -529,7 +275,7 @@
         "en": "elevation"
       }
     },
-    "multiple": {
+    "disabled": {
       "text": "boolean | undefined",
       "source": "group",
       "type": "anyOf",
@@ -549,7 +295,7 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Allows one to select multiple items."
+        "en": "Puts all children components into a disabled state."
       },
       "descriptionSource": {
         "en": "group"
@@ -581,9 +327,9 @@
         "en": "generic"
       }
     },
-    "mandatory": {
-      "text": "boolean | \"force\" | undefined",
-      "source": "group",
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
       "type": "anyOf",
       "items": [
         {
@@ -592,29 +338,29 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
         },
         {
-          "text": "\"force\"",
-          "type": "string",
-          "literal": "\"force\"",
-          "formatted": "\"force\""
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
         }
       ],
-      "formatted": "boolean | 'force'\n",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
       "optional": false,
-      "default": "'force'",
       "description": {
-        "en": "Forces at least one item to always be selected (if available)."
+        "en": "Specifies the component's location. Can combine by using a space separated string."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "location"
       }
     },
     "position": {
-      "text": "\"fixed\" | \"absolute\" | \"static\" | \"relative\" | \"sticky\" | undefined",
+      "text": "\"fixed\" | \"static\" | \"relative\" | \"absolute\" | \"sticky\" | undefined",
       "source": "position",
       "type": "anyOf",
       "items": [
@@ -630,12 +376,6 @@
           "formatted": "\"fixed\""
         },
         {
-          "text": "\"absolute\"",
-          "type": "string",
-          "literal": "\"absolute\"",
-          "formatted": "\"absolute\""
-        },
-        {
           "text": "\"static\"",
           "type": "string",
           "literal": "\"static\"",
@@ -648,19 +388,234 @@
           "formatted": "\"relative\""
         },
         {
+          "text": "\"absolute\"",
+          "type": "string",
+          "literal": "\"absolute\"",
+          "formatted": "\"absolute\""
+        },
+        {
           "text": "\"sticky\"",
           "type": "string",
           "literal": "\"sticky\"",
           "formatted": "\"sticky\""
         }
       ],
-      "formatted": "'fixed' | 'absolute' | 'static' | 'relative' | 'sticky'\n",
+      "formatted": "'fixed' | 'static' | 'relative' | 'absolute' | 'sticky'\n",
       "optional": false,
       "description": {
         "en": "Sets the position for the component."
       },
       "descriptionSource": {
         "en": "position"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VSheet",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
       }
     },
     "bgColor": {
@@ -738,30 +693,17 @@
         "en": "generic"
       }
     },
-    "itemTitle": {
-      "text": "string | undefined",
-      "source": "Stepper",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
+    "modelValue": {
+      "text": "any",
+      "source": "group",
+      "type": "any",
+      "formatted": "any\n",
       "optional": false,
-      "default": "'title'",
       "description": {
-        "en": "Property on supplied `items` that contains its title."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "Stepper"
+        "en": "generic"
       }
     },
     "itemValue": {
@@ -819,6 +761,133 @@
       },
       "descriptionSource": {
         "en": "Stepper"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "hideActions": {
+      "text": "boolean | undefined",
+      "source": "Stepper",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hide actions bar (prev and next buttons)."
+      },
+      "descriptionSource": {
+        "en": "Stepper"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": "'force'",
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "altLabels": {
@@ -1128,8 +1197,8 @@
         "en": "VStepper"
       }
     },
-    "hideActions": {
-      "text": "boolean | undefined",
+    "itemTitle": {
+      "text": "string | undefined",
       "source": "Stepper",
       "type": "anyOf",
       "items": [
@@ -1139,16 +1208,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": false,
+      "default": "'title'",
       "description": {
-        "en": "Hide actions bar (prev and next buttons)."
+        "en": "Property on supplied `items` that contains its title."
       },
       "descriptionSource": {
         "en": "Stepper"
@@ -1178,75 +1247,6 @@
       },
       "descriptionSource": {
         "en": "Stepper"
-      }
-    },
-    "mobileBreakpoint": {
-      "text": "number | DisplayBreakpoint | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "DisplayBreakpoint",
-          "source": "vuetify/src/composables/display.ts#L13-L13",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"xs\"",
-              "type": "string",
-              "literal": "\"xs\"",
-              "formatted": "\"xs\""
-            },
-            {
-              "text": "\"sm\"",
-              "type": "string",
-              "literal": "\"sm\"",
-              "formatted": "\"sm\""
-            },
-            {
-              "text": "\"md\"",
-              "type": "string",
-              "literal": "\"md\"",
-              "formatted": "\"md\""
-            },
-            {
-              "text": "\"lg\"",
-              "type": "string",
-              "literal": "\"lg\"",
-              "formatted": "\"lg\""
-            },
-            {
-              "text": "\"xl\"",
-              "type": "string",
-              "literal": "\"xl\"",
-              "formatted": "\"xl\""
-            },
-            {
-              "text": "\"xxl\"",
-              "type": "string",
-              "literal": "\"xxl\"",
-              "formatted": "\"xxl\""
-            }
-          ],
-          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
-        }
-      ],
-      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
-      "optional": false,
-      "description": {
-        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
-      },
-      "descriptionSource": {
-        "en": "display"
       }
     },
     "prevText": {
@@ -2027,29 +2027,14 @@
     "$stepper-elevation": {
       "default": "2"
     },
-    "$stepper-item-opacity": {
-      "default": "var(--v-medium-emphasis-opacity)"
-    },
-    "$stepper-item-padding": {
-      "default": "1.5rem"
-    },
-    "$stepper-item-transition-duration": {
-      "default": ".2s"
-    },
-    "$stepper-item-transition-property": {
-      "default": "opacity"
-    },
-    "$stepper-item-transition-timing-function": {
-      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
-    },
     "$stepper-header-divider-margin": {
       "default": "0 -16px"
     },
     "$stepper-header-elevation": {
       "default": "2"
     },
-    "$stepper-window-margin": {
-      "default": "1.5rem"
+    "$stepper-item-alt-labels-margin-bottom": {
+      "default": "16px"
     },
     "$stepper-item-avatar-background": {
       "default": "rgba(var(--v-theme-surface-variant), var(--v-medium-emphasis-opacity))"
@@ -2060,17 +2045,17 @@
     "$stepper-item-avatar-font-size": {
       "default": ".75rem"
     },
-    "$stepper-item-avatar-margin-inline-end": {
-      "default": "8px"
-    },
     "$stepper-item-avatar-icon-font-size": {
       "default": ".875rem"
     },
-    "$stepper-item-alt-labels-margin-bottom": {
-      "default": "16px"
+    "$stepper-item-avatar-margin-inline-end": {
+      "default": "8px"
     },
-    "$stepper-item-title-line-height": {
-      "default": "1"
+    "$stepper-item-opacity": {
+      "default": "var(--v-medium-emphasis-opacity)"
+    },
+    "$stepper-item-padding": {
+      "default": "1.5rem"
     },
     "$stepper-item-subtitle-font-size": {
       "default": ".75rem"
@@ -2080,6 +2065,21 @@
     },
     "$stepper-item-subtitle-opacity": {
       "default": "var(--v-medium-emphasis-opacity)"
+    },
+    "$stepper-item-title-line-height": {
+      "default": "1"
+    },
+    "$stepper-item-transition-duration": {
+      "default": ".2s"
+    },
+    "$stepper-item-transition-property": {
+      "default": "opacity"
+    },
+    "$stepper-item-transition-timing-function": {
+      "default": "cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "$stepper-window-margin": {
+      "default": "1.5rem"
     }
   }
 }

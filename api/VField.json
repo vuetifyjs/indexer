@@ -29,80 +29,16 @@
         "en": "VField"
       }
     },
-    "reverse": {
-      "text": "boolean | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Reverses the orientation."
-      },
-      "descriptionSource": {
-        "en": "VField"
-      }
-    },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
+    "modelValue": {
+      "text": "unknown",
+      "type": "unknown",
+      "formatted": "unknown\n",
       "optional": false,
       "description": {
-        "en": "Specify a theme for this component and all of its children."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "id": {
-      "text": "string | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the DOM id on the component."
-      },
-      "descriptionSource": {
-        "en": "VField"
+        "en": "generic"
       }
     },
     "error": {
@@ -126,6 +62,32 @@
       "default": false,
       "description": {
         "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "reverse": {
+      "text": "boolean | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reverses the orientation."
       },
       "descriptionSource": {
         "en": "VField"
@@ -190,6 +152,31 @@
       },
       "descriptionSource": {
         "en": "rounded"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
       }
     },
     "color": {
@@ -280,8 +267,8 @@
         "en": "generic"
       }
     },
-    "bgColor": {
-      "text": "string | undefined",
+    "disabled": {
+      "text": "boolean | undefined",
       "source": "VField",
       "type": "anyOf",
       "items": [
@@ -291,21 +278,22 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": "null",
       "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Removes the ability to click or target the input."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VField"
       }
     },
-    "baseColor": {
+    "id": {
       "text": "string | undefined",
       "source": "VField",
       "type": "anyOf",
@@ -324,7 +312,7 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the color of the input when it is not focused."
+        "en": "Sets the DOM id on the component."
       },
       "descriptionSource": {
         "en": "VField"
@@ -356,20 +344,8 @@
         "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "unknown",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
+    "baseColor": {
+      "text": "string | undefined",
       "source": "VField",
       "type": "anyOf",
       "items": [
@@ -379,19 +355,43 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": "null",
       "description": {
-        "en": "Removes the ability to click or target the input."
+        "en": "Sets the color of the input when it is not focused."
       },
       "descriptionSource": {
         "en": "VField"
+      }
+    },
+    "label": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "loading": {
@@ -423,31 +423,6 @@
       },
       "descriptionSource": {
         "en": "loader"
-      }
-    },
-    "label": {
-      "text": "string | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "focused": {
@@ -497,27 +472,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -547,18 +501,64 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "Creates a [v-icon](/api/v-icon/) component in the **append-inner** slot."
       },
       "descriptionSource": {
         "en": "VField"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "clearable": {
@@ -608,27 +608,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -658,12 +637,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "default": "'$clear'",
       "description": {
@@ -828,27 +828,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -878,12 +857,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "Creates a [v-icon](/api/v-icon/) component in the **prepend-inner** slot."
@@ -1249,10 +1249,10 @@
       "formatted": "{\n  isActive: Ref<boolean, boolean>\n  isFocused: Ref<boolean, boolean>\n  controlRef: Ref<HTMLElement | undefined, HTMLElement | undefined>\n  focus: () => void\n  blur: () => void\n}\n",
       "optional": false,
       "description": {
-        "en": "Adds an item inside the input content."
+        "en": "Slot that is appended to the input."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VField"
       }
     },
     "label": {
@@ -1537,7 +1537,7 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VField.json))"
+        "en": "The color of the icon."
       },
       "descriptionSource": {
         "en": "VField"
@@ -1548,35 +1548,11 @@
     "$field-border-radius": {
       "default": "settings.$border-radius-root"
     },
-    "$field-rounded-border-radius": {
-      "default": "map.get(settings.$rounded, 'xl')"
+    "$field-border-width": {
+      "default": "1px"
     },
-    "$field-color": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
-    },
-    "$field-disabled-color": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-disabled-opacity))"
-    },
-    "$field-error-color": {
-      "default": "rgb(var(--v-theme-error))"
-    },
-    "$field-font-size": {
-      "default": "16px"
-    },
-    "$field-letter-spacing": {
-      "default": ".009375em"
-    },
-    "$field-max-width": {
-      "default": "100%"
-    },
-    "$field-transition-timing": {
-      "default": ".15s settings.$standard-easing"
-    },
-    "$field-subtle-transition-timing": {
-      "default": "250ms settings.$standard-easing"
-    },
-    "$field-underlined-margin-bottom": {
-      "default": "4px"
+    "$field-chip-height": {
+      "default": "24px"
     },
     "$field-clearable-margin": {
       "default": "4px"
@@ -1584,8 +1560,32 @@
     "$field-clearable-transition": {
       "default": ".15s opacity, .15s width settings.$standard-easing"
     },
-    "$field-chip-height": {
-      "default": "24px"
+    "$field-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$field-control-affixed-inner-padding": {
+      "default": "6px"
+    },
+    "$field-control-affixed-padding": {
+      "default": "12px"
+    },
+    "$field-control-filled-background": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-idle-opacity))"
+    },
+    "$field-control-height": {
+      "default": "56px"
+    },
+    "$field-control-padding-bottom": {
+      "default": "4px"
+    },
+    "$field-control-padding-end": {
+      "default": "16px"
+    },
+    "$field-control-padding-start": {
+      "default": "16px"
+    },
+    "$field-control-padding-top": {
+      "default": "8px"
     },
     "$field-control-solo-background": {
       "default": "rgb(var(--v-theme-surface))"
@@ -1602,50 +1602,38 @@
     "$field-control-solo-inverted-focused-color": {
       "default": "rgb(var(--v-theme-on-surface-variant))"
     },
-    "$field-control-filled-background": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-idle-opacity))"
-    },
-    "$field-control-padding-start": {
-      "default": "16px"
-    },
-    "$field-control-padding-end": {
-      "default": "16px"
-    },
-    "$field-control-padding-top": {
-      "default": "8px"
-    },
-    "$field-control-padding-bottom": {
-      "default": "4px"
-    },
-    "$field-control-affixed-padding": {
-      "default": "12px"
-    },
-    "$field-control-affixed-inner-padding": {
-      "default": "6px"
-    },
     "$field-control-underlined-height": {
       "default": "48px"
     },
     "$field-control-underlined-padding-bottom": {
       "default": "2px"
     },
-    "$field-control-height": {
-      "default": "56px"
+    "$field-disabled-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-disabled-opacity))"
     },
-    "$field-input-opacity": {
-      "default": "var(--v-high-emphasis-opacity)"
+    "$field-error-color": {
+      "default": "rgb(var(--v-theme-error))"
+    },
+    "$field-focused-border-width": {
+      "default": "2px"
+    },
+    "$field-font-size": {
+      "default": "16px"
+    },
+    "$field-input-column-gap": {
+      "default": "2px"
     },
     "$field-input-min-height": {
       "default": "#{max(\n  var(--v-input-control-height, $input-control-height),\n  calc($input-font-size * $input-line-height + var(--v-field-input-padding-top) + var(--v-field-input-padding-bottom))\n)}"
     },
-    "$field-input-padding-top": {
-      "default": "calc(var(--v-field-padding-top, $field-control-padding-top) + var(--v-input-padding-top, 0px))"
+    "$field-input-opacity": {
+      "default": "var(--v-high-emphasis-opacity)"
     },
     "$field-input-padding-bottom": {
       "default": "var(--v-field-padding-bottom, $field-control-padding-bottom)"
     },
-    "$field-input-column-gap": {
-      "default": "2px"
+    "$field-input-padding-top": {
+      "default": "calc(var(--v-field-padding-top, $field-control-padding-top) + var(--v-input-padding-top, 0px))"
     },
     "$field-input-row-gap": {
       "default": "8px"
@@ -1653,20 +1641,32 @@
     "$field-label-floating-scale": {
       "default": ".75"
     },
+    "$field-letter-spacing": {
+      "default": ".009375em"
+    },
+    "$field-max-width": {
+      "default": "100%"
+    },
     "$field-outline-opacity": {
       "default": ".38"
-    },
-    "$field-border-width": {
-      "default": "1px"
-    },
-    "$field-focused-border-width": {
-      "default": "2px"
     },
     "$field-overlay-filled-opacity": {
       "default": "0.04"
     },
     "$field-overlay-focused-background-color": {
       "default": "rgb(var(--v-theme-surface-variant))"
+    },
+    "$field-rounded-border-radius": {
+      "default": "map.get(settings.$rounded, 'xl')"
+    },
+    "$field-subtle-transition-timing": {
+      "default": "250ms settings.$standard-easing"
+    },
+    "$field-transition-timing": {
+      "default": ".15s settings.$standard-easing"
+    },
+    "$field-underlined-margin-bottom": {
+      "default": "4px"
     }
   }
 }

@@ -42,6 +42,31 @@
         "en": "generic"
       }
     },
+    "color": {
+      "text": "string | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "density": {
       "text": "Density | undefined",
       "source": "density",
@@ -124,62 +149,6 @@
         "en": "VDataTable"
       }
     },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "DataTable",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "sticky": {
-      "text": "boolean | undefined",
-      "source": "VDataTableHeaders",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Deprecated, use `fixed-header` instead."
-      },
-      "descriptionSource": {
-        "en": "VDataTableHeaders"
-      }
-    },
     "tag": {
       "text": "string | JSXComponent | undefined",
       "source": "tag",
@@ -252,9 +221,9 @@
         "en": "theme"
       }
     },
-    "color": {
-      "text": "string | undefined",
-      "source": "VDataTableHeaders",
+    "width": {
+      "text": "string | number | undefined",
+      "source": "DataTable",
       "type": "anyOf",
       "items": [
         {
@@ -266,12 +235,208 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "sticky": {
+      "text": "boolean | undefined",
+      "source": "VDataTableHeaders",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Deprecated, use `fixed-header` instead."
+      },
+      "descriptionSource": {
+        "en": "VDataTableHeaders"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            },
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            }
+          ],
+          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
+        }
+      ],
+      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "loading": {
+      "text": "string | boolean | undefined",
+      "source": "loader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
+      },
+      "descriptionSource": {
+        "en": "loader"
+      }
+    },
+    "items": {
+      "text": "readonly any[] | undefined",
+      "source": "DataTable-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of strings or objects used for automatically generating children components."
       },
       "descriptionSource": {
         "en": "generic"
@@ -296,6 +461,27 @@
               "text": "string",
               "type": "string",
               "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             },
             {
               "text": "(string | [path: string, opacity: number])[]",
@@ -327,33 +513,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$next'",
       "description": {
@@ -384,6 +549,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -413,33 +599,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$prev'",
       "description": {
@@ -447,6 +612,32 @@
       },
       "descriptionSource": {
         "en": "VDataTableFooter"
+      }
+    },
+    "hover": {
+      "text": "boolean | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Adds a hover effects to a table rows."
+      },
+      "descriptionSource": {
+        "en": "VDataTable"
       }
     },
     "valueComparator": {
@@ -548,11 +739,11 @@
                 {
                   "name": "data",
                   "optional": false,
-                  "text": "Pick<ItemKeySlot<any>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">",
+                  "text": "Pick<ItemKeySlot<any>, \"value\" | \"index\" | \"item\" | \"column\" | \"internalItem\">",
                   "source": "typescript/lib/lib.es5.d.ts#L6-L6",
                   "type": "ref",
                   "ref": "Pick",
-                  "formatted": "Pick<ItemKeySlot<any>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">"
+                  "formatted": "Pick<ItemKeySlot<any>, \"value\" | \"index\" | \"item\" | \"column\" | \"internalItem\">"
                 }
               ],
               "returnType": {
@@ -571,13 +762,13 @@
                 },
                 "formatted": "Record<string, any>"
               },
-              "formatted": "(data: Pick<ItemKeySlot<any>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">) => Record<string, any>"
+              "formatted": "(data: Pick<ItemKeySlot<any>, \"value\" | \"index\" | \"item\" | \"column\" | \"internalItem\">) => Record<string, any>"
             }
           ],
-          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<any>, \"value\" | \"item\" | \"index\" | \"internalItem\" | \"column\">) => Record<string, any>)"
+          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<any>, \"value\" | \"index\" | \"item\" | \"column\" | \"internalItem\">) => Record<string, any>)"
         }
       ],
-      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<\n        ItemKeySlot<any>,\n        'value' | 'item' | 'index' | 'internalItem' | 'column'\n      >,\n    ) => Record<string, any>)\n",
+      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<\n        ItemKeySlot<any>,\n        'value' | 'index' | 'item' | 'column' | 'internalItem'\n      >,\n    ) => Record<string, any>)\n",
       "optional": false,
       "description": {
         "en": "An object of additional props to be passed to each `<td>` in the table body. Also accepts a function that will be called for each cell. If the same prop is defined both here and in `cellProps` in a headers object, the value from the headers object will be used."
@@ -586,39 +777,8 @@
         "en": "VDataTableRows"
       }
     },
-    "loading": {
-      "text": "string | boolean | undefined",
-      "source": "loader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
-      },
-      "descriptionSource": {
-        "en": "loader"
-      }
-    },
     "headers": {
-      "text": "readonly { readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"end\" | \"start\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[] | undefined",
+      "text": "readonly { readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"start\" | \"end\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[] | undefined",
       "source": "DataTable-header",
       "type": "anyOf",
       "items": [
@@ -628,22 +788,22 @@
           "formatted": "undefined"
         },
         {
-          "text": "readonly { readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"end\" | \"start\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[]",
+          "text": "readonly { readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"start\" | \"end\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[]",
           "source": "typescript/lib/lib.es5.d.ts#L4-L4",
           "type": "array",
           "items": [
             {
-              "text": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"end\" | \"start\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }",
+              "text": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"start\" | \"end\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }",
               "source": "@vue/reactivity/dist/reactivity.d.ts#L82-L84",
               "type": "ref",
               "ref": "__type",
-              "formatted": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"end\" | \"start\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }"
+              "formatted": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"start\" | \"end\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }"
             }
           ],
-          "formatted": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"end\" | \"start\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[]"
+          "formatted": "{ readonly key?: (string & {}) | \"data-table-group\" | \"data-table-select\" | \"data-table-expand\" | undefined; readonly value?: SelectItemKey<any>; readonly title?: string | undefined; readonly fixed?: boolean | undefined; readonly align?: \"start\" | \"end\" | \"center\" | undefined; readonly width?: string | number | undefined; readonly minWidth?: string | number | undefined; readonly maxWidth?: string | number | undefined; readonly nowrap?: boolean | undefined; readonly headerProps?: { readonly [x: string]: any; } | undefined; readonly cellProps?: { readonly [x: string]: any; } | HeaderCellPropsFunction | undefined; readonly sortable?: boolean | undefined; readonly sort?: DataTableCompareFunction<any> | undefined; readonly sortRaw?: DataTableCompareFunction<any> | undefined; readonly filter?: FilterFunction | undefined; readonly children?: readonly any[] | undefined; }[]"
         }
       ],
-      "formatted": "{\n  readonly key?:\n    | (string & {})\n    | 'data-table-group'\n    | 'data-table-select'\n    | 'data-table-expand'\n    | undefined\n  readonly value?: SelectItemKey<any>\n  readonly title?: string | undefined\n  readonly fixed?: boolean | undefined\n  readonly align?: 'end' | 'start' | 'center' | undefined\n  readonly width?: string | number | undefined\n  readonly minWidth?: string | number | undefined\n  readonly maxWidth?: string | number | undefined\n  readonly nowrap?: boolean | undefined\n  readonly headerProps?: { readonly [x: string]: any } | undefined\n  readonly cellProps?:\n    | { readonly [x: string]: any }\n    | HeaderCellPropsFunction\n    | undefined\n  readonly sortable?: boolean | undefined\n  readonly sort?: DataTableCompareFunction<any> | undefined\n  readonly sortRaw?: DataTableCompareFunction<any> | undefined\n  readonly filter?: FilterFunction | undefined\n  readonly children?: readonly any[] | undefined\n}[]\n",
+      "formatted": "{\n  readonly key?:\n    | (string & {})\n    | 'data-table-group'\n    | 'data-table-select'\n    | 'data-table-expand'\n    | undefined\n  readonly value?: SelectItemKey<any>\n  readonly title?: string | undefined\n  readonly fixed?: boolean | undefined\n  readonly align?: 'start' | 'end' | 'center' | undefined\n  readonly width?: string | number | undefined\n  readonly minWidth?: string | number | undefined\n  readonly maxWidth?: string | number | undefined\n  readonly nowrap?: boolean | undefined\n  readonly headerProps?: { readonly [x: string]: any } | undefined\n  readonly cellProps?:\n    | { readonly [x: string]: any }\n    | HeaderCellPropsFunction\n    | undefined\n  readonly sortable?: boolean | undefined\n  readonly sort?: DataTableCompareFunction<any> | undefined\n  readonly sortRaw?: DataTableCompareFunction<any> | undefined\n  readonly filter?: FilterFunction | undefined\n  readonly children?: readonly any[] | undefined\n}[]\n",
       "optional": false,
       "description": {
         "en": "An array of objects that each describe a header column."
@@ -766,40 +926,6 @@
         "en": "generic"
       }
     },
-    "items": {
-      "text": "readonly any[] | undefined",
-      "source": "DataTable-items",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "readonly any[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            }
-          ],
-          "formatted": "any[]"
-        }
-      ],
-      "formatted": "any[]\n",
-      "optional": false,
-      "default": "[]",
-      "description": {
-        "en": "An array of strings or objects used for automatically generating children components."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "noDataText": {
       "text": "string | undefined",
       "source": "VDataTableRows",
@@ -824,106 +950,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "mobile": {
-      "text": "boolean | null | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
-      },
-      "descriptionSource": {
-        "en": "display"
-      }
-    },
-    "mobileBreakpoint": {
-      "text": "number | DisplayBreakpoint | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "DisplayBreakpoint",
-          "source": "vuetify/src/composables/display.ts#L13-L13",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"xs\"",
-              "type": "string",
-              "literal": "\"xs\"",
-              "formatted": "\"xs\""
-            },
-            {
-              "text": "\"sm\"",
-              "type": "string",
-              "literal": "\"sm\"",
-              "formatted": "\"sm\""
-            },
-            {
-              "text": "\"md\"",
-              "type": "string",
-              "literal": "\"md\"",
-              "formatted": "\"md\""
-            },
-            {
-              "text": "\"lg\"",
-              "type": "string",
-              "literal": "\"lg\"",
-              "formatted": "\"lg\""
-            },
-            {
-              "text": "\"xl\"",
-              "type": "string",
-              "literal": "\"xl\"",
-              "formatted": "\"xl\""
-            },
-            {
-              "text": "\"xxl\"",
-              "type": "string",
-              "literal": "\"xxl\"",
-              "formatted": "\"xxl\""
-            }
-          ],
-          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
-        }
-      ],
-      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
-      "optional": false,
-      "description": {
-        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
-      },
-      "descriptionSource": {
-        "en": "display"
       }
     },
     "rowProps": {
@@ -965,11 +991,11 @@
                 {
                   "name": "data",
                   "optional": false,
-                  "text": "Pick<ItemKeySlot<any>, \"item\" | \"index\" | \"internalItem\">",
+                  "text": "Pick<ItemKeySlot<any>, \"index\" | \"item\" | \"internalItem\">",
                   "source": "typescript/lib/lib.es5.d.ts#L6-L6",
                   "type": "ref",
                   "ref": "Pick",
-                  "formatted": "Pick<ItemKeySlot<any>, \"item\" | \"index\" | \"internalItem\">"
+                  "formatted": "Pick<ItemKeySlot<any>, \"index\" | \"item\" | \"internalItem\">"
                 }
               ],
               "returnType": {
@@ -988,13 +1014,13 @@
                 },
                 "formatted": "Record<string, any>"
               },
-              "formatted": "(data: Pick<ItemKeySlot<any>, \"item\" | \"index\" | \"internalItem\">) => Record<string, any>"
+              "formatted": "(data: Pick<ItemKeySlot<any>, \"index\" | \"item\" | \"internalItem\">) => Record<string, any>"
             }
           ],
-          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<any>, \"item\" | \"index\" | \"internalItem\">) => Record<string, any>)"
+          "formatted": "Record<string, any> | ((data: Pick<ItemKeySlot<any>, \"index\" | \"item\" | \"internalItem\">) => Record<string, any>)"
         }
       ],
-      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<ItemKeySlot<any>, 'item' | 'index' | 'internalItem'>,\n    ) => Record<string, any>)\n",
+      "formatted": "  | Record<string, any>\n  | ((\n      data: Pick<ItemKeySlot<any>, 'index' | 'item' | 'internalItem'>,\n    ) => Record<string, any>)\n",
       "optional": false,
       "description": {
         "en": "An object of additional props to be passed to each `<tr>` in the table body. Also accepts a function that will be called for each row."
@@ -1498,6 +1524,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1527,33 +1574,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$sortAsc'",
       "description": {
@@ -1584,6 +1610,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1613,33 +1660,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$sortDesc'",
       "description": {
@@ -1673,32 +1699,6 @@
       },
       "descriptionSource": {
         "en": "VTable"
-      }
-    },
-    "hover": {
-      "text": "boolean | undefined",
-      "source": "VTable",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Adds a hover effects to a table rows."
-      },
-      "descriptionSource": {
-        "en": "VDataTable"
       }
     },
     "filterMode": {
@@ -1887,6 +1887,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1916,33 +1937,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$first'",
       "description": {
@@ -1973,6 +1973,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -2002,33 +2023,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "default": "'$last'",
       "description": {
@@ -2310,7 +2310,7 @@
       "formatted": "[any]\n",
       "optional": false,
       "description": {
-        "en": "Emits when the **expanded** property of the **options** prop is updated."
+        "en": "Emits when the **expanded** prop is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2330,7 +2330,7 @@
       "formatted": "[number]\n",
       "optional": false,
       "description": {
-        "en": "Emits when the **page** property of the **options** prop is updated."
+        "en": "Emits when the **page** prop is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2350,7 +2350,7 @@
       "formatted": "[number]\n",
       "optional": false,
       "description": {
-        "en": "Emits when the **items-per-page** property of the **options** prop is updated."
+        "en": "Emits when the **items-per-page** prop is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2370,7 +2370,7 @@
       "formatted": "[any]\n",
       "optional": false,
       "description": {
-        "en": "Emits when the **sortBy** property of the **options** prop is updated."
+        "en": "Emits when the **sortBy** prop is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2390,7 +2390,7 @@
       "formatted": "[any]\n",
       "optional": false,
       "description": {
-        "en": "Emits when one of the **options** properties is updated."
+        "en": "Emits when pagination related properties (page, itemsPerPage, sortBy, groupBy, search) is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2410,7 +2410,7 @@
       "formatted": "[any]\n",
       "optional": false,
       "description": {
-        "en": "Emits when the **group-by** property of the **options** property is updated."
+        "en": "Emits when the **group-by** prop is updated."
       },
       "descriptionSource": {
         "en": "VDataTable"
@@ -2744,6 +2744,27 @@
                 "formatted": "string"
               },
               {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              },
+              {
                 "text": "(string | [path: string, opacity: number])[]",
                 "source": "typescript/lib/lib.es5.d.ts#L4-L4",
                 "type": "array",
@@ -2775,36 +2796,15 @@
                   }
                 ],
                 "formatted": "(string | [string, number])[]"
-              },
-              {
-                "text": "JSXComponent",
-                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-                "type": "anyOf",
-                "items": [
-                  {
-                    "text": "new () => any",
-                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                    "type": "constructor",
-                    "formatted": "new () => any"
-                  },
-                  {
-                    "text": "FunctionalComponent<any, {}, any, {}>",
-                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                    "type": "ref",
-                    "ref": "FunctionalComponent",
-                    "formatted": "FunctionalComponent"
-                  }
-                ],
-                "formatted": "(new () => any) | FunctionalComponent"
               }
             ],
-            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+            "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
           },
-          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
           "optional": false
         }
       },
-      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n}\n",
       "optional": false,
       "description": {
         "en": "Slot to replace the default `v-checkbox-btn` in header."
@@ -2947,6 +2947,27 @@
                 "formatted": "string"
               },
               {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              },
+              {
                 "text": "(string | [path: string, opacity: number])[]",
                 "source": "typescript/lib/lib.es5.d.ts#L4-L4",
                 "type": "array",
@@ -2978,36 +2999,15 @@
                   }
                 ],
                 "formatted": "(string | [string, number])[]"
-              },
-              {
-                "text": "JSXComponent",
-                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-                "type": "anyOf",
-                "items": [
-                  {
-                    "text": "new () => any",
-                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                    "type": "constructor",
-                    "formatted": "new () => any"
-                  },
-                  {
-                    "text": "FunctionalComponent<any, {}, any, {}>",
-                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                    "type": "ref",
-                    "ref": "FunctionalComponent",
-                    "formatted": "FunctionalComponent"
-                  }
-                ],
-                "formatted": "(new () => any) | FunctionalComponent"
               }
             ],
-            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+            "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
           },
-          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
           "optional": false
         }
       },
-      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n}\n",
       "optional": false,
       "description": {
         "en": "Slot to replace the default `v-icon` used when expanding header."
@@ -3972,6 +3972,27 @@
                 "formatted": "string"
               },
               {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              },
+              {
                 "text": "(string | [path: string, opacity: number])[]",
                 "source": "typescript/lib/lib.es5.d.ts#L4-L4",
                 "type": "array",
@@ -4003,32 +4024,11 @@
                   }
                 ],
                 "formatted": "(string | [string, number])[]"
-              },
-              {
-                "text": "JSXComponent",
-                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-                "type": "anyOf",
-                "items": [
-                  {
-                    "text": "new () => any",
-                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                    "type": "constructor",
-                    "formatted": "new () => any"
-                  },
-                  {
-                    "text": "FunctionalComponent<any, {}, any, {}>",
-                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                    "type": "ref",
-                    "ref": "FunctionalComponent",
-                    "formatted": "FunctionalComponent"
-                  }
-                ],
-                "formatted": "(new () => any) | FunctionalComponent"
               }
             ],
-            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+            "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
           },
-          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
           "optional": false
         },
         "isSorted": {
@@ -4055,7 +4055,7 @@
           "optional": false
         }
       },
-      "formatted": "{\n  headers: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[][]\n  columns: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[]\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  selectAll: (value: boolean) => void\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n}\n",
+      "formatted": "{\n  headers: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[][]\n  columns: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>[]\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  selectAll: (value: boolean) => void\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n}\n",
       "optional": false,
       "description": {
         "en": "An array of objects that each describe a header column."
@@ -9324,6 +9324,27 @@
                 "formatted": "string"
               },
               {
+                "text": "JSXComponent",
+                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "new () => any",
+                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                    "type": "constructor",
+                    "formatted": "new () => any"
+                  },
+                  {
+                    "text": "FunctionalComponent<any, {}, any, {}>",
+                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                    "type": "ref",
+                    "ref": "FunctionalComponent",
+                    "formatted": "FunctionalComponent"
+                  }
+                ],
+                "formatted": "(new () => any) | FunctionalComponent"
+              },
+              {
                 "text": "(string | [path: string, opacity: number])[]",
                 "source": "typescript/lib/lib.es5.d.ts#L4-L4",
                 "type": "array",
@@ -9355,36 +9376,15 @@
                   }
                 ],
                 "formatted": "(string | [string, number])[]"
-              },
-              {
-                "text": "JSXComponent",
-                "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-                "type": "anyOf",
-                "items": [
-                  {
-                    "text": "new () => any",
-                    "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                    "type": "constructor",
-                    "formatted": "new () => any"
-                  },
-                  {
-                    "text": "FunctionalComponent<any, {}, any, {}>",
-                    "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                    "type": "ref",
-                    "ref": "FunctionalComponent",
-                    "formatted": "FunctionalComponent"
-                  }
-                ],
-                "formatted": "(new () => any) | FunctionalComponent"
               }
             ],
-            "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+            "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
           },
-          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (string | [string, number])[] | (new () => any) | FunctionalComponent",
+          "formatted": "(column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => string | (new () => any) | FunctionalComponent | (string | [string, number])[]",
           "optional": false
         }
       },
-      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (string | [string, number])[]\n    | (new () => any)\n    | FunctionalComponent\n}\n",
+      "formatted": "{\n  column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>\n  selectAll: (value: boolean) => void\n  isSorted: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => boolean\n  toggleSort: (column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>) => void\n  sortBy: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/composables/sort.ts#L30-L30\" target=\"_blank\">SortItem</a>[]\n  someSelected: boolean\n  allSelected: boolean\n  getSortIcon: (\n    column: <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VDataTable/types.ts#L34-L44\" target=\"_blank\">InternalDataTableHeader</a>,\n  ) =>\n    | string\n    | (new () => any)\n    | FunctionalComponent\n    | (string | [string, number])[]\n}\n",
       "optional": true,
       "description": {
         "en": "Slot for custom rendering of a header cell."
@@ -9396,20 +9396,14 @@
   },
   "exposed": {},
   "sass": {
-    "$data-table-header-sort-badge-size": {
-      "default": "20px"
-    },
-    "$data-table-header-sort-badge-color": {
-      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
-    },
-    "$data-table-loading-opacity": {
-      "default": "var(--v-disabled-opacity)"
-    },
     "$data-table-footer-info-min-width": {
       "default": "116px"
     },
     "$data-table-footer-info-padding": {
       "default": "0 16px"
+    },
+    "$data-table-footer-items-per-page-padding": {
+      "default": "8px"
     },
     "$data-table-footer-padding": {
       "default": "8px 4px"
@@ -9420,14 +9414,20 @@
     "$data-table-footer-select-width": {
       "default": "90px"
     },
-    "$data-table-footer-items-per-page-padding": {
-      "default": "8px"
-    },
     "$data-table-header-mobile-chip-icon-color": {
       "default": "rgba(var(--v-theme-on-surface), var(--v-disabled-opacity))"
     },
     "$data-table-header-mobile-chip-icon-color-active": {
       "default": "rgba(var(--v-theme-on-surface))"
+    },
+    "$data-table-header-sort-badge-color": {
+      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
+    },
+    "$data-table-header-sort-badge-size": {
+      "default": "20px"
+    },
+    "$data-table-loading-opacity": {
+      "default": "var(--v-disabled-opacity)"
     }
   }
 }

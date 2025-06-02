@@ -3,6 +3,32 @@
   "fileName": "VDialog",
   "pathName": "v-dialog",
   "props": {
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VOverlay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "height": {
       "text": "string | number | undefined",
       "source": "dimension",
@@ -183,32 +209,6 @@
         "en": "dimension"
       }
     },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "VOverlay",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the ability to click or target the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "location": {
       "text": "Anchor | undefined",
       "source": "VOverlay-location-strategies",
@@ -288,6 +288,32 @@
         "en": "theme"
       }
     },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VOverlay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "opacity": {
       "text": "string | number | undefined",
       "source": "VOverlay",
@@ -312,15 +338,15 @@
       "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "Sets the overlay opacity."
+        "en": "Sets the opacity of the scrim element. Only applies if `scrim` is enabled."
       },
       "descriptionSource": {
         "en": "VOverlay"
       }
     },
-    "modelValue": {
+    "eager": {
       "text": "boolean | undefined",
-      "source": "VOverlay",
+      "source": "lazy",
       "type": "anyOf",
       "items": [
         {
@@ -338,143 +364,10 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "offset": {
-      "text": "string | number | number[] | undefined",
-      "source": "VOverlay-location-strategies",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "number[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "number",
-              "type": "number",
-              "formatted": "number"
-            }
-          ],
-          "formatted": "number[]"
-        }
-      ],
-      "formatted": "string | number | number[]\n",
-      "optional": false,
-      "description": {
-        "en": "A single value that offsets content away from the target based upon what side it is on."
-      },
-      "descriptionSource": {
-        "en": "VOverlay-location-strategies"
-      }
-    },
-    "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; } | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "TransitionProps & { component?: Component | undefined; }",
-          "type": "allOf",
-          "items": [
-            {
-              "text": "TransitionProps",
-              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
-              "type": "ref",
-              "ref": "TransitionProps",
-              "formatted": "TransitionProps"
-            },
-            {
-              "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
-              "type": "object",
-              "properties": {
-                "component": {
-                  "text": "Component | undefined",
-                  "type": "anyOf",
-                  "items": [
-                    {
-                      "text": "undefined",
-                      "type": "ref",
-                      "ref": "",
-                      "formatted": "undefined"
-                    },
-                    {
-                      "text": "Component",
-                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-                      "type": "ref",
-                      "ref": "Component",
-                      "formatted": "Component"
-                    }
-                  ],
-                  "formatted": "Component",
-                  "optional": true
-                }
-              },
-              "formatted": "{ component: Component }"
-            }
-          ],
-          "formatted": "TransitionProps & { component: Component }"
-        },
-        {
-          "text": "{ component: Component; }",
-          "source": "vuetify/src/components/VDialog/VDialog.tsx#L34-L34",
-          "type": "object",
-          "properties": {
-            "component": {
-              "text": "Component",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-              "type": "ref",
-              "ref": "Component",
-              "formatted": "Component",
-              "optional": false
-            }
-          },
-          "formatted": "{ component: Component }"
-        }
-      ],
-      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component }\n",
-      "optional": false,
-      "default": "{component: {name: 'VDialogTransition'}}",
-      "description": {
-        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
-      },
-      "descriptionSource": {
-        "en": "transition"
       }
     },
     "origin": {
@@ -515,6 +408,224 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "contentClass": {
+      "text": "any",
+      "source": "VOverlay",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "Applies a custom class to the detached element. This is useful because the content is moved to the beginning of the `v-app` component (unless the **attach** prop is provided) and is not targetable by classes passed directly on the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions> & ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & FilterPropsOptions<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>, ExtractPropTypes<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>>>; } | null | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        },
+        {
+          "text": "{ component: ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions> & ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & FilterPropsOptions<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>, ExtractPropTypes<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>>>; }",
+          "source": "vuetify/src/components/VDialog/VDialog.tsx#L33-L33",
+          "type": "object",
+          "properties": {
+            "component": {
+              "text": "ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions> & ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & FilterPropsOptions<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>, ExtractPropTypes<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>>>",
+              "type": "allOf",
+              "items": [
+                {
+                  "text": "ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L462-L467",
+                  "type": "ref",
+                  "ref": "ComponentPublicInstanceConstructor",
+                  "formatted": "ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions>"
+                },
+                {
+                  "text": "ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L806-L824",
+                  "type": "ref",
+                  "ref": "ComponentOptionsBase",
+                  "formatted": "ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions>"
+                },
+                {
+                  "text": "VNodeProps",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1188-L1199",
+                  "type": "ref",
+                  "ref": "VNodeProps",
+                  "formatted": "VNodeProps"
+                },
+                {
+                  "text": "AllowedComponentProps",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1367-L1370",
+                  "type": "ref",
+                  "ref": "AllowedComponentProps",
+                  "formatted": "AllowedComponentProps"
+                },
+                {
+                  "text": "ComponentCustomProps",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1324-L1325",
+                  "type": "ref",
+                  "ref": "ComponentCustomProps",
+                  "formatted": "ComponentCustomProps"
+                },
+                {
+                  "text": "FilterPropsOptions<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>, ExtractPropTypes<AppendDefault<{ target: PropType<HTMLElement | [x: number, y: number]>; }, {}>>>",
+                  "source": "vuetify/src/util/defineComponent.tsx#L298-L303",
+                  "type": "object",
+                  "properties": {
+                    "filterProps": {
+                      "text": "<T, U>(props: T) => Partial<Pick<T, U>>",
+                      "source": "vuetify/src/util/defineComponent.tsx#L299-L302",
+                      "type": "function",
+                      "parameters": [
+                        {
+                          "name": "props",
+                          "optional": false,
+                          "text": "T",
+                          "source": "vuetify/src/util/defineComponent.tsx#L300-L300",
+                          "type": "UNSUPPORTED",
+                          "formatted": "T"
+                        }
+                      ],
+                      "returnType": {
+                        "text": "Partial<Pick<T, U>>",
+                        "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+                        "type": "ref",
+                        "ref": "Partial",
+                        "formatted": "Partial<Pick<T, U>>"
+                      },
+                      "formatted": "(props: T) => Partial<Pick<T, U>>",
+                      "optional": false
+                    }
+                  },
+                  "formatted": "{ filterProps: (props: T) => Partial<Pick<T, U>> }"
+                }
+              ],
+              "formatted": "ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions> & ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & { filterProps: (props: T) => Partial<Pick<T, U>> }",
+              "optional": false
+            }
+          },
+          "formatted": "{ component: ComponentPublicInstanceConstructor<CreateComponentPublicInstanceWithMixins<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, PublicProps, {}, true, {}, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, OptionTypesType<{}, {}, {}, {}, {}, {}>, {} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, {}, {}, {}, {}>, any, any, any, ComputedOptions, MethodOptions> & ComponentOptionsBase<{} & { target?: HTMLElement | [x: number, y: number] | undefined; } & { $children?: VNodeChild | (() => VNodeChild) | { default?: (() => VNodeChild) | undefined; }; 'v-slots'?: { default?: false | (() => VNodeChild) | undefined; } | undefined; } & { \"v-slot:default\"?: false | (() => VNodeChild) | undefined; }, () => any, unknown, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, Record<string, any>, string, {}, {}, string, SlotsType<Partial<MakeSlots<{ default: never; }>>>, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & { filterProps: (props: T) => Partial<Pick<T, U>> } }"
+        }
+      ],
+      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | {\n      component: ComponentPublicInstanceConstructor<\n        CreateComponentPublicInstanceWithMixins<\n          {} & { target?: HTMLElement | [x: number, y: number] | undefined } & {\n            $children?:\n              | VNodeChild\n              | (() => VNodeChild)\n              | { default?: (() => VNodeChild) | undefined }\n            'v-slots'?:\n              | { default?: false | (() => VNodeChild) | undefined }\n              | undefined\n          } & { 'v-slot:default'?: false | (() => VNodeChild) | undefined },\n          () => any,\n          unknown,\n          {},\n          {},\n          ComponentOptionsMixin,\n          ComponentOptionsMixin,\n          Record<string, any>,\n          PublicProps,\n          {},\n          true,\n          {},\n          SlotsType<Partial<MakeSlots<{ default: never }>>>,\n          GlobalComponents,\n          GlobalDirectives,\n          string,\n          {},\n          any,\n          ComponentProvideOptions,\n          OptionTypesType<{}, {}, {}, {}, {}, {}>,\n          {} & { target?: HTMLElement | [x: number, y: number] | undefined } & {\n            $children?:\n              | VNodeChild\n              | (() => VNodeChild)\n              | { default?: (() => VNodeChild) | undefined }\n            'v-slots'?:\n              | { default?: false | (() => VNodeChild) | undefined }\n              | undefined\n          } & { 'v-slot:default'?: false | (() => VNodeChild) | undefined },\n          () => any,\n          {},\n          {},\n          {},\n          {}\n        >,\n        any,\n        any,\n        any,\n        ComputedOptions,\n        MethodOptions\n      > &\n        ComponentOptionsBase<\n          {} & { target?: HTMLElement | [x: number, y: number] | undefined } & {\n            $children?:\n              | VNodeChild\n              | (() => VNodeChild)\n              | { default?: (() => VNodeChild) | undefined }\n            'v-slots'?:\n              | { default?: false | (() => VNodeChild) | undefined }\n              | undefined\n          } & { 'v-slot:default'?: false | (() => VNodeChild) | undefined },\n          () => any,\n          unknown,\n          {},\n          {},\n          ComponentOptionsMixin,\n          ComponentOptionsMixin,\n          Record<string, any>,\n          string,\n          {},\n          {},\n          string,\n          SlotsType<Partial<MakeSlots<{ default: never }>>>,\n          GlobalComponents,\n          GlobalDirectives,\n          string,\n          ComponentProvideOptions\n        > &\n        VNodeProps &\n        AllowedComponentProps &\n        ComponentCustomProps & {\n          filterProps: (props: T) => Partial<Pick<T, U>>\n        }\n    }\n",
+      "optional": false,
+      "default": "{component: {name: 'VDialogTransition'}}",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
+      }
+    },
+    "offset": {
+      "text": "string | number | number[] | undefined",
+      "source": "VOverlay-location-strategies",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        }
+      ],
+      "formatted": "string | number | number[]\n",
+      "optional": false,
+      "description": {
+        "en": "Increases distance from the target. When passed as a pair of numbers, the second value shifts anchor along the side and away from the target."
+      },
+      "descriptionSource": {
+        "en": "VOverlay-location-strategies"
       }
     },
     "activator": {
@@ -703,19 +814,6 @@
       },
       "descriptionSource": {
         "en": "VOverlay"
-      }
-    },
-    "contentClass": {
-      "text": "any",
-      "source": "VOverlay",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "Applies a custom class to the detached element. This is useful because the content is moved to the beginning of the `v-app` component (unless the **attach** prop is provided) and is not targetable by classes passed directly on the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "contentProps": {
@@ -1103,32 +1201,6 @@
         "en": "delay"
       }
     },
-    "eager": {
-      "text": "boolean | undefined",
-      "source": "lazy",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "locationStrategy": {
       "text": "\"static\" | \"connected\" | LocationStrategyFunction | undefined",
       "source": "VOverlay-location-strategies",
@@ -1170,7 +1242,7 @@
       }
     },
     "scrollStrategy": {
-      "text": "\"block\" | \"close\" | \"none\" | \"reposition\" | ScrollStrategyFunction | undefined",
+      "text": "\"close\" | \"none\" | \"block\" | \"reposition\" | ScrollStrategyFunction | undefined",
       "source": "VOverlay-scroll-strategies",
       "type": "anyOf",
       "items": [
@@ -1178,12 +1250,6 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
-        },
-        {
-          "text": "\"block\"",
-          "type": "string",
-          "literal": "\"block\"",
-          "formatted": "\"block\""
         },
         {
           "text": "\"close\"",
@@ -1196,6 +1262,12 @@
           "type": "string",
           "literal": "\"none\"",
           "formatted": "\"none\""
+        },
+        {
+          "text": "\"block\"",
+          "type": "string",
+          "literal": "\"block\"",
+          "formatted": "\"block\""
         },
         {
           "text": "\"reposition\"",
@@ -1211,7 +1283,7 @@
           "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>"
         }
       ],
-      "formatted": "'block' | 'close' | 'none' | 'reposition' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>\n",
+      "formatted": "'close' | 'none' | 'block' | 'reposition' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/components/VOverlay/scrollStrategies.ts#L17-L17\" target=\"_blank\">ScrollStrategyFunction</a>\n",
       "optional": false,
       "default": "'block'",
       "description": {
@@ -1590,14 +1662,8 @@
     }
   },
   "sass": {
-    "$dialog-elevation": {
-      "default": "24"
-    },
     "$dialog-border-radius": {
       "default": "settings.$border-radius-root"
-    },
-    "$dialog-margin": {
-      "default": "24px"
     },
     "$dialog-card-actions-justify": {
       "default": "flex-end"
@@ -1608,11 +1674,17 @@
     "$dialog-card-header-text-padding-top": {
       "default": "0"
     },
+    "$dialog-card-text-letter-spacing": {
+      "default": "tools.map-deep-get(settings.$typography, 'body-1', 'letter-spacing')"
+    },
     "$dialog-card-text-padding": {
       "default": "16px 24px 24px"
     },
-    "$dialog-card-text-letter-spacing": {
-      "default": "tools.map-deep-get(settings.$typography, 'body-1', 'letter-spacing')"
+    "$dialog-elevation": {
+      "default": "24"
+    },
+    "$dialog-margin": {
+      "default": "24px"
     }
   }
 }

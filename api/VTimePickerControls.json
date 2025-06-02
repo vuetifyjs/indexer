@@ -3,8 +3,8 @@
   "fileName": "VTimePickerControls",
   "pathName": "v-time-picker-controls",
   "props": {
-    "color": {
-      "text": "string | undefined",
+    "readonly": {
+      "text": "boolean | undefined",
       "source": "VTimePickerControls",
       "type": "anyOf",
       "items": [
@@ -14,18 +14,44 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Makes the timepicker readonly."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VTimePickerControls"
+      }
+    },
+    "value": {
+      "text": "number | undefined",
+      "source": "VTimePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The current value of the timepicker."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
       }
     },
     "disabled": {
@@ -54,8 +80,8 @@
         "en": "generic"
       }
     },
-    "value": {
-      "text": "number | undefined",
+    "color": {
+      "text": "string | undefined",
       "source": "VTimePickerControls",
       "type": "anyOf",
       "items": [
@@ -65,22 +91,22 @@
           "formatted": "undefined"
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "number\n",
+      "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "The current value of the timepicker."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "VTimePickerControls"
+        "en": "generic"
       }
     },
-    "readonly": {
-      "text": "boolean | undefined",
+    "viewMode": {
+      "text": "VTimePickerViewMode | undefined",
       "source": "VTimePickerControls",
       "type": "anyOf",
       "items": [
@@ -90,16 +116,36 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "VTimePickerViewMode",
+          "source": "vuetify/src/labs/VTimePicker/shared.ts#L1-L1",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"hour\"",
+              "type": "string",
+              "literal": "\"hour\"",
+              "formatted": "\"hour\""
+            },
+            {
+              "text": "\"minute\"",
+              "type": "string",
+              "literal": "\"minute\"",
+              "formatted": "\"minute\""
+            },
+            {
+              "text": "\"second\"",
+              "type": "string",
+              "literal": "\"second\"",
+              "formatted": "\"second\""
+            }
+          ],
+          "formatted": "\"hour\" | \"minute\" | \"second\""
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "'hour' | 'minute' | 'second'\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Makes the timepicker readonly."
+        "en": "The current view mode of the timepicker. Can be either `hour`, `minute`, or `second`."
       },
       "descriptionSource": {
         "en": "VTimePickerControls"
@@ -152,52 +198,6 @@
       "default": false,
       "description": {
         "en": "Enables AM/PM mode."
-      },
-      "descriptionSource": {
-        "en": "VTimePickerControls"
-      }
-    },
-    "viewMode": {
-      "text": "VTimePickerViewMode | undefined",
-      "source": "VTimePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "VTimePickerViewMode",
-          "source": "vuetify/src/labs/VTimePicker/shared.ts#L1-L1",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"hour\"",
-              "type": "string",
-              "literal": "\"hour\"",
-              "formatted": "\"hour\""
-            },
-            {
-              "text": "\"minute\"",
-              "type": "string",
-              "literal": "\"minute\"",
-              "formatted": "\"minute\""
-            },
-            {
-              "text": "\"second\"",
-              "type": "string",
-              "literal": "\"second\"",
-              "formatted": "\"second\""
-            }
-          ],
-          "formatted": "\"hour\" | \"minute\" | \"second\""
-        }
-      ],
-      "formatted": "'hour' | 'minute' | 'second'\n",
-      "optional": false,
-      "description": {
-        "en": "The current view mode of the timepicker. Can be either `hour`, `minute`, or `second`."
       },
       "descriptionSource": {
         "en": "VTimePickerControls"
@@ -372,41 +372,6 @@
     }
   },
   "events": {
-    "update:period": {
-      "text": "[data: Period]",
-      "type": "array",
-      "items": [
-        {
-          "text": "Period",
-          "source": "vuetify/src/labs/VTimePicker/VTimePickerControls.tsx#L17-L17",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"am\"",
-              "type": "string",
-              "literal": "\"am\"",
-              "formatted": "\"am\""
-            },
-            {
-              "text": "\"pm\"",
-              "type": "string",
-              "literal": "\"pm\"",
-              "formatted": "\"pm\""
-            }
-          ],
-          "formatted": "\"am\" | \"pm\""
-        }
-      ],
-      "length": 1,
-      "formatted": "['am' | 'pm']\n",
-      "optional": false,
-      "description": {
-        "en": "Emitted when the period is changed. The event payload is either `am` or `pm`."
-      },
-      "descriptionSource": {
-        "en": "VTimePickerControls"
-      }
-    },
     "update:viewMode": {
       "text": "[data: VTimePickerViewMode]",
       "type": "array",
@@ -443,6 +408,41 @@
       "optional": false,
       "description": {
         "en": "Emitted when the view mode is changed. The event payload is either `hour`, `minute`, or `second`."
+      },
+      "descriptionSource": {
+        "en": "VTimePickerControls"
+      }
+    },
+    "update:period": {
+      "text": "[data: Period]",
+      "type": "array",
+      "items": [
+        {
+          "text": "Period",
+          "source": "vuetify/src/labs/VTimePicker/VTimePickerControls.tsx#L17-L17",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"am\"",
+              "type": "string",
+              "literal": "\"am\"",
+              "formatted": "\"am\""
+            },
+            {
+              "text": "\"pm\"",
+              "type": "string",
+              "literal": "\"pm\"",
+              "formatted": "\"pm\""
+            }
+          ],
+          "formatted": "\"am\" | \"pm\""
+        }
+      ],
+      "length": 1,
+      "formatted": "['am' | 'pm']\n",
+      "optional": false,
+      "description": {
+        "en": "Emitted when the period is changed. The event payload is either `am` or `pm`."
       },
       "descriptionSource": {
         "en": "VTimePickerControls"

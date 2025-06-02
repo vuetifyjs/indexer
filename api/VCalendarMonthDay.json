@@ -3,6 +3,36 @@
   "fileName": "VCalendarMonthDay",
   "pathName": "v-calendar-month-day",
   "props": {
+    "title": {
+      "text": "string | number | undefined",
+      "source": "VCalendarMonthDay",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "VCalendarMonthDay",
@@ -23,32 +53,6 @@
       "optional": false,
       "description": {
         "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "active": {
-      "text": "boolean | undefined",
-      "source": "VCalendarMonthDay",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Controls the **active** state of the item. This is typically used to highlight the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -80,8 +84,8 @@
         "en": "generic"
       }
     },
-    "title": {
-      "text": "string | number | undefined",
+    "active": {
+      "text": "boolean | undefined",
       "source": "VCalendarMonthDay",
       "type": "anyOf",
       "items": [
@@ -91,20 +95,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string | number\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Specify a title text for the component."
+        "en": "Controls the **active** state of the item. This is typically used to highlight the component."
       },
       "descriptionSource": {
         "en": "generic"

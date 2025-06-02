@@ -3,6 +3,19 @@
   "fileName": "VTabsWindowItem",
   "pathName": "v-tabs-window-item",
   "props": {
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "group-item",
@@ -29,9 +42,9 @@
         "en": "VWindowItem"
       }
     },
-    "eager": {
-      "text": "boolean | undefined",
-      "source": "lazy",
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
       "type": "anyOf",
       "items": [
         {
@@ -40,32 +53,18 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
+        "en": "Configure the active CSS class applied when an item is selected."
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
       }
     },
     "transition": {
@@ -128,9 +127,9 @@
         "en": "VWindowItem"
       }
     },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group-item",
+    "eager": {
+      "text": "boolean | undefined",
+      "source": "lazy",
       "type": "anyOf",
       "items": [
         {
@@ -139,15 +138,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
+        "en": "Forces the component's content to render when it mounts. This is useful if you have content that will not be rendered in the DOM that you want crawled for SEO."
       },
       "descriptionSource": {
         "en": "generic"

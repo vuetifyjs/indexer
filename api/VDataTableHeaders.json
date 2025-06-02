@@ -3,37 +3,6 @@
   "fileName": "VDataTableHeaders",
   "pathName": "v-data-table-headers",
   "props": {
-    "loading": {
-      "text": "string | boolean | undefined",
-      "source": "loader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
-      },
-      "descriptionSource": {
-        "en": "loader"
-      }
-    },
     "sticky": {
       "text": "boolean | undefined",
       "source": "VDataTableHeaders",
@@ -83,106 +52,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "mobile": {
-      "text": "boolean | null | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
-      },
-      "descriptionSource": {
-        "en": "display"
-      }
-    },
-    "mobileBreakpoint": {
-      "text": "number | DisplayBreakpoint | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "DisplayBreakpoint",
-          "source": "vuetify/src/composables/display.ts#L13-L13",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"xs\"",
-              "type": "string",
-              "literal": "\"xs\"",
-              "formatted": "\"xs\""
-            },
-            {
-              "text": "\"sm\"",
-              "type": "string",
-              "literal": "\"sm\"",
-              "formatted": "\"sm\""
-            },
-            {
-              "text": "\"md\"",
-              "type": "string",
-              "literal": "\"md\"",
-              "formatted": "\"md\""
-            },
-            {
-              "text": "\"lg\"",
-              "type": "string",
-              "literal": "\"lg\"",
-              "formatted": "\"lg\""
-            },
-            {
-              "text": "\"xl\"",
-              "type": "string",
-              "literal": "\"xl\"",
-              "formatted": "\"xl\""
-            },
-            {
-              "text": "\"xxl\"",
-              "type": "string",
-              "literal": "\"xxl\"",
-              "formatted": "\"xxl\""
-            }
-          ],
-          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
-        }
-      ],
-      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
-      "optional": false,
-      "description": {
-        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
-      },
-      "descriptionSource": {
-        "en": "display"
       }
     },
     "disableSort": {
@@ -446,6 +315,137 @@
       },
       "descriptionSource": {
         "en": "VDataTableHeaders"
+      }
+    },
+    "mobile": {
+      "text": "boolean | null | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "mobileBreakpoint": {
+      "text": "number | DisplayBreakpoint | undefined",
+      "source": "display",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "DisplayBreakpoint",
+          "source": "vuetify/src/composables/display.ts#L13-L13",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "\"sm\"",
+              "type": "string",
+              "literal": "\"sm\"",
+              "formatted": "\"sm\""
+            },
+            {
+              "text": "\"md\"",
+              "type": "string",
+              "literal": "\"md\"",
+              "formatted": "\"md\""
+            },
+            {
+              "text": "\"lg\"",
+              "type": "string",
+              "literal": "\"lg\"",
+              "formatted": "\"lg\""
+            },
+            {
+              "text": "\"xl\"",
+              "type": "string",
+              "literal": "\"xl\"",
+              "formatted": "\"xl\""
+            },
+            {
+              "text": "\"xxl\"",
+              "type": "string",
+              "literal": "\"xxl\"",
+              "formatted": "\"xxl\""
+            },
+            {
+              "text": "\"xs\"",
+              "type": "string",
+              "literal": "\"xs\"",
+              "formatted": "\"xs\""
+            }
+          ],
+          "formatted": "\"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\" | \"xs\""
+        }
+      ],
+      "formatted": "number | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xs'\n",
+      "optional": false,
+      "description": {
+        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
+      },
+      "descriptionSource": {
+        "en": "display"
+      }
+    },
+    "loading": {
+      "text": "string | boolean | undefined",
+      "source": "loader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays linear progress bar. Can either be a String which specifies which color is applied to the progress bar (any material color or theme color - **primary**, **secondary**, **success**, **info**, **warning**, **error**) or a Boolean which uses the component **color** (set by color prop - if it's supported by the component) or the primary color."
+      },
+      "descriptionSource": {
+        "en": "loader"
       }
     }
   },

@@ -51,7 +51,7 @@
       }
     },
     "align": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -61,16 +61,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -91,74 +91,11 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
         "en": "Applies the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) css property. Available options are: **start**, **center**, **end**, **baseline** and **stretch**."
-      },
-      "descriptionSource": {
-        "en": "VRow"
-      }
-    },
-    "alignContent": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
-      "source": "VRow",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
-          "text": "\"end\"",
-          "type": "string",
-          "literal": "\"end\"",
-          "formatted": "\"end\""
-        },
-        {
-          "text": "\"center\"",
-          "type": "string",
-          "literal": "\"center\"",
-          "formatted": "\"center\""
-        },
-        {
-          "text": "\"stretch\"",
-          "type": "string",
-          "literal": "\"stretch\"",
-          "formatted": "\"stretch\""
-        },
-        {
-          "text": "\"space-between\"",
-          "type": "string",
-          "literal": "\"space-between\"",
-          "formatted": "\"space-between\""
-        },
-        {
-          "text": "\"space-around\"",
-          "type": "string",
-          "literal": "\"space-around\"",
-          "formatted": "\"space-around\""
-        },
-        {
-          "text": "\"space-evenly\"",
-          "type": "string",
-          "literal": "\"space-evenly\"",
-          "formatted": "\"space-evenly\""
-        }
-      ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Applies the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) css property. Available options are: **start**, **center**, **end**, **space-between**, **space-around** and **stretch**."
       },
       "descriptionSource": {
         "en": "VRow"
@@ -217,7 +154,7 @@
       }
     },
     "alignSm": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -227,16 +164,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -257,7 +194,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -268,7 +205,7 @@
       }
     },
     "alignMd": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -278,16 +215,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -308,7 +245,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -319,7 +256,7 @@
       }
     },
     "alignLg": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -329,16 +266,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -359,7 +296,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -370,7 +307,7 @@
       }
     },
     "alignXl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -380,16 +317,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -410,7 +347,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -421,7 +358,7 @@
       }
     },
     "alignXxl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -431,16 +368,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -461,7 +398,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -472,7 +409,7 @@
       }
     },
     "justifySm": {
-      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -482,16 +419,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -518,7 +455,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -529,7 +466,7 @@
       }
     },
     "justifyMd": {
-      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -539,16 +476,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -575,7 +512,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -586,7 +523,7 @@
       }
     },
     "justifyLg": {
-      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -596,16 +533,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -632,7 +569,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -643,7 +580,7 @@
       }
     },
     "justifyXl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -653,16 +590,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -689,7 +626,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -700,7 +637,7 @@
       }
     },
     "justifyXxl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -710,16 +647,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -746,7 +683,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -757,7 +694,7 @@
       }
     },
     "alignContentSm": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -767,16 +704,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -809,7 +746,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -820,7 +757,7 @@
       }
     },
     "alignContentMd": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -830,16 +767,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -872,7 +809,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -883,7 +820,7 @@
       }
     },
     "alignContentLg": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -893,16 +830,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -935,7 +872,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -946,7 +883,7 @@
       }
     },
     "alignContentXl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -956,16 +893,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -998,7 +935,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -1009,7 +946,7 @@
       }
     },
     "alignContentXxl": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -1019,16 +956,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -1061,7 +998,7 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
@@ -1072,7 +1009,7 @@
       }
     },
     "justify": {
-      "text": "\"start\" | \"end\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
       "source": "VRow",
       "type": "anyOf",
       "items": [
@@ -1082,16 +1019,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -1124,11 +1061,74 @@
           "formatted": "\"space-evenly\""
         }
       ],
-      "formatted": "  | 'start'\n  | 'end'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
       "optional": false,
       "default": "null",
       "description": {
         "en": "Applies the [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) css property. Available options are: **start**, **center**, **end**, **space-between** and **space-around**."
+      },
+      "descriptionSource": {
+        "en": "VRow"
+      }
+    },
+    "alignContent": {
+      "text": "\"end\" | \"start\" | \"center\" | \"stretch\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
+      "source": "VRow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"end\"",
+          "type": "string",
+          "literal": "\"end\"",
+          "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
+        },
+        {
+          "text": "\"center\"",
+          "type": "string",
+          "literal": "\"center\"",
+          "formatted": "\"center\""
+        },
+        {
+          "text": "\"stretch\"",
+          "type": "string",
+          "literal": "\"stretch\"",
+          "formatted": "\"stretch\""
+        },
+        {
+          "text": "\"space-between\"",
+          "type": "string",
+          "literal": "\"space-between\"",
+          "formatted": "\"space-between\""
+        },
+        {
+          "text": "\"space-around\"",
+          "type": "string",
+          "literal": "\"space-around\"",
+          "formatted": "\"space-around\""
+        },
+        {
+          "text": "\"space-evenly\"",
+          "type": "string",
+          "literal": "\"space-evenly\"",
+          "formatted": "\"space-evenly\""
+        }
+      ],
+      "formatted": "  | 'end'\n  | 'start'\n  | 'center'\n  | 'stretch'\n  | 'space-between'\n  | 'space-around'\n  | 'space-evenly'\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Applies the [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) css property. Available options are: **start**, **center**, **end**, **space-between**, **space-around** and **stretch**."
       },
       "descriptionSource": {
         "en": "VRow"

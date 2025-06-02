@@ -29,6 +29,36 @@
         "en": "VDefaultsProvider"
       }
     },
+    "reset": {
+      "text": "string | number | undefined",
+      "source": "VDefaultsProvider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Reset the default values up the nested chain by {n} amount."
+      },
+      "descriptionSource": {
+        "en": "VDefaultsProvider"
+      }
+    },
     "root": {
       "text": "string | boolean | undefined",
       "source": "VDefaultsProvider",
@@ -55,36 +85,6 @@
       "default": false,
       "description": {
         "en": "Force current defaults to match the application root defaults."
-      },
-      "descriptionSource": {
-        "en": "VDefaultsProvider"
-      }
-    },
-    "reset": {
-      "text": "string | number | undefined",
-      "source": "VDefaultsProvider",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Reset the default values up the nested chain by {n} amount."
       },
       "descriptionSource": {
         "en": "VDefaultsProvider"

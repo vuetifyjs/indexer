@@ -3,19 +3,6 @@
   "fileName": "VSelectionControlGroup",
   "pathName": "v-selection-control-group",
   "props": {
-    "modelValue": {
-      "text": "unknown",
-      "source": "SelectionControlGroup",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "type": {
       "text": "string | undefined",
       "source": "SelectionControlGroup",
@@ -39,83 +26,6 @@
       },
       "descriptionSource": {
         "en": "SelectionControlGroup"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "SelectionControlGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "theme": {
@@ -166,6 +76,31 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "id": {
+      "text": "string | undefined",
+      "source": "SelectionControlGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the DOM id on the component."
+      },
+      "descriptionSource": {
+        "en": "SelectionControlGroup"
       }
     },
     "disabled": {
@@ -230,6 +165,84 @@
         "en": "SelectionControlGroup"
       }
     },
+    "error": {
+      "text": "boolean | undefined",
+      "source": "SelectionControlGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the input in a manual error state."
+      },
+      "descriptionSource": {
+        "en": "SelectionControlGroup"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "valueComparator": {
       "text": "typeof deepEqual | undefined",
       "source": "SelectionControlGroup",
@@ -277,7 +290,7 @@
         "en": "generic"
       }
     },
-    "id": {
+    "color": {
       "text": "string | undefined",
       "source": "SelectionControlGroup",
       "type": "anyOf",
@@ -296,36 +309,23 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the DOM id on the component."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "SelectionControlGroup"
+        "en": "generic"
       }
     },
-    "error": {
-      "text": "boolean | undefined",
+    "modelValue": {
+      "text": "unknown",
       "source": "SelectionControlGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
+      "type": "unknown",
+      "formatted": "unknown\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Puts the input in a manual error state."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "SelectionControlGroup"
+        "en": "generic"
       }
     },
     "readonly": {
@@ -357,6 +357,46 @@
       },
       "descriptionSource": {
         "en": "SelectionControlGroup"
+      }
+    },
+    "ripple": {
+      "text": "boolean | { class: string; } | undefined",
+      "source": "SelectionControlGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "{ class: string; }",
+          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
+          "type": "object",
+          "properties": {
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ class: string }"
+        }
+      ],
+      "formatted": "boolean | { class: string }\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Applies the [v-ripple](/directives/ripple) directive."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "defaultsTarget": {
@@ -432,27 +472,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -482,12 +501,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "The icon used when inactive."
@@ -517,27 +557,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -567,58 +586,39 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "The icon used when active."
       },
       "descriptionSource": {
         "en": "SelectionControlGroup"
-      }
-    },
-    "ripple": {
-      "text": "boolean | { class: string; } | undefined",
-      "source": "SelectionControlGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "{ class: string; }",
-          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
-          "type": "object",
-          "properties": {
-            "class": {
-              "text": "string",
-              "type": "string",
-              "formatted": "string",
-              "optional": false
-            }
-          },
-          "formatted": "{ class: string }"
-        }
-      ],
-      "formatted": "boolean | { class: string }\n",
-      "optional": false,
-      "default": true,
-      "description": {
-        "en": "Applies the [v-ripple](/directives/ripple) directive."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     }
   },

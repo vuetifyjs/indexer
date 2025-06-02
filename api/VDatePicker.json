@@ -578,9 +578,35 @@
         "en": "generic"
       }
     },
-    "header": {
-      "text": "string | undefined",
-      "source": "VDatePicker",
+    "max": {
+      "text": "unknown",
+      "source": "VDatePickerYears",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Maximum allowed date/month (ISO 8601 format)."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "VDatePickerYears",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Minimum allowed date/month (ISO 8601 format)."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "multiple": {
+      "text": "number | boolean | (string & {}) | \"range\" | undefined",
+      "source": "VDatePickerMonth",
       "type": "anyOf",
       "items": [
         {
@@ -589,16 +615,45 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "string & {}",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "{}",
+              "type": "object",
+              "properties": {},
+              "formatted": "{  }"
+            }
+          ],
+          "formatted": "string & {  }"
+        },
+        {
+          "text": "\"range\"",
           "type": "string",
-          "formatted": "string"
+          "literal": "\"range\"",
+          "formatted": "\"range\""
         }
       ],
-      "formatted": "string\n",
+      "formatted": "number | boolean | (string & {}) | 'range'\n",
       "optional": false,
-      "default": "'$vuetify.datePicker.header'",
+      "default": false,
       "description": {
-        "en": "Text shown when no **display-date** is set."
+        "en": "Allow the selection of multiple dates. The **range** value selects all dates between two selections."
       },
       "descriptionSource": {
         "en": "VDatePicker"
@@ -681,194 +736,9 @@
         "en": "VPicker"
       }
     },
-    "nextIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
-      "optional": false,
-      "default": "'$next'",
-      "description": {
-        "en": "Sets the icon for next month/year button."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "prevIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
-      "optional": false,
-      "default": "'$prev'",
-      "description": {
-        "en": "Sets the icon for previous month/year button."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "modelValue": {
-      "text": "unknown",
+    "header": {
+      "text": "string | undefined",
       "source": "VDatePicker",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "multiple": {
-      "text": "number | boolean | (string & {}) | \"range\" | undefined",
-      "source": "VDatePickerMonth",
       "type": "anyOf",
       "items": [
         {
@@ -877,264 +747,42 @@
           "formatted": "undefined"
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.datePicker.header'",
+      "description": {
+        "en": "Text shown when no **display-date** is set."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "hideHeader": {
+      "text": "boolean | undefined",
+      "source": "VPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
         },
         {
           "text": "boolean",
           "type": "boolean",
           "formatted": "boolean"
-        },
-        {
-          "text": "string & {}",
-          "type": "allOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "{}",
-              "type": "object",
-              "properties": {},
-              "formatted": "{  }"
-            }
-          ],
-          "formatted": "string & {  }"
-        },
-        {
-          "text": "\"range\"",
-          "type": "string",
-          "literal": "\"range\"",
-          "formatted": "\"range\""
         }
       ],
-      "formatted": "number | boolean | (string & {}) | 'range'\n",
+      "formatted": "boolean\n",
       "optional": false,
       "default": false,
       "description": {
-        "en": "Allow the selection of multiple dates. The **range** value selects all dates between two selections."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "max": {
-      "text": "unknown",
-      "source": "VDatePickerYears",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Maximum allowed date/month (ISO 8601 format)."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "transition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-transition'",
-      "description": {
-        "en": "The transition used when changing months into the future"
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "headerColor": {
-      "text": "string | undefined",
-      "source": "VDatePicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Allows you to set a different color for the header when used in conjunction with the `color` prop."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "controlHeight": {
-      "text": "string | number | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height of the controls."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerControls"
-      }
-    },
-    "modeIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
-      "optional": false,
-      "default": "'$subgroup'",
-      "description": {
-        "en": "Icon displayed next to the current month and year, toggles year selection when clicked."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "viewMode": {
-      "text": "\"month\" | \"months\" | \"year\" | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"month\"",
-          "type": "string",
-          "literal": "\"month\"",
-          "formatted": "\"month\""
-        },
-        {
-          "text": "\"months\"",
-          "type": "string",
-          "literal": "\"months\"",
-          "formatted": "\"months\""
-        },
-        {
-          "text": "\"year\"",
-          "type": "string",
-          "literal": "\"year\"",
-          "formatted": "\"year\""
-        }
-      ],
-      "formatted": "'month' | 'months' | 'year'\n",
-      "optional": false,
-      "default": "'month'",
-      "description": {
-        "en": "Determines which picker in the date or month picker is being displayed. Allowed values: `'month'`, `'months'`, `'year'`."
+        "en": "Hides the header."
       },
       "descriptionSource": {
         "en": "VDatePicker"
@@ -1170,109 +818,6 @@
         "en": "VDatePicker"
       }
     },
-    "year": {
-      "text": "number | undefined",
-      "source": "VDatePickerMonths",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the year."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "hideWeekdays": {
-      "text": "boolean | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Hides the weekdays."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "showWeek": {
-      "text": "boolean | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Toggles visibility of the week numbers in the body of the calendar."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "reverseTransition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-reverse-transition'",
-      "description": {
-        "en": "The transition used when changing months into the past"
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
     "showAdjacentMonths": {
       "text": "boolean | undefined",
       "source": "calendar",
@@ -1294,6 +839,31 @@
       "default": false,
       "description": {
         "en": "Toggles visibility of days from previous and next months."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "year": {
+      "text": "number | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the year."
       },
       "descriptionSource": {
         "en": "VDatePicker"
@@ -1486,14 +1056,225 @@
         "en": "VDatePicker"
       }
     },
-    "min": {
+    "modelValue": {
       "text": "unknown",
-      "source": "VDatePickerYears",
+      "source": "VDatePicker",
       "type": "unknown",
       "formatted": "unknown\n",
       "optional": false,
       "description": {
-        "en": "Minimum allowed date/month (ISO 8601 format)."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "nextIcon": {
+      "text": "IconValue | undefined",
+      "source": "VDatePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "Sets the icon for next month/year button."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "prevIcon": {
+      "text": "IconValue | undefined",
+      "source": "VDatePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "Sets the icon for previous month/year button."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "viewMode": {
+      "text": "\"month\" | \"year\" | \"months\" | undefined",
+      "source": "VDatePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"month\"",
+          "type": "string",
+          "literal": "\"month\"",
+          "formatted": "\"month\""
+        },
+        {
+          "text": "\"year\"",
+          "type": "string",
+          "literal": "\"year\"",
+          "formatted": "\"year\""
+        },
+        {
+          "text": "\"months\"",
+          "type": "string",
+          "literal": "\"months\"",
+          "formatted": "\"months\""
+        }
+      ],
+      "formatted": "'month' | 'year' | 'months'\n",
+      "optional": false,
+      "default": "'month'",
+      "description": {
+        "en": "Determines which picker in the date or month picker is being displayed. Allowed values: `'month'`, `'months'`, `'year'`."
       },
       "descriptionSource": {
         "en": "VDatePicker"
@@ -1525,9 +1306,176 @@
         "en": "VDatePicker"
       }
     },
-    "hideHeader": {
+    "transition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-transition'",
+      "description": {
+        "en": "The transition used when changing months into the future"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "headerColor": {
+      "text": "string | undefined",
+      "source": "VDatePicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Allows you to set a different color for the header when used in conjunction with the `color` prop."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "controlHeight": {
+      "text": "string | number | undefined",
+      "source": "VDatePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height of the controls."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerControls"
+      }
+    },
+    "modeIcon": {
+      "text": "IconValue | undefined",
+      "source": "VDatePickerControls",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            }
+          ],
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "optional": false,
+      "default": "'$subgroup'",
+      "description": {
+        "en": "Icon displayed next to the current month and year, toggles year selection when clicked."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "hideWeekdays": {
       "text": "boolean | undefined",
-      "source": "VPicker",
+      "source": "VDatePickerMonth",
       "type": "anyOf",
       "items": [
         {
@@ -1545,10 +1493,168 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Hides the header."
+        "en": "Hides the weekdays."
       },
       "descriptionSource": {
         "en": "VDatePicker"
+      }
+    },
+    "showWeek": {
+      "text": "boolean | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Toggles visibility of the week numbers in the body of the calendar."
+      },
+      "descriptionSource": {
+        "en": "VDatePicker"
+      }
+    },
+    "reverseTransition": {
+      "text": "string | undefined",
+      "source": "VDatePickerMonth",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'picker-reverse-transition'",
+      "description": {
+        "en": "The transition used when changing months into the past"
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonth"
+      }
+    },
+    "allowedMonths": {
+      "text": "number[] | ((date: number) => boolean) | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        },
+        {
+          "text": "(date: number) => boolean",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L38-L38",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: number) => boolean"
+        }
+      ],
+      "formatted": "number[] | ((date: number) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Restricts which months can be selected."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    },
+    "allowedYears": {
+      "text": "number[] | ((date: number) => boolean) | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        },
+        {
+          "text": "(date: number) => boolean",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L43-L43",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: number) => boolean"
+        }
+      ],
+      "formatted": "number[] | ((date: number) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Restricts which years can be selected."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerYears"
       }
     }
   },
@@ -1701,12 +1807,6 @@
   },
   "exposed": {},
   "sass": {
-    "$date-picker-width": {
-      "default": "328px"
-    },
-    "$date-picker-show-week-width": {
-      "default": "368px"
-    },
     "$date-picker-controls-height": {
       "default": "var(--v-date-picker-controls-height, 56px)"
     },
@@ -1736,6 +1836,12 @@
     },
     "$date-picker-months-height": {
       "default": "288px"
+    },
+    "$date-picker-show-week-width": {
+      "default": "368px"
+    },
+    "$date-picker-width": {
+      "default": "328px"
     },
     "$date-picker-years-height": {
       "default": "288px"

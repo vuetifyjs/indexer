@@ -1007,32 +1007,6 @@
         "en": "generic"
       }
     },
-    "nav": {
-      "text": "boolean | undefined",
-      "source": "VListItem",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Reduces the width v-list-item takes up as well as adding a border radius."
-      },
-      "descriptionSource": {
-        "en": "VListItem"
-      }
-    },
     "title": {
       "text": "string | number | boolean | undefined",
       "source": "VListItem",
@@ -1176,6 +1150,32 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "nav": {
+      "text": "boolean | undefined",
+      "source": "VListItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reduces the width v-list-item takes up as well as adding a border radius."
+      },
+      "descriptionSource": {
+        "en": "VListItem"
       }
     },
     "lines": {

@@ -386,6 +386,9 @@
     "$system-bar-line-height": {
       "default": "tools.map-deep-get(settings.$typography, 'caption', 'line-height')"
     },
+    "$system-bar-padding": {
+      "default": "0 8px"
+    },
     "$system-bar-padding-x": {
       "default": "8px"
     },
@@ -398,17 +401,14 @@
     "$system-bar-text-transform": {
       "default": "tools.map-deep-get(settings.$typography, 'caption', 'text-transform')"
     },
-    "$system-bar-window-height": {
-      "default": "32px"
-    },
     "$system-bar-theme": {
       "default": "(\n  $system-bar-background,\n  $system-bar-color\n)"
     },
     "$system-bar-typography": {
       "default": "(\n  $system-bar-font-size,\n  $system-bar-font-weight,\n  $system-bar-letter-spacing,\n  $system-bar-line-height,\n  $system-bar-text-transform\n)"
     },
-    "$system-bar-padding": {
-      "default": "0 8px"
+    "$system-bar-window-height": {
+      "default": "32px"
     }
   }
 }

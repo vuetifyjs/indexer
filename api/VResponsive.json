@@ -183,6 +183,32 @@
         "en": "dimension"
       }
     },
+    "inline": {
+      "text": "boolean | undefined",
+      "source": "VResponsive",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Display as an inline element instead of a block, also disables flex-grow."
+      },
+      "descriptionSource": {
+        "en": "VResponsive"
+      }
+    },
     "aspectRatio": {
       "text": "string | number | undefined",
       "source": "VResponsive",
@@ -221,32 +247,6 @@
       "optional": false,
       "description": {
         "en": "Apply a custom class to the internal content element."
-      },
-      "descriptionSource": {
-        "en": "VResponsive"
-      }
-    },
-    "inline": {
-      "text": "boolean | undefined",
-      "source": "VResponsive",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Display as an inline element instead of a block, also disables flex-grow."
       },
       "descriptionSource": {
         "en": "VResponsive"

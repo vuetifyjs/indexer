@@ -16,6 +16,256 @@
         "en": "generic"
       }
     },
+    "items": {
+      "text": "unknown[] | undefined",
+      "source": "VTabs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "The items to display in the component. This can be an array of strings or objects with a property `text`."
+      },
+      "descriptionSource": {
+        "en": "VTabs"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all children components into a disabled state."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VTabs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height of the tabs bar."
+      },
+      "descriptionSource": {
+        "en": "VTabs"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VTabs",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": "'force'",
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "tag": {
       "text": "string | JSXComponent | undefined",
       "source": "tag",
@@ -88,31 +338,6 @@
         "en": "VTabs"
       }
     },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets a maximum number of selections that can be made."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
     "modelValue": {
       "text": "any",
       "source": "group",
@@ -124,257 +349,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts all children components into a disabled state."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "VTabs",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height of the tabs bar."
-      },
-      "descriptionSource": {
-        "en": "VTabs"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "multiple": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Allows one to select multiple items."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'v-tab-item--selected'",
-      "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "mandatory": {
-      "text": "boolean | \"force\" | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "\"force\"",
-          "type": "string",
-          "literal": "\"force\"",
-          "formatted": "\"force\""
-        }
-      ],
-      "formatted": "boolean | 'force'\n",
-      "optional": false,
-      "default": "'force'",
-      "description": {
-        "en": "Forces at least one item to always be selected (if available)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "bgColor": {
-      "text": "string | undefined",
-      "source": "VTabs",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "items": {
-      "text": "unknown[] | undefined",
-      "source": "VTabs",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "unknown[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "unknown",
-              "type": "unknown",
-              "formatted": "unknown"
-            }
-          ],
-          "formatted": "unknown[]"
-        }
-      ],
-      "formatted": "unknown[]\n",
-      "optional": false,
-      "default": "[]",
-      "description": {
-        "en": "The items to display in the component. This can be an array of strings or objects with a property `text`."
-      },
-      "descriptionSource": {
-        "en": "VTabs"
       }
     },
     "direction": {
@@ -441,6 +415,32 @@
         "en": "display"
       }
     },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-tab-item--selected'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "mobileBreakpoint": {
       "text": "number | DisplayBreakpoint | undefined",
       "source": "display",
@@ -505,6 +505,32 @@
       "optional": false,
       "description": {
         "en": "Sets the designated mobile breakpoint for the component."
+      },
+      "descriptionSource": {
+        "en": "VTabs"
+      }
+    },
+    "centerActive": {
+      "text": "boolean | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the selected tab to be centered."
       },
       "descriptionSource": {
         "en": "VTabs"
@@ -886,32 +912,6 @@
       "descriptionSource": {
         "en": "VTabs"
       }
-    },
-    "centerActive": {
-      "text": "boolean | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces the selected tab to be centered."
-      },
-      "descriptionSource": {
-        "en": "VTabs"
-      }
     }
   },
   "events": {
@@ -1048,15 +1048,6 @@
   },
   "exposed": {},
   "sass": {
-    "$tabs-density": {
-      "default": "( 'default': 0, 'comfortable' : -1, 'compact': -3)"
-    },
-    "$tabs-height": {
-      "default": "48px"
-    },
-    "$tabs-stacked-height": {
-      "default": "72px"
-    },
     "$tab-align-tabs-title-margin": {
       "default": "42px"
     },
@@ -1071,6 +1062,15 @@
     },
     "$tab-slider-size": {
       "default": "2px"
+    },
+    "$tabs-density": {
+      "default": "( 'default': 0, 'comfortable' : -1, 'compact': -3)"
+    },
+    "$tabs-height": {
+      "default": "48px"
+    },
+    "$tabs-stacked-height": {
+      "default": "72px"
     }
   }
 }

@@ -3,72 +3,6 @@
   "fileName": "VExpansionPanelTitle",
   "pathName": "v-expansion-panel-title",
   "props": {
-    "readonly": {
-      "text": "boolean | undefined",
-      "source": "VExpansionPanelTitle",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Makes the expansion panel content read only."
-      },
-      "descriptionSource": {
-        "en": "VExpansionPanelTitle"
-      }
-    },
-    "ripple": {
-      "text": "boolean | { class: string; } | undefined",
-      "source": "VExpansionPanelTitle",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "{ class: string; }",
-          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
-          "type": "object",
-          "properties": {
-            "class": {
-              "text": "string",
-              "type": "string",
-              "formatted": "string",
-              "optional": false
-            }
-          },
-          "formatted": "{ class: string }"
-        }
-      ],
-      "formatted": "boolean | { class: string }\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies the [v-ripple](/directives/ripple) directive."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "height": {
       "text": "string | number | undefined",
       "source": "dimension",
@@ -300,6 +234,72 @@
         "en": "generic"
       }
     },
+    "ripple": {
+      "text": "boolean | { class: string; } | undefined",
+      "source": "VExpansionPanelTitle",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "{ class: string; }",
+          "source": "vuetify/src/directives/ripple/index.ts#L28-L28",
+          "type": "object",
+          "properties": {
+            "class": {
+              "text": "string",
+              "type": "string",
+              "formatted": "string",
+              "optional": false
+            }
+          },
+          "formatted": "{ class: string }"
+        }
+      ],
+      "formatted": "boolean | { class: string }\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies the [v-ripple](/directives/ripple) directive."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "hideActions": {
+      "text": "boolean | undefined",
+      "source": "VExpansionPanelTitle",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hide the expand icon in the content title."
+      },
+      "descriptionSource": {
+        "en": "VExpansionPanelTitle"
+      }
+    },
     "expandIcon": {
       "text": "IconValue | undefined",
       "source": "VExpansionPanelTitle",
@@ -472,32 +472,6 @@
         "en": "VExpansionPanelTitle"
       }
     },
-    "hideActions": {
-      "text": "boolean | undefined",
-      "source": "VExpansionPanelTitle",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Hide the expand icon in the content title."
-      },
-      "descriptionSource": {
-        "en": "VExpansionPanelTitle"
-      }
-    },
     "focusable": {
       "text": "boolean | undefined",
       "source": "VExpansionPanelTitle",
@@ -519,6 +493,32 @@
       "default": false,
       "description": {
         "en": "Makes the expansion panel headers focusable."
+      },
+      "descriptionSource": {
+        "en": "VExpansionPanelTitle"
+      }
+    },
+    "readonly": {
+      "text": "boolean | undefined",
+      "source": "VExpansionPanelTitle",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Makes the expansion panel content read only."
       },
       "descriptionSource": {
         "en": "VExpansionPanelTitle"

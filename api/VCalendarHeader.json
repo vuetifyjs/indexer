@@ -3,6 +3,31 @@
   "fileName": "VCalendarHeader",
   "pathName": "v-calendar-header",
   "props": {
+    "title": {
+      "text": "string | undefined",
+      "source": "VCalendarHeader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "text": {
       "text": "string | undefined",
       "source": "VCalendarHeader",
@@ -24,31 +49,6 @@
       "default": "'$vuetify.calendar.today'",
       "description": {
         "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "title": {
-      "text": "string | undefined",
-      "source": "VCalendarHeader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a title text for the component."
       },
       "descriptionSource": {
         "en": "generic"

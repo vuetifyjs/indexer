@@ -3,56 +3,6 @@
   "fileName": "VToolbar",
   "pathName": "v-toolbar",
   "props": {
-    "image": {
-      "text": "string | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specifies a [v-img](/components/images) as the component's background."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "title": {
-      "text": "string | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a title text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "flat": {
       "text": "boolean | undefined",
       "source": "VToolbar",
@@ -74,255 +24,6 @@
       "default": false,
       "description": {
         "en": "Removes the toolbar's box-shadow."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "collapse": {
-      "text": "boolean | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts the toolbar into a collapsed state reducing its maximum width."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "absolute": {
-      "text": "boolean | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies position: absolute to the component."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/components/VToolbar/VToolbar.tsx#L30-L30",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"prominent\"",
-              "type": "string",
-              "literal": "\"prominent\"",
-              "formatted": "\"prominent\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"prominent\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'prominent' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "extended": {
-      "text": "boolean | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Use this prop to increase the height of the toolbar _without_ using the `extension` slot for adding content. May be used in conjunction with the **extension-height** prop, and any of the other props that affect the height of the toolbar, e.g. **prominent**, **dense**, etc., **WITH THE EXCEPTION** of **height**."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "extensionHeight": {
-      "text": "string | number | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 48,
-      "description": {
-        "en": "Specify an explicit height for the `extension` slot."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "floating": {
-      "text": "boolean | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies **display: inline-flex** to the component."
-      },
-      "descriptionSource": {
-        "en": "VToolbar"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "VToolbar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 64,
-      "description": {
-        "en": "Designates a specific height for the toolbar. Overrides the heights imposed by other props, e.g. **prominent**, **dense**, **extended**, etc."
       },
       "descriptionSource": {
         "en": "VToolbar"
@@ -364,6 +65,95 @@
         "en": "border"
       }
     },
+    "density": {
+      "text": "Density | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/components/VToolbar/VToolbar.tsx#L30-L30",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            },
+            {
+              "text": "\"prominent\"",
+              "type": "string",
+              "literal": "\"prominent\"",
+              "formatted": "\"prominent\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\" | \"prominent\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact' | 'prominent'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 64,
+      "description": {
+        "en": "Designates a specific height for the toolbar. Overrides the heights imposed by other props, e.g. **prominent**, **dense**, **extended**, etc."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
     "elevation": {
       "text": "string | number | undefined",
       "source": "elevation",
@@ -392,6 +182,32 @@
       },
       "descriptionSource": {
         "en": "elevation"
+      }
+    },
+    "absolute": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies position: absolute to the component."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
       }
     },
     "rounded": {
@@ -526,6 +342,190 @@
       "descriptionSource": {
         "en": "theme"
       }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "title": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "image": {
+      "text": "string | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies a [v-img](/components/images) as the component's background."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "extended": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Use this prop to increase the height of the toolbar _without_ using the `extension` slot for adding content. May be used in conjunction with the **extension-height** prop, and any of the other props that affect the height of the toolbar, e.g. **prominent**, **dense**, etc., **WITH THE EXCEPTION** of **height**."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "collapse": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts the toolbar into a collapsed state reducing its maximum width."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "extensionHeight": {
+      "text": "string | number | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 48,
+      "description": {
+        "en": "Specify an explicit height for the `extension` slot."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
+    },
+    "floating": {
+      "text": "boolean | undefined",
+      "source": "VToolbar",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies **display: inline-flex** to the component."
+      },
+      "descriptionSource": {
+        "en": "VToolbar"
+      }
     }
   },
   "events": {},
@@ -630,11 +630,14 @@
     }
   },
   "sass": {
+    "$toolbar-append-btn-margin-end": {
+      "default": "4px"
+    },
     "$toolbar-background": {
       "default": "rgb(var(--v-theme-surface-light))"
     },
-    "$toolbar-color": {
-      "default": "rgba(var(--v-theme-on-surface-light), var(--v-high-emphasis-opacity))"
+    "$toolbar-border": {
+      "default": "(\n  $toolbar-border-color,\n  $toolbar-border-style,\n  $toolbar-border-width,\n  $toolbar-border-thin-width\n)"
     },
     "$toolbar-border-color": {
       "default": "settings.$border-color-root"
@@ -660,6 +663,15 @@
     "$toolbar-collapsed-max-width": {
       "default": "112px"
     },
+    "$toolbar-color": {
+      "default": "rgba(var(--v-theme-on-surface-light), var(--v-high-emphasis-opacity))"
+    },
+    "$toolbar-content-padding-x": {
+      "default": "16px"
+    },
+    "$toolbar-content-padding-y": {
+      "default": "4px"
+    },
     "$toolbar-elevation": {
       "default": "0"
     },
@@ -671,33 +683,6 @@
     },
     "$toolbar-prepend-btn-margin-start": {
       "default": "4px"
-    },
-    "$toolbar-append-btn-margin-end": {
-      "default": "4px"
-    },
-    "$toolbar-rounded-border-radius": {
-      "default": "variables.$border-radius-root"
-    },
-    "$toolbar-transition": {
-      "default": ".2s variables.$standard-easing"
-    },
-    "$toolbar-title-margin": {
-      "default": "20px"
-    },
-    "$toolbar-title-font-size": {
-      "default": "1.25rem"
-    },
-    "$toolbar-title-font-weight": {
-      "default": "400"
-    },
-    "$toolbar-title-letter-spacing": {
-      "default": "0"
-    },
-    "$toolbar-title-line-height": {
-      "default": "1.75rem"
-    },
-    "$toolbar-title-text-transform": {
-      "default": "none"
     },
     "$toolbar-prominent-title-font-size": {
       "default": "1.5rem"
@@ -714,26 +699,41 @@
     "$toolbar-prominent-title-text-transform": {
       "default": "none"
     },
-    "$toolbar-border": {
-      "default": "(\n  $toolbar-border-color,\n  $toolbar-border-style,\n  $toolbar-border-width,\n  $toolbar-border-thin-width\n)"
-    },
-    "$toolbar-title-typography": {
-      "default": "(\n  $toolbar-title-font-size,\n  $toolbar-title-font-weight,\n  $toolbar-title-letter-spacing,\n  $toolbar-title-line-height,\n  $toolbar-title-text-transform\n)"
-    },
     "$toolbar-prominent-title-typography": {
       "default": "(\n  $toolbar-prominent-title-font-size,\n  $toolbar-prominent-title-font-weight,\n  $toolbar-prominent-title-letter-spacing,\n  $toolbar-prominent-title-line-height,\n  $toolbar-prominent-title-text-transform\n)"
+    },
+    "$toolbar-rounded-border-radius": {
+      "default": "variables.$border-radius-root"
     },
     "$toolbar-theme": {
       "default": "(\n  $toolbar-background,\n  $toolbar-color\n)"
     },
-    "$toolbar-content-padding-x": {
-      "default": "16px"
-    },
-    "$toolbar-content-padding-y": {
-      "default": "4px"
-    },
     "$toolbar-title-extended-padding": {
       "default": "56px"
+    },
+    "$toolbar-title-font-size": {
+      "default": "1.25rem"
+    },
+    "$toolbar-title-font-weight": {
+      "default": "400"
+    },
+    "$toolbar-title-letter-spacing": {
+      "default": "0"
+    },
+    "$toolbar-title-line-height": {
+      "default": "1.75rem"
+    },
+    "$toolbar-title-margin": {
+      "default": "20px"
+    },
+    "$toolbar-title-text-transform": {
+      "default": "none"
+    },
+    "$toolbar-title-typography": {
+      "default": "(\n  $toolbar-title-font-size,\n  $toolbar-title-font-weight,\n  $toolbar-title-letter-spacing,\n  $toolbar-title-line-height,\n  $toolbar-title-text-transform\n)"
+    },
+    "$toolbar-transition": {
+      "default": ".2s variables.$standard-easing"
     }
   }
 }

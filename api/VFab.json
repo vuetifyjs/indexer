@@ -1472,65 +1472,8 @@
         "en": "generic"
       }
     },
-    "offset": {
-      "text": "boolean | undefined",
-      "source": "VFab",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Translates the Fab up or down, depending on if location is set to **top** or **bottom**."
-      },
-      "descriptionSource": {
-        "en": "VFab"
-      }
-    },
-    "order": {
-      "text": "string | number | undefined",
-      "source": "layout-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Adjust the order of the component in relation to its registration order."
-      },
-      "descriptionSource": {
-        "en": "layout-item"
-      }
-    },
     "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | undefined",
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | null | undefined",
       "source": "transition",
       "type": "anyOf",
       "items": [
@@ -1538,6 +1481,11 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
         },
         {
           "text": "string",
@@ -1562,7 +1510,7 @@
             },
             {
               "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
               "type": "object",
               "properties": {
                 "component": {
@@ -1706,6 +1654,63 @@
       "descriptionSource": {
         "en": "VFab"
       }
+    },
+    "offset": {
+      "text": "boolean | undefined",
+      "source": "VFab",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Translates the Fab up or down, depending on if location is set to **top** or **bottom**."
+      },
+      "descriptionSource": {
+        "en": "VFab"
+      }
+    },
+    "order": {
+      "text": "string | number | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Adjust the order of the component in relation to its registration order."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
     }
   },
   "events": {
@@ -1758,15 +1763,6 @@
     "$fab-font-weight": {
       "default": "tools.map-deep-get(settings.$typography, 'button', 'weight')"
     },
-    "$fab-transition-duration": {
-      "default": "0.2s"
-    },
-    "$fab-transition-timing-function": {
-      "default": "settings.$standard-easing"
-    },
-    "$fab-width-ratio": {
-      "default": "math.div(16, 9)"
-    },
     "$fab-padding-ratio": {
       "default": "2.25"
     },
@@ -1775,6 +1771,15 @@
     },
     "$fab-sizes": {
       "default": "map.merge(\n  (\n    'height': $fab-height,\n    'font-size': $fab-font-size,\n    'width-ratio': $fab-width-ratio,\n    'padding-ratio': $fab-padding-ratio\n  ),\n  $fab-sizes\n)"
+    },
+    "$fab-transition-duration": {
+      "default": "0.2s"
+    },
+    "$fab-transition-timing-function": {
+      "default": "settings.$standard-easing"
+    },
+    "$fab-width-ratio": {
+      "default": "math.div(16, 9)"
     }
   }
 }

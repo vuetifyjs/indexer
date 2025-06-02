@@ -874,6 +874,9 @@
     "$app-bar-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$app-bar-border": {
+      "default": "(\n  $app-bar-border-color,\n  $app-bar-border-style,\n  $app-bar-border-width,\n  $app-bar-border-thin-width\n)"
+    },
     "$app-bar-border-color": {
       "default": "variables.$border-color-root"
     },
@@ -940,6 +943,9 @@
     "$app-bar-shaped-border-radius": {
       "default": "map.get(variables.$rounded, 'xl') $app-bar-border-radius"
     },
+    "$app-bar-theme": {
+      "default": "(\n  $app-bar-background,\n  $app-bar-color\n)"
+    },
     "$app-bar-title-font-size": {
       "default": "functions.map-deep-get(variables.$typography, 'h5', 'size')"
     },
@@ -948,12 +954,6 @@
     },
     "$app-bar-transition": {
       "default": ".2s variables.$standard-easing"
-    },
-    "$app-bar-border": {
-      "default": "(\n  $app-bar-border-color,\n  $app-bar-border-style,\n  $app-bar-border-width,\n  $app-bar-border-thin-width\n)"
-    },
-    "$app-bar-theme": {
-      "default": "(\n  $app-bar-background,\n  $app-bar-color\n)"
     }
   }
 }

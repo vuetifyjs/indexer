@@ -3,31 +3,6 @@
   "fileName": "VDatePickerMonths",
   "pathName": "v-date-picker-months",
   "props": {
-    "color": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonths",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "height": {
       "text": "string | number | undefined",
       "source": "VDatePickerMonths",
@@ -58,8 +33,8 @@
         "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "number | undefined",
+    "color": {
+      "text": "string | undefined",
       "source": "VDatePickerMonths",
       "type": "anyOf",
       "items": [
@@ -69,15 +44,15 @@
           "formatted": "undefined"
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "number\n",
+      "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
@@ -91,6 +66,19 @@
       "optional": false,
       "description": {
         "en": "Sets the maximum selectable date. Months after this date will be disabled."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerMonths"
+      }
+    },
+    "min": {
+      "text": "unknown",
+      "source": "VDatePickerMonths",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the minimum selectable date. Months before this date will be disabled."
       },
       "descriptionSource": {
         "en": "VDatePickerMonths"
@@ -121,14 +109,79 @@
         "en": "VDatePickerMonths"
       }
     },
-    "min": {
-      "text": "unknown",
+    "modelValue": {
+      "text": "number | undefined",
       "source": "VDatePickerMonths",
-      "type": "unknown",
-      "formatted": "unknown\n",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
       "optional": false,
       "description": {
-        "en": "Sets the minimum selectable date. Months before this date will be disabled."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "allowedMonths": {
+      "text": "number[] | ((date: number) => boolean) | undefined",
+      "source": "VDatePickerMonths",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        },
+        {
+          "text": "(date: number) => boolean",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L38-L38",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: number) => boolean"
+        }
+      ],
+      "formatted": "number[] | ((date: number) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Restricts which months can be selected."
       },
       "descriptionSource": {
         "en": "VDatePickerMonths"

@@ -3,31 +3,6 @@
   "fileName": "VAppBarTitle",
   "pathName": "v-app-bar-title",
   "props": {
-    "text": {
-      "text": "string | undefined",
-      "source": "VToolbarTitle",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "tag": {
       "text": "string | JSXComponent | undefined",
       "source": "tag",
@@ -73,6 +48,31 @@
       },
       "descriptionSource": {
         "en": "tag"
+      }
+    },
+    "text": {
+      "text": "string | undefined",
+      "source": "VToolbarTitle",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify content text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     }
   },

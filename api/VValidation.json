@@ -28,6 +28,37 @@
         "en": "generic"
       }
     },
+    "disabled": {
+      "text": "boolean | null | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "error": {
       "text": "boolean | undefined",
       "source": "validation",
@@ -90,68 +121,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | null | undefined",
-      "source": "validation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Removes the ability to click or target the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "readonly": {
-      "text": "boolean | null | undefined",
-      "source": "validation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Puts input in readonly state."
-      },
-      "descriptionSource": {
-        "en": "validation"
       }
     },
     "errorMessages": {
@@ -229,8 +198,8 @@
         "en": "validation"
       }
     },
-    "rules": {
-      "text": "readonly ValidationRule[] | undefined",
+    "readonly": {
+      "text": "boolean | null | undefined",
       "source": "validation",
       "type": "anyOf",
       "items": [
@@ -240,22 +209,161 @@
           "formatted": "undefined"
         },
         {
-          "text": "readonly ValidationRule[]",
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": "null",
+      "description": {
+        "en": "Puts input in readonly state."
+      },
+      "descriptionSource": {
+        "en": "validation"
+      }
+    },
+    "rules": {
+      "text": "readonly (string | boolean | PromiseLike<ValidationResult> | ((value: any) => ValidationResult) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string | undefined)?])[] | undefined",
+      "source": "validation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly (string | boolean | PromiseLike<ValidationResult> | ((value: any) => ValidationResult) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string | undefined)?])[]",
           "source": "typescript/lib/lib.es5.d.ts#L4-L4",
           "type": "array",
           "items": [
             {
-              "text": "ValidationRule",
-              "source": "vuetify/src/composables/validation.ts#L17-L21",
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean"
+            },
+            {
+              "text": "PromiseLike<ValidationResult>",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "ref",
-              "ref": "ValidationRule",
-              "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>"
+              "ref": "PromiseLike",
+              "formatted": "PromiseLike<ValidationResult>"
+            },
+            {
+              "text": "(value: any) => ValidationResult",
+              "source": "vuetify/src/composables/validation.ts#L21-L21",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "returnType": {
+                "text": "ValidationResult",
+                "source": "vuetify/src/composables/validation.ts#L17-L17",
+                "type": "anyOf",
+                "items": [
+                  {
+                    "text": "string",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "string"
+                  },
+                  {
+                    "text": "false",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "false"
+                  },
+                  {
+                    "text": "true",
+                    "type": "ref",
+                    "ref": "",
+                    "formatted": "true"
+                  }
+                ],
+                "formatted": "string | false | true"
+              },
+              "formatted": "(value: any) => string | false | true"
+            },
+            {
+              "text": "(value: any) => PromiseLike<ValidationResult>",
+              "source": "vuetify/src/composables/validation.ts#L22-L22",
+              "type": "function",
+              "parameters": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                }
+              ],
+              "returnType": {
+                "text": "PromiseLike<ValidationResult>",
+                "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+                "type": "ref",
+                "ref": "PromiseLike",
+                "formatted": "PromiseLike<ValidationResult>"
+              },
+              "formatted": "(value: any) => PromiseLike<ValidationResult>"
+            },
+            {
+              "text": "[string, any, (string | undefined)?]",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "any",
+                  "type": "any",
+                  "formatted": "any"
+                },
+                {
+                  "text": "string | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "UNSUPPORTED",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    }
+                  ],
+                  "formatted": "string"
+                }
+              ],
+              "length": 3,
+              "formatted": "[string, any, (string)]"
             }
           ],
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]"
+          "formatted": "(string | boolean | PromiseLike<ValidationResult> | ((value: any) => string | false | true) | ((value: any) => PromiseLike<ValidationResult>) | [string, any, (string)])[]"
         }
       ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/validation.ts#L17-L21\" target=\"_blank\">ValidationRule</a>[]\n",
+      "formatted": "(\n  | string\n  | boolean\n  | PromiseLike<ValidationResult>\n  | ((value: any) => string | false | true)\n  | ((value: any) => PromiseLike<ValidationResult>)\n  | [string, any, string]\n)[]\n",
       "optional": false,
       "default": "[]",
       "description": {
@@ -277,7 +385,7 @@
         },
         {
           "text": "ValidateOn",
-          "source": "vuetify/src/composables/validation.ts#L24-L31",
+          "source": "vuetify/src/composables/validation.ts#L25-L32",
           "type": "anyOf",
           "items": [
             {
@@ -294,7 +402,7 @@
             },
             {
               "text": "ValidateOnValue",
-              "source": "vuetify/src/composables/validation.ts#L23-L23",
+              "source": "vuetify/src/composables/validation.ts#L24-L24",
               "type": "anyOf",
               "items": [
                 {
@@ -518,7 +626,7 @@
   "slots": {
     "default": {
       "text": "{ errorMessages: ComputedRef<string[]>; isDirty: ComputedRef<boolean>; isDisabled: ComputedRef<boolean>; isReadonly: ComputedRef<boolean>; isPristine: ShallowRef<boolean, boolean>; isValid: ComputedRef<boolean | null>; isValidating: ShallowRef<boolean, boolean>; reset: () => Promise<void>; resetValidation: () => Promise<void>; validate: (silent?: boolean) => Promise<string[]>; validationClasses: ComputedRef<{ [x: string]: boolean; }>; }",
-      "source": "vuetify/src/composables/validation.ts#L254-L266",
+      "source": "vuetify/src/composables/validation.ts#L229-L241",
       "type": "object",
       "properties": {
         "errorMessages": {
@@ -579,7 +687,7 @@
         },
         "reset": {
           "text": "() => Promise<void>",
-          "source": "vuetify/src/composables/validation.ts#L207-L211",
+          "source": "vuetify/src/composables/validation.ts#L182-L186",
           "type": "function",
           "parameters": [],
           "returnType": {
@@ -594,7 +702,7 @@
         },
         "resetValidation": {
           "text": "() => Promise<void>",
-          "source": "vuetify/src/composables/validation.ts#L213-L220",
+          "source": "vuetify/src/composables/validation.ts#L188-L195",
           "type": "function",
           "parameters": [],
           "returnType": {
@@ -609,7 +717,7 @@
         },
         "validate": {
           "text": "(silent?: boolean) => Promise<string[]>",
-          "source": "vuetify/src/composables/validation.ts#L222-L252",
+          "source": "vuetify/src/composables/validation.ts#L197-L227",
           "type": "function",
           "parameters": [
             {

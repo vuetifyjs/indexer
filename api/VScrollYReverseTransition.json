@@ -3,31 +3,6 @@
   "fileName": "VScrollYReverseTransition",
   "pathName": "v-scroll-y-reverse-transition",
   "props": {
-    "mode": {
-      "text": "string | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the transition mode (does not apply to transition-group). You can find more information on the Vue documentation [for transition modes](https://vuejs.org/api/built-in-components.html#transition)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "transition",
@@ -54,6 +29,31 @@
         "en": "generic"
       }
     },
+    "mode": {
+      "text": "string | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the transition mode (does not apply to transition-group). You can find more information on the Vue documentation [for transition modes](https://vuejs.org/api/built-in-components.html#transition)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "group": {
       "text": "boolean | undefined",
       "source": "transition",
@@ -75,31 +75,6 @@
       "default": false,
       "description": {
         "en": "Creates a `transition-group` component. You can find more information in the [vue docs](https://vuejs.org/api/built-in-components.html#transitiongroup)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "origin": {
-      "text": "string | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the transition origin on the element. You can find more information on the MDN documentation [for transition origin](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)."
       },
       "descriptionSource": {
         "en": "generic"
@@ -152,6 +127,31 @@
       "default": false,
       "description": {
         "en": "Absolutely positions the leaving element (useful for [FLIP](https://aerotwist.com/blog/flip-your-animations/))."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "origin": {
+      "text": "string | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the transition origin on the element. You can find more information on the MDN documentation [for transition origin](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin)."
       },
       "descriptionSource": {
         "en": "generic"

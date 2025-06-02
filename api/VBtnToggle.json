@@ -3,279 +3,6 @@
   "fileName": "VBtnToggle",
   "pathName": "v-btn-toggle",
   "props": {
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'div'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets a maximum number of selections that can be made."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "modelValue": {
-      "text": "unknown",
-      "source": "group",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Round edge buttons."
-      },
-      "descriptionSource": {
-        "en": "VBtnToggle"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the component's border-radius."
-      },
-      "descriptionSource": {
-        "en": "VBtnToggle"
-      }
-    },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts all children components into a disabled state."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "baseColor": {
-      "text": "string | undefined",
-      "source": "VBtnGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the color of component when not focused."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "divided": {
-      "text": "boolean | undefined",
-      "source": "VBtnGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Add dividers between children [v-btn](/components/buttons) components."
-      },
-      "descriptionSource": {
-        "en": "VBtnGroup"
-      }
-    },
     "border": {
       "text": "string | number | boolean | undefined",
       "source": "border",
@@ -310,6 +37,19 @@
       },
       "descriptionSource": {
         "en": "border"
+      }
+    },
+    "modelValue": {
+      "text": "unknown",
+      "source": "group",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "density": {
@@ -394,8 +134,141 @@
         "en": "elevation"
       }
     },
-    "variant": {
-      "text": "\"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"text\" | \"plain\" | undefined",
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Round edge buttons."
+      },
+      "descriptionSource": {
+        "en": "VBtnToggle"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the component's border-radius."
+      },
+      "descriptionSource": {
+        "en": "VBtnToggle"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
       "source": "variant",
       "type": "anyOf",
       "items": [
@@ -403,6 +276,37 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
         },
         {
           "text": "\"flat\"",
@@ -429,19 +333,13 @@
           "formatted": "\"outlined\""
         },
         {
-          "text": "\"text\"",
-          "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
-        },
-        {
           "text": "\"plain\"",
           "type": "string",
           "literal": "\"plain\"",
           "formatted": "\"plain\""
         }
       ],
-      "formatted": "'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain'\n",
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
       "optional": false,
       "default": "'elevated'",
       "description": {
@@ -449,6 +347,57 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all children components into a disabled state."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
       }
     },
     "multiple": {
@@ -475,6 +424,57 @@
       },
       "descriptionSource": {
         "en": "group"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VBtnGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of component when not focused."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "divided": {
+      "text": "boolean | undefined",
+      "source": "VBtnGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Add dividers between children [v-btn](/components/buttons) components."
+      },
+      "descriptionSource": {
+        "en": "VBtnGroup"
       }
     },
     "selectedClass": {

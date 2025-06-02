@@ -3,125 +3,6 @@
   "fileName": "VList",
   "pathName": "v-list",
   "props": {
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "items": {
-      "text": "readonly any[] | undefined",
-      "source": "list-items",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "readonly any[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            }
-          ],
-          "formatted": "any[]"
-        }
-      ],
-      "formatted": "any[]\n",
-      "optional": false,
-      "default": "[]",
-      "description": {
-        "en": "Can be an array of objects or strings. By default objects should have a **title** property, and can optionally have a **props** property containing any [VListItem props](/api/v-list-item/#props), a **value** property to allow selection, and a **children** property containing more item objects. Keys to use for these can be changed with the **item-title**, **item-value**, **item-props**, and **item-children** props."
-      },
-      "descriptionSource": {
-        "en": "list-items"
-      }
-    },
-    "activated": {
-      "text": "any",
-      "source": "nested",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "Array of ids of activated nodes."
-      },
-      "descriptionSource": {
-        "en": "nested"
-      }
-    },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'div'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
     "border": {
       "text": "string | number | boolean | undefined",
       "source": "border",
@@ -205,174 +86,6 @@
       "default": "'default'",
       "description": {
         "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "variant": {
-      "text": "\"flat\" | \"text\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"flat\"",
-          "type": "string",
-          "literal": "\"flat\"",
-          "formatted": "\"flat\""
-        },
-        {
-          "text": "\"text\"",
-          "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
-        },
-        {
-          "text": "\"elevated\"",
-          "type": "string",
-          "literal": "\"elevated\"",
-          "formatted": "\"elevated\""
-        },
-        {
-          "text": "\"tonal\"",
-          "type": "string",
-          "literal": "\"tonal\"",
-          "formatted": "\"tonal\""
-        },
-        {
-          "text": "\"outlined\"",
-          "type": "string",
-          "literal": "\"outlined\"",
-          "formatted": "\"outlined\""
-        },
-        {
-          "text": "\"plain\"",
-          "type": "string",
-          "literal": "\"plain\"",
-          "formatted": "\"plain\""
-        }
-      ],
-      "formatted": "'flat' | 'text' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
-      "optional": false,
-      "default": "'text'",
-      "description": {
-        "en": "Applies a distinct style to the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "bgColor": {
-      "text": "string | undefined",
-      "source": "VList",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
@@ -588,9 +301,9 @@
         "en": "elevation"
       }
     },
-    "lines": {
-      "text": "false | \"one\" | \"two\" | \"three\" | undefined",
-      "source": "VList",
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
       "type": "anyOf",
       "items": [
         {
@@ -599,43 +312,106 @@
           "formatted": "undefined"
         },
         {
-          "text": "false",
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
           "type": "boolean",
-          "literal": "false",
-          "formatted": "false"
-        },
-        {
-          "text": "\"one\"",
-          "type": "string",
-          "literal": "\"one\"",
-          "formatted": "\"one\""
-        },
-        {
-          "text": "\"two\"",
-          "type": "string",
-          "literal": "\"two\"",
-          "formatted": "\"two\""
-        },
-        {
-          "text": "\"three\"",
-          "type": "string",
-          "literal": "\"three\"",
-          "formatted": "\"three\""
+          "formatted": "boolean"
         }
       ],
-      "formatted": "false | 'one' | 'two' | 'three'\n",
+      "formatted": "string | number | boolean\n",
       "optional": false,
-      "default": "'one'",
       "description": {
-        "en": "Designates a **minimum-height** for all children `v-list-item` components. This prop uses [line-clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) and is not supported in all browsers."
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
       },
       "descriptionSource": {
-        "en": "VList"
+        "en": "rounded"
       }
     },
-    "baseColor": {
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'div'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
       "text": "string | undefined",
-      "source": "VList",
+      "source": "theme",
       "type": "anyOf",
       "items": [
         {
@@ -652,10 +428,105 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the color of component when not focused."
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "variant": {
+      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "source": "variant",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
+          "text": "\"flat\"",
+          "type": "string",
+          "literal": "\"flat\"",
+          "formatted": "\"flat\""
+        },
+        {
+          "text": "\"elevated\"",
+          "type": "string",
+          "literal": "\"elevated\"",
+          "formatted": "\"elevated\""
+        },
+        {
+          "text": "\"tonal\"",
+          "type": "string",
+          "literal": "\"tonal\"",
+          "formatted": "\"tonal\""
+        },
+        {
+          "text": "\"outlined\"",
+          "type": "string",
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
+        },
+        {
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        }
+      ],
+      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "optional": false,
+      "default": "'text'",
+      "description": {
+        "en": "Applies a distinct style to the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "activated": {
+      "text": "any",
+      "source": "nested",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "Array of ids of activated nodes."
+      },
+      "descriptionSource": {
+        "en": "nested"
       }
     },
     "disabled": {
@@ -684,9 +555,9 @@
         "en": "VList"
       }
     },
-    "mandatory": {
-      "text": "boolean | undefined",
-      "source": "nested",
+    "activeClass": {
+      "text": "string | undefined",
+      "source": "VList",
       "type": "anyOf",
       "items": [
         {
@@ -695,16 +566,15 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Forces at least one item to always be selected (if available)."
+        "en": "The class applied to the component when it is in an active state."
       },
       "descriptionSource": {
         "en": "generic"
@@ -735,46 +605,7 @@
         "en": "generic"
       }
     },
-    "slim": {
-      "text": "boolean | undefined",
-      "source": "VList",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Reduces horizontal spacing for badges, icons, tooltips, and avatars within slim list items to create a more compact visual representation."
-      },
-      "descriptionSource": {
-        "en": "VList"
-      }
-    },
-    "selected": {
-      "text": "unknown",
-      "source": "nested",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "An array containing the values of currently selected items. Can be two-way bound with `v-model:selected`."
-      },
-      "descriptionSource": {
-        "en": "nested"
-      }
-    },
-    "activeClass": {
+    "baseColor": {
       "text": "string | undefined",
       "source": "VList",
       "type": "anyOf",
@@ -793,10 +624,49 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "The class applied to the component when it is in an active state."
+        "en": "Sets the color of component when not focused."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | undefined",
+      "source": "nested",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "selected": {
+      "text": "unknown",
+      "source": "nested",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "An array containing the values of currently selected items. Can be two-way bound with `v-model:selected`."
+      },
+      "descriptionSource": {
+        "en": "nested"
       }
     },
     "nav": {
@@ -835,32 +705,6 @@
       "default": "'value'",
       "description": {
         "en": "Property on supplied `items` that contains its value."
-      },
-      "descriptionSource": {
-        "en": "list-items"
-      }
-    },
-    "returnObject": {
-      "text": "boolean | undefined",
-      "source": "list-items",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Changes the selection behavior to return the object directly rather than the value specified with **item-value**."
       },
       "descriptionSource": {
         "en": "list-items"
@@ -1007,6 +851,66 @@
         "en": "generic"
       }
     },
+    "items": {
+      "text": "readonly any[] | undefined",
+      "source": "list-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly any[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "formatted": "any[]"
+        }
+      ],
+      "formatted": "any[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "Can be an array of objects or strings. By default objects should have a **title** property, and can optionally have a **props** property containing any [VListItem props](/api/v-list-item/#props), a **value** property to allow selection, and a **children** property containing more item objects. Keys to use for these can be changed with the **item-title**, **item-value**, **item-props**, and **item-children** props."
+      },
+      "descriptionSource": {
+        "en": "list-items"
+      }
+    },
+    "returnObject": {
+      "text": "boolean | undefined",
+      "source": "list-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Changes the selection behavior to return the object directly rather than the value specified with **item-value**."
+      },
+      "descriptionSource": {
+        "en": "list-items"
+      }
+    },
     "opened": {
       "text": "unknown",
       "source": "nested",
@@ -1041,27 +945,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1091,12 +974,33 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "Icon to display when the list item is collapsed."
@@ -1126,27 +1030,6 @@
               "formatted": "string"
             },
             {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -1176,15 +1059,132 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
       "optional": false,
       "description": {
         "en": "Icon to display when the list item is expanded."
+      },
+      "descriptionSource": {
+        "en": "VList"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "slim": {
+      "text": "boolean | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Reduces horizontal spacing for badges, icons, tooltips, and avatars within slim list items to create a more compact visual representation."
+      },
+      "descriptionSource": {
+        "en": "VList"
+      }
+    },
+    "lines": {
+      "text": "false | \"one\" | \"two\" | \"three\" | undefined",
+      "source": "VList",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "false",
+          "type": "boolean",
+          "literal": "false",
+          "formatted": "false"
+        },
+        {
+          "text": "\"one\"",
+          "type": "string",
+          "literal": "\"one\"",
+          "formatted": "\"one\""
+        },
+        {
+          "text": "\"two\"",
+          "type": "string",
+          "literal": "\"two\"",
+          "formatted": "\"two\""
+        },
+        {
+          "text": "\"three\"",
+          "type": "string",
+          "literal": "\"three\"",
+          "formatted": "\"three\""
+        }
+      ],
+      "formatted": "false | 'one' | 'two' | 'three'\n",
+      "optional": false,
+      "default": "'one'",
+      "description": {
+        "en": "Designates a **minimum-height** for all children `v-list-item` components. This prop uses [line-clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) and is not supported in all browsers."
       },
       "descriptionSource": {
         "en": "VList"
@@ -1339,6 +1339,12 @@
           "type": "anyOf",
           "items": [
             {
+              "text": "\"list\"",
+              "type": "string",
+              "literal": "\"list\"",
+              "formatted": "\"list\""
+            },
+            {
               "text": "\"multiple\"",
               "type": "string",
               "literal": "\"multiple\"",
@@ -1351,12 +1357,6 @@
               "formatted": "\"single\""
             },
             {
-              "text": "\"list\"",
-              "type": "string",
-              "literal": "\"list\"",
-              "formatted": "\"list\""
-            },
-            {
               "text": "OpenStrategy",
               "source": "vuetify/src/composables/nested/openStrategies.ts#L20-L23",
               "type": "ref",
@@ -1364,10 +1364,10 @@
               "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/openStrategies.ts#L20-L23\" target=\"_blank\">OpenStrategy</a>"
             }
           ],
-          "formatted": "\"multiple\" | \"single\" | \"list\" | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/openStrategies.ts#L20-L23\" target=\"_blank\">OpenStrategy</a>"
+          "formatted": "\"list\" | \"multiple\" | \"single\" | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/openStrategies.ts#L20-L23\" target=\"_blank\">OpenStrategy</a>"
         }
       ],
-      "formatted": "'multiple' | 'single' | 'list' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/openStrategies.ts#L20-L23\" target=\"_blank\">OpenStrategy</a>\n",
+      "formatted": "'list' | 'multiple' | 'single' | <a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/composables/nested/openStrategies.ts#L20-L23\" target=\"_blank\">OpenStrategy</a>\n",
       "optional": false,
       "default": "'list'",
       "description": {
@@ -1740,6 +1740,70 @@
         "en": "generic"
       }
     },
+    "title": {
+      "text": "ListItemTitleSlot & { item: any; }",
+      "type": "allOf",
+      "items": [
+        {
+          "text": "ListItemTitleSlot",
+          "source": "vuetify/src/components/VList/VListItem.tsx#L45-L47",
+          "type": "object",
+          "properties": {
+            "title": {
+              "text": "string | number | boolean | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "UNSUPPORTED",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "number",
+                  "type": "number",
+                  "formatted": "number"
+                },
+                {
+                  "text": "boolean",
+                  "type": "boolean",
+                  "formatted": "boolean"
+                }
+              ],
+              "formatted": "string | number | boolean",
+              "optional": true
+            }
+          },
+          "formatted": "{ title: string | number | boolean }"
+        },
+        {
+          "text": "{ item: any; }",
+          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
+          "type": "object",
+          "properties": {
+            "item": {
+              "text": "any",
+              "type": "any",
+              "formatted": "any",
+              "optional": false
+            }
+          },
+          "formatted": "{ item: any }"
+        }
+      ],
+      "formatted": "{ title: string | number | boolean } & { item: any }\n",
+      "optional": false,
+      "description": {
+        "en": "Slot for the component's title content."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "append": {
       "text": "ListItemSlot & { item: any; }",
       "type": "allOf",
@@ -1816,70 +1880,6 @@
       "optional": false,
       "description": {
         "en": "Adds an item inside the input and after input content."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "title": {
-      "text": "ListItemTitleSlot & { item: any; }",
-      "type": "allOf",
-      "items": [
-        {
-          "text": "ListItemTitleSlot",
-          "source": "vuetify/src/components/VList/VListItem.tsx#L45-L47",
-          "type": "object",
-          "properties": {
-            "title": {
-              "text": "string | number | boolean | undefined",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "undefined",
-                  "type": "UNSUPPORTED",
-                  "formatted": "undefined"
-                },
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "number",
-                  "type": "number",
-                  "formatted": "number"
-                },
-                {
-                  "text": "boolean",
-                  "type": "boolean",
-                  "formatted": "boolean"
-                }
-              ],
-              "formatted": "string | number | boolean",
-              "optional": true
-            }
-          },
-          "formatted": "{ title: string | number | boolean }"
-        },
-        {
-          "text": "{ item: any; }",
-          "source": "vuetify/src/components/VList/VListChildren.tsx#L18-L18",
-          "type": "object",
-          "properties": {
-            "item": {
-              "text": "any",
-              "type": "any",
-              "formatted": "any",
-              "optional": false
-            }
-          },
-          "formatted": "{ item: any }"
-        }
-      ],
-      "formatted": "{ title: string | number | boolean } & { item: any }\n",
-      "optional": false,
-      "description": {
-        "en": "Slot for the component's title content."
       },
       "descriptionSource": {
         "en": "generic"
@@ -2242,14 +2242,14 @@
       }
     },
     "focus": {
-      "text": "(location?: \"prev\" | \"next\" | \"first\" | \"last\" | undefined) => void",
+      "text": "(location?: number | \"next\" | \"prev\" | \"first\" | \"last\" | undefined) => void",
       "source": "vuetify/src/components/VList/VList.tsx#L242-L246",
       "type": "function",
       "parameters": [
         {
           "name": "location",
           "optional": false,
-          "text": "\"prev\" | \"next\" | \"first\" | \"last\" | undefined",
+          "text": "number | \"next\" | \"prev\" | \"first\" | \"last\" | undefined",
           "type": "anyOf",
           "items": [
             {
@@ -2258,16 +2258,21 @@
               "formatted": "undefined"
             },
             {
-              "text": "\"prev\"",
-              "type": "string",
-              "literal": "\"prev\"",
-              "formatted": "\"prev\""
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
             },
             {
               "text": "\"next\"",
               "type": "string",
               "literal": "\"next\"",
               "formatted": "\"next\""
+            },
+            {
+              "text": "\"prev\"",
+              "type": "string",
+              "literal": "\"prev\"",
+              "formatted": "\"prev\""
             },
             {
               "text": "\"first\"",
@@ -2282,7 +2287,7 @@
               "formatted": "\"last\""
             }
           ],
-          "formatted": "\"prev\" | \"next\" | \"first\" | \"last\""
+          "formatted": "number | \"next\" | \"prev\" | \"first\" | \"last\""
         }
       ],
       "returnType": {
@@ -2290,7 +2295,7 @@
         "type": "void",
         "formatted": "void"
       },
-      "formatted": "(location: 'prev' | 'next' | 'first' | 'last') => void\n",
+      "formatted": "(location: number | 'next' | 'prev' | 'first' | 'last') => void\n",
       "optional": false,
       "description": {
         "en": "Focus the list item."
@@ -2403,6 +2408,9 @@
     "$list-background": {
       "default": "rgba(var(--v-theme-surface))"
     },
+    "$list-border": {
+      "default": "(\n  $list-border-color,\n  $list-border-style,\n  $list-border-width,\n  $list-border-thin-width\n)"
+    },
     "$list-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -2421,56 +2429,35 @@
     "$list-color": {
       "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
     },
+    "$list-density": {
+      "default": "('default': 0, 'comfortable': -1, 'compact': -2)"
+    },
     "$list-disabled-opacity": {
       "default": "0.6"
     },
     "$list-elevation": {
       "default": "0"
     },
-    "$list-padding": {
-      "default": "8px 0"
-    },
-    "$list-rounded-border-radius": {
-      "default": "map.get(settings.$rounded, null)"
-    },
     "$list-indent-size": {
       "default": "16px"
     },
-    "$list-nav-padding": {
+    "$list-item-action-margin-end": {
       "default": "8px"
     },
-    "$list-nav-subheader-font-size": {
-      "default": ".75rem"
+    "$list-item-action-margin-start": {
+      "default": "8px"
     },
-    "$list-subheader-color": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
-    },
-    "$list-subheader-font-size": {
-      "default": ".875rem"
-    },
-    "$list-subheader-font-weight": {
-      "default": "400"
-    },
-    "$list-subheader-inset-padding-start": {
-      "default": "56px"
-    },
-    "$list-subheader-line-height": {
-      "default": "1.375rem"
-    },
-    "$list-subheader-min-height": {
-      "default": "40px"
-    },
-    "$list-subheader-padding-end": {
+    "$list-item-action-spacer-width": {
       "default": "16px"
     },
-    "$list-subheader-padding-top": {
-      "default": "0"
+    "$list-item-avatar-margin-end": {
+      "default": "16px"
     },
-    "$list-subheader-min-height-multiplier": {
-      "default": "1"
+    "$list-item-avatar-margin-start": {
+      "default": "16px"
     },
-    "$list-subheader-transition": {
-      "default": "0.2s min-height settings.$standard-easing"
+    "$list-item-border": {
+      "default": "(\n  $list-item-border-color,\n  $list-item-border-style,\n  $list-item-border-width,\n  $list-item-border-thin-width\n)"
     },
     "$list-item-border-color": {
       "default": "settings.$border-color-root"
@@ -2481,83 +2468,26 @@
     "$list-item-border-style": {
       "default": "settings.$border-style-root"
     },
-    "$list-item-border-width": {
-      "default": "0"
-    },
     "$list-item-border-thin-width": {
       "default": "thin"
+    },
+    "$list-item-border-width": {
+      "default": "0"
     },
     "$list-item-elevation": {
       "default": "1"
     },
-    "$list-item-icon-opacity": {
-      "default": "var(--v-medium-emphasis-opacity)"
-    },
     "$list-item-icon-active-opacity": {
       "default": "1"
-    },
-    "$list-item-min-height": {
-      "default": "40px"
-    },
-    "$list-item-padding": {
-      "default": "4px 16px"
-    },
-    "$list-item-prepend-size": {
-      "default": "40px"
-    },
-    "$list-item-slim-prepend-size": {
-      "default": "28px"
-    },
-    "$list-item-plain-opacity": {
-      "default": ".62"
-    },
-    "$list-item-rounded-border-radius": {
-      "default": "map.get(settings.$rounded, null)"
-    },
-    "$list-item-one-line-min-height": {
-      "default": "48px"
-    },
-    "$list-item-two-line-min-height": {
-      "default": "64px"
-    },
-    "$list-item-two-line-padding": {
-      "default": "12px 16px"
-    },
-    "$list-item-three-line-min-height": {
-      "default": "88px"
-    },
-    "$list-item-three-line-padding": {
-      "default": "16px 16px"
-    },
-    "$list-item-action-spacer-width": {
-      "default": "16px"
-    },
-    "$list-item-slim-action-spacer-width": {
-      "default": "4px"
-    },
-    "$list-item-avatar-margin-end": {
-      "default": "16px"
-    },
-    "$list-item-avatar-margin-start": {
-      "default": "16px"
-    },
-    "$list-item-slim-spacer-width": {
-      "default": "20px"
-    },
-    "$list-item-slim-avatar-spacer-width": {
-      "default": "4px"
-    },
-    "$list-item-action-margin-end": {
-      "default": "8px"
-    },
-    "$list-item-action-margin-start": {
-      "default": "8px"
     },
     "$list-item-icon-margin-end": {
       "default": "32px"
     },
     "$list-item-icon-margin-start": {
       "default": "32px"
+    },
+    "$list-item-icon-opacity": {
+      "default": "var(--v-medium-emphasis-opacity)"
     },
     "$list-item-media-margin-bottom": {
       "default": "0"
@@ -2571,32 +2501,23 @@
     "$list-item-media-margin-top": {
       "default": "0"
     },
-    "$list-item-media-two-line-margin-bottom": {
-      "default": "-4px"
-    },
-    "$list-item-media-two-line-margin-top": {
-      "default": "-4px"
-    },
     "$list-item-media-three-line-margin-bottom": {
       "default": "0"
     },
     "$list-item-media-three-line-margin-top": {
       "default": "0"
     },
+    "$list-item-media-two-line-margin-bottom": {
+      "default": "-4px"
+    },
+    "$list-item-media-two-line-margin-top": {
+      "default": "-4px"
+    },
+    "$list-item-min-height": {
+      "default": "40px"
+    },
     "$list-item-nav-margin-top": {
       "default": "4px"
-    },
-    "$list-item-nav-title-font-size": {
-      "default": ".8125rem"
-    },
-    "$list-item-nav-title-font-weight": {
-      "default": "500"
-    },
-    "$list-item-nav-title-letter-spacing": {
-      "default": "normal"
-    },
-    "$list-item-nav-title-line-height": {
-      "default": "1rem"
     },
     "$list-item-nav-subtitle-font-size": {
       "default": ".75rem"
@@ -2610,8 +2531,50 @@
     "$list-item-nav-subtitle-line-height": {
       "default": "1rem"
     },
-    "$list-item-subtitle-opacity": {
-      "default": "var(--v-list-item-subtitle-opacity, var(--v-medium-emphasis-opacity))"
+    "$list-item-nav-subtitle-typography": {
+      "default": "(\n  $list-item-nav-subtitle-font-size,\n  $list-item-nav-subtitle-font-weight,\n  $list-item-nav-subtitle-letter-spacing,\n  $list-item-nav-subtitle-line-height,\n  null\n)"
+    },
+    "$list-item-nav-title-font-size": {
+      "default": ".8125rem"
+    },
+    "$list-item-nav-title-font-weight": {
+      "default": "500"
+    },
+    "$list-item-nav-title-letter-spacing": {
+      "default": "normal"
+    },
+    "$list-item-nav-title-line-height": {
+      "default": "1rem"
+    },
+    "$list-item-nav-title-typography": {
+      "default": "(\n  $list-item-nav-title-font-size,\n  $list-item-nav-title-font-weight,\n  $list-item-nav-title-letter-spacing,\n  $list-item-nav-title-line-height,\n  null\n)"
+    },
+    "$list-item-one-line-min-height": {
+      "default": "48px"
+    },
+    "$list-item-padding": {
+      "default": "4px 16px"
+    },
+    "$list-item-plain-opacity": {
+      "default": ".62"
+    },
+    "$list-item-prepend-size": {
+      "default": "40px"
+    },
+    "$list-item-rounded-border-radius": {
+      "default": "map.get(settings.$rounded, null)"
+    },
+    "$list-item-slim-action-spacer-width": {
+      "default": "4px"
+    },
+    "$list-item-slim-avatar-spacer-width": {
+      "default": "4px"
+    },
+    "$list-item-slim-prepend-size": {
+      "default": "28px"
+    },
+    "$list-item-slim-spacer-width": {
+      "default": "20px"
     },
     "$list-item-subtitle-font-size": {
       "default": "tools.map-deep-get(settings.$typography, 'body-2', 'size')"
@@ -2625,17 +2588,29 @@
     "$list-item-subtitle-line-height": {
       "default": "1rem"
     },
+    "$list-item-subtitle-opacity": {
+      "default": "var(--v-list-item-subtitle-opacity, var(--v-medium-emphasis-opacity))"
+    },
+    "$list-item-subtitle-overflow-wrap": {
+      "default": "break-word"
+    },
     "$list-item-subtitle-padding": {
       "default": "0"
     },
     "$list-item-subtitle-text-transform": {
       "default": "none"
     },
-    "$list-item-subtitle-overflow-wrap": {
-      "default": "break-word"
+    "$list-item-subtitle-typography": {
+      "default": "(\n  $list-item-subtitle-font-size,\n  $list-item-subtitle-font-weight,\n  $list-item-subtitle-letter-spacing,\n  $list-item-subtitle-line-height,\n  $list-item-subtitle-text-transform\n)"
     },
     "$list-item-subtitle-word-break": {
       "default": "initial"
+    },
+    "$list-item-three-line-min-height": {
+      "default": "88px"
+    },
+    "$list-item-three-line-padding": {
+      "default": "16px 16px"
     },
     "$list-item-title-font-size": {
       "default": "tools.map-deep-get(settings.$typography, 'body-1', 'size')"
@@ -2661,38 +2636,68 @@
     "$list-item-title-text-transform": {
       "default": "none"
     },
+    "$list-item-title-typography": {
+      "default": "(\n  $list-item-title-font-size,\n  $list-item-title-font-weight,\n  $list-item-title-letter-spacing,\n  $list-item-title-line-height,\n  $list-item-title-text-transform\n)"
+    },
     "$list-item-title-word-break": {
       "default": "normal"
     },
     "$list-item-title-word-wrap": {
       "default": "break-word"
     },
-    "$list-density": {
-      "default": "('default': 0, 'comfortable': -1, 'compact': -2)"
+    "$list-item-two-line-min-height": {
+      "default": "64px"
     },
-    "$list-border": {
-      "default": "(\n  $list-border-color,\n  $list-border-style,\n  $list-border-width,\n  $list-border-thin-width\n)"
-    },
-    "$list-theme": {
-      "default": "(\n  $list-background,\n  $list-color\n)"
-    },
-    "$list-item-border": {
-      "default": "(\n  $list-item-border-color,\n  $list-item-border-style,\n  $list-item-border-width,\n  $list-item-border-thin-width\n)"
-    },
-    "$list-item-title-typography": {
-      "default": "(\n  $list-item-title-font-size,\n  $list-item-title-font-weight,\n  $list-item-title-letter-spacing,\n  $list-item-title-line-height,\n  $list-item-title-text-transform\n)"
-    },
-    "$list-item-subtitle-typography": {
-      "default": "(\n  $list-item-subtitle-font-size,\n  $list-item-subtitle-font-weight,\n  $list-item-subtitle-letter-spacing,\n  $list-item-subtitle-line-height,\n  $list-item-subtitle-text-transform\n)"
-    },
-    "$list-item-nav-title-typography": {
-      "default": "(\n  $list-item-nav-title-font-size,\n  $list-item-nav-title-font-weight,\n  $list-item-nav-title-letter-spacing,\n  $list-item-nav-title-line-height,\n  null\n)"
-    },
-    "$list-item-nav-subtitle-typography": {
-      "default": "(\n  $list-item-nav-subtitle-font-size,\n  $list-item-nav-subtitle-font-weight,\n  $list-item-nav-subtitle-letter-spacing,\n  $list-item-nav-subtitle-line-height,\n  null\n)"
+    "$list-item-two-line-padding": {
+      "default": "12px 16px"
     },
     "$list-item-variants": {
       "default": "(\n  $list-background,\n  $list-color,\n  $list-item-elevation,\n  $list-item-plain-opacity,\n  'v-list-item'\n)"
+    },
+    "$list-nav-padding": {
+      "default": "8px"
+    },
+    "$list-nav-subheader-font-size": {
+      "default": ".75rem"
+    },
+    "$list-padding": {
+      "default": "8px 0"
+    },
+    "$list-rounded-border-radius": {
+      "default": "map.get(settings.$rounded, null)"
+    },
+    "$list-subheader-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity))"
+    },
+    "$list-subheader-font-size": {
+      "default": ".875rem"
+    },
+    "$list-subheader-font-weight": {
+      "default": "400"
+    },
+    "$list-subheader-inset-padding-start": {
+      "default": "56px"
+    },
+    "$list-subheader-line-height": {
+      "default": "1.375rem"
+    },
+    "$list-subheader-min-height": {
+      "default": "40px"
+    },
+    "$list-subheader-min-height-multiplier": {
+      "default": "1"
+    },
+    "$list-subheader-padding-end": {
+      "default": "16px"
+    },
+    "$list-subheader-padding-top": {
+      "default": "0"
+    },
+    "$list-subheader-transition": {
+      "default": "0.2s min-height settings.$standard-easing"
+    },
+    "$list-theme": {
+      "default": "(\n  $list-background,\n  $list-color\n)"
     }
   }
 }

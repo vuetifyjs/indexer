@@ -126,6 +126,32 @@
         "en": "generic"
       }
     },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VBreadcrumbsItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "active": {
       "text": "boolean | undefined",
       "source": "VBreadcrumbsItem",
@@ -197,32 +223,6 @@
       "optional": false,
       "description": {
         "en": "The applied color when the component is in an active state."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "VBreadcrumbsItem",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the ability to click or target the component."
       },
       "descriptionSource": {
         "en": "generic"

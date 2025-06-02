@@ -3,33 +3,21 @@
   "fileName": "VBottomNavigation",
   "pathName": "v-bottom-navigation",
   "props": {
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
+    "modelValue": {
+      "text": "unknown",
+      "source": "group",
+      "type": "unknown",
+      "formatted": "unknown\n",
       "optional": false,
       "description": {
-        "en": "Specify a theme for this component and all of its children."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "theme"
+        "en": "generic"
       }
     },
-    "name": {
-      "text": "string | undefined",
+    "absolute": {
+      "text": "boolean | undefined",
       "source": "layout-item",
       "type": "anyOf",
       "items": [
@@ -39,6 +27,32 @@
           "formatted": "undefined"
         },
         {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies **position: absolute** to the component."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
+      "source": "VBottomNavigation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
           "text": "string",
           "type": "string",
           "formatted": "string"
@@ -46,95 +60,11 @@
       ],
       "formatted": "string\n",
       "optional": false,
-      "default": "'bottom-navigation'",
       "description": {
-        "en": "Assign a specific name for layout registration."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "layout-item"
-      }
-    },
-    "tag": {
-      "text": "string | JSXComponent | undefined",
-      "source": "tag",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "JSXComponent",
-          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "new () => any",
-              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-              "type": "constructor",
-              "formatted": "new () => any"
-            },
-            {
-              "text": "FunctionalComponent<any, {}, any, {}>",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-              "type": "ref",
-              "ref": "FunctionalComponent",
-              "formatted": "FunctionalComponent"
-            }
-          ],
-          "formatted": "(new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "string | (new () => any) | FunctionalComponent\n",
-      "optional": false,
-      "default": "'header'",
-      "description": {
-        "en": "Specify a custom tag used on the root element."
-      },
-      "descriptionSource": {
-        "en": "tag"
-      }
-    },
-    "border": {
-      "text": "string | number | boolean | undefined",
-      "source": "border",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
-      },
-      "descriptionSource": {
-        "en": "border"
+        "en": "generic"
       }
     },
     "density": {
@@ -187,6 +117,103 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VBottomNavigation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 56,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
       }
     },
     "rounded": {
@@ -250,9 +277,56 @@
         "en": "rounded"
       }
     },
-    "color": {
+    "tag": {
+      "text": "string | JSXComponent | undefined",
+      "source": "tag",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "JSXComponent",
+          "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "new () => any",
+              "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+              "type": "constructor",
+              "formatted": "new () => any"
+            },
+            {
+              "text": "FunctionalComponent<any, {}, any, {}>",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+              "type": "ref",
+              "ref": "FunctionalComponent",
+              "formatted": "FunctionalComponent"
+            }
+          ],
+          "formatted": "(new () => any) | FunctionalComponent"
+        }
+      ],
+      "formatted": "string | (new () => any) | FunctionalComponent\n",
+      "optional": false,
+      "default": "'header'",
+      "description": {
+        "en": "Specify a custom tag used on the root element."
+      },
+      "descriptionSource": {
+        "en": "tag"
+      }
+    },
+    "theme": {
       "text": "string | undefined",
-      "source": "VBottomNavigation",
+      "source": "theme",
       "type": "anyOf",
       "items": [
         {
@@ -269,10 +343,144 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Specify a theme for this component and all of its children."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "theme"
+      }
+    },
+    "name": {
+      "text": "string | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'bottom-navigation'",
+      "description": {
+        "en": "Assign a specific name for layout registration."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "order": {
+      "text": "string | number | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Adjust the order of the component in relation to its registration order."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Puts all children components into a disabled state."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
       }
     },
     "bgColor": {
@@ -298,93 +506,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "VBottomNavigation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 56,
-      "description": {
-        "en": "Sets the height for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "absolute": {
-      "text": "boolean | undefined",
-      "source": "layout-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies **position: absolute** to the component."
-      },
-      "descriptionSource": {
-        "en": "layout-item"
       }
     },
     "baseColor": {
@@ -489,101 +610,6 @@
         "en": "generic"
       }
     },
-    "order": {
-      "text": "string | number | undefined",
-      "source": "layout-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Adjust the order of the component in relation to its registration order."
-      },
-      "descriptionSource": {
-        "en": "layout-item"
-      }
-    },
-    "modelValue": {
-      "text": "unknown",
-      "source": "group",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "multiple": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Allows one to select multiple items."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets a maximum number of selections that can be made."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
     "selectedClass": {
       "text": "string | undefined",
       "source": "group",
@@ -608,32 +634,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts all children components into a disabled state."
-      },
-      "descriptionSource": {
-        "en": "group"
       }
     },
     "mandatory": {
@@ -730,6 +730,9 @@
     "$bottom-navigation-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$bottom-navigation-border": {
+      "default": "(\n  $bottom-navigation-border-color,\n  $bottom-navigation-border-style,\n  $bottom-navigation-border-width,\n  $bottom-navigation-border-thin-width\n)"
+    },
     "$bottom-navigation-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -787,14 +790,11 @@
     "$bottom-navigation-text-transform": {
       "default": "none"
     },
-    "$bottom-navigation-transition": {
-      "default": "transform, color, .2s, .1s settings.$standard-easing"
-    },
-    "$bottom-navigation-border": {
-      "default": "(\n  $bottom-navigation-border-color,\n  $bottom-navigation-border-style,\n  $bottom-navigation-border-width,\n  $bottom-navigation-border-thin-width\n)"
-    },
     "$bottom-navigation-theme": {
       "default": "(\n  $bottom-navigation-background,\n  $bottom-navigation-color\n)"
+    },
+    "$bottom-navigation-transition": {
+      "default": "transform, color, .2s, .1s settings.$standard-easing"
     }
   }
 }

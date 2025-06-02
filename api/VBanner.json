@@ -3,9 +3,9 @@
   "fileName": "VBanner",
   "pathName": "v-banner",
   "props": {
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
       "type": "anyOf",
       "items": [
         {
@@ -14,21 +14,28 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
       "optional": false,
       "description": {
-        "en": "Specify a theme for this component and all of its children."
+        "en": "Specifies the component's location. Can combine by using a space separated string."
       },
       "descriptionSource": {
-        "en": "theme"
+        "en": "location"
       }
     },
-    "text": {
+    "color": {
       "text": "string | undefined",
       "source": "VBanner",
       "type": "anyOf",
@@ -47,10 +54,219 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Specify content text for the component."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the height for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
       }
     },
     "tag": {
@@ -98,6 +314,61 @@
       },
       "descriptionSource": {
         "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
       }
     },
     "icon": {
@@ -185,156 +456,7 @@
         "en": "generic"
       }
     },
-    "border": {
-      "text": "string | number | boolean | undefined",
-      "source": "border",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
-      },
-      "descriptionSource": {
-        "en": "border"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
+    "text": {
       "text": "string | undefined",
       "source": "VBanner",
       "type": "anyOf",
@@ -353,7 +475,7 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Specify content text for the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -459,36 +581,6 @@
       },
       "descriptionSource": {
         "en": "VBanner"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
       }
     },
     "maxHeight": {
@@ -611,36 +703,6 @@
         "en": "dimension"
       }
     },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
     "mobile": {
       "text": "boolean | null | undefined",
       "source": "display",
@@ -741,70 +803,8 @@
         "en": "display"
       }
     },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "location": {
-      "text": "Anchor | null | undefined",
-      "source": "location",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "Anchor",
-          "source": "vuetify/src/util/anchor.ts#L8-L14",
-          "type": "ref",
-          "ref": "Anchor",
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
-        }
-      ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
-      "optional": false,
-      "description": {
-        "en": "Specifies the component's location. Can combine by using a space separated string."
-      },
-      "descriptionSource": {
-        "en": "location"
-      }
-    },
     "position": {
-      "text": "\"fixed\" | \"relative\" | \"sticky\" | \"static\" | \"absolute\" | undefined",
+      "text": "\"fixed\" | \"absolute\" | \"sticky\" | \"static\" | \"relative\" | undefined",
       "source": "position",
       "type": "anyOf",
       "items": [
@@ -820,10 +820,10 @@
           "formatted": "\"fixed\""
         },
         {
-          "text": "\"relative\"",
+          "text": "\"absolute\"",
           "type": "string",
-          "literal": "\"relative\"",
-          "formatted": "\"relative\""
+          "literal": "\"absolute\"",
+          "formatted": "\"absolute\""
         },
         {
           "text": "\"sticky\"",
@@ -838,13 +838,13 @@
           "formatted": "\"static\""
         },
         {
-          "text": "\"absolute\"",
+          "text": "\"relative\"",
           "type": "string",
-          "literal": "\"absolute\"",
-          "formatted": "\"absolute\""
+          "literal": "\"relative\"",
+          "formatted": "\"relative\""
         }
       ],
-      "formatted": "'fixed' | 'relative' | 'sticky' | 'static' | 'absolute'\n",
+      "formatted": "'fixed' | 'absolute' | 'sticky' | 'static' | 'relative'\n",
       "optional": false,
       "description": {
         "en": "Sets the position for the component."
@@ -954,6 +954,9 @@
     "$banner-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$banner-border": {
+      "default": "(\n  $banner-border-color,\n  $banner-border-style,\n  $banner-border-width,\n  $banner-border-thin-width\n)"
+    },
     "$banner-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -984,14 +987,26 @@
     "$banner-line-height": {
       "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'line-height')"
     },
-    "$banner-padding-inline-start": {
+    "$banner-mobile-avatar-margin-end": {
       "default": "16px"
+    },
+    "$banner-mobile-content-padding-end": {
+      "default": "8px"
+    },
+    "$banner-mobile-padding-end": {
+      "default": "8px"
+    },
+    "$banner-mobile-padding-start": {
+      "default": "16px"
+    },
+    "$banner-padding": {
+      "default": "8px"
     },
     "$banner-padding-inline-end": {
       "default": "8px"
     },
-    "$banner-padding": {
-      "default": "8px"
+    "$banner-padding-inline-start": {
+      "default": "16px"
     },
     "$banner-positions": {
       "default": "absolute fixed sticky"
@@ -1014,26 +1029,11 @@
     "$banner-text-padding-end": {
       "default": "90px"
     },
-    "$banner-width": {
-      "default": "100%"
-    },
-    "$banner-mobile-avatar-margin-end": {
-      "default": "16px"
-    },
-    "$banner-mobile-content-padding-end": {
-      "default": "8px"
-    },
-    "$banner-mobile-padding-end": {
-      "default": "8px"
-    },
-    "$banner-mobile-padding-start": {
-      "default": "16px"
-    },
-    "$banner-border": {
-      "default": "(\n  $banner-border-color,\n  $banner-border-style,\n  $banner-border-width,\n  $banner-border-thin-width\n)"
-    },
     "$banner-theme": {
       "default": "(\n  $banner-background,\n  $banner-color\n)"
+    },
+    "$banner-width": {
+      "default": "100%"
     }
   }
 }

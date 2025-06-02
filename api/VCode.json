@@ -50,20 +50,20 @@
     "$code-background-color": {
       "default": "rgb(var(--v-theme-code))"
     },
-    "$code-color": {
-      "default": "rgb(var(--v-theme-on-code))"
-    },
     "$code-border-radius": {
       "default": "4px"
     },
-    "$code-line-height": {
-      "default": "1.8"
+    "$code-color": {
+      "default": "rgb(var(--v-theme-on-code))"
     },
     "$code-font-size": {
       "default": "0.9em"
     },
     "$code-font-weight": {
       "default": "normal"
+    },
+    "$code-line-height": {
+      "default": "1.8"
     },
     "$code-padding": {
       "default": ".2em .4em"

@@ -3,6 +3,32 @@
   "fileName": "VLayoutItem",
   "pathName": "v-layout-item",
   "props": {
+    "modelValue": {
+      "text": "boolean | undefined",
+      "source": "VLayoutItem",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "position": {
       "text": "\"top\" | \"bottom\" | \"left\" | \"right\"",
       "source": "VLayoutItem",
@@ -68,6 +94,31 @@
         "en": "layout-item"
       }
     },
+    "name": {
+      "text": "string | undefined",
+      "source": "layout-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Assign a specific name for layout registration."
+      },
+      "descriptionSource": {
+        "en": "layout-item"
+      }
+    },
     "size": {
       "text": "string | number | undefined",
       "source": "VLayoutItem",
@@ -94,57 +145,6 @@
       "default": 300,
       "description": {
         "en": "Sets the height and width of the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "name": {
-      "text": "string | undefined",
-      "source": "layout-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Assign a specific name for layout registration."
-      },
-      "descriptionSource": {
-        "en": "layout-item"
-      }
-    },
-    "modelValue": {
-      "text": "boolean | undefined",
-      "source": "VLayoutItem",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
         "en": "generic"

@@ -3,6 +3,19 @@
   "fileName": "VConfirmEdit",
   "pathName": "v-confirm-edit",
   "props": {
+    "modelValue": {
+      "text": "unknown",
+      "source": "VConfirmEdit",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "Represents the committed v-model value"
+      },
+      "descriptionSource": {
+        "en": "VConfirmEdit"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "VConfirmEdit",
@@ -26,19 +39,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "modelValue": {
-      "text": "unknown",
-      "source": "VConfirmEdit",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Represents the committed v-model value"
-      },
-      "descriptionSource": {
-        "en": "VConfirmEdit"
       }
     },
     "disabled": {

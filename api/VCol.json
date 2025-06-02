@@ -50,6 +50,42 @@
         "en": "tag"
       }
     },
+    "cols": {
+      "text": "string | number | boolean | undefined",
+      "source": "VCol",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sets the default number of columns the component extends. Available options are: **1 -> 12** and **auto**."
+      },
+      "descriptionSource": {
+        "en": "VCol"
+      }
+    },
     "sm": {
       "text": "string | number | boolean | undefined",
       "source": "VCol",
@@ -225,42 +261,6 @@
       "default": false,
       "description": {
         "en": "Changes the number of columns on extra extra large and greater breakpoints."
-      },
-      "descriptionSource": {
-        "en": "VCol"
-      }
-    },
-    "cols": {
-      "text": "string | number | boolean | undefined",
-      "source": "VCol",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Sets the default number of columns the component extends. Available options are: **1 -> 12** and **auto**."
       },
       "descriptionSource": {
         "en": "VCol"
@@ -639,7 +639,7 @@
       }
     },
     "alignSelf": {
-      "text": "\"start\" | \"end\" | \"center\" | \"auto\" | \"baseline\" | \"stretch\" | undefined",
+      "text": "\"end\" | \"start\" | \"center\" | \"auto\" | \"baseline\" | \"stretch\" | undefined",
       "source": "VCol",
       "type": "anyOf",
       "items": [
@@ -649,16 +649,16 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"start\"",
-          "type": "string",
-          "literal": "\"start\"",
-          "formatted": "\"start\""
-        },
-        {
           "text": "\"end\"",
           "type": "string",
           "literal": "\"end\"",
           "formatted": "\"end\""
+        },
+        {
+          "text": "\"start\"",
+          "type": "string",
+          "literal": "\"start\"",
+          "formatted": "\"start\""
         },
         {
           "text": "\"center\"",
@@ -685,7 +685,7 @@
           "formatted": "\"stretch\""
         }
       ],
-      "formatted": "'start' | 'end' | 'center' | 'auto' | 'baseline' | 'stretch'\n",
+      "formatted": "'end' | 'start' | 'center' | 'auto' | 'baseline' | 'stretch'\n",
       "optional": false,
       "default": "null",
       "description": {

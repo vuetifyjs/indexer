@@ -76,6 +76,36 @@
         "en": "VBadge"
       }
     },
+    "max": {
+      "text": "string | number | undefined",
+      "source": "VBadge",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the maximum number allowed when using the **content** prop with a `number` like value. If the content number exceeds the maximum value, a `+` suffix is added."
+      },
+      "descriptionSource": {
+        "en": "VBadge"
+      }
+    },
     "bordered": {
       "text": "boolean | undefined",
       "source": "VBadge",
@@ -230,6 +260,27 @@
               "formatted": "string"
             },
             {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
               "text": "(string | [path: string, opacity: number])[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
@@ -259,33 +310,12 @@
                 }
               ],
               "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
             }
           ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
         }
       ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
       "description": {
         "en": "Apply a specific icon using the [v-icon](/components/icons/) component."
@@ -315,36 +345,6 @@
       "default": false,
       "description": {
         "en": "Display as an inline block instead of absolute position. **location**, **floating**, and **offset** will have no effect."
-      },
-      "descriptionSource": {
-        "en": "VBadge"
-      }
-    },
-    "max": {
-      "text": "string | number | undefined",
-      "source": "VBadge",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the maximum number allowed when using the **content** prop with a `number` like value. If the content number exceeds the maximum value, a `+` suffix is added."
       },
       "descriptionSource": {
         "en": "VBadge"
@@ -581,7 +581,7 @@
       }
     },
     "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | undefined",
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | null | undefined",
       "source": "transition",
       "type": "anyOf",
       "items": [
@@ -589,6 +589,11 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
         },
         {
           "text": "string",
@@ -613,7 +618,7 @@
             },
             {
               "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
               "type": "object",
               "properties": {
                 "component": {
@@ -687,9 +692,6 @@
     "$badge-background": {
       "default": "rgb(var(--v-theme-surface-variant))"
     },
-    "$badge-color": {
-      "default": "rgba(var(--v-theme-on-surface-variant), var(--v-high-emphasis-opacity))"
-    },
     "$badge-border-color": {
       "default": "rgb(var(--v-theme-background))"
     },
@@ -704,6 +706,9 @@
     },
     "$badge-border-width": {
       "default": "2px"
+    },
+    "$badge-color": {
+      "default": "rgba(var(--v-theme-on-surface-variant), var(--v-high-emphasis-opacity))"
     },
     "$badge-dot-border-radius": {
       "default": "4.5px"
@@ -747,14 +752,14 @@
     "$badge-padding": {
       "default": "4px 6px"
     },
+    "$badge-theme": {
+      "default": "(\n  $badge-background,\n  $badge-color\n)"
+    },
     "$badge-transition": {
       "default": ".225s settings.$standard-easing"
     },
     "$badge-wrapper-margin": {
       "default": "0 4px"
-    },
-    "$badge-theme": {
-      "default": "(\n  $badge-background,\n  $badge-color\n)"
     }
   }
 }

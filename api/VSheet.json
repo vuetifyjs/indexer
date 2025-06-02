@@ -289,6 +289,36 @@
         "en": "theme"
       }
     },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
+      }
+    },
     "maxHeight": {
       "text": "string | number | undefined",
       "source": "dimension",
@@ -409,38 +439,8 @@
         "en": "dimension"
       }
     },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
     "position": {
-      "text": "\"fixed\" | \"absolute\" | \"static\" | \"relative\" | \"sticky\" | undefined",
+      "text": "\"fixed\" | \"absolute\" | \"sticky\" | \"static\" | \"relative\" | undefined",
       "source": "position",
       "type": "anyOf",
       "items": [
@@ -462,6 +462,12 @@
           "formatted": "\"absolute\""
         },
         {
+          "text": "\"sticky\"",
+          "type": "string",
+          "literal": "\"sticky\"",
+          "formatted": "\"sticky\""
+        },
+        {
           "text": "\"static\"",
           "type": "string",
           "literal": "\"static\"",
@@ -472,15 +478,9 @@
           "type": "string",
           "literal": "\"relative\"",
           "formatted": "\"relative\""
-        },
-        {
-          "text": "\"sticky\"",
-          "type": "string",
-          "literal": "\"sticky\"",
-          "formatted": "\"sticky\""
         }
       ],
-      "formatted": "'fixed' | 'absolute' | 'static' | 'relative' | 'sticky'\n",
+      "formatted": "'fixed' | 'absolute' | 'sticky' | 'static' | 'relative'\n",
       "optional": false,
       "description": {
         "en": "Sets the position for the component."
@@ -510,6 +510,9 @@
     "$sheet-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
+    "$sheet-border": {
+      "default": "(\n  $sheet-border-color,\n  $sheet-border-style,\n  $sheet-border-width,\n  $sheet-border-thin-width\n)"
+    },
     "$sheet-border-color": {
       "default": "settings.$border-color-root"
     },
@@ -536,9 +539,6 @@
     },
     "$sheet-rounded-border-radius": {
       "default": "settings.$border-radius-root"
-    },
-    "$sheet-border": {
-      "default": "(\n  $sheet-border-color,\n  $sheet-border-style,\n  $sheet-border-width,\n  $sheet-border-thin-width\n)"
     },
     "$sheet-theme": {
       "default": "(\n  $sheet-background,\n  $sheet-color\n)"

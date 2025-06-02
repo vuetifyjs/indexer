@@ -3,6 +3,19 @@
   "fileName": "VSlideGroupItem",
   "pathName": "v-slide-group-item",
   "props": {
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "group-item",
@@ -27,19 +40,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
       }
     },
     "selectedClass": {

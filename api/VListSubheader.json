@@ -3,6 +3,57 @@
   "fileName": "VListSubheader",
   "pathName": "v-list-subheader",
   "props": {
+    "title": {
+      "text": "string | undefined",
+      "source": "VListSubheader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "VListSubheader"
+      }
+    },
+    "sticky": {
+      "text": "boolean | undefined",
+      "source": "VListSubheader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Sticks the header to the top of the table."
+      },
+      "descriptionSource": {
+        "en": "VListSubheader"
+      }
+    },
     "tag": {
       "text": "string | JSXComponent | undefined",
       "source": "tag",
@@ -73,57 +124,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "sticky": {
-      "text": "boolean | undefined",
-      "source": "VListSubheader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Sticks the header to the top of the table."
-      },
-      "descriptionSource": {
-        "en": "VListSubheader"
-      }
-    },
-    "title": {
-      "text": "string | undefined",
-      "source": "VListSubheader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a title text for the component."
-      },
-      "descriptionSource": {
-        "en": "VListSubheader"
       }
     },
     "inset": {

@@ -28,9 +28,9 @@
         "en": "VDataIterator"
       }
     },
-    "items": {
-      "text": "readonly unknown[] | undefined",
-      "source": "DataIterator-items",
+    "loading": {
+      "text": "boolean | undefined",
+      "source": "VDataIterator",
       "type": "anyOf",
       "items": [
         {
@@ -39,27 +39,19 @@
           "formatted": "undefined"
         },
         {
-          "text": "readonly unknown[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "unknown",
-              "type": "unknown",
-              "formatted": "unknown"
-            }
-          ],
-          "formatted": "unknown[]"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "unknown[]\n",
+      "formatted": "boolean\n",
       "optional": false,
-      "default": "[]",
+      "default": false,
       "description": {
-        "en": "An array of strings or objects used for automatically generating children components."
+        "en": "If `true` and no items are provided, then a loading text will be shown."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VDataIterator"
       }
     },
     "tag": {
@@ -109,6 +101,40 @@
         "en": "tag"
       }
     },
+    "items": {
+      "text": "readonly unknown[] | undefined",
+      "source": "DataIterator-items",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly unknown[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "unknown",
+              "type": "unknown",
+              "formatted": "unknown"
+            }
+          ],
+          "formatted": "unknown[]"
+        }
+      ],
+      "formatted": "unknown[]\n",
+      "optional": false,
+      "default": "[]",
+      "description": {
+        "en": "An array of strings or objects used for automatically generating children components."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "modelValue": {
       "text": "readonly any[] | undefined",
       "source": "DataTable-select",
@@ -143,9 +169,9 @@
         "en": "generic"
       }
     },
-    "loading": {
-      "text": "boolean | undefined",
-      "source": "VDataIterator",
+    "valueComparator": {
+      "text": "typeof deepEqual | undefined",
+      "source": "DataTable-select",
       "type": "anyOf",
       "items": [
         {
@@ -154,115 +180,40 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "If `true` and no items are provided, then a loading text will be shown."
-      },
-      "descriptionSource": {
-        "en": "VDataIterator"
-      }
-    },
-    "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; hideOnLeave: boolean; } | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "TransitionProps & { component?: Component | undefined; }",
-          "type": "allOf",
-          "items": [
+          "text": "typeof deepEqual",
+          "source": "vuetify/src/util/helpers.ts#L46-L71",
+          "type": "function",
+          "parameters": [
             {
-              "text": "TransitionProps",
-              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
-              "type": "ref",
-              "ref": "TransitionProps",
-              "formatted": "TransitionProps"
+              "name": "a",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
             },
             {
-              "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
-              "type": "object",
-              "properties": {
-                "component": {
-                  "text": "Component | undefined",
-                  "type": "anyOf",
-                  "items": [
-                    {
-                      "text": "undefined",
-                      "type": "ref",
-                      "ref": "",
-                      "formatted": "undefined"
-                    },
-                    {
-                      "text": "Component",
-                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-                      "type": "ref",
-                      "ref": "Component",
-                      "formatted": "Component"
-                    }
-                  ],
-                  "formatted": "Component",
-                  "optional": true
-                }
-              },
-              "formatted": "{ component: Component }"
+              "name": "b",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
             }
           ],
-          "formatted": "TransitionProps & { component: Component }"
-        },
-        {
-          "text": "{ component: Component; hideOnLeave: boolean; }",
-          "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L80-L83",
-          "type": "object",
-          "properties": {
-            "component": {
-              "text": "Component",
-              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
-              "type": "ref",
-              "ref": "Component",
-              "formatted": "Component",
-              "optional": false
-            },
-            "hideOnLeave": {
-              "text": "boolean",
-              "type": "boolean",
-              "formatted": "boolean",
-              "optional": false
-            }
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
           },
-          "formatted": "{ component: Component; hideOnLeave: boolean }"
+          "formatted": "(a: any, b: any) => boolean"
         }
       ],
-      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component; hideOnLeave: boolean }\n",
+      "formatted": "(a: any, b: any) => boolean\n",
       "optional": false,
-      "default": "{component: {name: 'fade-transition'}, hideOnLeave: true}",
       "description": {
-        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
       },
       "descriptionSource": {
-        "en": "transition"
+        "en": "generic"
       }
     },
     "itemValue": {
@@ -415,53 +366,6 @@
       },
       "descriptionSource": {
         "en": "DataTable-paginate"
-      }
-    },
-    "valueComparator": {
-      "text": "typeof deepEqual | undefined",
-      "source": "DataTable-select",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "typeof deepEqual",
-          "source": "vuetify/src/util/helpers.ts#L46-L71",
-          "type": "function",
-          "parameters": [
-            {
-              "name": "a",
-              "optional": false,
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            },
-            {
-              "name": "b",
-              "optional": false,
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            }
-          ],
-          "returnType": {
-            "text": "boolean",
-            "type": "boolean",
-            "formatted": "boolean"
-          },
-          "formatted": "(a: any, b: any) => boolean"
-        }
-      ],
-      "formatted": "(a: any, b: any) => boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "sortBy": {
@@ -881,6 +785,107 @@
       },
       "descriptionSource": {
         "en": "filter"
+      }
+    },
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; hideOnLeave: boolean; } | null | undefined",
+      "source": "transition",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "TransitionProps & { component?: Component | undefined; }",
+          "type": "allOf",
+          "items": [
+            {
+              "text": "TransitionProps",
+              "source": "@vue/runtime-dom/dist/runtime-dom.d.ts#L8-L25",
+              "type": "ref",
+              "ref": "TransitionProps",
+              "formatted": "TransitionProps"
+            },
+            {
+              "text": "{ component?: Component | undefined; }",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
+              "type": "object",
+              "properties": {
+                "component": {
+                  "text": "Component | undefined",
+                  "type": "anyOf",
+                  "items": [
+                    {
+                      "text": "undefined",
+                      "type": "ref",
+                      "ref": "",
+                      "formatted": "undefined"
+                    },
+                    {
+                      "text": "Component",
+                      "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+                      "type": "ref",
+                      "ref": "Component",
+                      "formatted": "Component"
+                    }
+                  ],
+                  "formatted": "Component",
+                  "optional": true
+                }
+              },
+              "formatted": "{ component: Component }"
+            }
+          ],
+          "formatted": "TransitionProps & { component: Component }"
+        },
+        {
+          "text": "{ component: Component; hideOnLeave: boolean; }",
+          "source": "vuetify/src/components/VDataIterator/VDataIterator.tsx#L80-L83",
+          "type": "object",
+          "properties": {
+            "component": {
+              "text": "Component",
+              "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1409-L1409",
+              "type": "ref",
+              "ref": "Component",
+              "formatted": "Component",
+              "optional": false
+            },
+            "hideOnLeave": {
+              "text": "boolean",
+              "type": "boolean",
+              "formatted": "boolean",
+              "optional": false
+            }
+          },
+          "formatted": "{ component: Component; hideOnLeave: boolean }"
+        }
+      ],
+      "formatted": "  | string\n  | boolean\n  | (TransitionProps & { component: Component })\n  | { component: Component; hideOnLeave: boolean }\n",
+      "optional": false,
+      "default": "{component: {name: 'fade-transition'}, hideOnLeave: true}",
+      "description": {
+        "en": "Sets the component transition. Can be one of the [built in](/styles/transitions/) or custom transition."
+      },
+      "descriptionSource": {
+        "en": "transition"
       }
     }
   },

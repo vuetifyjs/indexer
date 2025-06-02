@@ -1,7 +1,7 @@
 {
-  "displayName": "VDateInput",
-  "fileName": "VDateInput",
-  "pathName": "v-date-input",
+  "displayName": "VColorInput",
+  "fileName": "VColorInput",
+  "pathName": "v-color-input",
   "props": {
     "title": {
       "text": "string | undefined",
@@ -21,7 +21,6 @@
       ],
       "formatted": "string\n",
       "optional": false,
-      "default": "'$vuetify.datePicker.title'",
       "description": {
         "en": "Specify a title text for the component."
       },
@@ -56,10 +55,43 @@
       }
     },
     "modelValue": {
-      "text": "any",
-      "source": "VDatePicker",
-      "type": "any",
-      "formatted": "any\n",
+      "text": "string | Record<string, unknown> | null | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Record<string, unknown>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "unknown",
+            "type": "unknown",
+            "formatted": "unknown"
+          },
+          "formatted": "Record<string, unknown>"
+        }
+      ],
+      "formatted": "string | Record<string, unknown>\n",
       "optional": false,
       "description": {
         "en": "Represents the committed v-model value"
@@ -88,21 +120,26 @@
       "optional": false,
       "default": "'text'",
       "description": {
-        "en": "Determines the type of the picker - `date` for date picker, `month` for month picker."
+        "en": "Sets input type."
       },
       "descriptionSource": {
-        "en": "VDatePicker"
+        "en": "VTextField"
       }
     },
     "location": {
-      "text": "Anchor | undefined",
-      "source": "VDateInput",
+      "text": "Anchor | null | undefined",
+      "source": "location",
       "type": "anyOf",
       "items": [
         {
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
         },
         {
           "text": "Anchor",
@@ -114,12 +151,11 @@
       ],
       "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
       "optional": false,
-      "default": "'bottom start'",
       "description": {
-        "en": "Specifies the date picker's location. Can combine by using a space separated string."
+        "en": "Specifies the component's location. Can combine by using a space separated string."
       },
       "descriptionSource": {
-        "en": "VDateInput"
+        "en": "location"
       }
     },
     "color": {
@@ -429,32 +465,6 @@
         "en": "tag"
       }
     },
-    "header": {
-      "text": "string | undefined",
-      "source": "VDatePicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'$vuetify.datePicker.header'",
-      "description": {
-        "en": "Text shown when no **display-date** is set."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
     "theme": {
       "text": "string | undefined",
       "source": "theme",
@@ -507,7 +517,7 @@
     },
     "disabled": {
       "text": "boolean | undefined",
-      "source": "calendar",
+      "source": "VColorPicker",
       "type": "anyOf",
       "items": [
         {
@@ -523,93 +533,12 @@
       ],
       "formatted": "boolean\n",
       "optional": false,
-      "default": "null",
+      "default": false,
       "description": {
         "en": "Removes the ability to click or target the input."
       },
       "descriptionSource": {
         "en": "VField"
-      }
-    },
-    "max": {
-      "text": "unknown",
-      "source": "VDatePickerYears",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Maximum allowed date/month (ISO 8601 format)."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "min": {
-      "text": "unknown",
-      "source": "VDatePickerYears",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "Minimum allowed date/month (ISO 8601 format)."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "multiple": {
-      "text": "number | boolean | (string & {}) | \"range\" | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "string & {}",
-          "type": "allOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "{}",
-              "type": "object",
-              "properties": {},
-              "formatted": "{  }"
-            }
-          ],
-          "formatted": "string & {  }"
-        },
-        {
-          "text": "\"range\"",
-          "type": "string",
-          "literal": "\"range\"",
-          "formatted": "\"range\""
-        }
-      ],
-      "formatted": "number | boolean | (string & {}) | 'range'\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Allow the selection of multiple dates. The **range** value selects all dates between two selections."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
       }
     },
     "placeholder": {
@@ -661,10 +590,10 @@
       "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "Width of the picker."
+        "en": "Sets the width of the color picker."
       },
       "descriptionSource": {
-        "en": "VDatePicker"
+        "en": "VColorPicker"
       }
     },
     "id": {
@@ -766,31 +695,6 @@
       },
       "descriptionSource": {
         "en": "VTextField"
-      }
-    },
-    "text": {
-      "text": "string | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify content text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "variant": {
@@ -1001,106 +905,6 @@
         "en": "dimension"
       }
     },
-    "mobile": {
-      "text": "boolean | null | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": "null",
-      "description": {
-        "en": "Determines the display mode of the component. If true, the component will be displayed in mobile mode. If false, the component will be displayed in desktop mode. If null, will be based on the current mobile-breakpoint"
-      },
-      "descriptionSource": {
-        "en": "display"
-      }
-    },
-    "mobileBreakpoint": {
-      "text": "number | DisplayBreakpoint | undefined",
-      "source": "display",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "DisplayBreakpoint",
-          "source": "vuetify/src/composables/display.ts#L13-L13",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "\"xs\"",
-              "type": "string",
-              "literal": "\"xs\"",
-              "formatted": "\"xs\""
-            },
-            {
-              "text": "\"sm\"",
-              "type": "string",
-              "literal": "\"sm\"",
-              "formatted": "\"sm\""
-            },
-            {
-              "text": "\"md\"",
-              "type": "string",
-              "literal": "\"md\"",
-              "formatted": "\"md\""
-            },
-            {
-              "text": "\"lg\"",
-              "type": "string",
-              "literal": "\"lg\"",
-              "formatted": "\"lg\""
-            },
-            {
-              "text": "\"xl\"",
-              "type": "string",
-              "literal": "\"xl\"",
-              "formatted": "\"xl\""
-            },
-            {
-              "text": "\"xxl\"",
-              "type": "string",
-              "literal": "\"xxl\"",
-              "formatted": "\"xxl\""
-            }
-          ],
-          "formatted": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\" | \"xxl\""
-        }
-      ],
-      "formatted": "number | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'\n",
-      "optional": false,
-      "description": {
-        "en": "Overrides the display configuration default screen size that the component should be considered in mobile."
-      },
-      "descriptionSource": {
-        "en": "display"
-      }
-    },
     "position": {
       "text": "\"fixed\" | \"absolute\" | \"sticky\" | \"static\" | \"relative\" | undefined",
       "source": "position",
@@ -1174,6 +978,63 @@
       },
       "descriptionSource": {
         "en": "VField"
+      }
+    },
+    "mode": {
+      "text": "\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\" | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"rgb\"",
+          "type": "string",
+          "literal": "\"rgb\"",
+          "formatted": "\"rgb\""
+        },
+        {
+          "text": "\"rgba\"",
+          "type": "string",
+          "literal": "\"rgba\"",
+          "formatted": "\"rgba\""
+        },
+        {
+          "text": "\"hsl\"",
+          "type": "string",
+          "literal": "\"hsl\"",
+          "formatted": "\"hsl\""
+        },
+        {
+          "text": "\"hsla\"",
+          "type": "string",
+          "literal": "\"hsla\"",
+          "formatted": "\"hsla\""
+        },
+        {
+          "text": "\"hex\"",
+          "type": "string",
+          "literal": "\"hex\"",
+          "formatted": "\"hex\""
+        },
+        {
+          "text": "\"hexa\"",
+          "type": "string",
+          "literal": "\"hexa\"",
+          "formatted": "\"hexa\""
+        }
+      ],
+      "formatted": "'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hex' | 'hexa'\n",
+      "optional": false,
+      "default": "'rgba'",
+      "description": {
+        "en": "The current selected input type. Syncable with `v-model:mode`."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
       }
     },
     "active": {
@@ -1280,7 +1141,6 @@
       ],
       "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
       "optional": false,
-      "default": "'$calendar'",
       "description": {
         "en": "Prepends an icon to the outside the component's input, uses the same syntax as `v-icon`."
       },
@@ -1398,10 +1258,10 @@
       "optional": false,
       "default": "null",
       "description": {
-        "en": "Makes the picker readonly (doesn't allow to select new date)."
+        "en": "Puts input in readonly state."
       },
       "descriptionSource": {
-        "en": "VDatePicker"
+        "en": "validation"
       }
     },
     "loading": {
@@ -1433,178 +1293,6 @@
       },
       "descriptionSource": {
         "en": "VInput"
-      }
-    },
-    "nextIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            }
-          ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
-        }
-      ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "default": "'$next'",
-      "description": {
-        "en": "Sets the icon for next month/year button."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "prevIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            }
-          ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
-        }
-      ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "default": "'$prev'",
-      "description": {
-        "en": "Sets the icon for previous month/year button."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
       }
     },
     "direction": {
@@ -1699,6 +1387,58 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "pip": {
+      "text": "boolean | undefined",
+      "source": "VColorInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VColorInput.json))"
+      },
+      "descriptionSource": {
+        "en": "VColorInput"
+      }
+    },
+    "pipIcon": {
+      "text": "string | undefined",
+      "source": "VColorInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$color'",
+      "description": {
+        "en": "MISSING DESCRIPTION ([edit in github](https://github.com/vuetifyjs/vuetify/tree/master/packages/api-generator/src/locale/en/VColorInput.json))"
+      },
+      "descriptionSource": {
+        "en": "VColorInput"
       }
     },
     "focused": {
@@ -1797,12 +1537,12 @@
       ],
       "formatted": "boolean\n",
       "optional": false,
-      "default": true,
+      "default": false,
       "description": {
-        "en": "Hide the Cancel and OK buttons, and automatically update the value when a date is selected."
+        "en": "Prevent showing the default actions buttons. Does not affect `<component :is=\"actions\" />`"
       },
       "descriptionSource": {
-        "en": "VDateInput"
+        "en": "VConfirmEdit"
       }
     },
     "persistentPlaceholder": {
@@ -2956,6 +2696,268 @@
         "en": "generic"
       }
     },
+    "canvasHeight": {
+      "text": "string | number | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 150,
+      "description": {
+        "en": "Height of canvas."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "dotSize": {
+      "text": "string | number | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 10,
+      "description": {
+        "en": "Changes the size of the selection dot on the canvas."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "hideCanvas": {
+      "text": "boolean | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hides canvas."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "hideSliders": {
+      "text": "boolean | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hides sliders."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "hideInputs": {
+      "text": "boolean | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Hides inputs."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "modes": {
+      "text": "readonly (\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\")[] | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "readonly (\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\")[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "\"rgb\"",
+              "type": "string",
+              "literal": "\"rgb\"",
+              "formatted": "\"rgb\""
+            },
+            {
+              "text": "\"rgba\"",
+              "type": "string",
+              "literal": "\"rgba\"",
+              "formatted": "\"rgba\""
+            },
+            {
+              "text": "\"hsl\"",
+              "type": "string",
+              "literal": "\"hsl\"",
+              "formatted": "\"hsl\""
+            },
+            {
+              "text": "\"hsla\"",
+              "type": "string",
+              "literal": "\"hsla\"",
+              "formatted": "\"hsla\""
+            },
+            {
+              "text": "\"hex\"",
+              "type": "string",
+              "literal": "\"hex\"",
+              "formatted": "\"hex\""
+            },
+            {
+              "text": "\"hexa\"",
+              "type": "string",
+              "literal": "\"hexa\"",
+              "formatted": "\"hexa\""
+            }
+          ],
+          "formatted": "(\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\")[]"
+        }
+      ],
+      "formatted": "('rgb' | 'rgba' | 'hsl' | 'hsla' | 'hex' | 'hexa')[]\n",
+      "optional": false,
+      "default": "['rgb', 'rgba', 'hsl', 'hsla', 'hex', 'hexa']",
+      "description": {
+        "en": "Sets available input types."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "showSwatches": {
+      "text": "boolean | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Displays color swatches."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "swatchesMaxHeight": {
+      "text": "string | number | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 150,
+      "description": {
+        "en": "Sets the maximum height of the swatches section."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
     "divided": {
       "text": "boolean | undefined",
       "source": "VPicker",
@@ -3034,9 +3036,9 @@
         "en": "VPicker"
       }
     },
-    "displayFormat": {
-      "text": "string | Function | undefined",
-      "source": "VDateInput",
+    "swatches": {
+      "text": "readonly (readonly (string | number | { readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; } | { readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; } | { readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; })[])[] | undefined",
+      "source": "VColorPicker",
       "type": "anyOf",
       "items": [
         {
@@ -3045,775 +3047,62 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "Function",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "ref",
-          "ref": "Function",
-          "formatted": "Function"
-        }
-      ],
-      "formatted": "string | Function\n",
-      "optional": false,
-      "description": {
-        "en": "The format of the date that is displayed in the input. Can use any format [here](/features/dates/#format-options) or a custom function."
-      },
-      "descriptionSource": {
-        "en": "VDateInput"
-      }
-    },
-    "menu": {
-      "text": "boolean | undefined",
-      "source": "VDateInput",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Renders with the menu open by default."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "updateOn": {
-      "text": "(\"blur\" | \"enter\")[] | undefined",
-      "source": "VDateInput",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "(\"blur\" | \"enter\")[]",
+          "text": "readonly (readonly (string | number | { readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; } | { readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; } | { readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; })[])[]",
           "source": "typescript/lib/lib.es5.d.ts#L4-L4",
           "type": "array",
           "items": [
             {
-              "text": "\"blur\"",
-              "type": "string",
-              "literal": "\"blur\"",
-              "formatted": "\"blur\""
-            },
-            {
-              "text": "\"enter\"",
-              "type": "string",
-              "literal": "\"enter\"",
-              "formatted": "\"enter\""
-            }
-          ],
-          "formatted": "(\"blur\" | \"enter\")[]"
-        }
-      ],
-      "formatted": "('blur' | 'enter')[]\n",
-      "optional": false,
-      "default": "['blur', 'enter']",
-      "description": {
-        "en": "Specifies when the text input should update the model value. If empty, the text field will go into read-only state."
-      },
-      "descriptionSource": {
-        "en": "VDateInput"
-      }
-    },
-    "inputFormat": {
-      "text": "string | undefined",
-      "source": "date-format",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Format for manual date input. Use yyyy, mm, dd with separators '.', '-', '/' (e.g. 'yyyy-mm-dd', 'dd/mm/yyyy')."
-      },
-      "descriptionSource": {
-        "en": "VDateInput"
-      }
-    },
-    "headerColor": {
-      "text": "string | undefined",
-      "source": "VDatePicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Allows you to set a different color for the header when used in conjunction with the `color` prop."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "controlHeight": {
-      "text": "string | number | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height of the controls."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerControls"
-      }
-    },
-    "modeIcon": {
-      "text": "IconValue | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
+              "text": "readonly (string | number | { readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; } | { readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; } | { readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; })[]",
               "source": "typescript/lib/lib.es5.d.ts#L4-L4",
               "type": "array",
               "items": [
                 {
                   "text": "string",
-                  "type": "string",
+                  "type": "ref",
+                  "ref": "",
                   "formatted": "string"
                 },
                 {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
+                  "text": "number",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "number"
+                },
+                {
+                  "text": "{ readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; }",
+                  "source": "@vue/reactivity/dist/reactivity.d.ts#L82-L84",
+                  "type": "ref",
+                  "ref": "__type",
+                  "formatted": "{ readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; }"
+                },
+                {
+                  "text": "{ readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; }",
+                  "source": "@vue/reactivity/dist/reactivity.d.ts#L82-L84",
+                  "type": "ref",
+                  "ref": "__type",
+                  "formatted": "{ readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; }"
+                },
+                {
+                  "text": "{ readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; }",
+                  "source": "@vue/reactivity/dist/reactivity.d.ts#L82-L84",
+                  "type": "ref",
+                  "ref": "__type",
+                  "formatted": "{ readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; }"
                 }
               ],
-              "formatted": "(string | [string, number])[]"
+              "formatted": "(string | number | { readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; } | { readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; } | { readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; })[]"
             }
           ],
-          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+          "formatted": "(string | number | { readonly h: number; readonly s: number; readonly v: number; readonly a?: number | undefined; } | { readonly r: number; readonly g: number; readonly b: number; readonly a?: number | undefined; } | { readonly h: number; readonly s: number; readonly l: number; readonly a?: number | undefined; })[][]"
         }
       ],
-      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
-      "optional": false,
-      "default": "'$subgroup'",
-      "description": {
-        "en": "Icon displayed next to the current month and year, toggles year selection when clicked."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "viewMode": {
-      "text": "\"month\" | \"months\" | \"year\" | undefined",
-      "source": "VDatePickerControls",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"month\"",
-          "type": "string",
-          "literal": "\"month\"",
-          "formatted": "\"month\""
-        },
-        {
-          "text": "\"months\"",
-          "type": "string",
-          "literal": "\"months\"",
-          "formatted": "\"months\""
-        },
-        {
-          "text": "\"year\"",
-          "type": "string",
-          "literal": "\"year\"",
-          "formatted": "\"year\""
-        }
-      ],
-      "formatted": "'month' | 'months' | 'year'\n",
-      "optional": false,
-      "default": "'month'",
-      "description": {
-        "en": "Determines which picker in the date or month picker is being displayed. Allowed values: `'month'`, `'months'`, `'year'`."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "month": {
-      "text": "string | number | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
+      "formatted": "(\n  | string\n  | number\n  | {\n      readonly h: number\n      readonly s: number\n      readonly v: number\n      readonly a?: number | undefined\n    }\n  | {\n      readonly r: number\n      readonly g: number\n      readonly b: number\n      readonly a?: number | undefined\n    }\n  | {\n      readonly h: number\n      readonly s: number\n      readonly l: number\n      readonly a?: number | undefined\n    }\n)[][]\n",
       "optional": false,
       "description": {
-        "en": "Sets the month."
+        "en": "Sets the available color swatches to select from. 2D array of rows and columns, accepts any color format the picker does."
       },
       "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "year": {
-      "text": "number | undefined",
-      "source": "VDatePickerMonths",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the year."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "hideWeekdays": {
-      "text": "boolean | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Hides the weekdays."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "showWeek": {
-      "text": "boolean | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Toggles visibility of the week numbers in the body of the calendar."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "transition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-transition'",
-      "description": {
-        "en": "The transition used when changing months into the future"
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "reverseTransition": {
-      "text": "string | undefined",
-      "source": "VDatePickerMonth",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'picker-reverse-transition'",
-      "description": {
-        "en": "The transition used when changing months into the past"
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonth"
-      }
-    },
-    "showAdjacentMonths": {
-      "text": "boolean | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": true,
-      "description": {
-        "en": "Toggles visibility of days from previous and next months."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "weekdays": {
-      "text": "CalendarWeekdays[] | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "CalendarWeekdays[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "0",
-              "type": "number",
-              "literal": "0",
-              "formatted": "0"
-            },
-            {
-              "text": "1",
-              "type": "number",
-              "literal": "1",
-              "formatted": "1"
-            },
-            {
-              "text": "5",
-              "type": "number",
-              "literal": "5",
-              "formatted": "5"
-            },
-            {
-              "text": "2",
-              "type": "number",
-              "literal": "2",
-              "formatted": "2"
-            },
-            {
-              "text": "3",
-              "type": "number",
-              "literal": "3",
-              "formatted": "3"
-            },
-            {
-              "text": "4",
-              "type": "number",
-              "literal": "4",
-              "formatted": "4"
-            },
-            {
-              "text": "6",
-              "type": "number",
-              "literal": "6",
-              "formatted": "6"
-            }
-          ],
-          "formatted": "(0 | 1 | 5 | 2 | 3 | 4 | 6)[]"
-        }
-      ],
-      "formatted": "(0 | 1 | 5 | 2 | 3 | 4 | 6)[]\n",
-      "optional": false,
-      "default": "[0, 1, 2, 3, 4, 5, 6]",
-      "description": {
-        "en": "Array of weekdays."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "weeksInMonth": {
-      "text": "\"static\" | \"dynamic\" | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"static\"",
-          "type": "string",
-          "literal": "\"static\"",
-          "formatted": "\"static\""
-        },
-        {
-          "text": "\"dynamic\"",
-          "type": "string",
-          "literal": "\"dynamic\"",
-          "formatted": "\"dynamic\""
-        }
-      ],
-      "formatted": "'static' | 'dynamic'\n",
-      "optional": false,
-      "default": "'static'",
-      "description": {
-        "en": "A dynamic number of weeks in a month will grow and shrink depending on how many days are in the month. A static number always shows 7 weeks."
-      },
-      "descriptionSource": {
-        "en": "calendar"
-      }
-    },
-    "firstDayOfWeek": {
-      "text": "string | number | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the first day of the week, starting with 0 for Sunday."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "allowedDates": {
-      "text": "unknown[] | ((date: unknown) => boolean) | undefined",
-      "source": "calendar",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "unknown[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "unknown",
-              "type": "unknown",
-              "formatted": "unknown"
-            }
-          ],
-          "formatted": "unknown[]"
-        },
-        {
-          "text": "(date: unknown) => boolean",
-          "source": "vuetify/src/composables/calendar.ts#L55-L55",
-          "type": "function",
-          "parameters": [
-            {
-              "name": "date",
-              "optional": false,
-              "text": "unknown",
-              "type": "unknown",
-              "formatted": "unknown"
-            }
-          ],
-          "returnType": {
-            "text": "boolean",
-            "type": "boolean",
-            "formatted": "boolean"
-          },
-          "formatted": "(date: unknown) => boolean"
-        }
-      ],
-      "formatted": "unknown[] | ((date: unknown) => boolean)\n",
-      "optional": false,
-      "description": {
-        "en": "Restricts which dates can be selected."
-      },
-      "descriptionSource": {
-        "en": "VDatePicker"
-      }
-    },
-    "allowedMonths": {
-      "text": "number[] | ((date: number) => boolean) | undefined",
-      "source": "VDatePickerMonths",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "number",
-              "type": "number",
-              "formatted": "number"
-            }
-          ],
-          "formatted": "number[]"
-        },
-        {
-          "text": "(date: number) => boolean",
-          "source": "vuetify/src/components/VDatePicker/VDatePickerMonths.tsx#L38-L38",
-          "type": "function",
-          "parameters": [
-            {
-              "name": "date",
-              "optional": false,
-              "text": "number",
-              "type": "number",
-              "formatted": "number"
-            }
-          ],
-          "returnType": {
-            "text": "boolean",
-            "type": "boolean",
-            "formatted": "boolean"
-          },
-          "formatted": "(date: number) => boolean"
-        }
-      ],
-      "formatted": "number[] | ((date: number) => boolean)\n",
-      "optional": false,
-      "description": {
-        "en": "Restricts which months can be selected."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerMonths"
-      }
-    },
-    "allowedYears": {
-      "text": "number[] | ((date: number) => boolean) | undefined",
-      "source": "VDatePickerYears",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number[]",
-          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-          "type": "array",
-          "items": [
-            {
-              "text": "number",
-              "type": "number",
-              "formatted": "number"
-            }
-          ],
-          "formatted": "number[]"
-        },
-        {
-          "text": "(date: number) => boolean",
-          "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L43-L43",
-          "type": "function",
-          "parameters": [
-            {
-              "name": "date",
-              "optional": false,
-              "text": "number",
-              "type": "number",
-              "formatted": "number"
-            }
-          ],
-          "returnType": {
-            "text": "boolean",
-            "type": "boolean",
-            "formatted": "boolean"
-          },
-          "formatted": "(date: number) => boolean"
-        }
-      ],
-      "formatted": "number[] | ((date: number) => boolean)\n",
-      "optional": false,
-      "description": {
-        "en": "Restricts which years can be selected."
-      },
-      "descriptionSource": {
-        "en": "VDatePickerYears"
+        "en": "VColorPicker"
       }
     }
   },
@@ -3966,60 +3255,6 @@
       },
       "descriptionSource": {
         "en": "VField"
-      }
-    },
-    "save": {
-      "text": "[value: string]",
-      "type": "array",
-      "items": [
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "length": 1,
-      "formatted": "[string]\n",
-      "optional": false,
-      "description": {
-        "en": "The event emitted when the user clicks the Save button"
-      },
-      "descriptionSource": {
-        "en": "VConfirmEdit"
-      }
-    },
-    "cancel": {
-      "text": "[]",
-      "type": "array",
-      "items": [],
-      "length": 0,
-      "formatted": "[]\n",
-      "optional": false,
-      "description": {
-        "en": "The event emitted when the user clicks the Cancel button"
-      },
-      "descriptionSource": {
-        "en": "VConfirmEdit"
-      }
-    },
-    "update:menu": {
-      "text": "[val: boolean]",
-      "type": "array",
-      "items": [
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "length": 1,
-      "formatted": "[boolean]\n",
-      "optional": false,
-      "description": {
-        "en": "Event that is emitted when the component's menu state changes."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     }
   },
@@ -4848,13 +4083,13 @@
       }
     },
     "actions": {
-      "text": "VDateInputActionsSlot",
-      "source": "vuetify/src/labs/VDateInput/VDateInput.tsx#L26-L30",
+      "text": "VColorInputActionsSlot",
+      "source": "vuetify/src/labs/VColorInput/VColorInput.tsx#L22-L26",
       "type": "object",
       "properties": {
         "save": {
           "text": "() => void",
-          "source": "vuetify/src/labs/VDateInput/VDateInput.tsx#L27-L27",
+          "source": "vuetify/src/labs/VColorInput/VColorInput.tsx#L23-L23",
           "type": "function",
           "parameters": [],
           "returnType": {
@@ -4867,7 +4102,7 @@
         },
         "cancel": {
           "text": "() => void",
-          "source": "vuetify/src/labs/VDateInput/VDateInput.tsx#L28-L28",
+          "source": "vuetify/src/labs/VColorInput/VColorInput.tsx#L24-L24",
           "type": "function",
           "parameters": [],
           "returnType": {
@@ -4907,172 +4142,6 @@
       }
     }
   },
-  "exposed": {
-    "reset": {
-      "text": "() => Promise<void>",
-      "source": "vuetify/src/composables/validation.ts#L182-L186",
-      "type": "function",
-      "parameters": [],
-      "returnType": {
-        "text": "Promise<void>",
-        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-        "type": "ref",
-        "ref": "Promise",
-        "formatted": "Promise<void>"
-      },
-      "formatted": "() => Promise<void>\n",
-      "optional": false,
-      "description": {
-        "en": "Resets the input value."
-      },
-      "descriptionSource": {
-        "en": "VInput"
-      }
-    },
-    "resetValidation": {
-      "text": "() => Promise<void>",
-      "source": "vuetify/src/composables/validation.ts#L188-L195",
-      "type": "function",
-      "parameters": [],
-      "returnType": {
-        "text": "Promise<void>",
-        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-        "type": "ref",
-        "ref": "Promise",
-        "formatted": "Promise<void>"
-      },
-      "formatted": "() => Promise<void>\n",
-      "optional": false,
-      "description": {
-        "en": "Resets validation of the input without modifying its value."
-      },
-      "descriptionSource": {
-        "en": "VInput"
-      }
-    },
-    "validate": {
-      "text": "(silent?: boolean) => Promise<string[]>",
-      "source": "vuetify/src/composables/validation.ts#L197-L227",
-      "type": "function",
-      "parameters": [
-        {
-          "name": "silent",
-          "optional": false,
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "returnType": {
-        "text": "Promise<string[]>",
-        "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-        "type": "ref",
-        "ref": "Promise",
-        "formatted": "Promise<string[]>"
-      },
-      "formatted": "(silent: boolean) => Promise<string[]>\n",
-      "optional": false,
-      "description": {
-        "en": "Validates the input's value."
-      },
-      "descriptionSource": {
-        "en": "VInput"
-      }
-    },
-    "isValid": {
-      "text": "boolean | null",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Boolean indicating if the input is valid."
-      },
-      "descriptionSource": {
-        "en": "VInput"
-      }
-    },
-    "errorMessages": {
-      "text": "string[]",
-      "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-      "type": "array",
-      "items": [
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string[]\n",
-      "optional": false,
-      "description": {
-        "en": "An array of error messages that were set by the `setErrors` method."
-      },
-      "descriptionSource": {
-        "en": "VInput"
-      }
-    },
-    "controlRef": {
-      "text": "HTMLElement | undefined",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "HTMLElement",
-          "source": "typescript/lib/lib.dom.d.ts#L4166-L4220",
-          "type": "ref",
-          "ref": "HTMLElement",
-          "formatted": "HTMLElement"
-        }
-      ],
-      "formatted": "HTMLElement\n",
-      "optional": false,
-      "description": {
-        "en": "Reference to the control element of the field."
-      },
-      "descriptionSource": {
-        "en": "VField"
-      }
-    },
-    "fieldIconColor": {
-      "text": "string | undefined",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "The color of the icon."
-      },
-      "descriptionSource": {
-        "en": "VField"
-      }
-    }
-  },
+  "exposed": {},
   "sass": {}
 }

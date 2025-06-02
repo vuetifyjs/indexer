@@ -3,6 +3,31 @@
   "fileName": "VDatePickerYears",
   "pathName": "v-date-picker-years",
   "props": {
+    "modelValue": {
+      "text": "number | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "height": {
       "text": "string | number | undefined",
       "source": "VDatePickerYears",
@@ -58,31 +83,6 @@
         "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "number | undefined",
-      "source": "VDatePickerYears",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "number\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "max": {
       "text": "unknown",
       "source": "VDatePickerYears",
@@ -104,6 +104,59 @@
       "optional": false,
       "description": {
         "en": "Sets the minimum date of the month."
+      },
+      "descriptionSource": {
+        "en": "VDatePickerYears"
+      }
+    },
+    "allowedYears": {
+      "text": "number[] | ((date: number) => boolean) | undefined",
+      "source": "VDatePickerYears",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number[]",
+          "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+          "type": "array",
+          "items": [
+            {
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "formatted": "number[]"
+        },
+        {
+          "text": "(date: number) => boolean",
+          "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L43-L43",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "date",
+              "optional": false,
+              "text": "number",
+              "type": "number",
+              "formatted": "number"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(date: number) => boolean"
+        }
+      ],
+      "formatted": "number[] | ((date: number) => boolean)\n",
+      "optional": false,
+      "description": {
+        "en": "Restricts which years can be selected."
       },
       "descriptionSource": {
         "en": "VDatePickerYears"
@@ -134,7 +187,7 @@
   },
   "slots": {
     "year": {
-      "text": "{ year: { text: string; value: number; }; i: number; props: { active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void; }; }",
+      "text": "{ year: { text: string; value: number; }; i: number; props: { active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"text\" | \"flat\"; onClick: () => void; }; }",
       "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L20-L34",
       "type": "object",
       "properties": {
@@ -166,7 +219,7 @@
           "optional": false
         },
         "props": {
-          "text": "{ active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void; }",
+          "text": "{ active: boolean; color?: string | undefined; rounded: boolean; text: string; variant: \"text\" | \"flat\"; onClick: () => void; }",
           "source": "vuetify/src/components/VDatePicker/VDatePickerYears.tsx#L26-L33",
           "type": "object",
           "properties": {
@@ -207,23 +260,23 @@
               "optional": false
             },
             "variant": {
-              "text": "\"flat\" | \"text\"",
+              "text": "\"text\" | \"flat\"",
               "type": "anyOf",
               "items": [
-                {
-                  "text": "\"flat\"",
-                  "type": "string",
-                  "literal": "\"flat\"",
-                  "formatted": "\"flat\""
-                },
                 {
                   "text": "\"text\"",
                   "type": "string",
                   "literal": "\"text\"",
                   "formatted": "\"text\""
+                },
+                {
+                  "text": "\"flat\"",
+                  "type": "string",
+                  "literal": "\"flat\"",
+                  "formatted": "\"flat\""
                 }
               ],
-              "formatted": "\"flat\" | \"text\"",
+              "formatted": "\"text\" | \"flat\"",
               "optional": false
             },
             "onClick": {
@@ -240,11 +293,11 @@
               "optional": false
             }
           },
-          "formatted": "{ active: boolean; color: string; rounded: boolean; text: string; variant: \"flat\" | \"text\"; onClick: () => void }",
+          "formatted": "{ active: boolean; color: string; rounded: boolean; text: string; variant: \"text\" | \"flat\"; onClick: () => void }",
           "optional": false
         }
       },
-      "formatted": "{\n  year: { text: string; value: number }\n  i: number\n  props: {\n    active: boolean\n    color: string\n    rounded: boolean\n    text: string\n    variant: 'flat' | 'text'\n    onClick: () => void\n  }\n}\n",
+      "formatted": "{\n  year: { text: string; value: number }\n  i: number\n  props: {\n    active: boolean\n    color: string\n    rounded: boolean\n    text: string\n    variant: 'text' | 'flat'\n    onClick: () => void\n  }\n}\n",
       "optional": false,
       "description": {
         "en": "Slot for the year."

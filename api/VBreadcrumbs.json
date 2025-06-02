@@ -759,11 +759,11 @@
     "$breadcrumbs-line-height": {
       "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'line-height')"
     },
-    "$breadcrumbs-padding-y": {
-      "default": "16px"
-    },
     "$breadcrumbs-padding-x": {
       "default": "12px"
+    },
+    "$breadcrumbs-padding-y": {
+      "default": "16px"
     },
     "$breadcrumbs-rounded-border-radius": {
       "default": "settings.$border-radius-root"

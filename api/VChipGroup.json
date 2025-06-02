@@ -42,9 +42,22 @@
         "en": "VChipGroup"
       }
     },
-    "baseColor": {
+    "modelValue": {
+      "text": "unknown",
+      "source": "group",
+      "type": "unknown",
+      "formatted": "unknown\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "color": {
       "text": "string | undefined",
-      "source": "VChipGroup",
+      "source": "variant",
       "type": "anyOf",
       "items": [
         {
@@ -61,59 +74,7 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the color of component when not focused. Recommended with `color` or `filter` to properly highlight selected items."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Puts all children components into a disabled state."
-      },
-      "descriptionSource": {
-        "en": "group"
-      }
-    },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'v-chip--selected'",
-      "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
@@ -191,9 +152,9 @@
         "en": "theme"
       }
     },
-    "color": {
-      "text": "string | undefined",
-      "source": "variant",
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group",
       "type": "anyOf",
       "items": [
         {
@@ -202,18 +163,70 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "boolean\n",
       "optional": false,
+      "default": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Puts all children components into a disabled state."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "group"
+      }
+    },
+    "max": {
+      "text": "number | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets a maximum number of selections that can be made."
+      },
+      "descriptionSource": {
+        "en": "group"
+      }
+    },
+    "multiple": {
+      "text": "boolean | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Allows one to select multiple items."
+      },
+      "descriptionSource": {
+        "en": "group"
       }
     },
     "variant": {
@@ -271,386 +284,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "nextIcon": {
-      "text": "IconValue | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
-      "optional": false,
-      "default": "'$next'",
-      "description": {
-        "en": "Specify the icon to use for the next icon."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
-      }
-    },
-    "prevIcon": {
-      "text": "IconValue | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "IconValue",
-          "source": "vuetify/src/composables/icons.tsx#L12-L15",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "string",
-              "type": "string",
-              "formatted": "string"
-            },
-            {
-              "text": "(string | [path: string, opacity: number])[]",
-              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
-              "type": "array",
-              "items": [
-                {
-                  "text": "string",
-                  "type": "string",
-                  "formatted": "string"
-                },
-                {
-                  "text": "[path: string, opacity: number]",
-                  "type": "array",
-                  "items": [
-                    {
-                      "text": "string",
-                      "type": "string",
-                      "formatted": "string"
-                    },
-                    {
-                      "text": "number",
-                      "type": "number",
-                      "formatted": "number"
-                    }
-                  ],
-                  "length": 2,
-                  "formatted": "[string, number]"
-                }
-              ],
-              "formatted": "(string | [string, number])[]"
-            },
-            {
-              "text": "JSXComponent",
-              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "new () => any",
-                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
-                  "type": "constructor",
-                  "formatted": "new () => any"
-                },
-                {
-                  "text": "FunctionalComponent<any, {}, any, {}>",
-                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
-                  "type": "ref",
-                  "ref": "FunctionalComponent",
-                  "formatted": "FunctionalComponent"
-                }
-              ],
-              "formatted": "(new () => any) | FunctionalComponent"
-            }
-          ],
-          "formatted": "string | (string | [string, number])[] | (new () => any) | FunctionalComponent"
-        }
-      ],
-      "formatted": "  | string\n  | (string | [string, number])[]\n  | (new () => any)\n  | FunctionalComponent\n",
-      "optional": false,
-      "default": "'$prev'",
-      "description": {
-        "en": "Specify the icon to use for the prev icon."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
-      }
-    },
-    "showArrows": {
-      "text": "string | boolean | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Force the display of the pagination arrows."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
-      }
-    },
-    "direction": {
-      "text": "\"horizontal\" | \"vertical\" | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"horizontal\"",
-          "type": "string",
-          "literal": "\"horizontal\"",
-          "formatted": "\"horizontal\""
-        },
-        {
-          "text": "\"vertical\"",
-          "type": "string",
-          "literal": "\"vertical\"",
-          "formatted": "\"vertical\""
-        }
-      ],
-      "formatted": "'horizontal' | 'vertical'\n",
-      "optional": false,
-      "default": "'horizontal'",
-      "description": {
-        "en": "Switch between horizontal and vertical modes."
-      },
-      "descriptionSource": {
-        "en": "VSlideGroup"
-      }
-    },
-    "modelValue": {
-      "text": "unknown",
-      "source": "group",
-      "type": "unknown",
-      "formatted": "unknown\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "mandatory": {
-      "text": "boolean | \"force\" | undefined",
-      "source": "group",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        },
-        {
-          "text": "\"force\"",
-          "type": "string",
-          "literal": "\"force\"",
-          "formatted": "\"force\""
-        }
-      ],
-      "formatted": "boolean | 'force'\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces at least one item to always be selected (if available)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "column": {
-      "text": "boolean | undefined",
-      "source": "VChipGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Remove horizontal pagination and wrap items as needed."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
-      }
-    },
-    "valueComparator": {
-      "text": "typeof deepEqual | undefined",
-      "source": "VChipGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "typeof deepEqual",
-          "source": "vuetify/src/util/helpers.ts#L46-L71",
-          "type": "function",
-          "parameters": [
-            {
-              "name": "a",
-              "optional": false,
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            },
-            {
-              "name": "b",
-              "optional": false,
-              "text": "any",
-              "type": "any",
-              "formatted": "any"
-            }
-          ],
-          "returnType": {
-            "text": "boolean",
-            "type": "boolean",
-            "formatted": "boolean"
-          },
-          "formatted": "(a: any, b: any) => boolean"
-        }
-      ],
-      "formatted": "(a: any, b: any) => boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "centerActive": {
-      "text": "boolean | undefined",
-      "source": "VSlideGroup",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Forces the selected chip to be centered."
-      },
-      "descriptionSource": {
-        "en": "VChipGroup"
       }
     },
     "mobile": {
@@ -753,9 +386,328 @@
         "en": "VSlideGroup"
       }
     },
-    "multiple": {
-      "text": "boolean | undefined",
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VChipGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of component when not focused. Recommended with `color` or `filter` to properly highlight selected items."
+      },
+      "descriptionSource": {
+        "en": "VChipGroup"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
       "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-chip--selected'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mandatory": {
+      "text": "boolean | \"force\" | undefined",
+      "source": "group",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        },
+        {
+          "text": "\"force\"",
+          "type": "string",
+          "literal": "\"force\"",
+          "formatted": "\"force\""
+        }
+      ],
+      "formatted": "boolean | 'force'\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces at least one item to always be selected (if available)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "nextIcon": {
+      "text": "IconValue | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$next'",
+      "description": {
+        "en": "Specify the icon to use for the next icon."
+      },
+      "descriptionSource": {
+        "en": "VChipGroup"
+      }
+    },
+    "prevIcon": {
+      "text": "IconValue | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "IconValue",
+          "source": "vuetify/src/composables/icons.tsx#L12-L15",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "string",
+              "type": "string",
+              "formatted": "string"
+            },
+            {
+              "text": "JSXComponent",
+              "source": "vuetify/src/util/defineComponent.tsx#L331-L333",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "new () => any",
+                  "source": "vuetify/src/util/defineComponent.tsx#L332-L332",
+                  "type": "constructor",
+                  "formatted": "new () => any"
+                },
+                {
+                  "text": "FunctionalComponent<any, {}, any, {}>",
+                  "source": "@vue/runtime-core/dist/runtime-core.d.ts#L1385-L1393",
+                  "type": "ref",
+                  "ref": "FunctionalComponent",
+                  "formatted": "FunctionalComponent"
+                }
+              ],
+              "formatted": "(new () => any) | FunctionalComponent"
+            },
+            {
+              "text": "(string | [path: string, opacity: number])[]",
+              "source": "typescript/lib/lib.es5.d.ts#L4-L4",
+              "type": "array",
+              "items": [
+                {
+                  "text": "string",
+                  "type": "string",
+                  "formatted": "string"
+                },
+                {
+                  "text": "[path: string, opacity: number]",
+                  "type": "array",
+                  "items": [
+                    {
+                      "text": "string",
+                      "type": "string",
+                      "formatted": "string"
+                    },
+                    {
+                      "text": "number",
+                      "type": "number",
+                      "formatted": "number"
+                    }
+                  ],
+                  "length": 2,
+                  "formatted": "[string, number]"
+                }
+              ],
+              "formatted": "(string | [string, number])[]"
+            }
+          ],
+          "formatted": "string | (new () => any) | FunctionalComponent | (string | [string, number])[]"
+        }
+      ],
+      "formatted": "  | string\n  | (new () => any)\n  | FunctionalComponent\n  | (string | [string, number])[]\n",
+      "optional": false,
+      "default": "'$prev'",
+      "description": {
+        "en": "Specify the icon to use for the prev icon."
+      },
+      "descriptionSource": {
+        "en": "VChipGroup"
+      }
+    },
+    "showArrows": {
+      "text": "string | boolean | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Force the display of the pagination arrows."
+      },
+      "descriptionSource": {
+        "en": "VChipGroup"
+      }
+    },
+    "direction": {
+      "text": "\"horizontal\" | \"vertical\" | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"horizontal\"",
+          "type": "string",
+          "literal": "\"horizontal\"",
+          "formatted": "\"horizontal\""
+        },
+        {
+          "text": "\"vertical\"",
+          "type": "string",
+          "literal": "\"vertical\"",
+          "formatted": "\"vertical\""
+        }
+      ],
+      "formatted": "'horizontal' | 'vertical'\n",
+      "optional": false,
+      "default": "'horizontal'",
+      "description": {
+        "en": "Switch between horizontal and vertical modes."
+      },
+      "descriptionSource": {
+        "en": "VSlideGroup"
+      }
+    },
+    "column": {
+      "text": "boolean | undefined",
+      "source": "VChipGroup",
       "type": "anyOf",
       "items": [
         {
@@ -773,15 +725,15 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Allows one to select multiple items."
+        "en": "Remove horizontal pagination and wrap items as needed."
       },
       "descriptionSource": {
-        "en": "group"
+        "en": "VChipGroup"
       }
     },
-    "max": {
-      "text": "number | undefined",
-      "source": "group",
+    "valueComparator": {
+      "text": "typeof deepEqual | undefined",
+      "source": "VChipGroup",
       "type": "anyOf",
       "items": [
         {
@@ -790,18 +742,66 @@
           "formatted": "undefined"
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "typeof deepEqual",
+          "source": "vuetify/src/util/helpers.ts#L46-L71",
+          "type": "function",
+          "parameters": [
+            {
+              "name": "a",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            },
+            {
+              "name": "b",
+              "optional": false,
+              "text": "any",
+              "type": "any",
+              "formatted": "any"
+            }
+          ],
+          "returnType": {
+            "text": "boolean",
+            "type": "boolean",
+            "formatted": "boolean"
+          },
+          "formatted": "(a: any, b: any) => boolean"
         }
       ],
-      "formatted": "number\n",
+      "formatted": "(a: any, b: any) => boolean\n",
       "optional": false,
       "description": {
-        "en": "Sets a maximum number of selections that can be made."
+        "en": "Apply a custom comparison algorithm to compare **model-value** and values contains in the **items** prop."
       },
       "descriptionSource": {
-        "en": "group"
+        "en": "generic"
+      }
+    },
+    "centerActive": {
+      "text": "boolean | undefined",
+      "source": "VSlideGroup",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Forces the selected chip to be centered."
+      },
+      "descriptionSource": {
+        "en": "VChipGroup"
       }
     }
   },
@@ -935,14 +935,14 @@
   },
   "exposed": {},
   "sass": {
-    "$chip-group-selected-opacity": {
-      "default": "var(--v-activated-opacity)"
+    "$chip-group-margin": {
+      "default": "4px 8px 4px 0"
     },
     "$chip-group-padding": {
       "default": "4px 0"
     },
-    "$chip-group-margin": {
-      "default": "4px 8px 4px 0"
+    "$chip-group-selected-opacity": {
+      "default": "var(--v-activated-opacity)"
     }
   }
 }

@@ -68,9 +68,41 @@
         "en": "router"
       }
     },
-    "theme": {
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the component's location. Can combine by using a space separated string."
+      },
+      "descriptionSource": {
+        "en": "location"
+      }
+    },
+    "color": {
       "text": "string | undefined",
-      "source": "theme",
+      "source": "variant",
       "type": "anyOf",
       "items": [
         {
@@ -87,15 +119,67 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Specify a theme for this component and all of its children."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "theme"
+        "en": "generic"
       }
     },
-    "size": {
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
       "text": "string | number | undefined",
-      "source": "size",
+      "source": "dimension",
       "type": "anyOf",
       "items": [
         {
@@ -116,30 +200,82 @@
       ],
       "formatted": "string | number\n",
       "optional": false,
-      "default": "'default'",
       "description": {
-        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+        "en": "Sets the height for the component."
       },
       "descriptionSource": {
-        "en": "size"
+        "en": "dimension"
       }
     },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
+    "border": {
+      "text": "string | number | boolean | undefined",
+      "source": "border",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
+      },
+      "descriptionSource": {
+        "en": "border"
+      }
+    },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
       },
       "descriptionSource": {
-        "en": "group-item"
+        "en": "elevation"
       }
     },
-    "text": {
+    "rounded": {
       "text": "string | number | boolean | undefined",
-      "source": "VBtn",
+      "source": "rounded",
       "type": "anyOf",
       "items": [
         {
@@ -166,10 +302,36 @@
       "formatted": "string | number | boolean\n",
       "optional": false,
       "description": {
-        "en": "Specify content text for the component."
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
       }
     },
     "tag": {
@@ -217,6 +379,131 @@
       },
       "descriptionSource": {
         "en": "tag"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the height and width of the component. Default unit is px. Can also use the following predefined sizes: **x-small**, **small**, **default**, **large**, and **x-large**."
+      },
+      "descriptionSource": {
+        "en": "size"
+      }
+    },
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "dimension",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the width for the component."
+      },
+      "descriptionSource": {
+        "en": "dimension"
       }
     },
     "icon": {
@@ -310,97 +597,9 @@
         "en": "VBtn"
       }
     },
-    "border": {
+    "text": {
       "text": "string | number | boolean | undefined",
-      "source": "border",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Applies utility border classes to the component. To use it, you need to omit the `border-` prefix, (for example use `border-sm` as `border=\"sm\"`).  Find a list of the built-in border classes on the [borders page](/styles/borders)."
-      },
-      "descriptionSource": {
-        "en": "border"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
+      "source": "VBtn",
       "type": "anyOf",
       "items": [
         {
@@ -427,58 +626,7 @@
       "formatted": "string | number | boolean\n",
       "optional": false,
       "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "variant",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Specify content text for the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -565,36 +713,6 @@
       },
       "descriptionSource": {
         "en": "VBtn"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the height for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
       }
     },
     "maxHeight": {
@@ -717,100 +835,8 @@
         "en": "dimension"
       }
     },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "dimension",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the width for the component."
-      },
-      "descriptionSource": {
-        "en": "dimension"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "location": {
-      "text": "Anchor | null | undefined",
-      "source": "location",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "Anchor",
-          "source": "vuetify/src/util/anchor.ts#L8-L14",
-          "type": "ref",
-          "ref": "Anchor",
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
-        }
-      ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
-      "optional": false,
-      "description": {
-        "en": "Specifies the component's location. Can combine by using a space separated string."
-      },
-      "descriptionSource": {
-        "en": "location"
-      }
-    },
     "position": {
-      "text": "\"fixed\" | \"relative\" | \"sticky\" | \"static\" | \"absolute\" | undefined",
+      "text": "\"fixed\" | \"absolute\" | \"sticky\" | \"static\" | \"relative\" | undefined",
       "source": "position",
       "type": "anyOf",
       "items": [
@@ -826,10 +852,10 @@
           "formatted": "\"fixed\""
         },
         {
-          "text": "\"relative\"",
+          "text": "\"absolute\"",
           "type": "string",
-          "literal": "\"relative\"",
-          "formatted": "\"relative\""
+          "literal": "\"absolute\"",
+          "formatted": "\"absolute\""
         },
         {
           "text": "\"sticky\"",
@@ -844,13 +870,13 @@
           "formatted": "\"static\""
         },
         {
-          "text": "\"absolute\"",
+          "text": "\"relative\"",
           "type": "string",
-          "literal": "\"absolute\"",
-          "formatted": "\"absolute\""
+          "literal": "\"relative\"",
+          "formatted": "\"relative\""
         }
       ],
-      "formatted": "'fixed' | 'relative' | 'sticky' | 'static' | 'absolute'\n",
+      "formatted": "'fixed' | 'absolute' | 'sticky' | 'static' | 'relative'\n",
       "optional": false,
       "description": {
         "en": "Sets the position for the component."
@@ -929,32 +955,6 @@
       "optional": false,
       "description": {
         "en": "Configure the active CSS class applied when an item is selected."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "disabled": {
-      "text": "boolean | undefined",
-      "source": "group-item",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes the ability to click or target the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -1505,23 +1505,14 @@
     }
   },
   "sass": {
-    "$button-colored-disabled": {
-      "default": "true"
-    },
     "$button-background": {
       "default": "rgb(var(--v-theme-surface))"
-    },
-    "$button-color": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
     },
     "$button-banner-actions-padding": {
       "default": "0 8px"
     },
-    "$button-pagination-border-radius": {
-      "default": "settings.$border-radius-root"
-    },
-    "$button-pagination-rounded-border-radius": {
-      "default": "map.get(settings.$rounded, 'circle')"
+    "$button-border": {
+      "default": "(\n  $button-border-color,\n  $button-border-style,\n  $button-border-width,\n  $button-border-thin-width\n)"
     },
     "$button-border-color": {
       "default": "settings.$border-color-root"
@@ -1541,6 +1532,15 @@
     "$button-card-actions-padding": {
       "default": "0 8px"
     },
+    "$button-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$button-colored-disabled": {
+      "default": "true"
+    },
+    "$button-density": {
+      "default": "('default': 0, 'comfortable': -2, 'compact': -3)"
+    },
     "$button-disabled-opacity": {
       "default": "0.26"
     },
@@ -1559,14 +1559,11 @@
     "$button-height": {
       "default": "36px"
     },
-    "$button-stacked-height": {
-      "default": "72px"
-    },
-    "$button-stacked-icon-margin": {
-      "default": "4px"
-    },
     "$button-icon-border-radius": {
       "default": "map.get(settings.$rounded, 'circle')"
+    },
+    "$button-icon-density": {
+      "default": "('default': 3, 'comfortable': 0, 'compact': -2)"
     },
     "$button-icon-font-size": {
       "default": "1rem"
@@ -1577,20 +1574,8 @@
     "$button-loader-size": {
       "default": "1.5em"
     },
-    "$button-stacked-line-height": {
-      "default": "1.25"
-    },
-    "$button-plain-opacity": {
-      "default": ".62"
-    },
-    "$button-padding-ratio": {
-      "default": "2.25"
-    },
-    "$button-stacked-padding-ratio": {
-      "default": "4.5"
-    },
-    "$button-margin-start-multiplier": {
-      "default": "-9"
+    "$button-margin-end": {
+      "default": "calc(var(--v-btn-height) / #{$button-margin-end-multiplier})"
     },
     "$button-margin-end-multiplier": {
       "default": "4.5"
@@ -1598,14 +1583,59 @@
     "$button-margin-start": {
       "default": "calc(var(--v-btn-height) / #{$button-margin-start-multiplier})"
     },
-    "$button-margin-end": {
-      "default": "calc(var(--v-btn-height) / #{$button-margin-end-multiplier})"
+    "$button-margin-start-multiplier": {
+      "default": "-9"
     },
     "$button-max-width": {
       "default": "100%"
     },
+    "$button-padding-ratio": {
+      "default": "2.25"
+    },
+    "$button-pagination-border-radius": {
+      "default": "settings.$border-radius-root"
+    },
+    "$button-pagination-padding-inline": {
+      "default": "5px"
+    },
+    "$button-pagination-rounded-border-radius": {
+      "default": "map.get(settings.$rounded, 'circle')"
+    },
+    "$button-plain-opacity": {
+      "default": ".62"
+    },
     "$button-positions": {
       "default": "absolute fixed"
+    },
+    "$button-rounded-border-radius": {
+      "default": "map.get(settings.$rounded, 'xl')"
+    },
+    "$button-sizes": {
+      "default": "map.merge(\n  (\n    'height': $button-height,\n    'font-size': $button-font-size,\n    'width-ratio': $button-width-ratio,\n    'padding-ratio': $button-padding-ratio\n  ),\n  $button-sizes\n)"
+    },
+    "$button-snackbar-action-padding": {
+      "default": "0 8px"
+    },
+    "$button-stacked-density": {
+      "default": "('default': 0, 'comfortable': -4, 'compact': -6)"
+    },
+    "$button-stacked-height": {
+      "default": "72px"
+    },
+    "$button-stacked-icon-margin": {
+      "default": "4px"
+    },
+    "$button-stacked-line-height": {
+      "default": "1.25"
+    },
+    "$button-stacked-padding-ratio": {
+      "default": "4.5"
+    },
+    "$button-stacked-sizes": {
+      "default": "map.merge(\n  (\n    'height': $button-stacked-height,\n    'font-size': $button-font-size,\n    'width-ratio': $button-stacked-width-ratio,\n    'padding-ratio': $button-stacked-padding-ratio\n  ),\n  $button-stacked-sizes\n)"
+    },
+    "$button-stacked-width-ratio": {
+      "default": "1"
     },
     "$button-text-letter-spacing": {
       "default": "tools.map-deep-get(settings.$typography, 'button', 'letter-spacing')"
@@ -1616,44 +1646,17 @@
     "$button-transition-property": {
       "default": "box-shadow, transform, opacity, background"
     },
+    "$button-variants": {
+      "default": "(\n  $button-background,\n  $button-color,\n  map.get($button-elevation, 'default'),\n  $button-plain-opacity,\n  'v-btn'\n)"
+    },
     "$button-vertical-align": {
       "default": "middle"
-    },
-    "$button-width-ratio": {
-      "default": "math.div(16, 9)"
-    },
-    "$button-snackbar-action-padding": {
-      "default": "0 8px"
-    },
-    "$button-stacked-width-ratio": {
-      "default": "1"
-    },
-    "$button-rounded-border-radius": {
-      "default": "map.get(settings.$rounded, 'xl')"
     },
     "$button-white-space": {
       "default": "nowrap"
     },
-    "$button-density": {
-      "default": "('default': 0, 'comfortable': -2, 'compact': -3)"
-    },
-    "$button-stacked-density": {
-      "default": "('default': 0, 'comfortable': -4, 'compact': -6)"
-    },
-    "$button-icon-density": {
-      "default": "('default': 3, 'comfortable': 0, 'compact': -2)"
-    },
-    "$button-border": {
-      "default": "(\n  $button-border-color,\n  $button-border-style,\n  $button-border-width,\n  $button-border-thin-width\n)"
-    },
-    "$button-sizes": {
-      "default": "map.merge(\n  (\n    'height': $button-height,\n    'font-size': $button-font-size,\n    'width-ratio': $button-width-ratio,\n    'padding-ratio': $button-padding-ratio\n  ),\n  $button-sizes\n)"
-    },
-    "$button-stacked-sizes": {
-      "default": "map.merge(\n  (\n    'height': $button-stacked-height,\n    'font-size': $button-font-size,\n    'width-ratio': $button-stacked-width-ratio,\n    'padding-ratio': $button-stacked-padding-ratio\n  ),\n  $button-stacked-sizes\n)"
-    },
-    "$button-variants": {
-      "default": "(\n  $button-background,\n  $button-color,\n  map.get($button-elevation, 'default'),\n  $button-plain-opacity,\n  'v-btn'\n)"
+    "$button-width-ratio": {
+      "default": "math.div(16, 9)"
     }
   }
 }

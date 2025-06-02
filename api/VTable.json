@@ -3,6 +3,88 @@
   "fileName": "VTable",
   "pathName": "v-table",
   "props": {
+    "density": {
+      "text": "Density | undefined",
+      "source": "density",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "Density",
+          "source": "vuetify/src/composables/density.ts#L12-L12",
+          "type": "anyOf",
+          "items": [
+            {
+              "text": "null",
+              "type": "UNSUPPORTED",
+              "formatted": "null"
+            },
+            {
+              "text": "\"default\"",
+              "type": "string",
+              "literal": "\"default\"",
+              "formatted": "\"default\""
+            },
+            {
+              "text": "\"comfortable\"",
+              "type": "string",
+              "literal": "\"comfortable\"",
+              "formatted": "\"comfortable\""
+            },
+            {
+              "text": "\"compact\"",
+              "type": "string",
+              "literal": "\"compact\"",
+              "formatted": "\"compact\""
+            }
+          ],
+          "formatted": "\"default\" | \"comfortable\" | \"compact\""
+        }
+      ],
+      "formatted": "'default' | 'comfortable' | 'compact'\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Adjusts the vertical height used by the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "height": {
+      "text": "string | number | undefined",
+      "source": "VTable",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Use the height prop to set the height of the table."
+      },
+      "descriptionSource": {
+        "en": "VTable"
+      }
+    },
     "tag": {
       "text": "string | JSXComponent | undefined",
       "source": "tag",
@@ -73,88 +155,6 @@
       },
       "descriptionSource": {
         "en": "theme"
-      }
-    },
-    "height": {
-      "text": "string | number | undefined",
-      "source": "VTable",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Use the height prop to set the height of the table."
-      },
-      "descriptionSource": {
-        "en": "VTable"
-      }
-    },
-    "density": {
-      "text": "Density | undefined",
-      "source": "density",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "Density",
-          "source": "vuetify/src/composables/density.ts#L12-L12",
-          "type": "anyOf",
-          "items": [
-            {
-              "text": "null",
-              "type": "UNSUPPORTED",
-              "formatted": "null"
-            },
-            {
-              "text": "\"default\"",
-              "type": "string",
-              "literal": "\"default\"",
-              "formatted": "\"default\""
-            },
-            {
-              "text": "\"comfortable\"",
-              "type": "string",
-              "literal": "\"comfortable\"",
-              "formatted": "\"comfortable\""
-            },
-            {
-              "text": "\"compact\"",
-              "type": "string",
-              "literal": "\"compact\"",
-              "formatted": "\"compact\""
-            }
-          ],
-          "formatted": "\"default\" | \"comfortable\" | \"compact\""
-        }
-      ],
-      "formatted": "'default' | 'comfortable' | 'compact'\n",
-      "optional": false,
-      "default": "'default'",
-      "description": {
-        "en": "Adjusts the vertical height used by the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "hover": {
@@ -292,35 +292,32 @@
     "$table-background": {
       "default": "rgb(var(--v-theme-surface))"
     },
-    "$table-color": {
-      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
-    },
-    "$table-density": {
-      "default": "('default': 0, 'comfortable': -2, 'compact': -4)"
-    },
-    "$table-header-height": {
-      "default": "56px"
-    },
-    "$table-header-font-weight": {
-      "default": "500"
-    },
-    "$table-header-font-size": {
-      "default": "tools.map-deep-get(settings.$typography, 'caption', 'size')"
-    },
-    "$table-font-size": {
-      "default": "tools.map-deep-get(settings.$typography, 'body-2', 'size')"
-    },
-    "$table-row-height": {
-      "default": "52px"
-    },
-    "$table-row-font-size": {
-      "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'size')"
+    "$table-border": {
+      "default": "thin solid $table-border-color"
     },
     "$table-border-color": {
       "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
     },
-    "$table-border": {
-      "default": "thin solid $table-border-color"
+    "$table-color": {
+      "default": "rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))"
+    },
+    "$table-column-padding": {
+      "default": "0 16px"
+    },
+    "$table-density": {
+      "default": "('default': 0, 'comfortable': -2, 'compact': -4)"
+    },
+    "$table-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'body-2', 'size')"
+    },
+    "$table-header-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'caption', 'size')"
+    },
+    "$table-header-font-weight": {
+      "default": "500"
+    },
+    "$table-header-height": {
+      "default": "56px"
     },
     "$table-hover-color": {
       "default": "rgba(var(--v-border-color), var(--v-hover-opacity))"
@@ -328,8 +325,14 @@
     "$table-line-height": {
       "default": "1.5"
     },
-    "$table-column-padding": {
-      "default": "0 16px"
+    "$table-row-font-size": {
+      "default": "tools.map-deep-get(settings.$typography, 'subtitle-2', 'size')"
+    },
+    "$table-row-height": {
+      "default": "52px"
+    },
+    "$table-theme": {
+      "default": "(\n  $table-background,\n  $table-color,\n)"
     },
     "$table-transition-duration": {
       "default": "0.28s"
@@ -339,9 +342,6 @@
     },
     "$table-transition-timing-function": {
       "default": "settings.$standard-easing"
-    },
-    "$table-theme": {
-      "default": "(\n  $table-background,\n  $table-color,\n)"
     }
   }
 }

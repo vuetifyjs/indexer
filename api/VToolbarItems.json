@@ -29,7 +29,7 @@
       }
     },
     "variant": {
-      "text": "\"text\" | \"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"plain\" | undefined",
+      "text": "\"flat\" | \"elevated\" | \"tonal\" | \"outlined\" | \"text\" | \"plain\" | undefined",
       "source": "variant",
       "type": "anyOf",
       "items": [
@@ -37,12 +37,6 @@
           "text": "undefined",
           "type": "UNSUPPORTED",
           "formatted": "undefined"
-        },
-        {
-          "text": "\"text\"",
-          "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
         },
         {
           "text": "\"flat\"",
@@ -69,13 +63,19 @@
           "formatted": "\"outlined\""
         },
         {
+          "text": "\"text\"",
+          "type": "string",
+          "literal": "\"text\"",
+          "formatted": "\"text\""
+        },
+        {
           "text": "\"plain\"",
           "type": "string",
           "literal": "\"plain\"",
           "formatted": "\"plain\""
         }
       ],
-      "formatted": "'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain'\n",
+      "formatted": "'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain'\n",
       "optional": false,
       "default": "'text'",
       "description": {

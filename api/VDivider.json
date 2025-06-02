@@ -83,6 +83,32 @@
         "en": "generic"
       }
     },
+    "inset": {
+      "text": "boolean | undefined",
+      "source": "VDivider",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Adds indentation (72px) for **normal** dividers, reduces max height for **vertical**."
+      },
+      "descriptionSource": {
+        "en": "VDivider"
+      }
+    },
     "opacity": {
       "text": "string | number | undefined",
       "source": "VDivider",
@@ -111,32 +137,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "inset": {
-      "text": "boolean | undefined",
-      "source": "VDivider",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Adds indentation (72px) for **normal** dividers, reduces max height for **vertical**."
-      },
-      "descriptionSource": {
-        "en": "VDivider"
       }
     },
     "thickness": {
@@ -213,6 +213,9 @@
   },
   "exposed": {},
   "sass": {
+    "$divider-border": {
+      "default": "(\n  $divider-border-color,\n  $divider-border-style,\n  $divider-border-width\n)"
+    },
     "$divider-border-color": {
       "default": "null"
     },
@@ -257,9 +260,6 @@
     },
     "$divider-vertical-margin-left": {
       "default": "-1px"
-    },
-    "$divider-border": {
-      "default": "(\n  $divider-border-color,\n  $divider-border-style,\n  $divider-border-width\n)"
     }
   }
 }

@@ -3,71 +3,7 @@
   "fileName": "VProgressLinear",
   "pathName": "v-progress-linear",
   "props": {
-    "modelValue": {
-      "text": "string | number | undefined",
-      "source": "VProgressLinear",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "location": {
-      "text": "Anchor | null | undefined",
-      "source": "location",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "Anchor",
-          "source": "vuetify/src/util/anchor.ts#L8-L14",
-          "type": "ref",
-          "ref": "Anchor",
-          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
-        }
-      ],
-      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
-      "optional": false,
-      "default": "'top'",
-      "description": {
-        "en": "Specifies the component's location. Can combine by using a space separated string."
-      },
-      "descriptionSource": {
-        "en": "location"
-      }
-    },
-    "absolute": {
+    "reverse": {
       "text": "boolean | undefined",
       "source": "VProgressLinear",
       "type": "anyOf",
@@ -87,15 +23,15 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Applies position: absolute to the component."
+        "en": "Displays reversed progress (right to left in LTR mode and left to right in RTL)."
       },
       "descriptionSource": {
         "en": "VProgressLinear"
       }
     },
-    "color": {
+    "theme": {
       "text": "string | undefined",
-      "source": "VProgressLinear",
+      "source": "theme",
       "type": "anyOf",
       "items": [
         {
@@ -112,10 +48,10 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Specify a theme for this component and all of its children."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "theme"
       }
     },
     "height": {
@@ -149,7 +85,7 @@
         "en": "generic"
       }
     },
-    "reverse": {
+    "indeterminate": {
       "text": "boolean | undefined",
       "source": "VProgressLinear",
       "type": "anyOf",
@@ -169,10 +105,66 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Displays reversed progress (right to left in LTR mode and left to right in RTL)."
+        "en": "Constantly animates, use when loading progress is unknown."
       },
       "descriptionSource": {
         "en": "VProgressLinear"
+      }
+    },
+    "max": {
+      "text": "string | number | undefined",
+      "source": "VProgressLinear",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 100,
+      "description": {
+        "en": "Sets the maximum value the progress can reach."
+      },
+      "descriptionSource": {
+        "en": "VProgressLinear"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VProgressLinear",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "rounded": {
@@ -283,32 +275,7 @@
         "en": "tag"
       }
     },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "bgColor": {
+    "color": {
       "text": "string | undefined",
       "source": "VProgressLinear",
       "type": "anyOf",
@@ -327,10 +294,36 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "absolute": {
+      "text": "boolean | undefined",
+      "source": "VProgressLinear",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Applies position: absolute to the component."
+      },
+      "descriptionSource": {
+        "en": "VProgressLinear"
       }
     },
     "opacity": {
@@ -363,59 +356,7 @@
         "en": "VProgressLinear"
       }
     },
-    "active": {
-      "text": "boolean | undefined",
-      "source": "VProgressLinear",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": true,
-      "description": {
-        "en": "Reduce the height to 0, hiding component."
-      },
-      "descriptionSource": {
-        "en": "VProgressLinear"
-      }
-    },
-    "indeterminate": {
-      "text": "boolean | undefined",
-      "source": "VProgressLinear",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Constantly animates, use when loading progress is unknown."
-      },
-      "descriptionSource": {
-        "en": "VProgressLinear"
-      }
-    },
-    "max": {
+    "modelValue": {
       "text": "string | number | undefined",
       "source": "VProgressLinear",
       "type": "anyOf",
@@ -438,9 +379,68 @@
       ],
       "formatted": "string | number\n",
       "optional": false,
-      "default": 100,
+      "default": 0,
       "description": {
-        "en": "Sets the maximum value the progress can reach."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "location": {
+      "text": "Anchor | null | undefined",
+      "source": "location",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "Anchor",
+          "source": "vuetify/src/util/anchor.ts#L8-L14",
+          "type": "ref",
+          "ref": "Anchor",
+          "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>"
+        }
+      ],
+      "formatted": "<a href=\"https://github.com/vuetifyjs/vuetify/blob/master/packages/vuetify/src/util/anchor.ts#L8-L14\" target=\"_blank\">Anchor</a>\n",
+      "optional": false,
+      "default": "'top'",
+      "description": {
+        "en": "Specifies the component's location. Can combine by using a space separated string."
+      },
+      "descriptionSource": {
+        "en": "location"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VProgressLinear",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": true,
+      "description": {
+        "en": "Reduce the height to 0, hiding component."
       },
       "descriptionSource": {
         "en": "VProgressLinear"
@@ -732,23 +732,23 @@
     "$progress-linear-border-radius": {
       "default": "map.get(settings.$rounded, 'pill')"
     },
+    "$progress-linear-indeterminate-animation-duration": {
+      "default": "2.2s"
+    },
+    "$progress-linear-stream-animation": {
+      "default": "stream .25s infinite linear"
+    },
+    "$progress-linear-stream-border-width": {
+      "default": "4px"
+    },
     "$progress-linear-stream-opacity": {
       "default": "0.3"
     },
     "$progress-linear-stripe-background-size": {
       "default": "40px 40px"
     },
-    "$progress-linear-stream-border-width": {
-      "default": "4px"
-    },
     "$progress-linear-stripe-gradient": {
       "default": "linear-gradient(\n  135deg,\n  hsla(0, 0%, 100%, .25) 25%,\n  transparent 0,\n  transparent 50%,\n  hsla(0, 0%, 100%, .25) 0,\n  hsla(0, 0%, 100%, .25) 75%,\n  transparent 0,\n  transparent\n)"
-    },
-    "$progress-linear-indeterminate-animation-duration": {
-      "default": "2.2s"
-    },
-    "$progress-linear-stream-animation": {
-      "default": "stream .25s infinite linear"
     },
     "$progress-linear-striped-animation": {
       "default": "progress-linear-stripes 1s infinite linear"

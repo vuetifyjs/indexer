@@ -3,105 +3,6 @@
   "fileName": "VCarouselItem",
   "pathName": "v-carousel-item",
   "props": {
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "tile": {
-      "text": "boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Removes any applied **border-radius** from the component."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VImg",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "height": {
       "text": "string | number | undefined",
       "source": "dimension",
@@ -333,9 +234,70 @@
         "en": "VImg"
       }
     },
-    "selectedClass": {
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "tile": {
+      "text": "boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes any applied **border-radius** from the component."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "color": {
       "text": "string | undefined",
-      "source": "group-item",
+      "source": "VImg",
       "type": "anyOf",
       "items": [
         {
@@ -352,10 +314,35 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "alt": {
+      "text": "string | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Alternate text for screen readers. Leave empty for decorative images."
+      },
+      "descriptionSource": {
+        "en": "VImg"
       }
     },
     "disabled": {
@@ -384,8 +371,8 @@
         "en": "VWindowItem"
       }
     },
-    "alt": {
-      "text": "string | undefined",
+    "src": {
+      "text": "string | srcObject | undefined",
       "source": "VImg",
       "type": "anyOf",
       "items": [
@@ -398,41 +385,103 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
+        },
+        {
+          "text": "srcObject",
+          "source": "vuetify/src/components/VImg/VImg.tsx#L42-L47",
+          "type": "object",
+          "properties": {
+            "src": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "srcset": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "lazySrc": {
+              "text": "string | undefined",
+              "type": "anyOf",
+              "items": [
+                {
+                  "text": "undefined",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "undefined"
+                },
+                {
+                  "text": "string",
+                  "type": "ref",
+                  "ref": "",
+                  "formatted": "string"
+                }
+              ],
+              "formatted": "string",
+              "optional": true
+            },
+            "aspect": {
+              "text": "number",
+              "type": "number",
+              "formatted": "number",
+              "optional": false
+            }
+          },
+          "formatted": "{ src: string; srcset: string; lazySrc: string; aspect: number }"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "  | string\n  | { src: string; srcset: string; lazySrc: string; aspect: number }\n",
       "optional": false,
+      "default": "",
       "description": {
-        "en": "Alternate text for screen readers. Leave empty for decorative images."
+        "en": "The image URL. This prop is mandatory."
       },
       "descriptionSource": {
         "en": "VImg"
       }
     },
-    "cover": {
-      "text": "boolean | undefined",
-      "source": "VImg",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Resizes the background image to cover the entire container."
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
       },
       "descriptionSource": {
-        "en": "VImg"
+        "en": "group-item"
       }
     },
     "draggable": {
@@ -467,6 +516,57 @@
       "optional": false,
       "description": {
         "en": "Controls the `draggable` behavior of the image. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable)."
+      },
+      "descriptionSource": {
+        "en": "VImg"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "cover": {
+      "text": "boolean | undefined",
+      "source": "VImg",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Resizes the background image to cover the entire container."
       },
       "descriptionSource": {
         "en": "VImg"
@@ -596,106 +696,6 @@
       "optional": false,
       "description": {
         "en": "For use with `srcset`, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes)."
-      },
-      "descriptionSource": {
-        "en": "VImg"
-      }
-    },
-    "src": {
-      "text": "string | srcObject | undefined",
-      "source": "VImg",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "srcObject",
-          "source": "vuetify/src/components/VImg/VImg.tsx#L42-L47",
-          "type": "object",
-          "properties": {
-            "src": {
-              "text": "string | undefined",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "undefined",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "undefined"
-                },
-                {
-                  "text": "string",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "string"
-                }
-              ],
-              "formatted": "string",
-              "optional": true
-            },
-            "srcset": {
-              "text": "string | undefined",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "undefined",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "undefined"
-                },
-                {
-                  "text": "string",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "string"
-                }
-              ],
-              "formatted": "string",
-              "optional": true
-            },
-            "lazySrc": {
-              "text": "string | undefined",
-              "type": "anyOf",
-              "items": [
-                {
-                  "text": "undefined",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "undefined"
-                },
-                {
-                  "text": "string",
-                  "type": "ref",
-                  "ref": "",
-                  "formatted": "string"
-                }
-              ],
-              "formatted": "string",
-              "optional": true
-            },
-            "aspect": {
-              "text": "number",
-              "type": "number",
-              "formatted": "number",
-              "optional": false
-            }
-          },
-          "formatted": "{ src: string; srcset: string; lazySrc: string; aspect: number }"
-        }
-      ],
-      "formatted": "  | string\n  | { src: string; srcset: string; lazySrc: string; aspect: number }\n",
-      "optional": false,
-      "default": "",
-      "description": {
-        "en": "The image URL. This prop is mandatory."
       },
       "descriptionSource": {
         "en": "VImg"

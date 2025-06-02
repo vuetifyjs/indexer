@@ -140,6 +140,32 @@
         "en": "generic"
       }
     },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "VWindow",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'v-window-item--active'",
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
     "direction": {
       "text": "\"horizontal\" | \"vertical\" | undefined",
       "source": "VWindow",
@@ -171,32 +197,6 @@
       },
       "descriptionSource": {
         "en": "VWindow"
-      }
-    },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "VWindow",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'v-window-item--active'",
-      "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     }
   },

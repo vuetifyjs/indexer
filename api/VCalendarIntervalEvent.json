@@ -3,32 +3,6 @@
   "fileName": "VCalendarIntervalEvent",
   "pathName": "v-calendar-interval-event",
   "props": {
-    "allDay": {
-      "text": "boolean | undefined",
-      "source": "VCalendarIntervalEvent",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Indicates whether the event spans the entire day."
-      },
-      "descriptionSource": {
-        "en": "VCalendarIntervalEvent"
-      }
-    },
     "interval": {
       "text": "unknown",
       "source": "VCalendarIntervalEvent",
@@ -76,6 +50,32 @@
       "optional": false,
       "description": {
         "en": "Height of the interval in the calendar view, in pixels."
+      },
+      "descriptionSource": {
+        "en": "VCalendarIntervalEvent"
+      }
+    },
+    "allDay": {
+      "text": "boolean | undefined",
+      "source": "VCalendarIntervalEvent",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Indicates whether the event spans the entire day."
       },
       "descriptionSource": {
         "en": "VCalendarIntervalEvent"

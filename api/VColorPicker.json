@@ -3,31 +3,6 @@
   "fileName": "VColorPicker",
   "pathName": "v-color-picker",
   "props": {
-    "title": {
-      "text": "string | undefined",
-      "source": "VPicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a title text for the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
     "border": {
       "text": "string | number | boolean | undefined",
       "source": "border",
@@ -62,52 +37,6 @@
       },
       "descriptionSource": {
         "en": "border"
-      }
-    },
-    "modelValue": {
-      "text": "string | Record<string, unknown> | null | undefined",
-      "source": "VColorPicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "null",
-          "type": "UNSUPPORTED",
-          "formatted": "null"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "Record<string, unknown>",
-          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
-          "type": "record",
-          "key": {
-            "text": "string",
-            "type": "string",
-            "formatted": "string"
-          },
-          "value": {
-            "text": "unknown",
-            "type": "unknown",
-            "formatted": "unknown"
-          },
-          "formatted": "Record<string, unknown>"
-        }
-      ],
-      "formatted": "string | Record<string, unknown>\n",
-      "optional": false,
-      "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "height": {
@@ -318,6 +247,32 @@
       },
       "descriptionSource": {
         "en": "elevation"
+      }
+    },
+    "disabled": {
+      "text": "boolean | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Removes the ability to click or target the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "location": {
@@ -560,9 +515,116 @@
         "en": "generic"
       }
     },
-    "disabled": {
-      "text": "boolean | undefined",
+    "title": {
+      "text": "string | undefined",
+      "source": "VPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a title text for the component."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "mode": {
+      "text": "\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\" | undefined",
       "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "\"rgb\"",
+          "type": "string",
+          "literal": "\"rgb\"",
+          "formatted": "\"rgb\""
+        },
+        {
+          "text": "\"rgba\"",
+          "type": "string",
+          "literal": "\"rgba\"",
+          "formatted": "\"rgba\""
+        },
+        {
+          "text": "\"hsl\"",
+          "type": "string",
+          "literal": "\"hsl\"",
+          "formatted": "\"hsl\""
+        },
+        {
+          "text": "\"hsla\"",
+          "type": "string",
+          "literal": "\"hsla\"",
+          "formatted": "\"hsla\""
+        },
+        {
+          "text": "\"hex\"",
+          "type": "string",
+          "literal": "\"hex\"",
+          "formatted": "\"hex\""
+        },
+        {
+          "text": "\"hexa\"",
+          "type": "string",
+          "literal": "\"hexa\"",
+          "formatted": "\"hexa\""
+        }
+      ],
+      "formatted": "'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hex' | 'hexa'\n",
+      "optional": false,
+      "default": "'rgba'",
+      "description": {
+        "en": "The current selected input type. Syncable with `v-model:mode`."
+      },
+      "descriptionSource": {
+        "en": "VColorPicker"
+      }
+    },
+    "divided": {
+      "text": "boolean | undefined",
+      "source": "VPicker",
       "type": "anyOf",
       "items": [
         {
@@ -580,10 +642,10 @@
       "optional": false,
       "default": false,
       "description": {
-        "en": "Removes the ability to click or target the component."
+        "en": "Adds a divider between the header and controls."
       },
       "descriptionSource": {
-        "en": "generic"
+        "en": "VPicker"
       }
     },
     "hideHeader": {
@@ -610,6 +672,52 @@
       },
       "descriptionSource": {
         "en": "VPicker"
+      }
+    },
+    "modelValue": {
+      "text": "string | Record<string, unknown> | null | undefined",
+      "source": "VColorPicker",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "null",
+          "type": "UNSUPPORTED",
+          "formatted": "null"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "Record<string, unknown>",
+          "source": "typescript/lib/lib.es5.d.ts#L6-L6",
+          "type": "record",
+          "key": {
+            "text": "string",
+            "type": "string",
+            "formatted": "string"
+          },
+          "value": {
+            "text": "unknown",
+            "type": "unknown",
+            "formatted": "unknown"
+          },
+          "formatted": "Record<string, unknown>"
+        }
+      ],
+      "formatted": "string | Record<string, unknown>\n",
+      "optional": false,
+      "description": {
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "canvasHeight": {
@@ -752,63 +860,6 @@
         "en": "VColorPicker"
       }
     },
-    "mode": {
-      "text": "\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\" | undefined",
-      "source": "VColorPicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"rgb\"",
-          "type": "string",
-          "literal": "\"rgb\"",
-          "formatted": "\"rgb\""
-        },
-        {
-          "text": "\"rgba\"",
-          "type": "string",
-          "literal": "\"rgba\"",
-          "formatted": "\"rgba\""
-        },
-        {
-          "text": "\"hsl\"",
-          "type": "string",
-          "literal": "\"hsl\"",
-          "formatted": "\"hsl\""
-        },
-        {
-          "text": "\"hsla\"",
-          "type": "string",
-          "literal": "\"hsla\"",
-          "formatted": "\"hsla\""
-        },
-        {
-          "text": "\"hex\"",
-          "type": "string",
-          "literal": "\"hex\"",
-          "formatted": "\"hex\""
-        },
-        {
-          "text": "\"hexa\"",
-          "type": "string",
-          "literal": "\"hexa\"",
-          "formatted": "\"hexa\""
-        }
-      ],
-      "formatted": "'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hex' | 'hexa'\n",
-      "optional": false,
-      "default": "'rgba'",
-      "description": {
-        "en": "The current selected input type. Syncable with `v-model:mode`."
-      },
-      "descriptionSource": {
-        "en": "VColorPicker"
-      }
-    },
     "modes": {
       "text": "readonly (\"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hex\" | \"hexa\")[] | undefined",
       "source": "VColorPicker",
@@ -929,57 +980,6 @@
       },
       "descriptionSource": {
         "en": "VColorPicker"
-      }
-    },
-    "bgColor": {
-      "text": "string | undefined",
-      "source": "VPicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "divided": {
-      "text": "boolean | undefined",
-      "source": "VPicker",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Adds a divider between the header and controls."
-      },
-      "descriptionSource": {
-        "en": "VPicker"
       }
     },
     "landscape": {
@@ -1163,6 +1163,15 @@
     "$color-picker-border-radius": {
       "default": "4px"
     },
+    "$color-picker-canvas-dot-box-shadow": {
+      "default": "0px 0px 0px 1.5px rgba(255, 255, 255, 1), inset 0px 0px 1px 1.5px rgba(0, 0, 0, 0.3)"
+    },
+    "$color-picker-canvas-dot-disabled-box-shadow": {
+      "default": "0px 0px 0px 1.5px rgba(255, 255, 255, 0.7), inset 0px 0px 1px 1.5px rgba(0, 0, 0, 0.3)"
+    },
+    "$color-picker-canvas-dot-size": {
+      "default": "15px"
+    },
     "$color-picker-checkerboard": {
       "default": "url(data:image/png"
     },
@@ -1181,17 +1190,26 @@
     "$color-picker-input-margin": {
       "default": "8px"
     },
-    "$color-picker-preview-margin-bottom": {
-      "default": "0"
-    },
     "$color-picker-input-margin-bottom": {
       "default": "8px"
     },
     "$color-picker-input-margin-top": {
       "default": "24px"
     },
-    "$color-picker-width": {
-      "default": "300px"
+    "$color-picker-preview-dot-margin": {
+      "default": "24px"
+    },
+    "$color-picker-preview-dot-size": {
+      "default": "30px"
+    },
+    "$color-picker-preview-dropper-margin": {
+      "default": "12px"
+    },
+    "$color-picker-preview-margin-bottom": {
+      "default": "0"
+    },
+    "$color-picker-preview-sliders-padding": {
+      "default": "16px"
     },
     "$color-picker-swatch-color-border-radius": {
       "default": "2px"
@@ -1211,26 +1229,8 @@
     "$color-picker-swatches-border-radius": {
       "default": "8px"
     },
-    "$color-picker-canvas-dot-box-shadow": {
-      "default": "0px 0px 0px 1.5px rgba(255, 255, 255, 1), inset 0px 0px 1px 1.5px rgba(0, 0, 0, 0.3)"
-    },
-    "$color-picker-canvas-dot-disabled-box-shadow": {
-      "default": "0px 0px 0px 1.5px rgba(255, 255, 255, 0.7), inset 0px 0px 1px 1.5px rgba(0, 0, 0, 0.3)"
-    },
-    "$color-picker-canvas-dot-size": {
-      "default": "15px"
-    },
-    "$color-picker-preview-dot-size": {
-      "default": "30px"
-    },
-    "$color-picker-preview-dot-margin": {
-      "default": "24px"
-    },
-    "$color-picker-preview-dropper-margin": {
-      "default": "12px"
-    },
-    "$color-picker-preview-sliders-padding": {
-      "default": "16px"
+    "$color-picker-width": {
+      "default": "300px"
     }
   }
 }

@@ -73,9 +73,9 @@
         "en": "VOtpInput"
       }
     },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
+    "modelValue": {
+      "text": "string | number | undefined",
+      "source": "VOtpInput",
       "type": "anyOf",
       "items": [
         {
@@ -87,15 +87,20 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "string | number\n",
       "optional": false,
       "description": {
-        "en": "Specify a theme for this component and all of its children."
+        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
       },
       "descriptionSource": {
-        "en": "theme"
+        "en": "generic"
       }
     },
     "error": {
@@ -122,154 +127,6 @@
       },
       "descriptionSource": {
         "en": "VField"
-      }
-    },
-    "rounded": {
-      "text": "string | number | boolean | undefined",
-      "source": "rounded",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | number | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
-      },
-      "descriptionSource": {
-        "en": "rounded"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "variant": {
-      "text": "\"outlined\" | \"plain\" | \"underlined\" | \"filled\" | \"solo\" | \"solo-inverted\" | \"solo-filled\" | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "\"outlined\"",
-          "type": "string",
-          "literal": "\"outlined\"",
-          "formatted": "\"outlined\""
-        },
-        {
-          "text": "\"plain\"",
-          "type": "string",
-          "literal": "\"plain\"",
-          "formatted": "\"plain\""
-        },
-        {
-          "text": "\"underlined\"",
-          "type": "string",
-          "literal": "\"underlined\"",
-          "formatted": "\"underlined\""
-        },
-        {
-          "text": "\"filled\"",
-          "type": "string",
-          "literal": "\"filled\"",
-          "formatted": "\"filled\""
-        },
-        {
-          "text": "\"solo\"",
-          "type": "string",
-          "literal": "\"solo\"",
-          "formatted": "\"solo\""
-        },
-        {
-          "text": "\"solo-inverted\"",
-          "type": "string",
-          "literal": "\"solo-inverted\"",
-          "formatted": "\"solo-inverted\""
-        },
-        {
-          "text": "\"solo-filled\"",
-          "type": "string",
-          "literal": "\"solo-filled\"",
-          "formatted": "\"solo-filled\""
-        }
-      ],
-      "formatted": "  | 'outlined'\n  | 'plain'\n  | 'underlined'\n  | 'filled'\n  | 'solo'\n  | 'solo-inverted'\n  | 'solo-filled'\n",
-      "optional": false,
-      "default": "'outlined'",
-      "description": {
-        "en": "Applies a distinct style to the component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "bgColor": {
-      "text": "string | undefined",
-      "source": "VField",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "height": {
@@ -452,7 +309,67 @@
         "en": "dimension"
       }
     },
-    "baseColor": {
+    "rounded": {
+      "text": "string | number | boolean | undefined",
+      "source": "rounded",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "string | number | boolean\n",
+      "optional": false,
+      "description": {
+        "en": "Designates the **border-radius** applied to the component. This can be **0**, **xs**, **sm**, true, **lg**, **xl**, **pill**, **circle**, and **shaped**. Find more information on available border radius classes on the [Border Radius page](/styles/border-radius)."
+      },
+      "descriptionSource": {
+        "en": "rounded"
+      }
+    },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
       "text": "string | undefined",
       "source": "VField",
       "type": "anyOf",
@@ -471,15 +388,15 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Sets the color of the input when it is not focused."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "VField"
+        "en": "generic"
       }
     },
-    "modelValue": {
-      "text": "string | number | undefined",
-      "source": "VOtpInput",
+    "variant": {
+      "text": "\"outlined\" | \"plain\" | \"underlined\" | \"filled\" | \"solo\" | \"solo-inverted\" | \"solo-filled\" | undefined",
+      "source": "VField",
       "type": "anyOf",
       "items": [
         {
@@ -488,20 +405,53 @@
           "formatted": "undefined"
         },
         {
-          "text": "string",
+          "text": "\"outlined\"",
           "type": "string",
-          "formatted": "string"
+          "literal": "\"outlined\"",
+          "formatted": "\"outlined\""
         },
         {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
+          "text": "\"plain\"",
+          "type": "string",
+          "literal": "\"plain\"",
+          "formatted": "\"plain\""
+        },
+        {
+          "text": "\"underlined\"",
+          "type": "string",
+          "literal": "\"underlined\"",
+          "formatted": "\"underlined\""
+        },
+        {
+          "text": "\"filled\"",
+          "type": "string",
+          "literal": "\"filled\"",
+          "formatted": "\"filled\""
+        },
+        {
+          "text": "\"solo\"",
+          "type": "string",
+          "literal": "\"solo\"",
+          "formatted": "\"solo\""
+        },
+        {
+          "text": "\"solo-inverted\"",
+          "type": "string",
+          "literal": "\"solo-inverted\"",
+          "formatted": "\"solo-inverted\""
+        },
+        {
+          "text": "\"solo-filled\"",
+          "type": "string",
+          "literal": "\"solo-filled\"",
+          "formatted": "\"solo-filled\""
         }
       ],
-      "formatted": "string | number\n",
+      "formatted": "  | 'outlined'\n  | 'plain'\n  | 'underlined'\n  | 'filled'\n  | 'solo'\n  | 'solo-inverted'\n  | 'solo-filled'\n",
       "optional": false,
+      "default": "'outlined'",
       "description": {
-        "en": "The v-model value of the component. If component supports the **multiple** prop, this defaults to an empty array."
+        "en": "Applies a distinct style to the component."
       },
       "descriptionSource": {
         "en": "generic"
@@ -531,6 +481,133 @@
       },
       "descriptionSource": {
         "en": "VField"
+      }
+    },
+    "placeholder": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the input’s placeholder text."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "autofocus": {
+      "text": "boolean | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Automatically focuses the first input on page load"
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "divider": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specifies the dividing character between items."
+      },
+      "descriptionSource": {
+        "en": "VOtpInput"
+      }
+    },
+    "baseColor": {
+      "text": "string | undefined",
+      "source": "VField",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Sets the color of the input when it is not focused."
+      },
+      "descriptionSource": {
+        "en": "VField"
+      }
+    },
+    "label": {
+      "text": "string | undefined",
+      "source": "VOtpInput",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "default": "'$vuetify.input.otp'",
+      "description": {
+        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "loading": {
@@ -564,83 +641,6 @@
         "en": "loader"
       }
     },
-    "placeholder": {
-      "text": "string | undefined",
-      "source": "VOtpInput",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Sets the input’s placeholder text."
-      },
-      "descriptionSource": {
-        "en": "VOtpInput"
-      }
-    },
-    "label": {
-      "text": "string | undefined",
-      "source": "VOtpInput",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "default": "'$vuetify.input.otp'",
-      "description": {
-        "en": "Sets the text of the [v-label](/api/v-label/) or [v-field-label](/api/v-field-label/) component."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "autofocus": {
-      "text": "boolean | undefined",
-      "source": "VOtpInput",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Automatically focuses the first input on page load"
-      },
-      "descriptionSource": {
-        "en": "VOtpInput"
-      }
-    },
     "focused": {
       "text": "boolean | undefined",
       "source": "focus",
@@ -667,9 +667,9 @@
         "en": "focus"
       }
     },
-    "divider": {
+    "bgColor": {
       "text": "string | undefined",
-      "source": "VOtpInput",
+      "source": "VField",
       "type": "anyOf",
       "items": [
         {
@@ -686,10 +686,10 @@
       "formatted": "string\n",
       "optional": false,
       "description": {
-        "en": "Specifies the dividing character between items."
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "VOtpInput"
+        "en": "generic"
       }
     },
     "focusAll": {
@@ -808,44 +808,6 @@
     }
   },
   "exposed": {
-    "blur": {
-      "text": "() => void",
-      "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L318-L320",
-      "type": "function",
-      "parameters": [],
-      "returnType": {
-        "text": "void",
-        "type": "void",
-        "formatted": "void"
-      },
-      "formatted": "() => void\n",
-      "optional": false,
-      "description": {
-        "en": "Forces the input to lose focus."
-      },
-      "descriptionSource": {
-        "en": "VOtpInput"
-      }
-    },
-    "focus": {
-      "text": "() => void",
-      "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L321-L323",
-      "type": "function",
-      "parameters": [],
-      "returnType": {
-        "text": "void",
-        "type": "void",
-        "formatted": "void"
-      },
-      "formatted": "() => void\n",
-      "optional": false,
-      "description": {
-        "en": "Focuses the first field in the input"
-      },
-      "descriptionSource": {
-        "en": "VOtpInput"
-      }
-    },
     "reset": {
       "text": "() => void",
       "source": "vuetify/src/components/VOtpInput/VOtpInput.tsx#L178-L180",

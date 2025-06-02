@@ -28,9 +28,9 @@
         "en": "generic"
       }
     },
-    "active": {
-      "text": "boolean | undefined",
-      "source": "VMessages",
+    "transition": {
+      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; leaveAbsolute: boolean; group: boolean; } | null | undefined",
+      "source": "transition",
       "type": "anyOf",
       "items": [
         {
@@ -39,30 +39,9 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "boolean\n",
-      "optional": false,
-      "default": false,
-      "description": {
-        "en": "Determines whether the messages are visible or not."
-      },
-      "descriptionSource": {
-        "en": "VMessages"
-      }
-    },
-    "transition": {
-      "text": "string | boolean | (TransitionProps & { component?: Component | undefined; }) | { component: Component; leaveAbsolute: boolean; group: boolean; } | undefined",
-      "source": "transition",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
+          "text": "null",
           "type": "UNSUPPORTED",
-          "formatted": "undefined"
+          "formatted": "null"
         },
         {
           "text": "string",
@@ -87,7 +66,7 @@
             },
             {
               "text": "{ component?: Component | undefined; }",
-              "source": "vuetify/src/composables/transition.ts#L10-L10",
+              "source": "vuetify/src/composables/transition.ts#L13-L13",
               "type": "object",
               "properties": {
                 "component": {
@@ -193,6 +172,32 @@
       },
       "descriptionSource": {
         "en": "generic"
+      }
+    },
+    "active": {
+      "text": "boolean | undefined",
+      "source": "VMessages",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Determines whether the messages are visible or not."
+      },
+      "descriptionSource": {
+        "en": "VMessages"
       }
     }
   },

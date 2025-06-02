@@ -3,34 +3,9 @@
   "fileName": "VProgressCircular",
   "pathName": "v-progress-circular",
   "props": {
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
-      }
-    },
-    "size": {
+    "modelValue": {
       "text": "string | number | undefined",
-      "source": "size",
+      "source": "VProgressCircular",
       "type": "anyOf",
       "items": [
         {
@@ -51,9 +26,40 @@
       ],
       "formatted": "string | number\n",
       "optional": false,
-      "default": "'default'",
+      "default": 0,
       "description": {
-        "en": "Sets the diameter of the circle in pixels."
+        "en": "The percentage value for current progress."
+      },
+      "descriptionSource": {
+        "en": "VProgressCircular"
+      }
+    },
+    "width": {
+      "text": "string | number | undefined",
+      "source": "VProgressCircular",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 4,
+      "description": {
+        "en": "Sets the stroke of the circle in pixels."
       },
       "descriptionSource": {
         "en": "VProgressCircular"
@@ -106,6 +112,31 @@
         "en": "tag"
       }
     },
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
     "color": {
       "text": "string | undefined",
       "source": "VProgressCircular",
@@ -129,124 +160,6 @@
       },
       "descriptionSource": {
         "en": "generic"
-      }
-    },
-    "bgColor": {
-      "text": "string | undefined",
-      "source": "VProgressCircular",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "width": {
-      "text": "string | number | undefined",
-      "source": "VProgressCircular",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 4,
-      "description": {
-        "en": "Sets the stroke of the circle in pixels."
-      },
-      "descriptionSource": {
-        "en": "VProgressCircular"
-      }
-    },
-    "modelValue": {
-      "text": "string | number | undefined",
-      "source": "VProgressCircular",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "The percentage value for current progress."
-      },
-      "descriptionSource": {
-        "en": "VProgressCircular"
-      }
-    },
-    "rotate": {
-      "text": "string | number | undefined",
-      "source": "VProgressCircular",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "default": 0,
-      "description": {
-        "en": "Rotates the circle start point in degrees."
-      },
-      "descriptionSource": {
-        "en": "VProgressCircular"
       }
     },
     "indeterminate": {
@@ -276,6 +189,93 @@
       "default": false,
       "description": {
         "en": "Constantly animates, use when loading progress is unknown. If set to the string `'disable-shrink'` it will use a simpler animation that does not run on the main thread."
+      },
+      "descriptionSource": {
+        "en": "VProgressCircular"
+      }
+    },
+    "size": {
+      "text": "string | number | undefined",
+      "source": "size",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": "'default'",
+      "description": {
+        "en": "Sets the diameter of the circle in pixels."
+      },
+      "descriptionSource": {
+        "en": "VProgressCircular"
+      }
+    },
+    "bgColor": {
+      "text": "string | undefined",
+      "source": "VProgressCircular",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Applies specified color to the control's background. Used on components that also support the **color** prop. - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
+      },
+      "descriptionSource": {
+        "en": "generic"
+      }
+    },
+    "rotate": {
+      "text": "string | number | undefined",
+      "source": "VProgressCircular",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "default": 0,
+      "description": {
+        "en": "Rotates the circle start point in degrees."
       },
       "descriptionSource": {
         "en": "VProgressCircular"
@@ -311,11 +311,11 @@
     "$progress-circular-intermediate-svg-transition": {
       "default": "all 0.2s ease-in-out"
     },
-    "$progress-circular-overlay-transition": {
-      "default": "all 0.2s ease-in-out, stroke-width 0s"
-    },
     "$progress-circular-overlay-transform": {
       "default": "rotate(calc(-90deg))"
+    },
+    "$progress-circular-overlay-transition": {
+      "default": "all 0.2s ease-in-out, stroke-width 0s"
     },
     "$progress-circular-rotate-animation": {
       "default": "progress-circular-rotate 1.4s linear infinite"
@@ -326,11 +326,11 @@
     "$progress-circular-size": {
       "default": "32px"
     },
-    "$progress-circular-underlay-color": {
-      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
-    },
     "$progress-circular-sizes": {
       "default": "(\n  'x-small': -2,\n  'small': -1,\n  'default': 0,\n  'large': 2,\n  'x-large': 4\n)"
+    },
+    "$progress-circular-underlay-color": {
+      "default": "rgba(var(--v-border-color), var(--v-border-opacity))"
     }
   }
 }

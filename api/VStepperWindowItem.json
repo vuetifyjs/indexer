@@ -3,36 +3,6 @@
   "fileName": "VStepperWindowItem",
   "pathName": "v-stepper-window-item",
   "props": {
-    "transition": {
-      "text": "string | boolean | undefined",
-      "source": "VWindowItem",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
-        }
-      ],
-      "formatted": "string | boolean\n",
-      "optional": false,
-      "description": {
-        "en": "The transition used when the component progressing through items. Can be one of the [built in](/styles/transitions/) or custom transition."
-      },
-      "descriptionSource": {
-        "en": "VWindowItem"
-      }
-    },
     "disabled": {
       "text": "boolean | undefined",
       "source": "group-item",
@@ -57,6 +27,44 @@
       },
       "descriptionSource": {
         "en": "VWindowItem"
+      }
+    },
+    "value": {
+      "text": "any",
+      "source": "group-item",
+      "type": "any",
+      "formatted": "any\n",
+      "optional": false,
+      "description": {
+        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
+      },
+      "descriptionSource": {
+        "en": "group-item"
+      }
+    },
+    "selectedClass": {
+      "text": "string | undefined",
+      "source": "group-item",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Configure the active CSS class applied when an item is selected."
+      },
+      "descriptionSource": {
+        "en": "generic"
       }
     },
     "eager": {
@@ -85,9 +93,9 @@
         "en": "generic"
       }
     },
-    "selectedClass": {
-      "text": "string | undefined",
-      "source": "group-item",
+    "transition": {
+      "text": "string | boolean | undefined",
+      "source": "VWindowItem",
       "type": "anyOf",
       "items": [
         {
@@ -99,28 +107,20 @@
           "text": "string",
           "type": "string",
           "formatted": "string"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
         }
       ],
-      "formatted": "string\n",
+      "formatted": "string | boolean\n",
       "optional": false,
       "description": {
-        "en": "Configure the active CSS class applied when an item is selected."
+        "en": "The transition used when the component progressing through items. Can be one of the [built in](/styles/transitions/) or custom transition."
       },
       "descriptionSource": {
-        "en": "generic"
-      }
-    },
-    "value": {
-      "text": "any",
-      "source": "group-item",
-      "type": "any",
-      "formatted": "any\n",
-      "optional": false,
-      "description": {
-        "en": "The value used when the component is selected in a group. If not provided, a unique ID will be used."
-      },
-      "descriptionSource": {
-        "en": "group-item"
+        "en": "VWindowItem"
       }
     },
     "reverseTransition": {

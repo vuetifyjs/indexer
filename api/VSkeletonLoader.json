@@ -4,7 +4,7 @@
   "pathName": "v-skeleton-loader",
   "props": {
     "type": {
-      "text": "\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\" | readonly (\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[] | undefined",
+      "text": "\"text\" | (string & {}) | \"button\" | \"divider\" | \"subtitle\" | \"actions\" | \"image\" | \"article\" | \"table\" | \"avatar\" | \"chip\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\" | readonly (\"text\" | (string & {}) | \"button\" | \"divider\" | \"subtitle\" | \"actions\" | \"image\" | \"article\" | \"table\" | \"avatar\" | \"chip\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[] | undefined",
       "source": "VSkeletonLoader",
       "type": "anyOf",
       "items": [
@@ -14,10 +14,10 @@
           "formatted": "undefined"
         },
         {
-          "text": "\"image\"",
+          "text": "\"text\"",
           "type": "string",
-          "literal": "\"image\"",
-          "formatted": "\"image\""
+          "literal": "\"text\"",
+          "formatted": "\"text\""
         },
         {
           "text": "string & {}",
@@ -38,16 +38,10 @@
           "formatted": "string & {  }"
         },
         {
-          "text": "\"chip\"",
+          "text": "\"button\"",
           "type": "string",
-          "literal": "\"chip\"",
-          "formatted": "\"chip\""
-        },
-        {
-          "text": "\"subtitle\"",
-          "type": "string",
-          "literal": "\"subtitle\"",
-          "formatted": "\"subtitle\""
+          "literal": "\"button\"",
+          "formatted": "\"button\""
         },
         {
           "text": "\"divider\"",
@@ -56,22 +50,28 @@
           "formatted": "\"divider\""
         },
         {
-          "text": "\"text\"",
+          "text": "\"subtitle\"",
           "type": "string",
-          "literal": "\"text\"",
-          "formatted": "\"text\""
+          "literal": "\"subtitle\"",
+          "formatted": "\"subtitle\""
+        },
+        {
+          "text": "\"actions\"",
+          "type": "string",
+          "literal": "\"actions\"",
+          "formatted": "\"actions\""
+        },
+        {
+          "text": "\"image\"",
+          "type": "string",
+          "literal": "\"image\"",
+          "formatted": "\"image\""
         },
         {
           "text": "\"article\"",
           "type": "string",
           "literal": "\"article\"",
           "formatted": "\"article\""
-        },
-        {
-          "text": "\"button\"",
-          "type": "string",
-          "literal": "\"button\"",
-          "formatted": "\"button\""
         },
         {
           "text": "\"table\"",
@@ -84,6 +84,12 @@
           "type": "string",
           "literal": "\"avatar\"",
           "formatted": "\"avatar\""
+        },
+        {
+          "text": "\"chip\"",
+          "type": "string",
+          "literal": "\"chip\"",
+          "formatted": "\"chip\""
         },
         {
           "text": "\"heading\"",
@@ -108,12 +114,6 @@
           "type": "string",
           "literal": "\"ossein\"",
           "formatted": "\"ossein\""
-        },
-        {
-          "text": "\"actions\"",
-          "type": "string",
-          "literal": "\"actions\"",
-          "formatted": "\"actions\""
         },
         {
           "text": "\"card\"",
@@ -218,15 +218,15 @@
           "formatted": "\"table-tfoot\""
         },
         {
-          "text": "readonly (\"image\" | (string & {}) | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]",
+          "text": "readonly (\"text\" | (string & {}) | \"button\" | \"divider\" | \"subtitle\" | \"actions\" | \"image\" | \"article\" | \"table\" | \"avatar\" | \"chip\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]",
           "source": "typescript/lib/lib.es5.d.ts#L4-L4",
           "type": "array",
           "items": [
             {
-              "text": "\"image\"",
+              "text": "\"text\"",
               "type": "ref",
               "ref": "",
-              "formatted": "\"image\""
+              "formatted": "\"text\""
             },
             {
               "text": "string & {}",
@@ -235,16 +235,10 @@
               "formatted": "string & {}"
             },
             {
-              "text": "\"chip\"",
+              "text": "\"button\"",
               "type": "ref",
               "ref": "",
-              "formatted": "\"chip\""
-            },
-            {
-              "text": "\"subtitle\"",
-              "type": "ref",
-              "ref": "",
-              "formatted": "\"subtitle\""
+              "formatted": "\"button\""
             },
             {
               "text": "\"divider\"",
@@ -253,22 +247,28 @@
               "formatted": "\"divider\""
             },
             {
-              "text": "\"text\"",
+              "text": "\"subtitle\"",
               "type": "ref",
               "ref": "",
-              "formatted": "\"text\""
+              "formatted": "\"subtitle\""
+            },
+            {
+              "text": "\"actions\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"actions\""
+            },
+            {
+              "text": "\"image\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"image\""
             },
             {
               "text": "\"article\"",
               "type": "ref",
               "ref": "",
               "formatted": "\"article\""
-            },
-            {
-              "text": "\"button\"",
-              "type": "ref",
-              "ref": "",
-              "formatted": "\"button\""
             },
             {
               "text": "\"table\"",
@@ -281,6 +281,12 @@
               "type": "ref",
               "ref": "",
               "formatted": "\"avatar\""
+            },
+            {
+              "text": "\"chip\"",
+              "type": "ref",
+              "ref": "",
+              "formatted": "\"chip\""
             },
             {
               "text": "\"heading\"",
@@ -305,12 +311,6 @@
               "type": "ref",
               "ref": "",
               "formatted": "\"ossein\""
-            },
-            {
-              "text": "\"actions\"",
-              "type": "ref",
-              "ref": "",
-              "formatted": "\"actions\""
             },
             {
               "text": "\"card\"",
@@ -415,10 +415,10 @@
               "formatted": "\"table-tfoot\""
             }
           ],
-          "formatted": "(\"image\" | string & {} | \"chip\" | \"subtitle\" | \"divider\" | \"text\" | \"article\" | \"button\" | \"table\" | \"avatar\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"actions\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]"
+          "formatted": "(\"text\" | string & {} | \"button\" | \"divider\" | \"subtitle\" | \"actions\" | \"image\" | \"article\" | \"table\" | \"avatar\" | \"chip\" | \"heading\" | \"sentences\" | \"paragraph\" | \"ossein\" | \"card\" | \"card-avatar\" | \"date-picker\" | \"date-picker-options\" | \"date-picker-days\" | \"list-item\" | \"list-item-avatar\" | \"list-item-two-line\" | \"list-item-avatar-two-line\" | \"list-item-three-line\" | \"list-item-avatar-three-line\" | \"table-heading\" | \"table-thead\" | \"table-tbody\" | \"table-row-divider\" | \"table-row\" | \"table-tfoot\")[]"
         }
       ],
-      "formatted": "  | 'image'\n  | (string & {})\n  | 'chip'\n  | 'subtitle'\n  | 'divider'\n  | 'text'\n  | 'article'\n  | 'button'\n  | 'table'\n  | 'avatar'\n  | 'heading'\n  | 'sentences'\n  | 'paragraph'\n  | 'ossein'\n  | 'actions'\n  | 'card'\n  | 'card-avatar'\n  | 'date-picker'\n  | 'date-picker-options'\n  | 'date-picker-days'\n  | 'list-item'\n  | 'list-item-avatar'\n  | 'list-item-two-line'\n  | 'list-item-avatar-two-line'\n  | 'list-item-three-line'\n  | 'list-item-avatar-three-line'\n  | 'table-heading'\n  | 'table-thead'\n  | 'table-tbody'\n  | 'table-row-divider'\n  | 'table-row'\n  | 'table-tfoot'\n  | (\n      | 'image'\n      | (string & {})\n      | 'chip'\n      | 'subtitle'\n      | 'divider'\n      | 'text'\n      | 'article'\n      | 'button'\n      | 'table'\n      | 'avatar'\n      | 'heading'\n      | 'sentences'\n      | 'paragraph'\n      | 'ossein'\n      | 'actions'\n      | 'card'\n      | 'card-avatar'\n      | 'date-picker'\n      | 'date-picker-options'\n      | 'date-picker-days'\n      | 'list-item'\n      | 'list-item-avatar'\n      | 'list-item-two-line'\n      | 'list-item-avatar-two-line'\n      | 'list-item-three-line'\n      | 'list-item-avatar-three-line'\n      | 'table-heading'\n      | 'table-thead'\n      | 'table-tbody'\n      | 'table-row-divider'\n      | 'table-row'\n      | 'table-tfoot'\n    )[]\n",
+      "formatted": "  | 'text'\n  | (string & {})\n  | 'button'\n  | 'divider'\n  | 'subtitle'\n  | 'actions'\n  | 'image'\n  | 'article'\n  | 'table'\n  | 'avatar'\n  | 'chip'\n  | 'heading'\n  | 'sentences'\n  | 'paragraph'\n  | 'ossein'\n  | 'card'\n  | 'card-avatar'\n  | 'date-picker'\n  | 'date-picker-options'\n  | 'date-picker-days'\n  | 'list-item'\n  | 'list-item-avatar'\n  | 'list-item-two-line'\n  | 'list-item-avatar-two-line'\n  | 'list-item-three-line'\n  | 'list-item-avatar-three-line'\n  | 'table-heading'\n  | 'table-thead'\n  | 'table-tbody'\n  | 'table-row-divider'\n  | 'table-row'\n  | 'table-tfoot'\n  | (\n      | 'text'\n      | (string & {})\n      | 'button'\n      | 'divider'\n      | 'subtitle'\n      | 'actions'\n      | 'image'\n      | 'article'\n      | 'table'\n      | 'avatar'\n      | 'chip'\n      | 'heading'\n      | 'sentences'\n      | 'paragraph'\n      | 'ossein'\n      | 'card'\n      | 'card-avatar'\n      | 'date-picker'\n      | 'date-picker-options'\n      | 'date-picker-days'\n      | 'list-item'\n      | 'list-item-avatar'\n      | 'list-item-two-line'\n      | 'list-item-avatar-two-line'\n      | 'list-item-three-line'\n      | 'list-item-avatar-three-line'\n      | 'table-heading'\n      | 'table-thead'\n      | 'table-tbody'\n      | 'table-row-divider'\n      | 'table-row'\n      | 'table-tfoot'\n    )[]\n",
       "optional": false,
       "default": "'ossein'",
       "description": {
@@ -426,31 +426,6 @@
       },
       "descriptionSource": {
         "en": "VSkeletonLoader"
-      }
-    },
-    "color": {
-      "text": "string | undefined",
-      "source": "VSkeletonLoader",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
-      },
-      "descriptionSource": {
-        "en": "generic"
       }
     },
     "height": {
@@ -481,61 +456,6 @@
       },
       "descriptionSource": {
         "en": "dimension"
-      }
-    },
-    "elevation": {
-      "text": "string | number | undefined",
-      "source": "elevation",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        },
-        {
-          "text": "number",
-          "type": "number",
-          "formatted": "number"
-        }
-      ],
-      "formatted": "string | number\n",
-      "optional": false,
-      "description": {
-        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
-      },
-      "descriptionSource": {
-        "en": "elevation"
-      }
-    },
-    "theme": {
-      "text": "string | undefined",
-      "source": "theme",
-      "type": "anyOf",
-      "items": [
-        {
-          "text": "undefined",
-          "type": "UNSUPPORTED",
-          "formatted": "undefined"
-        },
-        {
-          "text": "string",
-          "type": "string",
-          "formatted": "string"
-        }
-      ],
-      "formatted": "string\n",
-      "optional": false,
-      "description": {
-        "en": "Specify a theme for this component and all of its children."
-      },
-      "descriptionSource": {
-        "en": "theme"
       }
     },
     "maxHeight": {
@@ -688,6 +608,36 @@
         "en": "dimension"
       }
     },
+    "elevation": {
+      "text": "string | number | undefined",
+      "source": "elevation",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        },
+        {
+          "text": "number",
+          "type": "number",
+          "formatted": "number"
+        }
+      ],
+      "formatted": "string | number\n",
+      "optional": false,
+      "description": {
+        "en": "Designates an elevation applied to the component between 0 and 24. You can find more information on the [elevation page](/styles/elevation)."
+      },
+      "descriptionSource": {
+        "en": "elevation"
+      }
+    },
     "loading": {
       "text": "boolean | undefined",
       "source": "VSkeletonLoader",
@@ -714,8 +664,33 @@
         "en": "VSkeletonLoader"
       }
     },
-    "boilerplate": {
-      "text": "boolean | undefined",
+    "theme": {
+      "text": "string | undefined",
+      "source": "theme",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
+        }
+      ],
+      "formatted": "string\n",
+      "optional": false,
+      "description": {
+        "en": "Specify a theme for this component and all of its children."
+      },
+      "descriptionSource": {
+        "en": "theme"
+      }
+    },
+    "color": {
+      "text": "string | undefined",
       "source": "VSkeletonLoader",
       "type": "anyOf",
       "items": [
@@ -725,19 +700,18 @@
           "formatted": "undefined"
         },
         {
-          "text": "boolean",
-          "type": "boolean",
-          "formatted": "boolean"
+          "text": "string",
+          "type": "string",
+          "formatted": "string"
         }
       ],
-      "formatted": "boolean\n",
+      "formatted": "string\n",
       "optional": false,
-      "default": false,
       "description": {
-        "en": "Remove the loading animation from the skeleton."
+        "en": "Applies specified color to the control - supports utility colors (for example `success` or `purple`) or css color (`#033` or `rgba(255, 0, 0, 0.5)`). Find a list of built-in classes on the [colors page](/styles/colors#material-colors)."
       },
       "descriptionSource": {
-        "en": "VSkeletonLoader"
+        "en": "generic"
       }
     },
     "loadingText": {
@@ -761,6 +735,32 @@
       "default": "'$vuetify.loading'",
       "description": {
         "en": "aria-label for the element in a loading state."
+      },
+      "descriptionSource": {
+        "en": "VSkeletonLoader"
+      }
+    },
+    "boilerplate": {
+      "text": "boolean | undefined",
+      "source": "VSkeletonLoader",
+      "type": "anyOf",
+      "items": [
+        {
+          "text": "undefined",
+          "type": "UNSUPPORTED",
+          "formatted": "undefined"
+        },
+        {
+          "text": "boolean",
+          "type": "boolean",
+          "formatted": "boolean"
+        }
+      ],
+      "formatted": "boolean\n",
+      "optional": false,
+      "default": false,
+      "description": {
+        "en": "Remove the loading animation from the skeleton."
       },
       "descriptionSource": {
         "en": "VSkeletonLoader"
